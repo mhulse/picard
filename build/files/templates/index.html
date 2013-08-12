@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title></title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+	
+	<link rel="stylesheet" href="./css/<!-- @echo name -->.css">
+	<link rel="stylesheet" href="./fonts/hulse2/hulse.css">
+	
+	<!-- @endif -->
+	
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
+	
+	<link rel="stylesheet" href="http://static.mhulse.com/v5<!-- @echo path -->/css/<!-- @echo name -->.min.css">
+	
+	<!-- @endif -->
+	
+</head>
+<body>
+	
+	<header id="flag"><div><h1><a href="#">M<span>icky Hulse</span></a></h1></div></header>
+	
+	<div class="container">
+		
+		<h1 class="marker">Colors</h1>
+		
+		<div class="swatches">
+			<div class="swatches-swatch milk"><code>@milk</code> &rsaquo; <code>#fff</code></div>
+			<div class="swatches-swatch bling"><code>@bling</code> &rsaquo; <code>#ffd100</code></div>
+			<div class="swatches-swatch goblin"><code>@goblin</code> &rsaquo; <code>#9ea301</code></div>
+			<div class="swatches-swatch hulk"><code>@hulk</code> &rsaquo; <code>#4e801c</code></div>
+			<div class="swatches-swatch prius"><code>@prius</code> &rsaquo; <code>#5e8da1</code></div>
+			<div class="swatches-swatch smurf"><code>@smurf</code> &rsaquo; <code>#13aac9</code></div>
+			<div class="swatches-swatch lobster"><code>@lobster</code> &rsaquo; <code>#c30</code></div>
+			<div class="swatches-swatch bruise"><code>@bruise</code> &rsaquo; <code>#490a3d</code></div>
+			<div class="swatches-swatch raven"><code>@raven</code> &rsaquo; <code>#000</code></div>
+		</div>
+		
+		<hr>
+		
+	</div> <!-- /.container -->
+	
+</body>
+</html>

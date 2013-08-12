@@ -1,0 +1,435 @@
+html {
+	height: 100%; /* Expand to height of browser window. */
+	overflow-y: scroll; /* Force scrollbar. */
+}
+
+body {
+	font-family: @sans;
+	color: @raven;
+	background: @milk;
+	/* Initial height of `<html>`, but will expand taller if necessary: */
+	min-height: 100%;
+}
+
+a {
+	color: @smurf;
+	text-decoration: none;
+}
+	a:visited { color: @smurf; }
+	a:visited:hover,
+	a:focus,
+	a:focus:hover,
+	a:hover,
+	a:active {
+		color: lighten(@bruise, 20%);
+		text-decoration: underline;
+	}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-family: @serif; }
+.sh1, .sh2, .sh3, .sh4, .sh5, .sh6 { font-family: @sans; }
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
+.sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
+	a {
+		color: @hulk;
+		&:visited { color: @hulk; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: @goblin;
+			text-decoration: none;
+		}
+	}
+}
+
+blockquote {
+	font-style: normal;
+	border-width: .0625rem; // 1px
+	border-left-width: .375rem; // 3px
+	border-style: solid;
+	border-color: fade(@prius, 20%);
+	background: fade(@prius, 3%);
+	padding-left: 1.25rem; // 20px
+	position: relative;
+	border-radius: 0 .625rem .625rem 0; // 0 10px 10px 0
+}
+	blockquote p {
+		color: darken(@prius, 20%);
+		font-style: italic;
+	}
+	blockquote footer { color: darken(@prius, 10%); }
+@media all and (min-width: 45em) { // (720px / 16) = 45em
+	blockquote:before {
+		font: 6.25rem/1 @sans; // 100px
+		color: fade(darken(@prius, 10%), 40%);
+		display: block;
+		content: "\201C";
+		position: absolute;
+		left: -.4375em; // -7px
+		top: -.125em; // 2px
+	}
+}
+
+figure { font-family: @sans; }
+	figure figcaption {
+		color: darken(@prius, 20%);
+		background: fade(@prius, 20%);
+		padding: .625rem; // 10px
+	}
+
+hr, .hr, .hr1, .hr2, .hr3, .hr4, .hr5, .hr6 {
+	color: fade(@bruise, 20%);
+	background: fade(@bruise, 20%);
+}
+	.hr1 { background: fade(@bruise, 25%); }
+	.hr2 { background: fade(@bruise, 35%); }
+	.hr3 { background: fade(@bruise, 45%); }
+	.hr4 { background: fade(@bruise, 55%); }
+	.hr5 { background: fade(@bruise, 65%); }
+	.hr6 { background: fade(@bruise, 75%); }
+
+p { font-family: @serif; }
+
+pre {
+	color: @gray3;
+	background: fade(@raven, 2.5%);
+	box-shadow: inset 0 0 .625rem 0 fade(@raven, 15%); // 10px
+}
+	pre code,
+	pre kbd,
+	pre samp {
+		text-shadow: none;
+		line-height: inherit;
+		color: inherit;
+		font-size: 1em;
+		background: transparent;
+		margin: 0;
+		padding: 0;
+		top: 0;
+		border: 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
+	
+	/**
+	 * Blinking cursor.
+	 *
+	 * @see http://fredericiana.com/2012/11/04/html5-blink-tag/
+	 */
+	
+	pre .cursor {
+		-webkit-animation-duration: 2s;
+		        animation-duration: 2s;
+		-webkit-animation-name: cursor-blink;
+		        animation-name: cursor-blink;
+		-webkit-animation-iteration-count: infinite;
+		        animation-iteration-count: infinite;
+		-webkit-animation-timing-function: steps(2, start);
+		        animation-timing-function: steps(2, start);
+	}
+		@-webkit-keyframes cursor-blink { 80% { visibility: hidden; } }
+		        @keyframes cursor-blink { 80% { visibility: hidden; } }
+	
+	/**
+	 * Prompt style.
+	 */
+	
+	pre .prompt { color: @raven; }
+	
+pre.terminal {
+	letter-spacing: .05em;
+	color: lighten(spin(@hulk, 45), 20%);
+	text-shadow: 0 .0625rem 0 @raven; // 0 1px 0
+	background: fade(@gray1, 90%);
+	box-shadow: inset 0 0 .3125rem 0 fade(@raven, 50%); // 5px
+}
+	pre.terminal .prompt { color: lighten(spin(@hulk, 90), 20%); }
+
+code {
+	font-family: @mono;
+	color: @lobster;
+	padding: 0 .25em; // 4px
+	background: fade(@lobster, 5%);
+	border: .0625rem solid fade(@lobster, 20%); // 1px
+	border-radius: .1875rem; // 3px
+}
+
+kbd {
+	font-family: @mono;
+	line-height: 0;
+	text-shadow: 0 .0625rem 0 @milk; // 0 1px 0
+	color: @gray3;
+	background: @graye;
+	border: .0625rem solid @grayc; // 1px
+	border-radius: .1875rem; // 3px
+	margin: 0 .125em; // 0 2px
+	padding: .0625em .3125em; // 1px 5px
+	position: relative;
+	box-shadow:
+		0 .0625rem 0 fade(@raven, 20%), // 0 1px 0
+		0 0 0 .125rem @milk inset; // 0 0 0 2px
+}
+	kbd kbd,
+	kbd samp {
+		text-shadow: none;
+		line-height: inherit;
+		color: inherit;
+		font-size: 1em;
+		background: transparent;
+		margin: 0;
+		padding: 0;
+		top: 0;
+		border: 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
+mark {
+	color: darken(@duck, 30%);
+	background-color: fade(@duck, 50%);
+	padding: .1875em .25em; // 3px 4px
+}
+
+s {
+	color: @gray6;
+	-webkit-text-decoration-color: @chili;
+	   -moz-text-decoration-color: @chili;
+	        text-decoration-color: @chili;
+}
+
+/**
+ * The `<samp>` element represents (sample) output from a program or
+ * computing system.
+ *
+ * @see https://developer.mozilla.org/docs/web/html/element/samp
+ * @see http://dev.w3.org/html5/spec#the-samp-element
+ * @see http://ç.whatwg.org#the-samp-element
+ */
+
+samp {
+	font-family: @mono;
+	color: @milk;
+	line-height: 0;
+	text-shadow: 0 .0625rem 0 @raven; // 0 1px 0
+	background: fade(@gray2, 75%);
+	padding: .125rem .3125rem; // 2px 5px
+	position: relative;
+}
+
+del,
+ins {
+	line-height: 0;
+	border-radius: .1875rem; // 3px
+	padding: .125rem .3125rem; // 2px 5px
+	position: relative;
+}
+del {
+	color: darken(@chili, 20%);
+	background-color: fade(@chili, 25%);
+}
+ins {
+	text-decoration: none;
+	color: darken(@frog, 20%);
+	background-color: fade(@frog, 25%);
+}
+
+.table {
+	margin: .625rem 0; // 10px 0
+	width: 100%;
+}
+	.table caption {
+		color: @gray3;
+		text-align: left;
+	}
+	.table thead { vertical-align: bottom; }
+	.table tfoot th,
+	.table tfoot td { color: @gray3; }
+	.table th,
+	.table td {
+		text-align: left;
+		padding-right: .625rem; // 10px
+		padding-left: .625rem; // 10px
+	}
+	.table th:first-child,
+	.table td:first-child { padding-left: 0; }
+	.table th:last-child,
+	.table td:last-child { padding-right: 0; }
+	.table th { white-space: nowrap; }
+	.table tbody { vertical-align: top; }
+
+.table-border-x thead th,
+.table-border-x tbody th,
+.table-border-x tbody td { border-bottom: .0625rem solid fade(@raven, 25%); }
+/*
+.table-border-x th:empty,
+.table-border-x td:empty {
+	border-bottom: 0;
+}
+*/
+.table-border-x tfoot th,
+.table-border-x tfoot td { border-top: .0625rem solid fade(@raven, 25%); }
+.table-border-x tbody tr:last-child th,
+.table-border-x tbody tr:last-child td { border-bottom: 0; }
+
+.table-border-y th,
+.table-border-y td {
+	border-right: .0625rem solid fade(@raven, 25%); // 1px
+	border-left: .0625rem solid fade(@raven, 25%); // 1px
+}
+	.table-border-y th:first-child,
+	.table-border-y td:first-child { border-left: 0; }
+	.table-border-y th:last-child,
+	.table-border-y td:last-child { border-right: 0; }
+
+legend {
+	font-weight: bold;
+	letter-spacing: -.01em;
+	border-bottom: .0625rem solid @gray9; // 1px
+}
+
+.form input[type="color"] {
+	box-sizing: content-box;
+	padding-top: .1875em;
+	padding-bottom: .1875em;
+}
+
+.form textarea {
+	height: 15rem;
+	display: block;
+	width: 100%;
+	padding: .3125rem; // 5px
+}
+/*
+.form fieldset > div {
+	margin: .625rem 0;
+}
+.form label {
+	font-size: .875rem; // 14px
+	line-height: 1.71428571428571;
+	xfont-weight: bold;
+	color: @gray6;
+	xtext-transform: uppercase;
+	letter-spacing: .05em;
+}
+.form input[type="text"],
+.form input[type="tel"] {
+	color: @gray3;
+	line-height: 2.25;
+	letter-spacing: .05em;
+	border: 1px solid fade(@raven, 20%);
+	padding: 0 .75rem;
+	background: fade(@raven, 1%);
+	box-shadow: inset 0 .1em .2em .1em fade(@raven, 10%);
+	width: 50%;
+	height: 2.25rem;
+	border-radius: .1875rem;
+	display: block;
+}
+*/
+
+.swatches {
+	margin: .625rem 0; // 10 0
+	text-align: center;
+}
+	.swatches-swatch {
+		font-size: .875rem; // 14px
+		line-height: 1.28571428571428; // ((((1.5 / .875) = 1.71428571428571) * .75) = 1.28571428571428)
+		padding: .64285714285714rem 0; // (1.28571428571428 / 2) = .64285714285714
+		margin: .3125rem 0; // 5px 0
+		border: .0625rem solid fade(@raven, 10%); // 1px
+	}
+		.swatches-swatch code {
+			color: @milk;
+			background: fade(@raven, 30%);
+			border: .0625rem solid fade(@raven, 35%); // 1px
+		}
+	.milk    { background: @milk;    }
+	.bling   { background: @bling;   }
+	.goblin  { background: @goblin;  }
+	.hulk    { background: @hulk;    }
+	.prius   { background: @prius;   }
+	.smurf   { background: @smurf;   }
+	.lobster { background: @lobster; }
+	.bruise  { background: @bruise;  }
+	.raven   { background: @raven;   }
+	.graye   { background: @graye;   }
+	.grayd   { background: @grayd;   }
+	.grayc   { background: @grayc;   }
+	.grayb   { background: @grayb;   }
+	.graya   { background: @graya;   }
+	.gray9   { background: @gray9;   }
+	.gray8   { background: @gray8;   }
+	.gray7   { background: @gray7;   }
+	.gray6   { background: @gray6;   }
+	.gray5   { background: @gray5;   }
+	.gray4   { background: @gray4;   }
+	.gray3   { background: @gray3;   }
+	.gray2   { background: @gray2;   }
+	.gray1   { background: @gray1;   }
+	.duck    { background: @duck;    }
+	.chili   { background: @chili;   }
+	.frog    { background: @frog;    }
+
+/**
+ * <header id="flag"><div><h1>M<span>icky Hulse</span></h1><div></header>
+ *
+ * @see http://jsfiddle.net/Nalum/46pHK/
+ * @see http://jsfiddle.net/R2UkY/
+ */
+
+#flag {
+	position: relative;
+	height: 11.5625rem; /* 185px */
+}
+	#flag div {
+		position: absolute;
+		top: 1.25rem; /* 20px */
+		left: 50%;
+	}
+	#flag h1 {
+		font: 7.8125rem/1 "Hulse", Arial, sans-serif; /* 125px */
+		color: @smurf;
+		position: relative;
+		left: -50%;
+	}
+	#flag span {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
+	#flag a,
+	#flag a:visited { color: @smurf; }
+	#flag a:visited:hover,
+	#flag a:focus,
+	#flag a:focus:hover,
+	#flag a:hover,
+	#flag a:active {
+		color: lighten(@smurf, 20%);
+		text-decoration: none;
+	}
+	#flag a:active,
+	#flag a:focus { outline: none; }
+@media all and (min-width: 45em) { /* (720px / 16) = 45em */
+	#flag div { left: 0; }
+	#flag h1 {
+		font-size: 6.25rem; /* 100px */
+		left: -1.3125rem; /* 21px */
+	}
+}
+
+/*----------------------------------( SELECTION )----------------------------------*/
+
+::-moz-selection {
+	background: fade(lighten(@bruise, 40%), 75%);
+	text-shadow: none;
+}
+::selection {
+	background: fade(lighten(@bruise, 40%), 75%);
+	text-shadow: none;
+}
