@@ -2,6 +2,6 @@
   "name": "picard",
   "version": "0.0.0",
   "dependencies": {
-    "https://github.com/mhulse/stoops.git": "0.1.0"
+    "https://github.com/mhulse/rex.git": "1.0.0"
   }
 }

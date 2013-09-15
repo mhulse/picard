@@ -1,0 +1,31 @@
+{
+  "title": "Picard",
+  "name": "picard",
+  "description": "Make it so.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/mhulse/picard",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mhulse/picard.git"
+  },
+  "author": {
+    "name": "Micky Hulse",
+    "url": "http://mhulse.com"
+  },
+  "licenses": [
+    {
+      "type": "No License",
+      "url": "http://choosealicense.com/licenses/no-license/"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/mhulse/picard/issues"
+  },
+  "dependencies": {
+    "grunt": "0.4.1",
+    "grunt-contrib-jshint": "0.6.4",
+    "grunt-contrib-sass": "0.5.0",
+    "grunt-bower-task": "0.3.2"
+  },
+  "devDependencies": {}
+}
