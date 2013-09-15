@@ -13,3 +13,168 @@ legend {
 thead { vertical-align: bottom; }
 
 tfoot { vertical-align: top; }
+
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.fix:before,
+.fix:after {
+content: " ";
+display: table;
+}
+.fix:after { clear: both; }
+.fix { *zoom: 1; }
+
+.gone {
+display: none !important;
+visibility: hidden;
+}
+
+.off {
+border: 0;
+clip: rect(0 0 0 0);
+height: 1px;
+margin: -1px;
+overflow: hidden;
+padding: 0;
+position: absolute;
+width: 1px;
+}
+
+.ghost { visibility: hidden; }
+
+.force {
+margin-top: -1px;
+margin-bottom: -1px;
+padding: 1px 0;
+}
+
+.nono { word-wrap: break-word; }
+
+body {
+	-webkit-font-smoothing: antialiased;
+	        font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+// Used for `title`-free sections.
+//
+// `<h1></h1> <!-- Testing `:empty` pseudo-class. -->`
+//
+// @see https://developer.mozilla.org/en-US/docs/Web/CSS/:empty
+// @see http://camendesign.com/design/design.css
+
+h1:empty { display: none; }
+
+span {
+	
+	// The italic version of an ampersand is more decorative and interesting
+	// than its roman counterpart.
+	//
+	// @see http://simplebits.com/notebook/2008/08/14/ampersands-2/
+	// @see http://fluidbaselinegrid.com/css/style.css
+	
+	&.amp {
+		font-size: 110%;
+		font-family: adobe-caslon-pro, Adobe Caslon Pro, Baskerville, "Goudy Old Style", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", Times, serif;;
+		font-weight: 400;
+		line-height: 0;
+		vertical-align: baseline;
+		position: relative;
+	}
+	
+}
+
+
+ins {
+	
+	text-decoration: none;
+	
+	&:before { content: "["; }
+	&:after { content: "]"; }
+	
+}
+
+
+
+abbr {
+	
+	font-style: italic;
+	cursor: help;
+	
+	&[title] { border-bottom: 1px dotted; }
+	
+	&[title="et cetera"] { font-family: "Hoefler Text", Palatino, Constantia, "Palatino Linotype", cursive; }
+	
+}
+
+cite { font-style: italic; }
+
+dfn {
+	
+	font-weight: bold;
+	font-style: italic;
+	
+	&[title] {
+		border-bottom: 1px dotted;
+		cursor: help;
+	}
+	
+}
+
+img {
+	
+	max-width: 100%;
+	max-height: 100%;
+	vertical-align: middle;
+	
+	&.reset {
+		max-width: none;
+		max-height: none;
+	}
+	
+}
+
+// Simple solution for responsive tables.
+//
+// @see http://www.maxdesign.com.au/2013/03/22/simple-responsive-table/
+// @see http://creativeandcode.com/simple-solution-for-responsive-tables/
+
+.scroll {
+	
+	width: 100%;
+	margin: 10px 0;
+	overflow-y: auto;
+	/*-webkit-overflow-scrolling: touch;*/
+	
+	& > * { margin: 0 !important; }
+	
+}
+
+wbr {
+	&:after { content: "\00200B"; }
+}
+
+pre {
+	word-wrap: normal;
+	overflow: auto;
+	white-space: pre;
+	/*-webkit-overflow-scrolling: touch;*/
+}
+
+code {
+	white-space: pre;           // CSS 2.0
+	white-space: pre-wrap;      // CSS 2.1
+	white-space: pre-line;      // CSS 3.0
+	white-space: -pre-wrap;     // Opera 4-6
+	white-space: -o-pre-wrap;   // Opera 7
+	white-space: -moz-pre-wrap; // Mozilla
+	white-space: -hp-pre-wrap;  // HP Printers
+	word-wrap: break-word;      // IE 5+
+}
