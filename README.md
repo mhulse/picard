@@ -1,14 +1,11 @@
 # Picard
 
 [![ScreenShot](picard.gif)](http://www.youtube.com/watch?v=-ZxHAZChcYU)
-**Make it so.**
+
+**Captain's Log, Stardate 41235.25.**  
+Our location, planet Git Hub. Source of a rare repository needed on Federation website [mhulse.com](http://mhulse.com).  
+Starfleet has instructed me to engage in a friendly visit and open treaty negotiations to acquire this digital substance.
 
 ---
-
-More information coming soon.
-
----
-
-#### LEGAL
 
 Copyright &copy; 2013 [Micky Hulse](http://mhulse.com)
