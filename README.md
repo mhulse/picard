@@ -1,5 +1,12 @@
 # Picard
 
+[![ScreenShot](picard.gif)](http://www.youtube.com/watch?v=-ZxHAZChcYU)
+**Make it so.**
+
+---
+
+More information coming soon.
+
 ---
 
 #### LEGAL
