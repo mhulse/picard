@@ -1,3 +1,14 @@
+@import "variables",
+        "rex/functions",
+        "rex/mixins",
+        "rex/variables";
+
+.container {
+	margin: 0 auto;
+	padding: 20px;
+	max-width: 680px;
+}
+
 .marker {
 	@include baseline(22, .875, $optional: bold, $family: "Arial, sans-serif");
 	color: $milk;

@@ -1,0 +1,148 @@
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 680px;
+}
+
+.marker {
+  font: bold 1.375rem/0.95454545454545 Arial, sans-serif;
+  color: white;
+  text-transform: none;
+  background: rgba(0, 0, 0, 0.85);
+  margin: 0.75rem 0;
+  padding: 0.47727272727273em;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.55);
+}
+
+.subtle {
+  font: normal 1.1875rem/1.10526315789474 monospace, serif;
+  color: #666666;
+  margin: 0.75rem 0;
+}
+
+.swatches {
+  margin: 0.625rem 0;
+  text-align: center;
+}
+
+.swatches-swatch {
+  font-size: 0.875rem;
+  line-height: 1.28571428571429;
+  padding: 0.64285714285714em 0;
+  padding: .64285714285714rem 0;
+  margin: 0.3125rem 0;
+  border: 0.0625rem solid rgba(0, 0, 0, 0.1);
+}
+
+.swatches-swatch code {
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  border: 0.0625rem solid rgba(0, 0, 0, 0.35);
+}
+
+.milk {
+  background: white;
+}
+
+.bling {
+  background: #ffd100;
+}
+
+.goblin {
+  background: #9ea301;
+}
+
+.hulk {
+  background: #4e801c;
+}
+
+.prius {
+  background: #5e8da1;
+}
+
+.smurf {
+  background: #13aac9;
+}
+
+.lobster {
+  background: #cc3300;
+}
+
+.bruise {
+  background: #490a3d;
+}
+
+.raven {
+  background: black;
+}
+
+.graye {
+  background: #eeeeee;
+}
+
+.grayd {
+  background: #dddddd;
+}
+
+.grayc {
+  background: #cccccc;
+}
+
+.grayb {
+  background: #bbbbbb;
+}
+
+.graya {
+  background: #aaaaaa;
+}
+
+.gray9 {
+  background: #999999;
+}
+
+.gray8 {
+  background: #888888;
+}
+
+.gray7 {
+  background: #777777;
+}
+
+.gray6 {
+  background: #666666;
+}
+
+.gray5 {
+  background: #555555;
+}
+
+.gray4 {
+  background: #444444;
+}
+
+.gray3 {
+  background: #333333;
+}
+
+.gray2 {
+  background: #222222;
+}
+
+.gray1 {
+  background: #111111;
+}
+
+.duck {
+  background: yellow;
+}
+
+.chili {
+  background: red;
+}
+
+.frog {
+  background: #009933;
+}

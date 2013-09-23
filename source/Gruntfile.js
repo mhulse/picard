@@ -165,7 +165,6 @@ module.exports = function(grunt) {
 				noCache: true,      // Don't cache to sassc files.
 				precision : 14,     // How many digits of precision to use when outputting decimal numbers.
 				style : 'expanded', // Output style. Can be nested, compact, compressed, expanded.
-				trace: true,        // Show a full traceback on error.
 				
 			},
 			
@@ -174,6 +173,7 @@ module.exports = function(grunt) {
 				files : {
 					
 					'../dev/<%= pkg.name %>.css' : './files/styles/<%= pkg.name %>.scss',
+					'../dev/development.css' : './files/styles/development.scss',
 					
 				},
 				
@@ -215,6 +215,31 @@ module.exports = function(grunt) {
 			
 		},
 		
+		/*----------------------------------( COPY )----------------------------------*/
+		
+		/**
+		 * Copy files and folders.
+		 *
+		 * @see https://github.com/gruntjs/grunt-contrib-copy
+		 * @see http://gruntjs.com/configuring-tasks#globbing-patterns
+		 */
+		
+		copy : {
+			
+			dev : {
+				
+				filter : 'isFile',
+				expand : true,
+				cwd : './files/fonts/hulse2/',
+				src : [
+					'**/*',
+				],
+				dest : '../dev/font/',
+				
+			},
+			
+		},
+		
 	});
 	
 	/*----------------------------------( TASKS )----------------------------------*/
@@ -224,6 +249,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	
 	grunt.loadNpmTasks('grunt-contrib-clean');
+	
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	
@@ -246,7 +273,7 @@ module.exports = function(grunt) {
 	
 	grunt.registerTask('init', ['jshint',]);
 	
-	grunt.registerTask('dev', ['env:dev', 'clean:dev', 'sass:dev', 'preprocess:dev',]);
+	grunt.registerTask('dev', ['env:dev', 'clean:dev', 'sass:dev', 'preprocess:dev', 'copy:dev',]);
 	
 	grunt.registerTask('default', ['init', 'dev',]);
 	
