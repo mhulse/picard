@@ -1,1 +1,5 @@
-@import "variables", "master", "pending";
+@import 
+        "variables",
+        "normalize",
+        "../plugins/rex/scss/rex.scss",
+        "development";

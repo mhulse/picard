@@ -1,0 +1,66 @@
+.marker {
+	@include baseline(22, .875, $optional: bold, $family: "Arial, sans-serif");
+	color: $milk;
+	text-transform: none;
+	background: fade-out($raven, .15);
+	margin: #{relative(12)}rem 0;
+	padding: #{baseline(22, .875) / 2}em;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	box-shadow: 0 0 #{relative(5)}rem 0 fade-out($raven, .45);
+}
+
+.subtle {
+	@include baseline(19, .875, $optional: normal, $family: "monospace, serif");
+	color: $gray6;
+	margin: #{relative(12)}rem 0;
+}
+
+// `:xxx` = pseudo-class & `::xxx` = pseudo-element.
+//
+// @see http://reference.sitepoint.com/css/pseudoclasses
+// @see http://reference.sitepoint.com/css/pseudoelements
+
+.swatches {
+	margin: #{relative(10)}rem 0;
+	text-align: center;
+}
+	.swatches-swatch {
+		@include baseline(14, .75);
+		padding: #{baseline(14, .75) / 2}em 0;
+		padding: .64285714285714rem 0; // (1.28571428571428 / 2) = .64285714285714
+		margin: #{relative(5)}rem 0; // 5px 0
+		border: #{relative(1)}rem solid fade-out($raven, .9); // 1px
+	}
+		.swatches-swatch code {
+			color: $milk;
+			background: fade-out($raven, .7);
+			border: #{relative(1)}rem solid fade-out($raven, .65); // 1px
+		}
+	.milk    { background: $milk;    }
+	.bling   { background: $bling;   }
+	.goblin  { background: $goblin;  }
+	.hulk    { background: $hulk;    }
+	.prius   { background: $prius;   }
+	.smurf   { background: $smurf;   }
+	.lobster { background: $lobster; }
+	.bruise  { background: $bruise;  }
+	.raven   { background: $raven;   }
+	.graye   { background: $graye;   }
+	.grayd   { background: $grayd;   }
+	.grayc   { background: $grayc;   }
+	.grayb   { background: $grayb;   }
+	.graya   { background: $graya;   }
+	.gray9   { background: $gray9;   }
+	.gray8   { background: $gray8;   }
+	.gray7   { background: $gray7;   }
+	.gray6   { background: $gray6;   }
+	.gray5   { background: $gray5;   }
+	.gray4   { background: $gray4;   }
+	.gray3   { background: $gray3;   }
+	.gray2   { background: $gray2;   }
+	.gray1   { background: $gray1;   }
+	.duck    { background: $duck;    }
+	.chili   { background: $chili;   }
+	.frog    { background: $frog;    }

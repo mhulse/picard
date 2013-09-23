@@ -1,20 +1,18 @@
-/**
- * Color scheme for Picard!
- *
- *        |          |         |                        |                        |
- *  white | $milk    | #fff    | rgba(255, 255, 255, 1) | hsla(0, 0, 100%, 1)    |
- *   gold | $bling   | #ffd100 | rgba(255, 209, 0, 1)   | hsla(49, 100%, 50%, 1) |
- *  olive | $goblin  | #9ea301 | rgba(158, 163, 1, 1)   | hsla(62, 99%, 32%, 1)  |
- *  green | $hulk    | #4e801c | rgba(78, 128, 28, 1)   | hsla(90, 64%, 31%, 1)  |
- *   teal | $prius   | #5e8da1 | rgba(94, 141, 161, 1)  | hsla(198, 26%, 50%, 1) |
- *   blue | $smurf   | #13aac9 | rgba(19, 170, 201, 1)  | hsla(190, 83%, 43%, 1) |
- * orange | $lobster | #c30    | rgba(204, 51, 0, 1)    | hsla(15, 100%, 40%, 1) |
- * purple | $bruise  | #490a3d | rgba(73, 10, 61, 1)    | hsla(311, 76%, 16%, 1) |
- *  black | $raven   | #000    | rgba(0, 0, 0, 1)       | hsla(0, 0, 0, 1)       |
- *        |          |         |                        |                        |
- */
+// Color scheme for Picard!
+//
+//        |          |         |                        |                        |
+//  white | $milk    | #fff    | rgba(255, 255, 255, 1) | hsla(0, 0, 100%, 1)    |
+//   gold | $bling   | #ffd100 | rgba(255, 209, 0, 1)   | hsla(49, 100%, 50%, 1) |
+//  olive | $goblin  | #9ea301 | rgba(158, 163, 1, 1)   | hsla(62, 99%, 32%, 1)  |
+//  green | $hulk    | #4e801c | rgba(78, 128, 28, 1)   | hsla(90, 64%, 31%, 1)  |
+//   teal | $prius   | #5e8da1 | rgba(94, 141, 161, 1)  | hsla(198, 26%, 50%, 1) |
+//   blue | $smurf   | #13aac9 | rgba(19, 170, 201, 1)  | hsla(190, 83%, 43%, 1) |
+// orange | $lobster | #c30    | rgba(204, 51, 0, 1)    | hsla(15, 100%, 40%, 1) |
+// purple | $bruise  | #490a3d | rgba(73, 10, 61, 1)    | hsla(311, 76%, 16%, 1) |
+//  black | $raven   | #000    | rgba(0, 0, 0, 1)       | hsla(0, 0, 0, 1)       |
+//        |          |         |                        |                        |
 
-// Primary:
+// Base:
 $milk: #fff;
 $bling: #ffd100;
 $goblin: #9ea301;
@@ -25,7 +23,7 @@ $lobster: #c30;
 $bruise: #490a3d;
 $raven: #000;
 
-// Grays:
+// Gray:
 $graye: #eee;
 $grayd: #ddd;
 $grayc: #ccc;
@@ -41,7 +39,7 @@ $gray3: #333;
 $gray2: #222;
 $gray1: #111;
 
-// Misc:
+// Other:
 $duck: #ff0;
 $chili: #f00;
 $frog: #093;

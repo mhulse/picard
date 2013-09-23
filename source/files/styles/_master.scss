@@ -328,49 +328,6 @@ legend {
 }
 */
 
-.swatches {
-	margin: .625rem 0; // 10 0
-	text-align: center;
-}
-	.swatches-swatch {
-		font-size: .875rem; // 14px
-		line-height: 1.28571428571428; // ((((1.5 / .875) = 1.71428571428571) * .75) = 1.28571428571428)
-		padding: .64285714285714rem 0; // (1.28571428571428 / 2) = .64285714285714
-		margin: .3125rem 0; // 5px 0
-		border: .0625rem solid fade(@raven, 10%); // 1px
-	}
-		.swatches-swatch code {
-			color: @milk;
-			background: fade(@raven, 30%);
-			border: .0625rem solid fade(@raven, 35%); // 1px
-		}
-	.milk    { background: @milk;    }
-	.bling   { background: @bling;   }
-	.goblin  { background: @goblin;  }
-	.hulk    { background: @hulk;    }
-	.prius   { background: @prius;   }
-	.smurf   { background: @smurf;   }
-	.lobster { background: @lobster; }
-	.bruise  { background: @bruise;  }
-	.raven   { background: @raven;   }
-	.graye   { background: @graye;   }
-	.grayd   { background: @grayd;   }
-	.grayc   { background: @grayc;   }
-	.grayb   { background: @grayb;   }
-	.graya   { background: @graya;   }
-	.gray9   { background: @gray9;   }
-	.gray8   { background: @gray8;   }
-	.gray7   { background: @gray7;   }
-	.gray6   { background: @gray6;   }
-	.gray5   { background: @gray5;   }
-	.gray4   { background: @gray4;   }
-	.gray3   { background: @gray3;   }
-	.gray2   { background: @gray2;   }
-	.gray1   { background: @gray1;   }
-	.duck    { background: @duck;    }
-	.chili   { background: @chili;   }
-	.frog    { background: @frog;    }
-
 /**
  * <header id="flag"><div><h1>M<span>icky Hulse</span></h1><div></header>
  *
