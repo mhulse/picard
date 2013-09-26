@@ -383,7 +383,7 @@ table {
   box-sizing: border-box;
 }
 
-.rex_baseline {
+.baseline {
   position: relative;
   cursor: pointer;
   cursor: hand;
@@ -399,7 +399,7 @@ table {
   -o-user-select: none;
   user-select: none;
 }
-.rex_baseline::before {
+.baseline::before {
   background-image: -webkit-linear-gradient(rgba(255, 0, 0, 0.75) 1px, transparent 1px), -webkit-linear-gradient(rgba(0, 255, 255, 0.75) 1px, transparent 1px), -webkit-linear-gradient(rgba(0, 255, 255, 0.25) 1px, transparent 1px);
   background-image: -moz-linear-gradient(rgba(255, 0, 0, 0.75) 1px, transparent 1px), -moz-linear-gradient(rgba(0, 255, 255, 0.75) 1px, transparent 1px), -moz-linear-gradient(rgba(0, 255, 255, 0.25) 1px, transparent 1px);
   background-image: linear-gradient(rgba(255, 0, 0, 0.75) 1px, transparent 1px), linear-gradient(rgba(0, 255, 255, 0.75) 1px, transparent 1px), linear-gradient(rgba(0, 255, 255, 0.25) 1px, transparent 1px);
@@ -416,10 +416,10 @@ table {
   content: "";
   pointer-events: none;
 }
-.rex_baseline:active::before {
+.baseline:active::before {
   display: none;
 }
-.rex_baseline:active * {
+.baseline:active * {
   box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.5);
 }
 
@@ -440,71 +440,71 @@ h3,
 h4,
 h5,
 h6,
-.rex_h1,
-.rex_h2,
-.rex_h3,
-.rex_h4,
-.rex_h5,
-.rex_h6,
-.rex_sh1,
-.rex_sh2,
-.rex_sh3,
-.rex_sh4,
-.rex_sh5,
-.rex_sh6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.sh1,
+.sh2,
+.sh3,
+.sh4,
+.sh5,
+.sh6 {
   font-size: 1rem;
   line-height: 1.5;
   margin: 0 0 .125em;
 }
 
 h1,
-.rex_h1,
-.rex_sh1 {
+.h1,
+.sh1 {
   font-size: 2.875rem;
   line-height: 1.04347826086957;
 }
 
 h2,
-.rex_h2,
-.rex_sh2 {
+.h2,
+.sh2 {
   font-size: 2.5rem;
   line-height: 1.05;
 }
 
 h3,
-.rex_h3,
-.rex_sh3 {
+.h3,
+.sh3 {
   font-size: 2.125rem;
   line-height: 1.05882352941176;
 }
 
 h4,
-.rex_h4,
-.rex_sh4 {
+.h4,
+.sh4 {
   font-size: 1.75rem;
   line-height: 1.07142857142857;
 }
 
 h5,
-.rex_h5,
-.rex_sh5 {
+.h5,
+.sh5 {
   font-size: 1.375rem;
   line-height: 1.09090909090909;
 }
 
 h6,
-.rex_h6,
-.rex_sh6 {
+.h6,
+.sh6 {
   font-size: 1.125rem;
   line-height: 1.16666666666667;
 }
 
-.rex_sh1,
-.rex_sh2,
-.rex_sh3,
-.rex_sh4,
-.rex_sh5,
-.rex_sh6 {
+.sh1,
+.sh2,
+.sh3,
+.sh4,
+.sh5,
+.sh6 {
   font-weight: normal;
 }
 
@@ -551,7 +551,7 @@ figure figcaption > :last-child {
 }
 
 hr,
-.rex_hr {
+.hr {
   border: 0;
   border-top-width: 0.0625rem;
   border-style: solid;
@@ -717,33 +717,27 @@ textarea {
 
 html {
   height: 100%;
-  /* Expand to height of browser window. */
   overflow-y: scroll;
-  /* Force scrollbar. */
 }
 
 body {
   font-family: Arial, sans-serif;
   color: black;
   background: white;
-  /* Initial height of `<html>`, but will expand taller if necessary: */
   min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 a {
   color: #13aac9;
   text-decoration: none;
 }
-
 a:visited {
   color: #13aac9;
 }
-
-a:visited:hover,
-a:focus,
-a:focus:hover,
-a:hover,
-a:active {
+a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
   color: #a31688;
   text-decoration: underline;
 }
@@ -785,16 +779,13 @@ blockquote {
   position: relative;
   border-radius: 0 .625rem .625rem 0;
 }
-
 blockquote p {
   color: #385561;
   font-style: italic;
 }
-
 blockquote footer {
   color: #4b7181;
 }
-
 @media all and (min-width: 45em) {
   blockquote:before {
     font: 6.25rem/1 Arial, sans-serif;
@@ -806,10 +797,10 @@ blockquote footer {
     top: -.125em;
   }
 }
+
 figure {
   font-family: Arial, sans-serif;
 }
-
 figure figcaption {
   color: #385561;
   background: #5e8da1;
@@ -854,10 +845,7 @@ pre {
   background: black;
   box-shadow: inset 0 0 0.625rem 0 black;
 }
-
-pre code,
-pre kbd,
-pre samp {
+pre code, pre kbd, pre samp {
   text-shadow: none;
   line-height: inherit;
   color: inherit;
@@ -870,12 +858,6 @@ pre samp {
   border-radius: 0;
   box-shadow: none;
 }
-
-/**
- * Blinking cursor.
- *
- * @see http://fredericiana.com/2012/11/04/html5-blink-tag/
- */
 pre .cursor {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
@@ -885,6 +867,19 @@ pre .cursor {
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: steps(2, start);
   animation-timing-function: steps(2, start);
+}
+pre .prompt {
+  color: black;
+}
+pre.terminal {
+  letter-spacing: .05em;
+  color: #30d259;
+  text-shadow: 0 0.0625rem 0 black;
+  background: #111111;
+  box-shadow: inset 0 0 0.3125rem 0 black;
+}
+pre.terminal .prompt {
+  color: #1c8181;
 }
 
 @-webkit-keyframes cursor-blink {
@@ -897,25 +892,6 @@ pre .cursor {
   80% {
     visibility: hidden;
   }
-}
-
-/**
- * Prompt style.
- */
-pre .prompt {
-  color: black;
-}
-
-pre.terminal {
-  letter-spacing: .05em;
-  color: #30d259;
-  text-shadow: 0 0.0625rem 0 black;
-  background: #111111;
-  box-shadow: inset 0 0 0.3125rem 0 black;
-}
-
-pre.terminal .prompt {
-  color: #1c8181;
 }
 
 code {
@@ -940,9 +916,7 @@ kbd {
   position: relative;
   box-shadow: 0 0.0625rem 0 black, 0 0 0 0.125rem white inset;
 }
-
-kbd kbd,
-kbd samp {
+kbd kbd, kbd samp {
   text-shadow: none;
   line-height: inherit;
   color: inherit;
@@ -1213,6 +1187,12 @@ legend {
 ::selection {
   background: #e43bc4;
   text-shadow: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 680px;
 }
 
 table {
