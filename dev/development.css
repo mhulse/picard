@@ -11,6 +11,20 @@
   box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.55);
 }
 
+.marker * {
+  text-shadow: none;
+  line-height: inherit;
+  color: inherit;
+  font-size: 1em;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 .subtle {
   font: normal 1.1875rem/1.10526315789474 monospace, serif;
   color: #666666;
@@ -22,19 +36,21 @@
   text-align: center;
 }
 
-.swatches-swatch {
+.swatches .swatches-swatch {
   font-size: 0.875rem;
   line-height: 1.28571428571429;
-  padding: 0.64285714285714em 0;
-  padding: .64285714285714rem 0;
-  margin: 0.3125rem 0;
   border: 0.0625rem solid rgba(0, 0, 0, 0.1);
+  margin: 0.3125rem 0;
+  padding: 0.64285714285714em;
 }
 
-.swatches-swatch code {
+.swatches code {
+  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  text-shadow: 0 0.0625em 0 rgba(0, 0, 0, 0.8);
   color: white;
-  background: rgba(0, 0, 0, 0.3);
-  border: 0.0625rem solid rgba(0, 0, 0, 0.35);
+  border: 0;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.1875em 0.3125em;
 }
 
 .milk {

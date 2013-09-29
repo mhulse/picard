@@ -15,6 +15,19 @@
 	*zoom: 1;
 	box-shadow: 0 0 #{relative(5)}rem 0 fade-out($raven, .45);
 }
+	.marker * {
+		text-shadow: none;
+		line-height: inherit;
+		color: inherit;
+		font-size: 1em;
+		background: transparent;
+		margin: 0;
+		padding: 0;
+		top: 0;
+		border: 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
 
 .subtle {
 	@include baseline(19, .875, $optional: normal, $family: "monospace, serif");
@@ -31,17 +44,19 @@
 	margin: #{relative(10)}rem 0;
 	text-align: center;
 }
-	.swatches-swatch {
+	.swatches .swatches-swatch {
 		@include baseline(14, .75);
-		padding: #{baseline(14, .75) / 2}em 0;
-		padding: .64285714285714rem 0; // (1.28571428571428 / 2) = .64285714285714
-		margin: #{relative(5)}rem 0; // 5px 0
-		border: #{relative(1)}rem solid fade-out($raven, .9); // 1px
+		border: #{relative(1)}rem solid fade-out($raven, .9);
+		margin: #{relative(5)}rem 0;
+		padding: #{baseline(14, .75) / 2}em;
 	}
-		.swatches-swatch code {
+		.swatches code {
+			font-family: $mono;
+			text-shadow: 0 #{relative(1)}em 0 fade-out($raven, .2);
 			color: $milk;
-			background: fade-out($raven, .7);
-			border: #{relative(1)}rem solid fade-out($raven, .65); // 1px
+			border: 0;
+			background: fade-out($raven, .5);
+			padding: #{relative(3)}em #{relative(5)}em;
 		}
 
 .milk    { background: $milk;    }
