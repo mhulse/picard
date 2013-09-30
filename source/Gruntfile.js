@@ -172,8 +172,8 @@ module.exports = function(grunt) {
 				
 				files : {
 					
-					'../dev/<%= pkg.name %>.css' : './files/styles/<%= pkg.name %>.scss',
-					'../dev/development.css' : './files/styles/development.scss',
+					'../dev/css/<%= pkg.name %>.css' : './files/styles/<%= pkg.name %>.scss',
+					'../dev/css/development.css' : './files/styles/development.scss',
 					
 				},
 				
@@ -228,13 +228,13 @@ module.exports = function(grunt) {
 			
 			dev : {
 				
-				filter : 'isFile',
 				expand : true,
-				cwd : './files/fonts/hulse2/',
+				cwd : './files/',
 				src : [
-					'**/*',
+					'images/**/*',
+					'fonts/**/*',
 				],
-				dest : '../dev/font/',
+				dest : '../dev/',
 				
 			},
 			

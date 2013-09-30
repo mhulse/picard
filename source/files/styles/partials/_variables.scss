@@ -1,3 +1,7 @@
+// Picard variables.
+//
+// @see http://www.awayback.com/revised-font-stack/
+
 // Color scheme for Picard!
 //
 //        |          |         |                        |                        |
@@ -44,11 +48,11 @@ $duck: #ff0;
 $chili: #f00;
 $frog: #093;
 
-// http://www.awayback.com/revised-font-stack/
 // Fonts:
-$sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans: Arial, sans-serif;
 $serif: Cambria, Georgia, serif;
 $mono: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
 $amp: adobe-caslon-pro, Adobe Caslon Pro, Baskerville, "Goudy Old Style", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", Times, serif;
 
+// Rex overrides:
 $NS: "";

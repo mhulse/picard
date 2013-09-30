@@ -720,7 +720,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   color: black;
   background: white;
   min-height: 100%;
@@ -794,10 +794,6 @@ blockquote {
   padding: 10px 10px 10px 20px;
   position: relative;
 }
-blockquote, blockquote p {
-  font-size: 1.125rem;
-  line-height: 1.16666666666667;
-}
 blockquote footer {
   font-size: smaller;
   font-weight: bold;
@@ -814,12 +810,21 @@ dl dt {
 }
 
 figure {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 figure figcaption {
-  color: #4b7181;
-  background: rgba(94, 141, 161, 0.2);
-  padding: 10px;
+  color: #cccccc;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 15px 20px;
+}
+figure p {
+  margin: 6px 0;
+}
+figure img {
+  background: black;
+}
+figure > * {
+  margin: 0;
 }
 
 hr, .hr {
