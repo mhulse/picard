@@ -809,19 +809,20 @@ dl dt {
   font-weight: bold;
 }
 
-figure {
-  font-family: Arial, sans-serif;
-}
 figure figcaption {
-  color: #cccccc;
-  background: rgba(0, 0, 0, 0.85);
-  padding: 15px 20px;
+  font-family: Cambria, Georgia, serif;
+  font-style: italic;
+  color: #666666;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(204, 204, 204, 0.25);
+  padding: 10px;
+}
+figure img + figcaption {
+  border-top: 0;
+  margin: 0;
 }
 figure p {
   margin: 6px 0;
-}
-figure img {
-  background: black;
 }
 figure > * {
   margin: 0;
@@ -833,8 +834,14 @@ hr, .hr {
 
 pre {
   color: #333333;
-  background: black;
-  box-shadow: inset 0 0 0.625rem 0 black;
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  word-wrap: normal;
+  overflow: auto;
+  white-space: pre;
+  /*-webkit-overflow-scrolling: touch;*/
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 10px;
 }
 pre code, pre kbd, pre samp {
   text-shadow: none;
@@ -865,9 +872,9 @@ pre .prompt {
 pre.terminal {
   letter-spacing: .05em;
   color: #30d259;
-  text-shadow: 0 0.0625rem 0 black;
+  text-shadow: 0 1px 0 black;
   background: #111111;
-  box-shadow: inset 0 0 0.3125rem 0 black;
+  box-shadow: inset 0 0 5px 0 black;
 }
 pre.terminal .prompt {
   color: #1c8181;
@@ -888,24 +895,32 @@ pre.terminal .prompt {
 code {
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
   color: #cc3300;
-  padding: 0 .25em;
+  padding: 0 4px;
   background: rgba(204, 51, 0, 0.1);
-  border: 0.0625rem solid rgba(204, 51, 0, 0.2);
-  border-radius: .1875rem;
+  border: 1px solid rgba(204, 51, 0, 0.2);
+  border-radius: 3px;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -hp-pre-wrap;
+  word-wrap: break-word;
 }
 
 kbd {
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
   line-height: 0;
-  text-shadow: 0 0.0625rem 0 white;
+  text-shadow: 0 1px 0 white;
   color: #333333;
   background: #eeeeee;
-  border: 0.0625rem solid #cccccc;
-  border-radius: .1875rem;
-  margin: 0 .125em;
-  padding: .0625em .3125em;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  margin: 0 2px;
+  padding: 1px 5px;
   position: relative;
-  box-shadow: 0 0.0625rem 0 black, 0 0 0 0.125rem white inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
 }
 kbd kbd, kbd samp {
   text-shadow: none;
@@ -923,8 +938,8 @@ kbd kbd, kbd samp {
 
 mark {
   color: #666600;
-  background-color: yellow;
-  padding: .1875em .25em;
+  background-color: rgba(255, 255, 0, 0.5);
+  padding: 3px 4px;
 }
 
 s {
@@ -938,9 +953,9 @@ samp {
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
   color: white;
   line-height: 0;
-  text-shadow: 0 0.0625rem 0 black;
-  background: #222222;
-  padding: .125rem .3125rem;
+  text-shadow: 0 1px 0 black;
+  background: rgba(34, 34, 34, 0.75);
+  padding: 2px 5px;
   position: relative;
 }
 
@@ -954,13 +969,13 @@ ins {
 
 del {
   color: #990000;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.25);
 }
 
 ins {
   text-decoration: none;
   color: #003311;
-  background-color: #009933;
+  background-color: rgba(0, 153, 51, 0.25);
 }
 
 .table {
@@ -1233,16 +1248,16 @@ span.amp {
   position: relative;
 }
 
+/*
 ins {
-  text-decoration: none;
+	
+	text-decoration: none;
+	
+	&:before { content: "["; }
+	&:after { content: "]"; }
+	
 }
-ins:before {
-  content: "[";
-}
-ins:after {
-  content: "]";
-}
-
+*/
 abbr {
   font-style: italic;
   cursor: help;
@@ -1289,22 +1304,4 @@ img.reset {
 
 wbr:after {
   content: "\00200B";
-}
-
-pre {
-  word-wrap: normal;
-  overflow: auto;
-  white-space: pre;
-  /*-webkit-overflow-scrolling: touch;*/
-}
-
-code {
-  white-space: pre;
-  white-space: pre-wrap;
-  white-space: pre-line;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -hp-pre-wrap;
-  word-wrap: break-word;
 }

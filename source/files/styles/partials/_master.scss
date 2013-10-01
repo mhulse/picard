@@ -31,7 +31,10 @@ a {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-family: $serif; }
-.sh1, .sh2, .sh3, .sh4, .sh5, .sh6 { font-family: $serif; font-style: italic; }
+.sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
+	font-family: $serif;
+	font-style: italic;
+}
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 .sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
 	
@@ -112,17 +115,21 @@ dl {
 
 figure {
 	
-	font-family: $sans;
-	
 	& figcaption {
-		color: $grayc;
-		background: fade-out($raven, .15);
-		padding: 15px 20px; // Should this value be multiples of 2 (like other thing's margins)?
+		font-family: $serif;
+		font-style: italic;
+		color: $gray6;
+		border: 1px solid fade-out($raven, .9);
+		background: fade-out($grayc, .75);
+		padding: 10px;
 	}
 	
-	& p { margin: 6px 0; } // Check how rex calculates `<p>` margins, and then half it.
+	& img + figcaption {
+		border-top: 0;
+		margin: 0;
+	}
 	
-	& img { background: $raven; }
+	& p { margin: 6px 0; }
 	
 	& > * { margin: 0;}
 	
@@ -135,8 +142,15 @@ hr, .hr { border-color: fade-out($bruise, .8); }
 pre {
 	
 	color: $gray3;
-	background: fade-in($raven, .025);
-	box-shadow: inset 0 0 .625rem 0 fade-in($raven, .15); // 10px
+	background: fade-out($raven, .95);
+	box-shadow: inset 0 0 10px 0 fade-out($raven, .85);
+	word-wrap: normal;
+	overflow: auto;
+	white-space: pre;
+	/*-webkit-overflow-scrolling: touch;*/
+	
+	border: 1px solid fade-out($raven, .75);
+	padding: 10px;
 	
 	& code,
 	& kbd,
@@ -177,9 +191,9 @@ pre {
 		
 		letter-spacing: .05em;
 		color: lighten(adjust-hue($hulk, 45), 20%);
-		text-shadow: 0 .0625rem 0 $raven; // 0 1px 0
+		text-shadow: 0 1px 0 $raven;
 		background: fade-in($gray1, .9);
-		box-shadow: inset 0 0 .3125rem 0 fade-in($raven, .5); // 5px
+		box-shadow: inset 0 0 5px 0 fade-in($raven, .5);
 		
 		& .prompt { color: lighten(adjust-hue($hulk, 90), .2); }
 		
@@ -194,26 +208,34 @@ pre {
 code {
 	font-family: $mono;
 	color: $lobster;
-	padding: 0 .25em; // 4px
+	padding: 0 4px;
 	background: fade-out($lobster, .9);
-	border: .0625rem solid fade-out($lobster, .8); // 1px
-	border-radius: .1875rem; // 3px
+	border: 1px solid fade-out($lobster, .8);
+	border-radius: 3px;
+	white-space: pre;           // CSS 2.0
+	white-space: pre-wrap;      // CSS 2.1
+	white-space: pre-line;      // CSS 3.0
+	white-space: -pre-wrap;     // Opera 4-6
+	white-space: -o-pre-wrap;   // Opera 7
+	white-space: -moz-pre-wrap; // Mozilla
+	white-space: -hp-pre-wrap;  // HP Printers
+	word-wrap: break-word;      // IE 5+
 }
 
 kbd {
 	font-family: $mono;
 	line-height: 0;
-	text-shadow: 0 .0625rem 0 $milk; // 0 1px 0
+	text-shadow: 0 1px 0 $milk;
 	color: $gray3;
 	background: $graye;
-	border: .0625rem solid $grayc; // 1px
-	border-radius: .1875rem; // 3px
-	margin: 0 .125em; // 0 2px
-	padding: .0625em .3125em; // 1px 5px
+	border: 1px solid $grayc;
+	border-radius: 3px;
+	margin: 0 2px;
+	padding: 1px 5px;
 	position: relative;
 	box-shadow:
-		0 .0625rem 0 fade-in($raven, .2), // 0 1px 0
-		0 0 0 .125rem $milk inset; // 0 0 0 2px
+		0 1px 0 fade-out($raven, .8),
+		0 0 0 2px $milk inset;
 	
 	& kbd,
 	& samp {
@@ -234,8 +256,8 @@ kbd {
 
 mark {
 	color: darken($duck, 30%);
-	background-color: fade-in($duck, .5);
-	padding: .1875em .25em; // 3px 4px
+	background-color: fade-out($duck, .5);
+	padding: 3px 4px;
 }
 
 s {
@@ -249,9 +271,9 @@ samp {
 	font-family: $mono;
 	color: $milk;
 	line-height: 0;
-	text-shadow: 0 .0625rem 0 $raven; // 0 1px 0
-	background: fade-in($gray2, .75);
-	padding: .125rem .3125rem; // 2px 5px
+	text-shadow: 0 1px 0 $raven;
+	background: fade-out($gray2, .25);
+	padding: 2px 5px;
 	position: relative;
 }
 
@@ -264,12 +286,12 @@ ins {
 }
 del {
 	color: darken($chili, 20%);
-	background-color: fade-in($chili, .25);
+	background-color: fade-out($chili, .75);
 }
 ins {
 	text-decoration: none;
 	color: darken($frog, 20%);
-	background-color: fade-in($frog, .25);
+	background-color: fade-out($frog, .75);
 }
 
 .table {
