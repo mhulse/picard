@@ -778,28 +778,30 @@ p.tight {
 }
 
 blockquote {
+  font: italic bold 1.125rem/1.33333333333333 Cambria, Georgia, serif;
+  text-align: center;
   color: #4b7181;
-  font-style: italic;
-  border-width: 0 0 0 10px;
+  border-width: 3px 0;
   border-style: solid;
-  border-color: rgba(94, 141, 161, 0.8);
-  background: rgba(94, 141, 161, 0.7);
-  background: -moz-linear-gradient(left, rgba(94, 141, 161, 0.2) 0, rgba(0, 0, 0, 0) 75%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(94, 141, 161, 0.2)), color-stop(75%, rgba(0, 0, 0, 0)));
-  background: -webkit-linear-gradient(left, rgba(94, 141, 161, 0.2) 0, rgba(0, 0, 0, 0) 75%);
-  background: -o-linear-gradient(left, rgba(94, 141, 161, 0.2) 0, rgba(0, 0, 0, 0) 75%);
-  background: -ms-linear-gradient(left, rgba(94, 141, 161, 0.2) 0, rgba(0, 0, 0, 0) 75%);
-  background: linear-gradient(to right, rgba(94, 141, 161, 0.2) 0, rgba(0, 0, 0, 0) 75%);
+  border-color: rgba(158, 187, 199, 0.5);
   margin: 12px 0;
-  padding: 10px 10px 10px 20px;
+  padding: 24px 48px;
   position: relative;
+}
+blockquote p {
+  font-size: inherit;
+  line-height: inherit;
+}
+blockquote code, blockquote samp, blockquote kbd {
+  font-size: 80%;
 }
 blockquote footer {
   font-size: smaller;
-  font-weight: bold;
+  font-weight: normal;
+  text-align: right;
+  color: #9ebbc7;
 }
 blockquote footer p {
-  font-size: inherit;
   margin: 0;
 }
 
@@ -813,8 +815,8 @@ figure figcaption {
   font-family: Cambria, Georgia, serif;
   font-style: italic;
   color: #666666;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgba(204, 204, 204, 0.25);
+  border: 1px solid rgba(158, 187, 199, 0.5);
+  background: rgba(94, 141, 161, 0.1);
   padding: 10px;
 }
 figure img + figcaption {
@@ -830,6 +832,31 @@ figure > * {
 
 hr, .hr {
   border-color: rgba(73, 10, 61, 0.2);
+  margin: 24px 0;
+}
+
+.hr1 {
+  border-width: 2px;
+}
+
+.hr2 {
+  border-width: 3px;
+}
+
+.hr3 {
+  border-width: 4px;
+}
+
+.hr4 {
+  border-width: 5px;
+}
+
+.hr5 {
+  border-width: 6px;
+}
+
+.hr6 {
+  border-width: 7px;
 }
 
 pre {
@@ -894,6 +921,7 @@ pre.terminal .prompt {
 
 code {
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  font-weight: normal;
   color: #cc3300;
   padding: 0 4px;
   background: rgba(204, 51, 0, 0.1);
@@ -911,6 +939,7 @@ code {
 
 kbd {
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  font-weight: normal;
   line-height: 0;
   text-shadow: 0 1px 0 white;
   color: #333333;
@@ -951,6 +980,7 @@ s {
 
 samp {
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  font-weight: normal;
   color: white;
   line-height: 0;
   text-shadow: 0 1px 0 black;

@@ -4,7 +4,7 @@
         "partials/rex/variables";
 
 .marker {
-	@include baseline(22, .875, $optional: bold, $family: "Arial, sans-serif");
+	@include baseline(22, .875, $optional: bold, $family: $sans);
 	color: $milk;
 	text-transform: none;
 	background: fade-out($raven, .15);
