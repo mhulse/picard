@@ -722,32 +722,28 @@ html {
 body {
   font-family: Arial, sans-serif;
   color: black;
-  background: white;
+  padding: 20px;
+  background: #eeeeee;
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-a {
+a, a:visited {
   color: #13aac9;
   text-decoration: none;
 }
-a:visited {
-  color: #13aac9;
-}
 a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
-  color: #a31688;
-  text-decoration: underline;
+  color: #084755;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: Cambria, Georgia, serif;
+  text-transform: uppercase;
 }
 
 .sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
-  font-family: Cambria, Georgia, serif;
-  font-style: italic;
+  text-transform: none;
 }
 
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a,
@@ -815,13 +811,7 @@ figure figcaption {
   font-family: Cambria, Georgia, serif;
   font-style: italic;
   color: #666666;
-  border: 1px solid rgba(158, 187, 199, 0.5);
-  background: rgba(94, 141, 161, 0.1);
-  padding: 10px;
-}
-figure img + figcaption {
-  border-top: 0;
-  margin: 0;
+  margin: 12px 0;
 }
 figure p {
   margin: 6px 0;
@@ -831,32 +821,8 @@ figure > * {
 }
 
 hr, .hr {
-  border-color: rgba(73, 10, 61, 0.2);
+  border-color: rgba(102, 102, 102, 0.25);
   margin: 24px 0;
-}
-
-.hr1 {
-  border-width: 2px;
-}
-
-.hr2 {
-  border-width: 3px;
-}
-
-.hr3 {
-  border-width: 4px;
-}
-
-.hr4 {
-  border-width: 5px;
-}
-
-.hr5 {
-  border-width: 6px;
-}
-
-.hr6 {
-  border-width: 7px;
 }
 
 pre {
@@ -1131,23 +1097,10 @@ legend {
  * @see http://jsfiddle.net/Nalum/46pHK/
  * @see http://jsfiddle.net/R2UkY/
  */
-#flag {
-  position: relative;
-  height: 11.5625rem;
-  /* 185px */
-}
-#flag div {
-  position: absolute;
-  top: 1.25rem;
-  /* 20px */
-  left: 50%;
-}
 #flag h1 {
-  font: 7.8125rem/1 "Hulse", Arial, sans-serif;
-  /* 125px */
-  color: #13aac9;
-  position: relative;
-  left: -50%;
+  font: 100px/1 "Hulse", Arial, sans-serif;
+  color: #333333;
+  text-align: center;
 }
 #flag span {
   border: 0;
@@ -1160,40 +1113,35 @@ legend {
   width: 1px;
 }
 #flag a, #flag a:visited {
-  color: #13aac9;
+  color: rgba(0, 0, 0, 0.5);
 }
 #flag a:visited:hover, #flag a:focus, #flag a:focus:hover, #flag a:hover, #flag a:active {
-  color: #53d4ef;
+  color: #13aac9;
   text-decoration: none;
 }
 #flag a:active, #flag a:focus {
   outline: none;
 }
-@media all and (min-width: 45em) {
-  #flag {
-    /* (720px / 16) = 45em */
-  }
-  #flag div {
-    left: 0;
-  }
-  #flag h1 {
-    font-size: 6.25rem;
-    /* 100px */
-    left: -1.3125rem;
-    /* 21px */
-  }
-}
 
 /*----------------------------------( SELECTION )----------------------------------*/
+::-moz-selection {
+  background: rgba(228, 59, 196, 0.25);
+  text-shadow: none;
+}
+
 ::selection {
-  background: #e43bc4;
+  background: rgba(228, 59, 196, 0.25);
   text-shadow: none;
 }
 
 .container {
-  margin: 0 auto;
-  padding: 20px;
-  max-width: 680px;
+  margin: 50px auto;
+  padding: 50px;
+  max-width: 800px;
+  border-width: 6px 3px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 table {

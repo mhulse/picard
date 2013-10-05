@@ -7,13 +7,13 @@
 	@include baseline(22, .875, $optional: bold, $family: $sans);
 	color: $milk;
 	text-transform: none;
+	letter-spacing: .05em;
 	background: fade-out($raven, .15);
-	margin: #{relative(12)}rem 0;
+	margin: 0 0 #{relative(24)}rem;
 	padding: #{baseline(22, .875) / 2}em;
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
-	box-shadow: 0 0 #{relative(5)}rem 0 fade-out($raven, .45);
 }
 	.marker * {
 		text-shadow: none;

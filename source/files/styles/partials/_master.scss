@@ -6,7 +6,8 @@ html {
 body {
 	font-family: $sans;
 	color: $raven;
-	background: $milk;
+	padding: 20px;
+	background: $graye;
 	min-height: 100%;
 	-webkit-font-smoothing: antialiased;
 	        font-smoothing: antialiased;
@@ -15,26 +16,21 @@ body {
 
 a {
 	
-	color: $smurf;
-	text-decoration: none;
-	
-	&:visited { color: $smurf; }
+	&,
+	&:visited {
+		color: $smurf;
+		text-decoration: none;
+	}
 	&:visited:hover,
 	&:focus,
 	&:focus:hover,
 	&:hover,
-	&:active {
-		color: lighten($bruise, 20%);
-		text-decoration: underline;
-	}
+	&:active { color: darken($smurf, 25%); }
 	
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-family: $serif; }
-.sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
-	font-family: $serif;
-	font-style: italic;
-}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { text-transform: uppercase; }
+.sh1, .sh2, .sh3, .sh4, .sh5, .sh6 { text-transform: none; }
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 .sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
 	
@@ -122,14 +118,7 @@ figure {
 		font-family: $serif;
 		font-style: italic;
 		color: $gray6;
-		border: 1px solid fade-out(lighten($prius, 20%), .5);
-		background: fade-out($prius, .9);
-		padding: 10px;
-	}
-	
-	& img + figcaption {
-		border-top: 0;
-		margin: 0;
+		margin: 12px 0;
 	}
 	
 	& p { margin: 6px 0; }
@@ -141,15 +130,9 @@ figure {
 img {  } // Add default margin to images? Probably don't want to, and just create custom classes.
 
 hr, .hr {
-	border-color: fade-out($bruise, .8);
+	border-color: fade-out($gray6, .75);
 	margin: 24px 0;
 }
-	.hr1 { border-width: 2px; }
-	.hr2 { border-width: 3px; }
-	.hr3 { border-width: 4px; }
-	.hr4 { border-width: 5px; }
-	.hr5 { border-width: 6px; }
-	.hr6 { border-width: 7px; }
 
 pre {
 	
@@ -421,20 +404,10 @@ legend {
 
 #flag {
 	
-	position: relative;
-	height: 11.5625rem; /* 185px */
-	
-	& div {
-		position: absolute;
-		top: 1.25rem; /* 20px */
-		left: 50%;
-	}
-	
 	& h1 {
-		font: 7.8125rem/1 "Hulse", Arial, sans-serif; /* 125px */
-		color: $smurf;
-		position: relative;
-		left: -50%;
+		font: 100px/1 "Hulse", Arial, sans-serif;
+		color: $gray3;
+		text-align: center;
 	}
 	
 	& span {
@@ -451,14 +424,14 @@ legend {
 	& a {
 		
 		&,
-		&:visited { color: $smurf; }
+		&:visited { color: fade-out($raven, .5); }
 		
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: lighten($smurf, 20%);
+			color: $smurf;
 			text-decoration: none;
 		}
 		
@@ -467,29 +440,26 @@ legend {
 		
 	}
 	
-	@media all and (min-width: 45em) { /* (720px / 16) = 45em */
-		
-		& div { left: 0; }
-		
-		& h1 {
-			font-size: 6.25rem; /* 100px */
-			left: -1.3125rem; /* 21px */
-		}
-		
-	}
-	
 }
 
 /*----------------------------------( SELECTION )----------------------------------*/
 
-::selection {
-	background: fade-in(lighten($bruise, 40%), .75);
+::-moz-selection {
+	background: fade-out(lighten($bruise, 40%), .75);
 	text-shadow: none;
 }
 
+::selection {
+	background: fade-out(lighten($bruise, 40%), .75);
+	text-shadow: none;
+}
 
 .container {
-	margin: 0 auto;
-	padding: 20px;
-	max-width: 680px;
+	margin: 50px auto;
+	padding: 50px;
+	max-width: 800px;
+	border-width: 6px 3px;
+	border-style: solid;
+	border-color: fade-out($raven, .9);
+	background: fade-out($milk, .1);
 }

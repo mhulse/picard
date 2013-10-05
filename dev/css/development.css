@@ -2,13 +2,13 @@
   font: bold 1.375rem/0.95454545454545 Arial, sans-serif;
   color: white;
   text-transform: none;
+  letter-spacing: .05em;
   background: rgba(0, 0, 0, 0.85);
-  margin: 0.75rem 0;
+  margin: 0 0 1.5rem;
   padding: 0.47727272727273em;
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.55);
 }
 
 .marker * {
