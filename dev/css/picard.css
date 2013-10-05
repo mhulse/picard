@@ -721,9 +721,9 @@ html {
 
 body {
   font-family: Arial, sans-serif;
-  color: black;
-  padding: 20px;
-  background: #eeeeee;
+  color: #666666;
+  background: white;
+  padding: 10px 10px;
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
@@ -731,11 +731,11 @@ body {
 }
 
 a, a:visited {
-  color: #13aac9;
+  color: black;
   text-decoration: none;
 }
 a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
-  color: #084755;
+  color: #cc3300;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -744,24 +744,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
   text-transform: none;
-}
-
-h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a,
-.sh1 a, .sh2 a, .sh3 a, .sh4 a, .sh5 a, .sh6 a {
-  color: #4e801c;
-}
-h1 a:visited, .h1 a:visited, h2 a:visited, .h2 a:visited, h3 a:visited, .h3 a:visited, h4 a:visited, .h4 a:visited, h5 a:visited, .h5 a:visited, h6 a:visited, .h6 a:visited,
-.sh1 a:visited, .sh2 a:visited, .sh3 a:visited, .sh4 a:visited, .sh5 a:visited, .sh6 a:visited {
-  color: #4e801c;
-}
-h1 a:visited:hover, h1 a:focus, h1 a:focus:hover, h1 a:hover, h1 a:active, .h1 a:visited:hover, .h1 a:focus, .h1 a:focus:hover, .h1 a:hover, .h1 a:active, h2 a:visited:hover, h2 a:focus, h2 a:focus:hover, h2 a:hover, h2 a:active, .h2 a:visited:hover, .h2 a:focus, .h2 a:focus:hover, .h2 a:hover, .h2 a:active, h3 a:visited:hover, h3 a:focus, h3 a:focus:hover, h3 a:hover, h3 a:active, .h3 a:visited:hover, .h3 a:focus, .h3 a:focus:hover, .h3 a:hover, .h3 a:active, h4 a:visited:hover, h4 a:focus, h4 a:focus:hover, h4 a:hover, h4 a:active, .h4 a:visited:hover, .h4 a:focus, .h4 a:focus:hover, .h4 a:hover, .h4 a:active, h5 a:visited:hover, h5 a:focus, h5 a:focus:hover, h5 a:hover, h5 a:active, .h5 a:visited:hover, .h5 a:focus, .h5 a:focus:hover, .h5 a:hover, .h5 a:active, h6 a:visited:hover, h6 a:focus, h6 a:focus:hover, h6 a:hover, h6 a:active, .h6 a:visited:hover, .h6 a:focus, .h6 a:focus:hover, .h6 a:hover, .h6 a:active,
-.sh1 a:visited:hover,
-.sh1 a:focus,
-.sh1 a:focus:hover,
-.sh1 a:hover,
-.sh1 a:active, .sh2 a:visited:hover, .sh2 a:focus, .sh2 a:focus:hover, .sh2 a:hover, .sh2 a:active, .sh3 a:visited:hover, .sh3 a:focus, .sh3 a:focus:hover, .sh3 a:hover, .sh3 a:active, .sh4 a:visited:hover, .sh4 a:focus, .sh4 a:focus:hover, .sh4 a:hover, .sh4 a:active, .sh5 a:visited:hover, .sh5 a:focus, .sh5 a:focus:hover, .sh5 a:hover, .sh5 a:active, .sh6 a:visited:hover, .sh6 a:focus, .sh6 a:focus:hover, .sh6 a:hover, .sh6 a:active {
-  color: #9ea301;
-  text-decoration: none;
 }
 
 h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
@@ -774,14 +756,10 @@ p.tight {
 }
 
 blockquote {
-  font: italic bold 1.125rem/1.33333333333333 Cambria, Georgia, serif;
-  text-align: center;
-  color: #4b7181;
-  border-width: 3px 0;
-  border-style: solid;
-  border-color: rgba(158, 187, 199, 0.5);
-  margin: 12px 0;
-  padding: 24px 48px;
+  font: italic 1.125rem/1.33333333333333 Cambria, Georgia, serif;
+  border-left: 5px solid black;
+  margin: 24px 0;
+  padding: 0 0 0 12px;
   position: relative;
 }
 blockquote p {
@@ -794,8 +772,7 @@ blockquote code, blockquote samp, blockquote kbd {
 blockquote footer {
   font-size: smaller;
   font-weight: normal;
-  text-align: right;
-  color: #9ebbc7;
+  color: #666666;
 }
 blockquote footer p {
   margin: 0;
@@ -807,11 +784,29 @@ dl dt {
   font-weight: bold;
 }
 
+figure img {
+  border: 1px solid #333333;
+  padding: 3px;
+  background: #666666;
+}
+figure img + figcaption {
+  margin-top: 0;
+}
 figure figcaption {
-  font-family: Cambria, Georgia, serif;
-  font-style: italic;
-  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  color: #999999;
+  background: #333333;
+  padding: 12px;
   margin: 12px 0;
+  text-shadow: 0 1px 0 black;
+}
+figure figcaption a, figure figcaption a:visited {
+  color: white;
+  text-decoration: none;
+}
+figure figcaption a:visited:hover, figure figcaption a:focus, figure figcaption a:focus:hover, figure figcaption a:hover, figure figcaption a:active {
+  color: #13aac9;
 }
 figure p {
   margin: 6px 0;
@@ -888,10 +883,10 @@ pre.terminal .prompt {
 code {
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
   font-weight: normal;
-  color: #cc3300;
+  color: #333333;
   padding: 0 4px;
-  background: rgba(204, 51, 0, 0.1);
-  border: 1px solid rgba(204, 51, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   white-space: pre;
   white-space: pre-wrap;
@@ -932,16 +927,17 @@ kbd kbd, kbd samp {
 }
 
 mark {
-  color: #666600;
-  background-color: rgba(255, 255, 0, 0.5);
+  color: #333333;
+  background: none;
   padding: 3px 4px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-s {
-  color: #666666;
-  -webkit-text-decoration-color: red;
-  -moz-text-decoration-color: red;
-  text-decoration-color: red;
+s,
+del {
+  -webkit-text-decoration-color: #cc3300;
+  -moz-text-decoration-color: #cc3300;
+  text-decoration-color: #cc3300;
 }
 
 samp {
@@ -961,11 +957,6 @@ ins {
   border-radius: .1875rem;
   padding: .125rem .3125rem;
   position: relative;
-}
-
-del {
-  color: #990000;
-  background-color: rgba(255, 0, 0, 0.25);
 }
 
 ins {
@@ -1070,9 +1061,7 @@ legend {
 .form label {
   font-size: .875rem;
   line-height: 1.71428571428571;
-  xfont-weight: bold;
   color: #666666;
-  xtext-transform: uppercase;
   letter-spacing: .05em;
 }
 
@@ -1097,10 +1086,12 @@ legend {
  * @see http://jsfiddle.net/Nalum/46pHK/
  * @see http://jsfiddle.net/R2UkY/
  */
+#flag {
+  height: 400px;
+}
 #flag h1 {
-  font: 100px/1 "Hulse", Arial, sans-serif;
-  color: #333333;
-  text-align: center;
+  font: 65px/1 "Hulse", Arial, sans-serif;
+  margin: 0 0 0 -10px;
 }
 #flag span {
   border: 0;
@@ -1113,10 +1104,10 @@ legend {
   width: 1px;
 }
 #flag a, #flag a:visited {
-  color: rgba(0, 0, 0, 0.5);
+  color: black;
 }
 #flag a:visited:hover, #flag a:focus, #flag a:focus:hover, #flag a:hover, #flag a:active {
-  color: #13aac9;
+  color: #cc3300;
   text-decoration: none;
 }
 #flag a:active, #flag a:focus {
@@ -1134,14 +1125,9 @@ legend {
   text-shadow: none;
 }
 
-.container {
-  margin: 50px auto;
-  padding: 50px;
+.x {
   max-width: 800px;
-  border-width: 6px 3px;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.9);
+  padding: 50px;
 }
 
 table {

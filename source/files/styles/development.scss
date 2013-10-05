@@ -9,7 +9,7 @@
 	text-transform: none;
 	letter-spacing: .05em;
 	background: fade-out($raven, .15);
-	margin: 0 0 #{relative(24)}rem;
+	margin: #{relative(24)}rem 0;
 	padding: #{baseline(22, .875) / 2}em;
 	display: inline-block;
 	*display: inline;

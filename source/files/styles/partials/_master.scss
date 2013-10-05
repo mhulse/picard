@@ -5,9 +5,9 @@ html {
 
 body {
 	font-family: $sans;
-	color: $raven;
-	padding: 20px;
-	background: $graye;
+	color: $gray6;
+	background: $milk;
+	padding: 10px 10px;
 	min-height: 100%;
 	-webkit-font-smoothing: antialiased;
 	        font-smoothing: antialiased;
@@ -18,41 +18,19 @@ a {
 	
 	&,
 	&:visited {
-		color: $smurf;
+		color: $raven;
 		text-decoration: none;
 	}
 	&:visited:hover,
 	&:focus,
 	&:focus:hover,
 	&:hover,
-	&:active { color: darken($smurf, 25%); }
+	&:active { color: $lobster; }
 	
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { text-transform: uppercase; }
 .sh1, .sh2, .sh3, .sh4, .sh5, .sh6 { text-transform: none; }
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
-.sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
-	
-	& a {
-		
-		color: $hulk;
-		
-		&:visited { color: $hulk; }
-		
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
-			color: $goblin;
-			text-decoration: none;
-		}
-		
-	}
-	
-}
-
 h1, h2, h3, h4, h5, h6 {
 	
 	& + p { margin-top: #{relative(6)}rem; }
@@ -67,18 +45,12 @@ p.tight {
 
 blockquote {
 	
-	// font: italic bold 1.375rem/1.09090909090909 Cambria, Georgia, serif;
-	@include baseline(18, $optional: italic bold, $family: $serif);
+	@include baseline(18, $optional: italic, $family: $serif);
 	
-	text-align: center;
-	color: darken($prius, 10%);
+	border-left: 5px solid $raven;
 	
-	border-width: 3px 0;
-	border-style: solid;
-	border-color: fade-out(lighten($prius, 20%), .5);
-	
-	margin: 12px 0;
-	padding: 24px 48px;
+	margin: 24px 0;
+	padding: 0 0 0 12px;
 	position: relative;
 	
 	& p {
@@ -94,8 +66,7 @@ blockquote {
 		
 		font-size: smaller;
 		font-weight: normal;
-		text-align: right;
-		color: lighten($prius, 20%);
+		color: $gray6;
 		
 		& p { margin: 0; }
 		
@@ -114,16 +85,45 @@ dl {
 
 figure {
 	
+	& img {
+		
+		border: 1px solid $gray3;
+		padding: 3px;
+		background: $gray6;
+		
+		& + figcaption { margin-top: 0; }
+		
+	}
+	
 	& figcaption {
-		font-family: $serif;
-		font-style: italic;
-		color: $gray6;
+		
+		text-transform: uppercase;
+		letter-spacing: .03em;
+		color: $gray9;
+		background: $gray3;
+		padding: 12px;
 		margin: 12px 0;
+		text-shadow: 0 1px 0 $raven;
+		
+		& a {
+			
+			&,
+			&:visited {
+				color: $milk;
+				text-decoration: none;
+			}
+			&:visited:hover,
+			&:focus,
+			&:focus:hover,
+			&:hover,
+			&:active { color: $smurf; }
+			
+		}
 	}
 	
 	& p { margin: 6px 0; }
 	
-	& > * { margin: 0;}
+	& > * { margin: 0; }
 	
 }
 
@@ -203,10 +203,10 @@ pre {
 code {
 	font-family: $mono;
 	font-weight: normal;
-	color: $lobster;
+	color: $gray3;
 	padding: 0 4px;
-	background: fade-out($lobster, .9);
-	border: 1px solid fade-out($lobster, .8);
+	background: fade-out($raven, .9);
+	border: 1px solid fade-out($raven, .8);
 	border-radius: 3px;
 	white-space: pre;           // CSS 2.0
 	white-space: pre-wrap;      // CSS 2.1
@@ -252,16 +252,17 @@ kbd {
 }
 
 mark {
-	color: darken($duck, 30%);
-	background-color: fade-out($duck, .5);
+	color: $gray3;
+	background: none;
 	padding: 3px 4px;
+	border: 1px solid fade-out($raven, .75)
 }
 
-s {
-	color: $gray6;
-	-webkit-text-decoration-color: $chili;
-	   -moz-text-decoration-color: $chili;
-	        text-decoration-color: $chili;
+s,
+%s {
+	-webkit-text-decoration-color: $lobster;
+	   -moz-text-decoration-color: $lobster;
+	        text-decoration-color: $lobster;
 }
 
 samp {
@@ -283,8 +284,7 @@ ins {
 	position: relative;
 }
 del {
-	color: darken($chili, 20%);
-	background-color: fade-out($chili, .75);
+	@extend %s;
 }
 ins {
 	text-decoration: none;
@@ -375,9 +375,7 @@ legend {
 .form label {
 	font-size: .875rem; // 14px
 	line-height: 1.71428571428571;
-	xfont-weight: bold;
 	color: $gray6;
-	xtext-transform: uppercase;
 	letter-spacing: .05em;
 }
 .form input[type="text"],
@@ -404,10 +402,11 @@ legend {
 
 #flag {
 	
+	height: 400px;
+	
 	& h1 {
-		font: 100px/1 "Hulse", Arial, sans-serif;
-		color: $gray3;
-		text-align: center;
+		font: 65px/1 "Hulse", Arial, sans-serif;
+		margin: 0 0 0 -10px;
 	}
 	
 	& span {
@@ -424,14 +423,14 @@ legend {
 	& a {
 		
 		&,
-		&:visited { color: fade-out($raven, .5); }
+		&:visited { color: $raven; }
 		
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $smurf;
+			color: $lobster;
 			text-decoration: none;
 		}
 		
@@ -454,12 +453,7 @@ legend {
 	text-shadow: none;
 }
 
-.container {
-	margin: 50px auto;
-	padding: 50px;
+.x {
 	max-width: 800px;
-	border-width: 6px 3px;
-	border-style: solid;
-	border-color: fade-out($raven, .9);
-	background: fade-out($milk, .1);
+	padding: 50px;
 }
