@@ -5,16 +5,24 @@
 
 .marker {
 	@include baseline(22, .875, $optional: bold, $family: $sans);
-	color: $milk;
+	color: fade-out($milk, .5);
 	text-transform: none;
+	text-shadow: 0 1px 0 fade-out($raven, .1);
 	letter-spacing: .05em;
-	background: fade-out($raven, .15);
+	background: fade-out($gray3, .5);
 	margin: #{relative(24)}rem 0;
 	padding: #{baseline(22, .875) / 2}em;
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
+	box-shadow: 0 0 #{relative(5)}rem 0 fade-out($raven, .1);
 }
+.subtle {
+	@include baseline(19, .875, $optional: normal, $family: "monospace, serif");
+	color: fade-out($grayc, .1);
+	margin: #{relative(24)}rem 0 #{relative(12)}rem;
+}
+	.subtle *,
 	.marker * {
 		text-shadow: none;
 		line-height: inherit;
@@ -29,12 +37,6 @@
 		box-shadow: none;
 	}
 
-.subtle {
-	@include baseline(19, .875, $optional: normal, $family: "monospace, serif");
-	color: $gray6;
-	margin: #{relative(12)}rem 0;
-}
-
 // `:xxx` = pseudo-class & `::xxx` = pseudo-element.
 //
 // @see http://reference.sitepoint.com/css/pseudoclasses
@@ -45,10 +47,24 @@
 	text-align: center;
 }
 	.swatches .swatches-swatch {
+		
 		@include baseline(14, .75);
+		
 		border: #{relative(1)}rem solid fade-out($raven, .9);
 		margin: #{relative(5)}rem 0;
 		padding: #{baseline(14, .75) / 2}em;
+		
+		opacity: .5;
+		-webkit-transition: opacity .5s ease-out;
+		   -moz-transition: opacity .5s ease-out;
+		     -o-transition: opacity .5s ease-out;
+		        transition: opacity .5s ease-out;
+		
+		border-radius: 3px;
+		
+	}
+	.swatches .swatches-swatch:hover {
+		opacity: 1;
 	}
 		.swatches code {
 			font-family: $mono;
