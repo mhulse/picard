@@ -146,3 +146,11 @@ img {
 wbr {
 	&:after { content: "\00200B"; }
 }
+
+section,
+article,
+aside {
+	
+	& > :first-child { margin-top: 0; }
+	
+}

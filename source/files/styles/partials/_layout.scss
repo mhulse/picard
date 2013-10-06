@@ -1,0 +1,67 @@
+h1#flag {
+	
+	font: 65px/1 "Hulse", Arial, sans-serif;
+	text-shadow: 0 1px 0 fade-out($raven, .1);
+	margin: 50px 0; // temp, until I can think of better layout.
+	position: relative;
+	left: -8px;
+	
+	& span {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
+	
+	& a {
+		
+		&,
+		&:visited { color: fade-out(darken($lobster, 10%), .2); }
+		
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $lobster;
+			text-decoration: none;
+		}
+		
+		&:active,
+		&:focus { outline: none; }
+		
+	}
+	
+}
+
+.container {
+	
+	& .primary,
+	& .secondary {
+		width: auto;
+		float: none;
+		margin: 0;
+	}
+	
+	@media all and (min-width: 768px) {
+		
+		& {
+			
+			margin: 0 auto;
+			max-width: #{relative(1024)}rem;
+			
+			& .primary { margin-right: 25%; }
+			& .secondary {
+				width: 20%;
+				float: right;
+			}
+			
+		}
+		
+	}
+	
+}

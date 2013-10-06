@@ -1,8 +1,26 @@
-@import "partials/variables",
-        "partials/rex/functions",
+// Picard helpers:
+@import "partials/variables";
+
+// External helpers:
+@import "partials/rex/functions",
         "partials/rex/mixins",
-        "partials/rex/variables",
-        "partials/normalize",
-        "partials/rex/master",
-        "partials/master",
-        "partials/pending";
+        "partials/rex/variables";
+
+// Normalization:
+@import "partials/normalize",
+        "partials/rex/master";
+
+// Animation:
+@import "partials/keyframes";
+
+// Core:
+@import "partials/base",
+        "partials/layout",
+        "partials/type",
+        "partials/code",
+        "partials/tables",
+        "partials/forms",
+        "partials/media";
+
+// To be sorted:
+@import "partials/pending";

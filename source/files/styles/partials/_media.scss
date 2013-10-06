@@ -1,0 +1,22 @@
+figure {
+	
+	& img + figcaption { margin-top: 3px; }
+	
+	& figcaption {
+		
+		text-transform: uppercase;
+		letter-spacing: .03em;
+		color: fade-out($prius, .4);
+		background: fade-out($raven, .3);
+		padding: 12px;
+		margin: 12px 0;
+		-webkit-border-radius: 0 0 5px 5px;
+		border-radius: 0 0 5px 5px; 
+		
+	}
+	
+	& p { margin: 6px 0; }
+	
+	& > * { margin: 0; }
+	
+}

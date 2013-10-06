@@ -1,0 +1,46 @@
+html {
+	height: 100%;
+	overflow-y: scroll;
+}
+
+body {
+	font-family: $sans;
+	color: fade-out($gray6, .1);
+	background: $gray1;
+	padding: 0 24px;
+	min-height: 100%;
+	-webkit-font-smoothing: antialiased;
+	        font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+a {
+	
+	&,
+	&:visited {
+		color: fade-out(darken($smurf, 20%), .2);
+		text-decoration: none;
+	}
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: $smurf; }
+	
+}
+
+hr, .hr {
+	border-top-color: fade-out($lobster, .75);
+	border-bottom: 2px solid fade-out($raven, .1);
+	margin: 24px 0;
+}
+
+::-moz-selection {
+	background: fade-out($smurf, .45);
+	text-shadow: none;
+}
+
+::selection {
+	background: fade-out($smurf, .45);
+	text-shadow: none;
+}

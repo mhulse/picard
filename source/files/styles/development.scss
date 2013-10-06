@@ -1,7 +1,8 @@
 @import "partials/variables",
         "partials/rex/functions",
         "partials/rex/mixins",
-        "partials/rex/variables";
+        "partials/rex/variables",
+        "partials/keyframes";
 
 .marker {
 	@include baseline(22, .875, $optional: bold, $family: $sans);
