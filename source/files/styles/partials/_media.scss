@@ -4,9 +4,9 @@ figure {
 	
 	& figcaption {
 		
-		text-transform: uppercase;
-		letter-spacing: .03em;
-		color: fade-out($prius, .4);
+		font-family: $serif;
+		letter-spacing: .04em;
+		color: fade-out(mix($prius, $milk, 90%), .3);
 		background: fade-out($raven, .3);
 		padding: 12px;
 		margin: 12px 0;

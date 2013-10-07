@@ -743,7 +743,7 @@ body {
 }
 
 a, a:visited {
-  color: rgba(10, 91, 108, 0.8);
+  color: rgba(15, 131, 154, 0.8);
   text-decoration: none;
 }
 a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
@@ -844,7 +844,7 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 blockquote {
   font-style: italic;
   font-family: Cambria, Georgia, serif;
-  color: rgba(75, 113, 129, 0.9);
+  color: rgba(110, 152, 170, 0.7);
   letter-spacing: .05em;
   border-left: 5px solid rgba(73, 10, 61, 0.7);
   margin: 24px 0;
@@ -864,7 +864,7 @@ blockquote footer p {
 }
 blockquote:first-line, blockquote p:first-of-type:first-line {
   text-transform: uppercase;
-  color: rgba(94, 141, 161, 0.9);
+  color: rgba(110, 152, 170, 0.9);
 }
 
 dl dt {
@@ -875,36 +875,40 @@ dl dt {
 }
 
 mark {
-  color: #333333;
-  background: none;
-  padding: 3px 4px;
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  letter-spacing: .05em;
+  color: rgba(153, 153, 0, 0.9);
+  background: rgba(255, 255, 0, 0.15);
+  padding: 1px 3px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.9);
 }
 
 s {
-  -webkit-text-decoration-color: #cc3300;
-  -moz-text-decoration-color: #cc3300;
-  text-decoration-color: #cc3300;
+  -webkit-text-decoration-color: rgba(255, 0, 0, 0.5);
+  -moz-text-decoration-color: rgba(255, 0, 0, 0.5);
+  text-decoration-color: rgba(255, 0, 0, 0.5);
 }
 
 del,
 ins {
   line-height: 0;
-  border-radius: .1875rem;
-  padding: .125rem .3125rem;
+  letter-spacing: .05em;
+  border-radius: 2px;
+  padding: 1px 3px;
   position: relative;
 }
 
 del {
-  -webkit-text-decoration-color: #cc3300;
-  -moz-text-decoration-color: #cc3300;
-  text-decoration-color: #cc3300;
+  color: rgba(153, 0, 0, 0.9);
+  background: rgba(255, 0, 0, 0.1);
+  -webkit-text-decoration-color: rgba(255, 0, 0, 0.5);
+  -moz-text-decoration-color: rgba(255, 0, 0, 0.5);
+  text-decoration-color: rgba(255, 0, 0, 0.5);
 }
 
 ins {
   text-decoration: none;
-  color: #003311;
-  background-color: rgba(0, 153, 51, 0.25);
+  color: rgba(0, 153, 51, 0.9);
+  background: rgba(0, 153, 51, 0.1);
 }
 
 p.tight {
@@ -922,17 +926,23 @@ p.tight {
   margin-top: 0;
 }
 
+q {
+  font-family: Cambria, Georgia, serif;
+  letter-spacing: .05em;
+  color: rgba(110, 152, 170, 0.7);
+}
+
 pre {
   font-size: 1.125rem;
   line-height: 1.16666666666667;
-  color: rgba(153, 125, 0, 0.8);
-  background: rgba(0, 0, 0, 0.5);
+  color: rgba(153, 125, 0, 0.9);
+  background: rgba(51, 42, 0, 0.1);
   box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.8);
   word-wrap: normal;
   overflow: auto;
   white-space: pre;
   /*-webkit-overflow-scrolling: touch;*/
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(51, 42, 0, 0.5);
   padding: 24px;
 }
 pre code, pre kbd, pre samp {
@@ -977,10 +987,10 @@ code {
   font-weight: normal;
   font-style: normal;
   line-height: 0;
-  color: rgba(255, 209, 0, 0.6);
+  color: rgba(153, 125, 0, 0.9);
   padding: 0 4px;
   border: 1px solid rgba(255, 209, 0, 0.1);
-  background: rgba(255, 209, 0, 0.1);
+  background: rgba(51, 42, 0, 0.1);
   border-radius: 3px;
   white-space: pre;
   white-space: pre-wrap;
@@ -1000,13 +1010,11 @@ kbd {
   line-height: 0;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.9);
   color: rgba(238, 238, 238, 0.7);
-  background: rgba(51, 51, 51, 0.9);
-  border: 1px solid #333333;
-  border-radius: 3px;
+  background: rgba(51, 51, 51, 0.8);
+  border-radius: 2px;
   margin: 0 2px;
-  padding: 0 3px;
+  padding: 1px 3px;
   position: relative;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(68, 68, 68, 0.8) inset;
 }
 kbd kbd, kbd samp {
   text-shadow: none;
@@ -1032,9 +1040,16 @@ samp {
   color: rgba(240, 149, 223, 0.65);
   line-height: 0;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.9);
-  background: rgba(73, 10, 61, 0.85);
+  background: rgba(118, 71, 109, 0.25);
   padding: 2px 5px;
   position: relative;
+}
+
+var {
+  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  font-weight: normal;
+  font-style: italic;
+  color: rgba(153, 153, 153, 0.8);
 }
 
 .table {
@@ -1137,9 +1152,9 @@ figure img + figcaption {
   margin-top: 3px;
 }
 figure figcaption {
-  text-transform: uppercase;
-  letter-spacing: .03em;
-  color: rgba(94, 141, 161, 0.6);
+  font-family: Cambria, Georgia, serif;
+  letter-spacing: .04em;
+  color: rgba(110, 152, 170, 0.7);
   background: rgba(0, 0, 0, 0.7);
   padding: 12px;
   margin: 12px 0;
