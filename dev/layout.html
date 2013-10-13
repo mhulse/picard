@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>LAYOUT</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<style>
+		
+		*,
+		*::before,
+		*::after {
+			
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			
+		}
+		
+		body {
+			
+			margin: 0;
+			padding: 0;
+			
+		}
+		
+		#picard,
+		.flex {
+			
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: flex;
+			
+			flex-direction: column;
+			
+		}
+		
+		#picard > *:not(div) {
+			
+			background: #333;
+			
+		}
+		
+		#picard {
+			
+			max-width: 1024px;
+			margin: 0 auto;
+			
+		}
+		
+		.flex > * {
+			
+			padding: 20px;
+			background: #ccc;
+			
+			-webkit-flex: 1;
+			   -moz-flex: 1;
+			        flex: 1;
+			
+		}
+		
+		.flex > nav {
+			
+			order: -1;
+			
+		}
+		
+		@media (min-width: 768px) {
+			
+			.flex > nav {
+				
+				order: 0;
+				
+			}
+			
+			.flex {
+				
+				flex-direction: row;
+				flex: 1;
+				
+			}
+			
+			.flex > main {
+				
+				flex: 1;
+				
+			}
+			
+			.flex > aside {
+				
+				-webkit-flex: 0 0 300px;
+				   -moz-flex: 0 0 300px;
+				        flex: 0 0 300px;
+				
+			}
+			
+			.flex > nav {
+				
+				-webkit-flex: 0 0 150px;
+				   -moz-flex: 0 0 150px;
+				        flex: 0 0 150px;
+				
+			}
+			
+			.flex > *:not(:last-child) { margin-right: 97px; }
+			
+		}
+		
+	</style>
+	
+</head>
+<body>
+	
+	<div id="picard">
+		<header role="banner">header</header>
+		<div class="flex">
+			<main role="main">article</main>
+			<nav role="navigation">nav</nav>
+			<aside role="complementary">aside</aside>
+		</div>
+		<footer role="contentinfo">footer</footer>
+	</div>
+	
+</body>
+</html>

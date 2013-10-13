@@ -1,21 +1,31 @@
 figure {
 	
-	& img + figcaption { margin-top: 3px; }
+	margin: 24px 0;
 	
-	& figcaption {
+	& img {
 		
-		font-family: $serif;
-		letter-spacing: .04em;
-		color: fade-out(mix($prius, $milk, 90%), .3);
-		background: fade-out($raven, .3);
-		padding: 12px;
-		margin: 12px 0;
-		-webkit-border-radius: 0 0 5px 5px;
-		border-radius: 0 0 5px 5px; 
+		margin: 0 auto;
+		display: block;
+		
+		& + figcaption { margin-top: 6px; }
 		
 	}
 	
-	& p { margin: 6px 0; }
+	& figcaption {
+		
+		@include baseline(13, .75);
+		
+		letter-spacing: .05em;
+		text-transform: uppercase;
+		color: $gray4;
+		margin: 12px 0;
+		
+	}
+	
+	& p {
+		margin: 6px 0;
+		line-height: inherit;
+	}
 	
 	& > * { margin: 0; }
 	

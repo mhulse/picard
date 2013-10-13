@@ -1,11 +1,10 @@
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	text-transform: uppercase;
-	color: fade-out($gray9, .2);
+	color: $gray4;
 }
 .sh1, .sh2, .sh3, .sh4, .sh5, .sh6 { text-transform: none; }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
-.sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
+h1, h2, h3, h4, h5, h6 {
 	
 	& a {
 		
@@ -24,20 +23,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
 	
 }
 
-h1, h2, h3, h4, h5, h6 {
-	
-	& + p { margin-top: #{relative(6)}rem; }
-	
-}
-
 blockquote {
 	
-	font-style: italic;
-	font-family: $serif;
-	color: fade-out(mix($prius, $milk, 90%), .3);
-	letter-spacing: .05em;
-	
-	border-left: 5px solid fade-out($bruise, .3);
+	color: $gray9;
+	border-left: 5px solid $grayc;
 	
 	margin: 24px 0;
 	padding: 0 0 0 12px;
@@ -52,15 +41,11 @@ blockquote {
 		
 		font-size: smaller;
 		font-weight: normal;
+		text-transform: uppercase;
+		letter-spacing: .05em;
 		
 		& p { margin: 0; }
 		
-	}
-	
-	&:first-line,
-	& p:first-of-type:first-line {
-		text-transform: uppercase;
-		color: fade-out(mix($prius, $milk, 90%), .1);
 	}
 	
 }
@@ -68,9 +53,12 @@ blockquote {
 dl {
 	
 	dt {
+		
 		@include baseline(18, .875);
+		
 		font-weight: bold;
-		color: fade-out($gray9, .2);
+		color: $gray4;
+		
 	}
 	
 }
@@ -108,25 +96,6 @@ ins {
 	text-decoration: none;
 	color: fade-out($frog, .1);
 	background: fade-out($frog, .9);
-}
-
-p.tight {
-	
-	@include baseline(15, .75);
-	
-	letter-spacing: .05em;
-	
-}
-
-.story {
-	
-	& p {
-		@include baseline(18, 1.1);
-		margin: 24px 0;
-	}
-	
-	& > p { margin-top: 0; }
-	
 }
 
 q {

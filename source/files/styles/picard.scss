@@ -1,5 +1,6 @@
 // Picard helpers:
-@import "partials/variables";
+@import "partials/variables",
+        "partials/mixins";
 
 // External helpers:
 @import "partials/rex/functions",
@@ -9,9 +10,6 @@
 // Normalization:
 @import "partials/normalize",
         "partials/rex/master";
-
-// Animation:
-@import "partials/keyframes";
 
 // Core:
 @import "partials/base",

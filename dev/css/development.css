@@ -1,34 +1,22 @@
-@-webkit-keyframes cursor-blink {
-  80% {
-    visibility: hidden;
-  }
-}
-
-@keyframes cursor-blink {
-  80% {
-    visibility: hidden;
-  }
-}
-
 .marker {
   font: bold 1.375rem/0.95454545454545 Arial, sans-serif;
-  color: rgba(255, 255, 255, 0.5);
+  font-weight: normal;
+  color: #666666;
   text-transform: none;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.9);
   letter-spacing: .05em;
-  background: rgba(51, 51, 51, 0.5);
+  background: rgba(0, 0, 0, 0.15);
   margin: 1.5rem 0;
   padding: 0.47727272727273em;
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.9);
 }
 
 .subtle {
-  font: normal 1.1875rem/1.10526315789474 monospace, serif;
-  color: rgba(204, 204, 204, 0.9);
-  margin: 1.5rem 0 0.75rem;
+  font: normal 1.375rem/0.95454545454545 Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  color: #666666;
+  letter-spacing: .08em;
+  margin: 1.5rem 0;
 }
 
 .subtle *,
@@ -57,16 +45,6 @@
   border: 0.0625rem solid rgba(0, 0, 0, 0.1);
   margin: 0.3125rem 0;
   padding: 0.64285714285714em;
-  opacity: .5;
-  -webkit-transition: opacity .5s ease-out;
-  -moz-transition: opacity .5s ease-out;
-  -o-transition: opacity .5s ease-out;
-  transition: opacity .5s ease-out;
-  border-radius: 3px;
-}
-
-.swatches .swatches-swatch:hover {
-  opacity: 1;
 }
 
 .swatches code {

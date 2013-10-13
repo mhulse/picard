@@ -208,8 +208,12 @@ module.exports = function(grunt) {
 			
 			dev : {
 				
-				src : './files/templates/index.html',
-				dest : '../dev/index.html',
+				files : {
+					
+					'../dev/index.html' : './files/templates/index.html',
+					'../dev/layout.html' : './files/templates/layout.html',
+					
+				}
 				
 			},
 			

@@ -2,8 +2,8 @@ pre {
 	
 	@include baseline(18, .875);
 	
-	color: fade-out(darken($bling, 20%), .1);
-	background: fade-out(darken($bling, 40%), .9);
+	color: fade-out(darken($prius, 20%), .1);
+	background: fade-out(darken($prius, 40%), .9);
 	box-shadow: inset 0 0 10px 0 fade-out($raven, .2);
 	word-wrap: normal;
 	overflow: auto;

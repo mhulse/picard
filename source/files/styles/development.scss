@@ -1,27 +1,37 @@
+// Picard helpers:
 @import "partials/variables",
-        "partials/rex/functions",
+        "partials/mixins";
+
+// External helpers:
+@import "partials/rex/functions",
         "partials/rex/mixins",
-        "partials/rex/variables",
-        "partials/keyframes";
+        "partials/rex/variables";
 
 .marker {
+	
 	@include baseline(22, .875, $optional: bold, $family: $sans);
-	color: fade-out($milk, .5);
+	
+	font-weight: normal;
+	color: $gray6;
 	text-transform: none;
-	text-shadow: 0 1px 0 fade-out($raven, .1);
 	letter-spacing: .05em;
-	background: fade-out($gray3, .5);
+	background: fade-out($raven, .85);
 	margin: #{relative(24)}rem 0;
 	padding: #{baseline(22, .875) / 2}em;
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
-	box-shadow: 0 0 #{relative(5)}rem 0 fade-out($raven, .1);
+	
 }
+
 .subtle {
-	@include baseline(19, .875, $optional: normal, $family: "monospace, serif");
-	color: fade-out($grayc, .1);
-	margin: #{relative(24)}rem 0 #{relative(12)}rem;
+	
+	@include baseline(22, .875, $optional: normal, $family: $mono);
+	
+	color: $gray6;
+	letter-spacing: .08em;
+	margin: #{relative(24)}rem 0;
+	
 }
 	.subtle *,
 	.marker * {
@@ -55,17 +65,6 @@
 		margin: #{relative(5)}rem 0;
 		padding: #{baseline(14, .75) / 2}em;
 		
-		opacity: .5;
-		-webkit-transition: opacity .5s ease-out;
-		   -moz-transition: opacity .5s ease-out;
-		     -o-transition: opacity .5s ease-out;
-		        transition: opacity .5s ease-out;
-		
-		border-radius: 3px;
-		
-	}
-	.swatches .swatches-swatch:hover {
-		opacity: 1;
 	}
 		.swatches code {
 			font-family: $mono;

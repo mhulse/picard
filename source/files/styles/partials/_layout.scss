@@ -1,8 +1,7 @@
 h1#flag {
 	
-	font: 65px/1 "Hulse", Arial, sans-serif;
-	text-shadow: 0 1px 0 fade-out($raven, .1);
-	margin: 50px 0; // temp, until I can think of better layout.
+	font: 65px/64px "Hulse", Arial, sans-serif;
+	margin: 0;
 	position: relative;
 	left: -8px;
 	
@@ -20,7 +19,7 @@ h1#flag {
 	& a {
 		
 		&,
-		&:visited { color: fade-out(darken($lobster, 10%), .2); }
+		&:visited { color: $lobster; }
 		
 		&:visited:hover,
 		&:focus,
@@ -38,30 +37,23 @@ h1#flag {
 	
 }
 
-.container {
+// Simple solution for responsive tables.
+//
+// @see http://www.maxdesign.com.au/2013/03/22/simple-responsive-table/
+// @see http://creativeandcode.com/simple-solution-for-responsive-tables/
+
+.scroll {
 	
-	& .primary,
-	& .secondary {
-		width: auto;
-		float: none;
-		margin: 0;
-	}
+	width: 100%;
+	margin: 10px 0;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
 	
-	@media all and (min-width: 768px) {
-		
-		& {
-			
-			margin: 0 auto;
-			max-width: #{relative(1024)}rem;
-			
-			& .primary { margin-right: 25%; }
-			& .secondary {
-				width: 20%;
-				float: right;
-			}
-			
-		}
-		
+	& > * {
+		margin-top: 0;
+		margin-bottom: 0;
+		max-width: none;
+		max-height: none;
 	}
 	
 }
