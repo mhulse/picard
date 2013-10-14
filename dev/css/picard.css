@@ -722,7 +722,7 @@ html {
 body {
   font-family: Arial, sans-serif;
   color: #666666;
-  background: white;
+  background: #222222;
   padding: 0 24px;
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
