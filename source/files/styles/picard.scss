@@ -5,7 +5,8 @@
 // External helpers:
 @import "partials/rex/functions",
         "partials/rex/mixins",
-        "partials/rex/variables";
+        "partials/rex/variables",
+        "partials/flex.scss";
 
 // Normalization:
 @import "partials/normalize",

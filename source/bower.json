@@ -3,12 +3,16 @@
   "version": "0.0.0",
   "dependencies": {
     "normalize-css": "2.1.3",
-    "rex": "https://github.com/mhulse/rex.git"
+    "rex": "https://github.com/mhulse/rex.git",
+    "flexbox": "https://github.com/mastastealth/sass-flex-mixin.git"
   },
   "exportsOverride": {
     "rex": {
       "scss": "rex/scss/",
       "css": "rex/*.css"
+    },
+    "flexbox": {
+      "": "flex.scss"
     }
   }
 }
