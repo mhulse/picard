@@ -721,18 +721,12 @@ html {
 
 body {
   font-family: Arial, sans-serif;
-  color: #666666;
-  background: #222222;
-  padding: 0 24px;
+  color: #888888;
+  background: white;
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-}
-@media all and (min-width: 1020px) {
-  body {
-    padding: 48px;
-  }
 }
 
 a, a:visited {
@@ -740,11 +734,11 @@ a, a:visited {
   text-decoration: none;
 }
 a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
-  color: #cc3300;
+  color: white;
 }
 
 hr, .hr {
-  border-color: #eeeeee;
+  border-color: #111111;
   margin: 36px 0;
 }
 
@@ -800,7 +794,8 @@ h1#flag a:active, h1#flag a:focus {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   text-transform: uppercase;
-  color: #444444;
+  letter-spacing: .03em;
+  color: #555555;
 }
 
 .sh1, .sh2, .sh3, .sh4, .sh5, .sh6 {
@@ -884,6 +879,10 @@ q {
   font-family: Cambria, Georgia, serif;
   letter-spacing: .05em;
   color: rgba(110, 152, 170, 0.7);
+}
+
+p {
+  letter-spacing: .05em;
 }
 
 pre {

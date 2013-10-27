@@ -1,6 +1,9 @@
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	
 	text-transform: uppercase;
-	color: $gray4;
+	letter-spacing: .03em;
+	color: $gray5;
+	
 }
 .sh1, .sh2, .sh3, .sh4, .sh5, .sh6 { text-transform: none; }
 
@@ -102,4 +105,8 @@ q {
 	font-family: $serif;
 	letter-spacing: .05em;
 	color: fade-out(mix($prius, $milk, 90%), .3);
+}
+
+p {
+	letter-spacing: .05em;
 }
