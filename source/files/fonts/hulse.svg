@@ -3,7 +3,7 @@
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata></metadata>
 <defs>
-<font id="hulse" horiz-adv-x="500" >
+<font id="hulseregular" horiz-adv-x="500" >
 <font-face units-per-em="1000" ascent="800" descent="-200" />
 <missing-glyph horiz-adv-x="500" />
 <glyph />

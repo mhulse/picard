@@ -19,265 +19,64 @@
 	
 	<style>
 		
-		body {
-			
-			padding: 50px;
-			
-		}
-		
-		/*--------------------------------------------------------------------*/
-		
-		.flex-rows {
-			
-			display: -webkit-flex;
-			display: -moz-flex;
-			display: flex;
-			
-			flex-direction: column;
-			
-		}
-		
-		.flex-rows > * {
-			
-			-webkit-flex: 1 1 auto;
-			   -moz-flex: 1 1 auto;
-			        flex: 1 1 auto;
-			
-		}
-		
-		@media (min-width: 768px) {
-			
-			.flex-rows.flex-cols {
-				
-				flex-direction: row;
-				
-				-webkit-flex: 1 1 auto;
-				   -moz-flex: 1 1 auto;
-				        flex: 1 1 auto;
-				
-			}
-			
-		}
-		
-		header[role="banner"] {
-			
-			margin-bottom: 50px;
-			
-		}
-		
-		main[role="main"] { order: 2; }
-		
-		aside[role="complementary"] { order: 1; }
-		
-		/*--------------------------------------------------------------------*/
-		
-		@media (min-width: 768px) {
-			
-			main[role="main"] {
-				
-				max-width: 1000px;
-				
-				order: 2;
-				
-			}
-			
-			aside[role="complementary"] {
-				
-				margin-right: 50px;
-				
-				-webkit-flex: 0 0 300px;
-				   -moz-flex: 0 0 300px;
-				        flex: 0 0 300px;
-				
-				order: 1;
-				
-			}
-			
-		}
-		
-		nav[role="navigation"] {
-			
-			xmargin: 50px 0;
-			
-		}
-		
-		nav[role="navigation"] ul {
-			
-			margin: 0;
-			padding: 0;
-			
-		}
-		
-		nav[role="navigation"] ul li {
-			
-			text-align: center;
-			
-			list-style: none;
-			
-			margin: 0 0 1px;
-			padding: 0;
-			
-		}
-		
-		nav[role="navigation"] ul li a {
-			
-			font-size: 13px;
-			
-			text-transform: uppercase;
-			letter-spacing: .05em;
-			
-			color: #444;
-			
-			display: block;
-			padding: 15px 5px;
-			
-			background: #151515;
-			
-			border-radius: 3px;
-			
-		}
-		nav[role="navigation"] ul li a:hover {
-			
-			color: #999;
-			
-			background: #000;
-			
-		}
-		
-		figure {
-			
-			margin: 0;
-			
-		}
-		
-		figure img {
-			
-			margin: 0;
-			
-		}
-		
-		article {
-			
-			margin-bottom: 50px;
-			
-		}
-		
 	</style>
 	
 </head>
-<body class="flex-rows" ontouchstart>
+<body ontouchstart>
 	
 	<header role="banner">
 		
 		<h1 id="flag"><a href="#">M<span>hulse.com</span></a></h1>
 		
+		<!--
+		<nav role="navigation">
+			
+			<ul>
+				<li><a href="#">Lorem</a></li>
+				<li><a href="#">Ipsum</a></li>
+				<li><a href="#">Dolor</a></li>
+			</ul>
+			
+		</nav>
+		-->
+		
 	</header>
 	
-	<div id="page" class="flex-rows flex-cols">
+	<div id="container">
 		
-		<main role="main">
+		<div class="flex-rows flex-cols">
 			
-			<section>
+			<main role="main">
 				
-				<h1></h1>
+				<p>main</p>
 				
-				<article>
-					
-					<figure>
-						
-						<img src="images/picard1.jpg">
-						
-					</figure>
-					
-					<h1 class="h5"><a href="#">Lorem ipsum dolor sit amet</a></h1>
-					<h2 class="sh6">The quick brown fox jumps over the lazy dog</h2>
-					
-				</article>
-				
-				<article>
-					
-					<h1 class="h3"><a href="#">Consectetuer adipiscing elit</a></h1>
-					<h2 class="sh4">The quick brown fox jumps over the lazy dog</h2>
-					
-				</article>
-				
-				<article>
-					
-					<h1 class="h3"><a href="#">Aenean commodo ligula</a></h1>
-					<h2 class="sh4">The quick brown fox jumps over the lazy dog</h2>
-					
-					<figure>
-						
-						<img src="images/picard3.jpg">
-						
-					</figure>
-					
-				</article>
-				
-				<article>
-					
-					<h1 class="h3"><a href="#">Lorem ipsum dolor sit amet</a></h1>
-					<h2 class="sh4">The quick brown fox jumps over the lazy dog</h2>
-					
-				</article>
-				
-				<article>
-					
-					<h1 class="h3"><a href="#">Lorem ipsum dolor sit amet</a></h1>
-					<h2 class="sh4">The quick brown fox jumps over the lazy dog</h2>
-					
-				</article>
-				
-				<article>
-					
-					<h1 class="h3"><a href="#">Lorem ipsum dolor sit amet</a></h1>
-					<h2 class="sh4">The quick brown fox jumps over the lazy dog</h2>
-					
-				</article>
-				
-			</section>
+			</main>
 			
-		</main>
+			<aside role="complimentary">
+				
+				<nav>
+					
+					<dl>
+						<dt>Categories</dt>
+							<dd><a href="#">Art</a></dd>
+							<dd><a href="#">Wacom</a></dd>
+							<dd><a href="#">Logo</a></dd>
+						<dt>Links</dt>
+							<dd><a href="#">GitHub</a></dd>
+							<dd><a href="#">The Register-Guard</a></dd>
+					</dl>
+					
+				</nav>
+				
+			</aside>
+			
+		</div>
 		
-		<aside role="complementary">
+		<footer role="contentinfo">
 			
-			<nav role="navigation">
-				
-				<ul>
-					<li><a href="#">Lorem ipsum</a></li>
-					<li><a href="#">Dolor sit amet</a></li>
-					<li><a href="#">Consectetuer adipiscing elit</a></li>
-					<li><a href="#">Aenean commodo ligula</a></li>
-					<li><a href="#">Cum sociis natoque</a></li>
-					<li><a href="#">Dolor sit amet</a></li>
-					<li><a href="#">Consectetuer adipiscing elit</a></li>
-					<li><a href="#">Aenean commodo ligula</a></li>
-					<li><a href="#">Cum sociis natoque</a></li>
-					<li><a href="#">Dolor sit amet</a></li>
-					<li><a href="#">Consectetuer adipiscing elit</a></li>
-					<li><a href="#">Aenean commodo ligula</a></li>
-					<li><a href="#">Cum sociis natoque</a></li>
-					<li><a href="#">Dolor sit amet</a></li>
-					<li><a href="#">Consectetuer adipiscing elit</a></li>
-					<li><a href="#">Aenean commodo ligula</a></li>
-					<li><a href="#">Cum sociis natoque</a></li>
-					<li><a href="#">Dolor sit amet</a></li>
-					<li><a href="#">Consectetuer adipiscing elit</a></li>
-					<li><a href="#">Aenean commodo ligula</a></li>
-					<li><a href="#">Cum sociis natoque</a></li>
-					<li><a href="#">Dolor sit amet</a></li>
-					<li><a href="#">Consectetuer adipiscing elit</a></li>
-					<li><a href="#">Aenean commodo ligula</a></li>
-					<li><a href="#">Cum sociis natoque</a></li>
-					<li><a href="#">Dolor sit amet</a></li>
-					<li><a href="#">Consectetuer adipiscing elit</a></li>
-					<li><a href="#">Aenean commodo ligula</a></li>
-					<li><a href="#">Cum sociis natoque</a></li>
-				</ul>
-				
-			</nav>
+			<p>Footer</p>
 			
-		</aside>
+		</footer>
 		
 	</div>
 	

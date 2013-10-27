@@ -1,9 +1,7 @@
 h1#flag {
 	
-	font: 65px/64px "Hulse", Arial, sans-serif;
+	font: #{relative(50)}rem/#{relative(49)}rem "Hulse", Arial, sans-serif;
 	margin: 0;
-	position: relative;
-	left: -8px;
 	
 	& span {
 		border: 0;
@@ -19,14 +17,13 @@ h1#flag {
 	& a {
 		
 		&,
-		&:visited { color: $lobster; }
-		
+		&:visited,
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $lobster;
+			color: $milk;
 			text-decoration: none;
 		}
 		
@@ -56,4 +53,156 @@ h1#flag {
 		max-height: none;
 	}
 	
+}
+
+/*--------------------------------------------------------------------*/
+
+.flex-rows {
+	
+	@include flexbox;
+	@include flex-direction(column);
+	
+	& > * {
+		
+		@include flex(1 1 auto);
+		
+	}
+	
+	@media (min-width: 768px) {
+		
+		&.flex-cols {
+			
+			@include flex-direction;
+			@include flex(1 1 auto);
+			
+		}
+		
+	}
+	
+}
+
+#container {
+	
+	max-width: #{relative(1000)}rem;
+	
+	aside[role="complimentary"] {
+		
+		@include order(1);
+		
+	}
+	
+	main[role="main"] {
+		
+		@include order(2);
+		
+	}
+	
+	@media (min-width: 768px) {
+		
+		aside[role="complimentary"] {
+			
+			margin-right: #{relative(50)}rem;
+			
+			@include flex(0 0 #{relative(200)}rem);
+			
+			:first-child {
+				margin-top: 0;
+			}
+			
+			> nav {
+				
+				dl {
+					
+					margin: #{relative(48)}rem 0;
+					
+					dt,
+					dd {
+						margin: 0;
+						padding: 0;
+					}
+					
+					dt {
+						
+						font-family: $serif;
+						font-weight: normal;
+						letter-spacing: .05em;
+						padding-bottom: #{baseline(15, .25)}em;
+						border-bottom: #{relative(1)}rem solid $raven;
+						margin: #{relative(24)}rem 0 #{relative(6)}rem;
+						
+						@include baseline(15, .75);
+						
+					}
+					
+					dd {
+						
+						text-transform: uppercase;
+						letter-spacing: .05em;
+						border-bottom: #{relative(1)}rem dotted $grayc;
+						padding: #{baseline(12, .125)}em 0;
+						
+						@include baseline(12, .75);
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+header[role="banner"] {
+	
+	border-top: #{relative(10)}rem solid $raven;
+	background: $lobster;
+	margin-bottom: #{relative(50)}rem;
+	padding: #{relative(20)}rem 0;
+	position: relative;
+	
+	nav[role="navigation"] {
+		
+		* { border: 1px solid red; }
+		
+		ul {
+			
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			
+			@include flexbox;
+			@include flex-flow;
+			@include justify-content(flex-end);
+			
+			li {
+				
+				color: $milk;
+				font-family: $sans;
+				font-weight: bold;
+				background: $raven;
+				
+				@include baseline(18, .75);
+				
+				a {
+					
+					color: $milk;
+					display: block;
+					padding: #{relative(10)}em #{relative(20)}em;
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+footer[role="contentinfo"] {
+	margin-top: #{relative(50)}rem;
 }

@@ -6,7 +6,8 @@ html {
 body {
 	
 	font-family: $sans;
-	color: $gray8;
+	text-align: center;
+	color: $raven;
 	background: $milk;
 	min-height: 100%;
 	-webkit-font-smoothing: antialiased;
@@ -18,15 +19,12 @@ body {
 a {
 	
 	&,
-	&:visited {
-		color: $smurf;
-		text-decoration: none;
-	}
+	&:visited { color: $raven; }
 	&:visited:hover,
 	&:focus,
 	&:focus:hover,
 	&:hover,
-	&:active { color: $milk; }
+	&:active { color: $lobster; }
 	
 }
 
