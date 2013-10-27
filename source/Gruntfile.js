@@ -188,6 +188,7 @@ module.exports = function(grunt) {
 		 *
 		 * @see https://github.com/onehealth/grunt-preprocess
 		 * @see https://github.com/onehealth/preprocess
+		 * @see http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically
 		 */
 		
 		preprocess : {
@@ -208,12 +209,19 @@ module.exports = function(grunt) {
 			
 			dev : {
 				
-				files : {
+				files: [
 					
-					'../dev/index.html' : './files/templates/index.html',
-					'../dev/layout.html' : './files/templates/layout.html',
+					{
+						
+						expand: true,
+						cwd: './files/templates/',
+						src: ['**/*.html'],
+						dest: '../dev/',
+						ext: '.html',
+						
+					},
 					
-				}
+				],
 				
 			},
 			
