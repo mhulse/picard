@@ -9,6 +9,7 @@ body {
 	text-align: center;
 	color: $raven;
 	background: $milk;
+	padding: 0 50px;
 	min-height: 100%;
 	-webkit-font-smoothing: antialiased;
 	        font-smoothing: antialiased;
@@ -19,7 +20,10 @@ body {
 a {
 	
 	&,
-	&:visited { color: $raven; }
+	&:visited {
+		color: $raven;
+		text-decoration: none;
+	}
 	&:visited:hover,
 	&:focus,
 	&:focus:hover,

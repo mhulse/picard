@@ -1,32 +1,23 @@
 figure {
 	
-	margin: 24px 0;
+	margin: #{relative(25)}rem 0;
 	
-	& img {
+	img {
 		
 		margin: 0 auto;
 		display: block;
 		
-		& + figcaption { margin-top: 6px; }
+	}
+	
+	figcaption {
+		
+		@include baseline(14, .75);
+		letter-spacing: .03em;
+		max-width: #{relative(1000)}rem; // 300 + 50 + 300 + 50 + 300
+		margin: #{relative(10)}rem auto 0;
 		
 	}
 	
-	& figcaption {
-		
-		@include baseline(13, .75);
-		
-		letter-spacing: .05em;
-		text-transform: uppercase;
-		color: $gray4;
-		margin: 12px 0;
-		
-	}
-	
-	& p {
-		margin: 6px 0;
-		line-height: inherit;
-	}
-	
-	& > * { margin: 0; }
+	figcaption p { line-height: inherit; }
 	
 }

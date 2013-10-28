@@ -1,9 +1,9 @@
 h1#flag {
 	
-	font: #{relative(50)}rem/#{relative(49)}rem "Hulse", Arial, sans-serif;
-	margin: 0;
+	font: #{relative(150)}rem/#{relative(150)}rem "Hulse", Arial, sans-serif;
+	margin: #{relative(50)}rem 0;
 	
-	& span {
+	span {
 		border: 0;
 		clip: rect(0 0 0 0);
 		height: 1px;
@@ -14,16 +14,16 @@ h1#flag {
 		width: 1px;
 	}
 	
-	& a {
+	a {
 		
 		&,
-		&:visited,
+		&:visited { color: $raven; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $milk;
+			color: $lobster;
 			text-decoration: none;
 		}
 		
@@ -42,11 +42,11 @@ h1#flag {
 .scroll {
 	
 	width: 100%;
-	margin: 10px 0;
+	margin: #{relative(10)}em 0;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 	
-	& > * {
+	> * {
 		margin-top: 0;
 		margin-bottom: 0;
 		max-width: none;
@@ -57,143 +57,43 @@ h1#flag {
 
 /*--------------------------------------------------------------------*/
 
-.flex-rows {
+nav[role="navigation"] {
 	
-	@include flexbox;
-	@include flex-direction(column);
-	
-	& > * {
+	ul {
 		
-		@include flex(1 1 auto);
+		max-width: #{relative(650)}rem; // 300 + 50 + 300
+		margin: #{relative(50)}rem auto;
 		
-	}
-	
-	@media (min-width: 768px) {
-		
-		&.flex-cols {
+		li {
 			
-			@include flex-direction;
-			@include flex(1 1 auto);
-			
-		}
-		
-	}
-	
-}
-
-#container {
-	
-	max-width: #{relative(1000)}rem;
-	
-	aside[role="complimentary"] {
-		
-		@include order(1);
-		
-	}
-	
-	main[role="main"] {
-		
-		@include order(2);
-		
-	}
-	
-	@media (min-width: 768px) {
-		
-		aside[role="complimentary"] {
-			
-			margin-right: #{relative(50)}rem;
-			
-			@include flex(0 0 #{relative(200)}rem);
-			
-			:first-child {
-				margin-top: 0;
-			}
-			
-			> nav {
-				
-				dl {
-					
-					margin: #{relative(48)}rem 0;
-					
-					dt,
-					dd {
-						margin: 0;
-						padding: 0;
-					}
-					
-					dt {
-						
-						font-family: $serif;
-						font-weight: normal;
-						letter-spacing: .05em;
-						padding-bottom: #{baseline(15, .25)}em;
-						border-bottom: #{relative(1)}rem solid $raven;
-						margin: #{relative(24)}rem 0 #{relative(6)}rem;
-						
-						@include baseline(15, .75);
-						
-					}
-					
-					dd {
-						
-						text-transform: uppercase;
-						letter-spacing: .05em;
-						border-bottom: #{relative(1)}rem dotted $grayc;
-						padding: #{baseline(12, .125)}em 0;
-						
-						@include baseline(12, .75);
-						
-					}
-					
-				}
-				
-			}
-			
-		}
-		
-	}
-	
-}
-
-header[role="banner"] {
-	
-	border-top: #{relative(10)}rem solid $raven;
-	background: $lobster;
-	margin-bottom: #{relative(50)}rem;
-	padding: #{relative(20)}rem 0;
-	position: relative;
-	
-	nav[role="navigation"] {
-		
-		* { border: 1px solid red; }
-		
-		ul {
-			
-			text-align: center;
-			margin: 0;
-			padding: 0;
 			list-style: none;
+			display: inline-block;
+			margin: #{relative(2)}rem;
+			padding: 0;
 			
-			@include flexbox;
-			@include flex-flow;
-			@include justify-content(flex-end);
-			
-			li {
+			a {
 				
-				color: $milk;
-				font-family: $sans;
-				font-weight: bold;
+				letter-spacing: .08em;
 				background: $raven;
+				padding: #{relative(25)}em #{relative(15)}em;
+				display: block;
+				border-radius: #{relative(3)}em;
+				text-shadow: 0 #{relative(1)}em #{relative(1)}em $raven;
+				white-space: nowrap;
 				
-				@include baseline(18, .75);
-				
-				a {
-					
-					color: $milk;
-					display: block;
-					padding: #{relative(10)}em #{relative(20)}em;
-					
+				&,
+				&:visited { color: $milk; }
+				&:visited:hover,
+				&:focus,
+				&:focus:hover,
+				&:hover,
+				&:active {
+					background: $lobster;
+					text-decoration: none;
 				}
+				
+				&:active,
+				&:focus { outline: none; }
 				
 			}
 			
@@ -203,6 +103,78 @@ header[role="banner"] {
 	
 }
 
-footer[role="contentinfo"] {
-	margin-top: #{relative(50)}rem;
+article {
+	
+	margin: #{relative(50)}rem 0;
+	
+	> header {
+		
+		max-width: #{relative(1000)}rem; // 300 + 50 + 300 + 50 + 300
+		margin: 0 auto;
+		
+	}
+	
+}
+
+// .copy {
+// 	@include flexbox;
+// 	@include flex-direction(column);
+// 	@media (min-width: 768px) {
+// 		& {
+// 			@include flex-direction(row);
+// 		}
+// 	}
+// 	> div {
+// 		@include flex(1 1 auto);
+// 		@media (min-width: 768px) {
+// 			&:last-child {
+// 				margin-left: 25px;
+// 			}
+// 		}
+// 	}
+// }
+
+.tags {
+	
+	margin: #{relative(10)}rem 0 0;
+	
+	&,
+	li {
+		margin: 0;
+		padding: 0;
+	}
+	
+	li {
+		
+		list-style: none;
+		display: inline-block;
+		margin: #{relative(3)}rem;
+		
+		a {
+			
+			letter-spacing: .04em;
+			background: $raven;
+			padding: #{relative(3)}em #{relative(5)}em;
+			border-radius: #{relative(3)}em;
+			text-shadow: 0 #{relative(1)}em #{relative(1)}em $raven;
+			white-space: nowrap;
+			
+			&,
+			&:visited { color: $milk; }
+			&:visited:hover,
+			&:focus,
+			&:focus:hover,
+			&:hover,
+			&:active {
+				background: $lobster;
+				text-decoration: none;
+			}
+			
+			&:active,
+			&:focus { outline: none; }
+			
+		}
+		
+	}
+	
 }

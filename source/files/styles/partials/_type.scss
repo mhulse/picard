@@ -1,30 +1,5 @@
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-	
-	text-transform: uppercase;
-	letter-spacing: .03em;
-	color: $gray5;
-	
-}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { text-transform: uppercase; }
 .sh1, .sh2, .sh3, .sh4, .sh5, .sh6 { text-transform: none; }
-
-h1, h2, h3, h4, h5, h6 {
-	
-	& a {
-		
-		&,
-		&:visited { color: fade-out($hulk, .1); }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
-			color: $goblin;
-			text-decoration: none;
-		}
-		
-	}
-	
-}
 
 blockquote {
 	
@@ -107,6 +82,72 @@ q {
 	color: fade-out(mix($prius, $milk, 90%), .3);
 }
 
-p {
-	letter-spacing: .05em;
+//----------------------------------------------------------------------
+
+.category {
+	
+	font-family: $serif;
+	font-weight: normal;
+	font-style: italic;
+	text-transform: none;
+	border-bottom: 1px solid $raven;
+	margin: 0 0 20px;
+	padding: 0 10px #{baseline(18, .25)}em;
+	display: inline-block;
+	
+	@include baseline(18, .75);
+	
+}
+
+.copy {
+	
+	text-align: left;
+	max-width: #{relative(1000)}rem; // 300 + 50 + 300 + 50 + 300
+	margin: #{relative(20)}rem auto;
+	
+	-webkit-columns: #{relative(300)}rem;
+	   -moz-columns: #{relative(300)}rem;
+	        columns: #{relative(300)}rem;
+	
+	-webkit-column-gap: #{relative(50)}rem;
+	   -moz-column-gap: #{relative(50)}rem;
+	        column-gap: #{relative(50)}rem;
+	
+	p {
+		
+		font-family: $serif;
+		@include baseline(18);
+		margin: #{baseline(18)}em 0;
+		
+		/*
+		text-align: justify;
+		text-justify: newspaper;
+		-webkit-hyphenate-character: "\2010";
+		-webkit-hyphenate-limit-after: 1;
+		-webkit-hyphenate-limit-before: 3;
+		-webkit-hyphens: auto;
+		   -moz-hyphens: auto;
+		        hyphens: auto;
+		*/
+		
+	}
+	
+	.byline,
+	.published {
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.byline {
+		font-variant: small-caps;
+		font-weight: bold;
+	}
+	
+	.published { font-style: italic; }
+	
+	:first-child { margin-top: 0; }
+	
+	:last-child { margin-bottom: 0; }
+	
 }
