@@ -1,4 +1,4 @@
-/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -232,7 +232,7 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: 1px solid silver;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -453,7 +453,7 @@ h6,
 .sh6 {
   font-size: 1rem;
   line-height: 1.5;
-  margin: 0 0 .125em;
+  margin: 0 0 0.125em;
 }
 
 h1,
@@ -755,7 +755,7 @@ hr, .hr {
 }
 
 h1#flag {
-  font: 9.375rem/9.375rem "Hulse", Arial, sans-serif;
+  font: 6.25rem/6.25rem "Hulse", Arial, sans-serif;
   margin: 3.125rem 0;
 }
 h1#flag span {
@@ -794,19 +794,22 @@ h1#flag a:active, h1#flag a:focus {
 
 /*--------------------------------------------------------------------*/
 nav[role="navigation"] ul {
-  max-width: 40.625rem;
+  max-width: 21.875rem;
   margin: 3.125rem auto;
 }
 nav[role="navigation"] ul li {
+  text-transform: uppercase;
   list-style: none;
   display: inline-block;
   margin: 0.125rem;
   padding: 0;
+  font-size: 0.75rem;
+  line-height: 2;
 }
 nav[role="navigation"] ul li a {
   letter-spacing: .08em;
   background: black;
-  padding: 1.5625em 0.9375em;
+  padding: 0.5em 0.9375em;
   display: block;
   border-radius: 0.1875em;
   text-shadow: 0 0.0625em 0.0625em black;
@@ -827,7 +830,7 @@ article {
   margin: 3.125rem 0;
 }
 article > header {
-  max-width: 62.5rem;
+  max-width: 21.875rem;
   margin: 0 auto;
 }
 
@@ -947,30 +950,35 @@ q {
   font-weight: normal;
   font-style: italic;
   text-transform: none;
-  border-bottom: 1px solid black;
-  margin: 0 0 20px;
-  padding: 0 10px 0.33333333333333em;
+  letter-spacing: .03em;
+  word-spacing: .3em;
+  border-bottom: 4px double black;
+  margin: 0 0 10px;
+  padding: 0 10px 0.42857142857143em;
   display: inline-block;
-  font-size: 1.125rem;
-  line-height: 1;
+  font-size: 0.875rem;
+  line-height: 1.28571428571429;
 }
 
 .copy {
   text-align: left;
-  max-width: 62.5rem;
+  max-width: 21.875rem;
   margin: 1.25rem auto;
+  /*
   -webkit-columns: 18.75rem;
-  -moz-columns: 18.75rem;
-  columns: 18.75rem;
+     -moz-columns: 18.75rem;
+          columns: 18.75rem;
+  
   -webkit-column-gap: 3.125rem;
-  -moz-column-gap: 3.125rem;
-  column-gap: 3.125rem;
+     -moz-column-gap: 3.125rem;
+          column-gap: 3.125rem;
+  */
 }
 .copy p {
   font-family: Cambria, Georgia, serif;
-  font-size: 1.125rem;
-  line-height: 1.33333333333333;
-  margin: 1.33333333333333em 0;
+  margin: 1.71428571428571em 0;
+  font-size: 0.875rem;
+  line-height: 1.71428571428571;
   /*
   text-align: justify;
   text-justify: newspaper;
@@ -1203,7 +1211,7 @@ var {
   line-height: 2.25;
   letter-spacing: .05em;
   border: 1px solid black;
-  padding: 0 .75rem;
+  padding: 0 0.75rem;
   background: black;
   box-shadow: inset 0 0.1em 0.2em 0.1em black;
   width: 50%;

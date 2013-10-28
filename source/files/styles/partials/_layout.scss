@@ -1,6 +1,6 @@
 h1#flag {
 	
-	font: #{relative(150)}rem/#{relative(150)}rem "Hulse", Arial, sans-serif;
+	font: #{relative(100)}rem/#{relative(100)}rem "Hulse", Arial, sans-serif;
 	margin: #{relative(50)}rem 0;
 	
 	span {
@@ -61,21 +61,24 @@ nav[role="navigation"] {
 	
 	ul {
 		
-		max-width: #{relative(650)}rem; // 300 + 50 + 300
+		max-width: #{relative(350)}rem; // 300 + 50 + 300
 		margin: #{relative(50)}rem auto;
 		
 		li {
 			
+			text-transform: uppercase;
 			list-style: none;
 			display: inline-block;
 			margin: #{relative(2)}rem;
 			padding: 0;
 			
+			@include baseline(12);
+			
 			a {
 				
 				letter-spacing: .08em;
 				background: $raven;
-				padding: #{relative(25)}em #{relative(15)}em;
+				padding: #{baseline(12, .25)}em #{relative(15)}em;
 				display: block;
 				border-radius: #{relative(3)}em;
 				text-shadow: 0 #{relative(1)}em #{relative(1)}em $raven;
@@ -109,7 +112,7 @@ article {
 	
 	> header {
 		
-		max-width: #{relative(1000)}rem; // 300 + 50 + 300 + 50 + 300
+		max-width: #{relative(350)}rem;
 		margin: 0 auto;
 		
 	}

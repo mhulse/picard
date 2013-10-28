@@ -90,21 +90,24 @@ q {
 	font-weight: normal;
 	font-style: italic;
 	text-transform: none;
-	border-bottom: 1px solid $raven;
-	margin: 0 0 20px;
-	padding: 0 10px #{baseline(18, .25)}em;
+	letter-spacing: .03em;
+	word-spacing: .3em;
+	border-bottom: 4px double $raven;
+	margin: 0 0 10px;
+	padding: 0 10px #{baseline(14, .25)}em;
 	display: inline-block;
 	
-	@include baseline(18, .75);
+	@include baseline(14, .75);
 	
 }
 
 .copy {
 	
 	text-align: left;
-	max-width: #{relative(1000)}rem; // 300 + 50 + 300 + 50 + 300
+	max-width: #{relative(350)}rem;
 	margin: #{relative(20)}rem auto;
 	
+	/*
 	-webkit-columns: #{relative(300)}rem;
 	   -moz-columns: #{relative(300)}rem;
 	        columns: #{relative(300)}rem;
@@ -112,12 +115,14 @@ q {
 	-webkit-column-gap: #{relative(50)}rem;
 	   -moz-column-gap: #{relative(50)}rem;
 	        column-gap: #{relative(50)}rem;
+	*/
 	
 	p {
 		
 		font-family: $serif;
-		@include baseline(18);
-		margin: #{baseline(18)}em 0;
+		margin: #{baseline(14)}em 0;
+		
+		@include baseline(14);
 		
 		/*
 		text-align: justify;
