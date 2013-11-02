@@ -119,10 +119,12 @@ q {
 	
 	p {
 		
-		font-family: $serif;
-		margin: #{baseline(14)}em 0;
+		/*
+		font-family: $sans;
+		margin: #{baseline(12)}em 0;
 		
-		@include baseline(14);
+		@include baseline(12);
+		*/
 		
 		/*
 		text-align: justify;
@@ -133,6 +135,8 @@ q {
 		-webkit-hyphens: auto;
 		   -moz-hyphens: auto;
 		        hyphens: auto;
+		-moz-text-align-last: center;
+		text-align-last: center;
 		*/
 		
 	}

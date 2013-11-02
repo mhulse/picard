@@ -1,4 +1,4 @@
-/* normalize.css v2.1.3 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -232,7 +232,7 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -402,7 +402,7 @@ table {
   background-image: -webkit-linear-gradient(rgba(255, 0, 0, 0.75) 1px, transparent 1px), -webkit-linear-gradient(rgba(0, 255, 255, 0.75) 1px, transparent 1px), -webkit-linear-gradient(rgba(0, 255, 255, 0.25) 1px, transparent 1px);
   background-image: -moz-linear-gradient(rgba(255, 0, 0, 0.75) 1px, transparent 1px), -moz-linear-gradient(rgba(0, 255, 255, 0.75) 1px, transparent 1px), -moz-linear-gradient(rgba(0, 255, 255, 0.25) 1px, transparent 1px);
   background-image: linear-gradient(rgba(255, 0, 0, 0.75) 1px, transparent 1px), linear-gradient(rgba(0, 255, 255, 0.75) 1px, transparent 1px), linear-gradient(rgba(0, 255, 255, 0.25) 1px, transparent 1px);
-  background-size: 100% 1.5rem, 100% 0.75rem, 100% 0.375rem;
+  background-size: 100% 1.42857142857143rem, 100% 0.71428571428571rem, 100% 0.35714285714286rem;
   background-position: 0 0;
   background-origin: content-box;
   background-attachment: local;
@@ -422,15 +422,19 @@ table {
   box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.5);
 }
 
+html {
+  font-size: 87.5%;
+}
+
 body {
   font-size: 100%;
-  line-height: 1.5;
+  line-height: 1.42857142857143;
 }
 
 address {
   font-size: 1rem;
-  line-height: 1.125;
-  margin: 0.75rem 0;
+  line-height: 1.07142857142857;
+  margin: 0.71428571428571rem 0;
 }
 
 h1,
@@ -452,50 +456,50 @@ h6,
 .sh5,
 .sh6 {
   font-size: 1rem;
-  line-height: 1.5;
-  margin: 0 0 0.125em;
+  line-height: 1.42857142857143;
+  margin: 0 0 .125em;
 }
 
 h1,
 .h1,
 .sh1 {
-  font-size: 2.875rem;
-  line-height: 1.04347826086957;
+  font-size: 3.14285714285714rem;
+  line-height: 1.36363636363636;
 }
 
 h2,
 .h2,
 .sh2 {
-  font-size: 2.5rem;
-  line-height: 1.05;
+  font-size: 2.71428571428571rem;
+  line-height: 0.92105263157895;
 }
 
 h3,
 .h3,
 .sh3 {
-  font-size: 2.125rem;
-  line-height: 1.05882352941176;
+  font-size: 2.28571428571429rem;
+  line-height: 0.9375;
 }
 
 h4,
 .h4,
 .sh4 {
-  font-size: 1.75rem;
-  line-height: 1.07142857142857;
+  font-size: 1.85714285714286rem;
+  line-height: 0.96153846153846;
 }
 
 h5,
 .h5,
 .sh5 {
-  font-size: 1.375rem;
-  line-height: 1.09090909090909;
+  font-size: 1.42857142857143rem;
+  line-height: 1;
 }
 
 h6,
 .h6,
 .sh6 {
-  font-size: 1.125rem;
-  line-height: 1.16666666666667;
+  font-size: 1.14285714285714rem;
+  line-height: 1.09375;
 }
 
 .sh1,
@@ -508,7 +512,7 @@ h6,
 }
 
 blockquote {
-  margin: 0.75rem 1.5rem;
+  margin: 0.71428571428571rem 1.42857142857143rem;
 }
 blockquote > :first-child {
   margin-top: 0 !important;
@@ -519,25 +523,25 @@ blockquote > :last-child {
 
 dl {
   font-size: 1rem;
-  line-height: 1.125;
-  margin: 0.75rem 0;
+  line-height: 1.07142857142857;
+  margin: 0.71428571428571rem 0;
   padding: 0;
 }
 dl dt,
 dl dd {
-  margin: 0 0 0.375rem;
+  margin: 0 0 0.35714285714286rem;
   padding: 0;
 }
 dl dd {
-  margin-left: 0.5rem;
+  margin-left: 0.47619047619048rem;
 }
 
 figure {
-  margin: 0.75rem 0;
+  margin: 0.71428571428571rem 0;
 }
 figure figcaption {
-  font-size: 0.875rem;
-  line-height: 1.5;
+  font-size: 0.85714285714286rem;
+  line-height: 1.45833333333333;
 }
 figure figcaption p {
   font-size: inherit;
@@ -552,10 +556,10 @@ figure figcaption > :last-child {
 hr,
 .hr {
   border: 0;
-  border-top-width: 0.0625rem;
+  border-top-width: 0.07142857142857rem;
   border-style: solid;
   height: 0;
-  margin: 0.75rem 0;
+  margin: 0.71428571428571rem 0;
   padding: 0;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -564,14 +568,14 @@ hr,
 ol,
 ul {
   font-size: 1rem;
-  line-height: 1.125;
-  margin: 0.75rem 0;
+  line-height: 1.07142857142857;
+  margin: 0.71428571428571rem 0;
   padding: 0;
   list-style-position: outside;
 }
 ol li,
 ul li {
-  margin: 0 0 0.375rem;
+  margin: 0 0 0.35714285714286rem;
   padding: 0;
 }
 ol li img,
@@ -581,35 +585,29 @@ ul li img {
 }
 
 ol {
-  margin-left: 2.5rem;
+  margin-left: 2.85714285714286rem;
 }
 li ol {
-  margin-left: 2.5rem;
+  margin-left: 2.85714285714286rem;
 }
 
 p {
   font-size: 1rem;
-  line-height: 1.5;
-  margin: 0.75rem 0;
+  line-height: 1.42857142857143;
+  margin: 0.71428571428571rem 0;
 }
 
 pre {
-  font-size: 0.875rem;
-  line-height: 1.28571428571429;
-  margin: 0.75rem 0;
+  font-size: 0.85714285714286rem;
+  line-height: 1.25;
+  margin: 0.71428571428571rem 0;
 }
 
 ul {
-  margin-left: 1.5rem;
+  margin-left: 1.42857142857143rem;
 }
-li ul {
-  margin-left: 0.5rem;
-}
-
-code,
-kbd,
-samp {
-  font-size: 1em;
+ul li ul {
+  margin-left: 0.47619047619048rem;
 }
 
 small {
@@ -625,11 +623,11 @@ sup {
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -0.28571428571429em;
 }
 
 sup {
-  top: -0.5em;
+  top: -0.57142857142857em;
 }
 
 table {
@@ -638,17 +636,17 @@ table {
 }
 
 caption {
-  font-size: 0.875rem;
-  line-height: 1.28571428571429;
-  padding: 0.21428571428571em 0;
+  font-size: 0.85714285714286rem;
+  line-height: 1.25;
+  padding: 0.20833333333333em 0;
 }
 
 th,
 td {
   font-size: 1rem;
-  line-height: 1.125;
+  line-height: 1.07142857142857;
   margin: 0;
-  padding: 0.1875em 0;
+  padding: 0.17857142857143em 0;
 }
 
 form {
@@ -657,7 +655,7 @@ form {
 
 fieldset {
   margin: 1rem 0;
-  padding: 0.0625rem 0 0;
+  padding: 0.07142857142857rem 0 0;
 }
 
 input,
@@ -671,43 +669,43 @@ input[type="checkbox"],
 input[type="radio"] {
   padding: 0;
   position: relative;
-  bottom: 0.125em;
+  bottom: 0.14285714285714em;
   vertical-align: middle;
 }
 
 input[type="text"],
 input[type="password"] {
   font-size: 1em;
-  line-height: 1.5;
-  height: 1.5rem;
+  line-height: 1.42857142857143;
+  height: 1.42857142857143rem;
   margin: 0;
-  padding: 0 0.25em;
+  padding: 0 0.23809523809524em;
   vertical-align: baseline;
 }
 
 label {
   font-size: 1em;
-  line-height: 1.5;
+  line-height: 1.42857142857143;
   vertical-align: middle;
 }
 
 legend {
-  font-size: 1.125rem;
-  line-height: 1.16666666666667;
+  font-size: 1.14285714285714rem;
+  line-height: 1.09375;
   margin: 0;
-  padding: 0 0 0.33333333333333em;
+  padding: 0 0 0.3125em;
 }
 
 select {
   font-size: 1em;
-  line-height: 1.5;
+  line-height: 1.42857142857143;
   vertical-align: baseline;
 }
 
 textarea {
   font-size: 1em;
-  line-height: 1.5;
-  min-height: 7.5rem;
+  line-height: 1.42857142857143;
+  min-height: 7.14285714285714rem;
   overflow: auto;
   margin: 0;
   padding: 0;
@@ -755,8 +753,8 @@ hr, .hr {
 }
 
 h1#flag {
-  font: 6.25rem/6.25rem "Hulse", Arial, sans-serif;
-  margin: 3.125rem 0;
+  font: 7.14285714285714rem/7.14285714285714rem "Hulse", Arial, sans-serif;
+  margin: 3.57142857142857rem 0;
 }
 h1#flag span {
   border: 0;
@@ -781,7 +779,7 @@ h1#flag a:active, h1#flag a:focus {
 
 .scroll {
   width: 100%;
-  margin: 0.625em 0;
+  margin: 0.71428571428571em 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -794,25 +792,25 @@ h1#flag a:active, h1#flag a:focus {
 
 /*--------------------------------------------------------------------*/
 nav[role="navigation"] ul {
-  max-width: 21.875rem;
-  margin: 3.125rem auto;
+  max-width: 25rem;
+  margin: 3.57142857142857rem auto;
 }
 nav[role="navigation"] ul li {
   text-transform: uppercase;
   list-style: none;
   display: inline-block;
-  margin: 0.125rem;
+  margin: 0.14285714285714rem;
   padding: 0;
-  font-size: 0.75rem;
-  line-height: 2;
+  font-size: 0.85714285714286rem;
+  line-height: 1.66666666666667;
 }
 nav[role="navigation"] ul li a {
   letter-spacing: .08em;
   background: black;
-  padding: 0.5em 0.9375em;
+  padding: 0.41666666666667em 1.07142857142857em;
   display: block;
-  border-radius: 0.1875em;
-  text-shadow: 0 0.0625em 0.0625em black;
+  border-radius: 0.21428571428571em;
+  text-shadow: 0 0.07142857142857em 0.07142857142857em black;
   white-space: nowrap;
 }
 nav[role="navigation"] ul li a, nav[role="navigation"] ul li a:visited {
@@ -827,43 +825,11 @@ nav[role="navigation"] ul li a:active, nav[role="navigation"] ul li a:focus {
 }
 
 article {
-  margin: 3.125rem 0;
+  margin: 3.57142857142857rem 0;
 }
 article > header {
-  max-width: 21.875rem;
+  max-width: 25rem;
   margin: 0 auto;
-}
-
-.tags {
-  margin: 0.625rem 0 0;
-}
-.tags,
-.tags li {
-  margin: 0;
-  padding: 0;
-}
-.tags li {
-  list-style: none;
-  display: inline-block;
-  margin: 0.1875rem;
-}
-.tags li a {
-  letter-spacing: .04em;
-  background: black;
-  padding: 0.1875em 0.3125em;
-  border-radius: 0.1875em;
-  text-shadow: 0 0.0625em 0.0625em black;
-  white-space: nowrap;
-}
-.tags li a, .tags li a:visited {
-  color: white;
-}
-.tags li a:visited:hover, .tags li a:focus, .tags li a:focus:hover, .tags li a:hover, .tags li a:active {
-  background: #cc3300;
-  text-decoration: none;
-}
-.tags li a:active, .tags li a:focus {
-  outline: none;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -896,8 +862,8 @@ blockquote footer p {
 }
 
 dl dt {
-  font-size: 1.125rem;
-  line-height: 1.16666666666667;
+  font-size: 1.28571428571429rem;
+  line-height: 0.97222222222222;
   font-weight: bold;
   color: #444444;
 }
@@ -954,31 +920,33 @@ q {
   word-spacing: .3em;
   border-bottom: 4px double black;
   margin: 0 0 10px;
-  padding: 0 10px 0.42857142857143em;
+  padding: 0 10px 0.35714285714286em;
   display: inline-block;
-  font-size: 0.875rem;
-  line-height: 1.28571428571429;
+  font-size: 1rem;
+  line-height: 1.07142857142857;
 }
 
 .copy {
   text-align: left;
-  max-width: 21.875rem;
-  margin: 1.25rem auto;
+  max-width: 25rem;
+  margin: 1.42857142857143rem auto;
   /*
-  -webkit-columns: 18.75rem;
-     -moz-columns: 18.75rem;
-          columns: 18.75rem;
+  -webkit-columns: 21.42857142857143rem;
+     -moz-columns: 21.42857142857143rem;
+          columns: 21.42857142857143rem;
   
-  -webkit-column-gap: 3.125rem;
-     -moz-column-gap: 3.125rem;
-          column-gap: 3.125rem;
+  -webkit-column-gap: 3.57142857142857rem;
+     -moz-column-gap: 3.57142857142857rem;
+          column-gap: 3.57142857142857rem;
   */
 }
 .copy p {
-  font-family: Cambria, Georgia, serif;
-  margin: 1.71428571428571em 0;
-  font-size: 0.875rem;
-  line-height: 1.71428571428571;
+  /*
+  font-family: $sans;
+  margin: 1.66666666666667em 0;
+  
+  @include baseline(12);
+  */
   /*
   text-align: justify;
   text-justify: newspaper;
@@ -988,6 +956,8 @@ q {
   -webkit-hyphens: auto;
      -moz-hyphens: auto;
           hyphens: auto;
+  -moz-text-align-last: center;
+  text-align-last: center;
   */
 }
 .copy .byline,
@@ -1011,8 +981,8 @@ q {
 }
 
 pre {
-  font-size: 1.125rem;
-  line-height: 1.16666666666667;
+  font-size: 1.28571428571429rem;
+  line-height: 0.97222222222222;
   color: rgba(56, 85, 97, 0.9);
   background: rgba(19, 28, 32, 0.1);
   box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.8);
@@ -1211,7 +1181,7 @@ var {
   line-height: 2.25;
   letter-spacing: .05em;
   border: 1px solid black;
-  padding: 0 0.75rem;
+  padding: 0 .75rem;
   background: black;
   box-shadow: inset 0 0.1em 0.2em 0.1em black;
   width: 50%;
@@ -1227,18 +1197,18 @@ var {
 }
 
 figure {
-  margin: 1.5625rem 0;
+  margin: 1.78571428571429rem 0;
 }
 figure img {
   margin: 0 auto;
   display: block;
 }
 figure figcaption {
-  font-size: 0.875rem;
-  line-height: 1.28571428571429;
+  font-size: 1rem;
+  line-height: 1.07142857142857;
   letter-spacing: .03em;
-  max-width: 62.5rem;
-  margin: 0.625rem auto 0;
+  max-width: 71.42857142857143rem;
+  margin: 0.71428571428571rem auto 0;
 }
 figure figcaption p {
   line-height: inherit;

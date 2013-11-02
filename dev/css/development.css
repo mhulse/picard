@@ -1,22 +1,22 @@
 .marker {
-  font: bold 1.375rem/0.95454545454545 Arial, sans-serif;
+  font: bold 1.57142857142857rem/1.59090909090909 Arial, sans-serif;
   font-weight: normal;
   color: #666666;
   text-transform: none;
   letter-spacing: .05em;
   background: rgba(0, 0, 0, 0.15);
-  margin: 1.5rem 0;
-  padding: 0.47727272727273em;
+  margin: 1.71428571428571rem 0;
+  padding: 0.79545454545455em;
   display: inline-block;
   *display: inline;
   *zoom: 1;
 }
 
 .subtle {
-  font: normal 1.375rem/0.95454545454545 Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  font: normal 1.57142857142857rem/1.59090909090909 Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
   color: #666666;
   letter-spacing: .08em;
-  margin: 1.5rem 0;
+  margin: 1.71428571428571rem 0;
 }
 
 .subtle *,
@@ -35,25 +35,25 @@
 }
 
 .swatches {
-  margin: 0.625rem 0;
+  margin: 0.71428571428571rem 0;
   text-align: center;
 }
 
 .swatches .swatches-swatch {
-  font-size: 0.875rem;
-  line-height: 1.28571428571429;
-  border: 0.0625rem solid rgba(0, 0, 0, 0.1);
-  margin: 0.3125rem 0;
-  padding: 0.64285714285714em;
+  font-size: 1rem;
+  line-height: 1.07142857142857;
+  border: 0.07142857142857rem solid rgba(0, 0, 0, 0.1);
+  margin: 0.35714285714286rem 0;
+  padding: 0.53571428571429em;
 }
 
 .swatches code {
   font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
-  text-shadow: 0 0.0625em 0 rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0.07142857142857em 0 rgba(0, 0, 0, 0.8);
   color: white;
   border: 0;
   background: rgba(0, 0, 0, 0.5);
-  padding: 0.1875em 0.3125em;
+  padding: 0.21428571428571em 0.35714285714286em;
 }
 
 .milk {
