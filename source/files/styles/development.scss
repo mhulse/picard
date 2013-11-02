@@ -9,15 +9,15 @@
 
 .marker {
 	
-	@include baseline(22, .875, $optional: bold, $family: $sans);
+	@include baseline($base_font-size + 4, .875, $optional: bold, $family: $sans);
 	
 	font-weight: normal;
 	color: $gray6;
 	text-transform: none;
-	letter-spacing: .05em;
+	letter-spacing: .03em;
 	background: fade-out($raven, .85);
-	margin: #{relative(24)}rem 0;
-	padding: #{baseline(22, .875) / 2}em;
+	margin: #{relative($base_margin * 2)}rem 0;
+	padding: #{baseline($base_font-size + 4, .875) / 2}em;
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;

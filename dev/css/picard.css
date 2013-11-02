@@ -1204,10 +1204,11 @@ figure img {
   display: block;
 }
 figure figcaption {
-  font-size: 1rem;
-  line-height: 1.07142857142857;
+  text-transform: uppercase;
+  font-size: 0.85714285714286rem;
+  line-height: 1.45833333333333;
   letter-spacing: .03em;
-  max-width: 71.42857142857143rem;
+  max-width: 25rem;
   margin: 0.71428571428571rem auto 0;
 }
 figure figcaption p {

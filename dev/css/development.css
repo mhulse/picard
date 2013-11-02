@@ -1,12 +1,12 @@
 .marker {
-  font: bold 1.57142857142857rem/1.59090909090909 Arial, sans-serif;
+  font: bold 1.28571428571429rem/0.97222222222222 Arial, sans-serif;
   font-weight: normal;
   color: #666666;
   text-transform: none;
-  letter-spacing: .05em;
+  letter-spacing: .03em;
   background: rgba(0, 0, 0, 0.15);
-  margin: 1.71428571428571rem 0;
-  padding: 0.79545454545455em;
+  margin: 1.42857142857143rem 0;
+  padding: 0.48611111111111em;
   display: inline-block;
   *display: inline;
   *zoom: 1;
