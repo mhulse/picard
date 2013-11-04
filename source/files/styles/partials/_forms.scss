@@ -9,7 +9,7 @@
 		}
 		
 		& > div {
-			margin: 10px 0;
+			margin: #{relative($base_margin)}rem 0;
 		}
 		
 	}

@@ -1,6 +1,6 @@
 figure {
 	
-	margin: #{relative(25)}rem 0;
+	margin: #{relative($base_margin)}rem 0;
 	
 	img {
 		margin: 0 auto;
@@ -12,9 +12,10 @@ figure {
 figcaption {
 	
 	@include baseline(12, .75);
+	
 	text-transform: uppercase;
 	letter-spacing: .03em;
-	margin: #{relative(10)}rem auto 0;
+	margin: #{relative($base_margin)}rem auto 0;
 	
 	p { line-height: inherit; }
 	

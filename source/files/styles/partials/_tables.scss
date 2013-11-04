@@ -1,7 +1,6 @@
 .table {
 	
-	margin-top: #{$base_margin}rem;
-	margin-bottom: #{$base_margin}rem;
+	margin: #{relative($base_margin)}rem 0;
 	width: 100%;
 	
 	& caption { text-align: left; }

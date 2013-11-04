@@ -43,11 +43,10 @@
 // @see http://reference.sitepoint.com/css/pseudoelements
 
 .swatches {
-	margin-top: #{relative($base_margin)}rem;
-	margin-top: #{relative($base_margin)}rem;
-	text-align: center;
-}
-	.swatches .swatches-swatch {
+	
+	margin: #{relative($base_margin)}rem 0;
+	
+	.swatches-swatch {
 		
 		@include baseline(14, .75);
 		
@@ -56,14 +55,15 @@
 		padding: #{baseline(14, .75) / 2}em;
 		
 	}
-		.swatches code {
-			font-family: $mono;
-			text-shadow: 0 #{relative(1)}em 0 fade-out($raven, .2);
-			color: $milk;
-			border: 0;
-			background: fade-out($raven, .5);
-			padding: #{relative(3)}em #{relative(5)}em;
-		}
+	
+	code {
+		text-shadow: 0 #{relative(1)}em 0 fade-out($raven, .2);
+		color: $milk;
+		background: fade-out($raven, .5);
+		padding: #{relative(3)}em #{relative(5)}em;
+	}
+	
+}
 
 .milk    { background: $milk;    }
 .bling   { background: $bling;   }

@@ -23,11 +23,8 @@
 }
 
 .swatches {
-  margin-top: 0.71428571428571rem;
-  margin-top: 0.71428571428571rem;
-  text-align: center;
+  margin: 0.71428571428571rem 0;
 }
-
 .swatches .swatches-swatch {
   font-size: 1rem;
   line-height: 1.17857142857143;
@@ -35,12 +32,9 @@
   margin: 0.35714285714286rem 0;
   padding: 0.58928571428571em;
 }
-
 .swatches code {
-  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
   text-shadow: 0 0.07142857142857em 0 rgba(0, 0, 0, 0.8);
   color: white;
-  border: 0;
   background: rgba(0, 0, 0, 0.5);
   padding: 0.21428571428571em 0.35714285714286em;
 }
@@ -138,7 +132,7 @@
 }
 
 .duck {
-  background: yellow;
+  background: #f3f315;
 }
 
 .chili {
@@ -146,5 +140,5 @@
 }
 
 .frog {
-  background: #00ee00;
+  background: #008b45;
 }

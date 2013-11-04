@@ -9,8 +9,8 @@ pre {
 	overflow: auto;
 	white-space: pre;
 	-webkit-overflow-scrolling: touch;
-	border: 1px solid $gray9;
-	padding: 24px;
+	border: 1px solid $grayc;
+	padding: #{relative($base_padding) * 2}rem;
 	
 	// Blinking cursor.
 	//

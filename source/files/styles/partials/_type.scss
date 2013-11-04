@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	
 }
+
 .sh1, .sh2, .sh3, .sh4, .sh5, .sh6 { text-transform: none; }
 
 blockquote {
@@ -32,8 +33,7 @@ blockquote {
 	border-style: dashed;
 	border-color: $grayd;
 	
-	margin-top: #{relative($base_margin)}rem;
-	margin-bottom: #{relative($base_margin)}rem;
+	margin: #{relative($base_margin)}rem 0;
 	padding: #{relative($base_padding)}rem #{relative($base_padding * 4)}rem;
 	position: relative;
 	
@@ -64,11 +64,10 @@ blockquote {
 }
 
 mark {
-	letter-spacing: .05em;
-	color: fade-out(darken($duck, 20%), .1);
-	background: fade-out($duck, .85);
-	padding: 1px 3px;
-	text-shadow: 0 1px 0 fade-out(darken($duck, 50%), .1);
+	background: fade-out($duck, .1);
+	padding: #{relative(1)}em #{relative(3)}em;
+	-webkit-border-radius: #{relative(3)}em;
+	        border-radius: #{relative(3)}em;
 }
 
 s {
@@ -93,16 +92,13 @@ del {
 	        text-decoration-color: fade-out($chili, .5);
 }
 ins {
+	color: $frog;
 	text-decoration: none;
-	color: fade-out($frog, .1);
-	background: fade-out($frog, .9);
+	&:before { content: "["; }
+	&:after { content: "]"; }
 }
 
-q {
-	font-family: $serif;
-	letter-spacing: .05em;
-	color: fade-out(mix($prius, $milk, 90%), .3);
-}
+q { font-family: $serif; }
 
 //----------------------------------------------------------------------
 

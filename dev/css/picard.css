@@ -784,8 +784,7 @@ h1#flag a:active, h1#flag a:focus {
 
 .scroll {
   width: 100%;
-  margin-top: 0.71428571428571rem;
-  margin-bottom: 0.71428571428571rem;
+  margin: 0.71428571428571rem 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -797,10 +796,9 @@ h1#flag a:active, h1#flag a:focus {
 }
 
 /*--------------------------------------------------------------------*/
-section > * {
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
+.block {
+  max-width: 46.42857142857143rem;
+  margin: 0 auto;
 }
 
 nav[role="navigation"] ul {
@@ -836,10 +834,6 @@ nav[role="navigation"] ul li a:active, nav[role="navigation"] ul li a:focus {
   outline: none;
 }
 
-.freedom {
-  max-width: none;
-}
-
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
@@ -864,8 +858,7 @@ blockquote {
   border-width: 0.14285714285714rem 0;
   border-style: dashed;
   border-color: #dddddd;
-  margin-top: 0.71428571428571rem;
-  margin-bottom: 0.71428571428571rem;
+  margin: 0.71428571428571rem 0;
   padding: 0.71428571428571rem 2.85714285714286rem;
   position: relative;
 }
@@ -892,11 +885,10 @@ blockquote blockquote {
 }
 
 mark {
-  letter-spacing: .05em;
-  color: rgba(153, 153, 0, 0.9);
-  background: rgba(255, 255, 0, 0.15);
-  padding: 1px 3px;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.9);
+  background: rgba(243, 243, 21, 0.9);
+  padding: 0.07142857142857em 0.21428571428571em;
+  -webkit-border-radius: 0.21428571428571em;
+  border-radius: 0.21428571428571em;
 }
 
 s {
@@ -923,15 +915,18 @@ del {
 }
 
 ins {
+  color: #008b45;
   text-decoration: none;
-  color: rgba(0, 238, 0, 0.9);
-  background: rgba(0, 238, 0, 0.1);
+}
+ins:before {
+  content: "[";
+}
+ins:after {
+  content: "]";
 }
 
 q {
   font-family: Cambria, Georgia, serif;
-  letter-spacing: .05em;
-  color: rgba(110, 152, 170, 0.7);
 }
 
 .category {
@@ -972,8 +967,8 @@ pre {
   overflow: auto;
   white-space: pre;
   -webkit-overflow-scrolling: touch;
-  border: 1px solid #999999;
-  padding: 24px;
+  border: 1px solid #cccccc;
+  padding: 1.42857142857143rem;
 }
 pre .cursor {
   -webkit-animation-duration: 2s;
@@ -1019,8 +1014,7 @@ var {
 }
 
 .table {
-  margin-top: 10pxrem;
-  margin-bottom: 10pxrem;
+  margin: 0.71428571428571rem 0;
   width: 100%;
 }
 .table caption {
@@ -1082,7 +1076,7 @@ var {
   border-bottom: 1px solid #999999;
 }
 .form fieldset > div {
-  margin: 10px 0;
+  margin: 0.71428571428571rem 0;
 }
 .form label {
   font-size: 14px;
@@ -1116,7 +1110,7 @@ var {
 }
 
 figure {
-  margin: 1.78571428571429rem 0;
+  margin: 0.71428571428571rem 0;
 }
 figure img {
   margin: 0 auto;

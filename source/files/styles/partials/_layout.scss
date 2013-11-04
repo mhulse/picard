@@ -42,8 +42,7 @@ h1#flag {
 .scroll {
 	
 	width: 100%;
-	margin-top: #{relative($base_margin)}rem;
-	margin-bottom: #{relative($base_margin)}rem;
+	margin: #{relative($base_margin)}rem 0;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 	
@@ -58,17 +57,16 @@ h1#flag {
 
 /*--------------------------------------------------------------------*/
 
-section > * {
-	max-width: 650px;
-	margin-left: auto;
-	margin-right: auto;
+.block {
+	max-width: #{relative(650)}rem;
+	margin: 0 auto;
 }
 
 nav[role="navigation"] {
 	
 	ul {
 		
-		max-width: #{relative(350)}rem; // 300 + 50 + 300
+		max-width: #{relative(350)}rem;
 		margin: #{relative($base_margin)}rem auto;
 		
 		li {
@@ -112,5 +110,3 @@ nav[role="navigation"] {
 	}
 	
 }
-
-.freedom { max-width: none; }
