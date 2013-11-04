@@ -9,7 +9,7 @@ body {
 	text-align: center;
 	color: $raven;
 	background: $milk;
-	padding: 0 50px;
+	padding: $base_padding * 5;
 	min-height: 100%;
 	
 	-webkit-font-smoothing: antialiased;
@@ -22,20 +22,25 @@ a {
 	
 	&,
 	&:visited {
-		color: $raven;
+		color: $lobster;
 		text-decoration: none;
 	}
 	&:visited:hover,
 	&:focus,
 	&:focus:hover,
 	&:hover,
-	&:active { color: $lobster; }
+	&:active {
+		color: $lobster;
+		text-decoration: underline;
+	}
 	
 }
 
 hr, .hr {
-	border-color: $gray1;
-	margin: 36px 0;
+	border-top-width: #{relative(1)}rem;
+	border-top-style: solid;
+	border-top-color: $grayc;
+	margin: #{relative($base_margin * 2)}rem 0;
 }
 
 ::-moz-selection {

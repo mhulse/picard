@@ -3,23 +3,19 @@ figure {
 	margin: #{relative(25)}rem 0;
 	
 	img {
-		
 		margin: 0 auto;
 		display: block;
-		
 	}
 	
-	figcaption {
-		
-		text-transform: uppercase;
-		
-		@include baseline(12, .875);
-		letter-spacing: .03em;
-		max-width: #{relative(350)}rem;
-		margin: #{relative(10)}rem auto 0;
-		
-	}
+}
+
+figcaption {
 	
-	figcaption p { line-height: inherit; }
+	@include baseline(12, .75);
+	text-transform: uppercase;
+	letter-spacing: .03em;
+	margin: #{relative(10)}rem auto 0;
+	
+	p { line-height: inherit; }
 	
 }

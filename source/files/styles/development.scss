@@ -11,11 +11,13 @@
 	
 	@include baseline($base_font-size + 4, .875, $optional: bold, $family: $sans);
 	
+	text-shadow: 0 #{relative(1)}em #{relative(1)}em darken($prius, 20%);
 	font-weight: normal;
-	color: $gray6;
+	color: $milk;
 	text-transform: none;
-	letter-spacing: .03em;
-	background: fade-out($raven, .85);
+	letter-spacing: .05em;
+	background: $prius;
+	border: #{relative(2)}rem solid darken($prius, 10%);
 	margin: #{relative($base_margin * 2)}rem 0;
 	padding: #{baseline($base_font-size + 4, .875) / 2}em;
 	display: inline-block;
@@ -26,27 +28,14 @@
 
 .subtle {
 	
-	@include baseline(22, .875, $optional: normal, $family: $mono);
+	@include baseline(16, .75, $optional: normal, $family: $mono);
 	
 	color: $gray6;
-	letter-spacing: .08em;
-	margin: #{relative(24)}rem 0;
+	letter-spacing: .1em;
+	margin-top: #{relative($base_margin)}rem;
+	margin-bottom: #{relative($base_margin)}rem;
 	
 }
-	.subtle *,
-	.marker * {
-		text-shadow: none;
-		line-height: inherit;
-		color: inherit;
-		font-size: 1em;
-		background: transparent;
-		margin: 0;
-		padding: 0;
-		top: 0;
-		border: 0;
-		border-radius: 0;
-		box-shadow: none;
-	}
 
 // `:xxx` = pseudo-class & `::xxx` = pseudo-element.
 //
@@ -54,7 +43,8 @@
 // @see http://reference.sitepoint.com/css/pseudoelements
 
 .swatches {
-	margin: #{relative(10)}rem 0;
+	margin-top: #{relative($base_margin)}rem;
+	margin-top: #{relative($base_margin)}rem;
 	text-align: center;
 }
 	.swatches .swatches-swatch {

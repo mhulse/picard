@@ -1,7 +1,7 @@
 h1#flag {
 	
-	font: #{relative(100)}rem/#{relative(100)}rem "Hulse", Arial, sans-serif;
-	margin: #{relative(50)}rem 0;
+	font: #{relative(115)}rem/#{relative(115)}rem "Hulse", Arial, sans-serif;
+	margin-bottom: #{relative($base_margin * 5)}rem;
 	
 	span {
 		border: 0;
@@ -17,13 +17,13 @@ h1#flag {
 	a {
 		
 		&,
-		&:visited { color: $raven; }
+		&:visited,
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $lobster;
+			color: $smurf;
 			text-decoration: none;
 		}
 		
@@ -42,7 +42,8 @@ h1#flag {
 .scroll {
 	
 	width: 100%;
-	margin: #{relative(10)}em 0;
+	margin-top: #{relative($base_margin)}rem;
+	margin-bottom: #{relative($base_margin)}rem;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 	
@@ -57,12 +58,18 @@ h1#flag {
 
 /*--------------------------------------------------------------------*/
 
+section > * {
+	max-width: 650px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 nav[role="navigation"] {
 	
 	ul {
 		
 		max-width: #{relative(350)}rem; // 300 + 50 + 300
-		margin: #{relative(50)}rem auto;
+		margin: #{relative($base_margin)}rem auto;
 		
 		li {
 			
@@ -106,15 +113,4 @@ nav[role="navigation"] {
 	
 }
 
-article {
-	
-	margin: #{relative(50)}rem 0;
-	
-	> header {
-		
-		max-width: #{relative(350)}rem;
-		margin: 0 auto;
-		
-	}
-	
-}
+.freedom { max-width: none; }

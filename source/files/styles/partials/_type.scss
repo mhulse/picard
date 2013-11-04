@@ -1,41 +1,63 @@
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { text-transform: uppercase; }
-.sh1, .sh2, .sh3, .sh4, .sh5, .sh6 { text-transform: none; }
-
-blockquote {
+h1, h2, h3, h4, h5, h6 {
 	
-	color: $gray9;
-	border-left: 5px solid $grayc;
+	text-transform: uppercase;
 	
-	margin: 24px 0;
-	padding: 0 0 0 12px;
-	position: relative;
-	
-	& p {
-		font-size: inherit;
-		line-height: inherit;
-	}
-	
-	& footer {
+	a {
 		
-		font-size: smaller;
-		font-weight: normal;
-		text-transform: uppercase;
-		letter-spacing: .05em;
-		
-		& p { margin: 0; }
+		&,
+		&:visited { color: $hulk; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $goblin;
+			text-decoration: none;
+		}
 		
 	}
 	
 }
+.sh1, .sh2, .sh3, .sh4, .sh5, .sh6 { text-transform: none; }
 
-dl {
+blockquote {
 	
-	dt {
+	@include baseline(18, .875);
+	
+	font-family: serif;
+	font-style: italic;
+	
+	color: $gray3;
+	border-width: #{relative(2)}rem 0;
+	border-style: dashed;
+	border-color: $grayd;
+	
+	margin-top: #{relative($base_margin)}rem;
+	margin-bottom: #{relative($base_margin)}rem;
+	padding: #{relative($base_padding)}rem #{relative($base_padding * 4)}rem;
+	position: relative;
+	
+	p {
+		font-size: inherit;
+		line-height: inherit;
+	}
+	
+	footer {
 		
-		@include baseline(18, .875);
+		font-size: 70%;
+		font-weight: normal;
+		text-transform: uppercase;
+		letter-spacing: .05em;
 		
-		font-weight: bold;
-		color: $gray4;
+		p { margin: 0; }
+		
+	}
+	
+	blockquote { border-width: #{relative(1)}rem 0; }
+	
+	@media (max-width: $make-it-so) {
+		
+		& { padding: #{relative($base_padding)}rem; }
 		
 	}
 	
@@ -98,65 +120,5 @@ q {
 	display: inline-block;
 	
 	@include baseline(14, .75);
-	
-}
-
-.copy {
-	
-	text-align: left;
-	max-width: #{relative(350)}rem;
-	margin: #{relative(20)}rem auto;
-	
-	/*
-	-webkit-columns: #{relative(300)}rem;
-	   -moz-columns: #{relative(300)}rem;
-	        columns: #{relative(300)}rem;
-	
-	-webkit-column-gap: #{relative(50)}rem;
-	   -moz-column-gap: #{relative(50)}rem;
-	        column-gap: #{relative(50)}rem;
-	*/
-	
-	p {
-		
-		/*
-		font-family: $sans;
-		margin: #{baseline(12)}em 0;
-		
-		@include baseline(12);
-		*/
-		
-		/*
-		text-align: justify;
-		text-justify: newspaper;
-		-webkit-hyphenate-character: "\2010";
-		-webkit-hyphenate-limit-after: 1;
-		-webkit-hyphenate-limit-before: 3;
-		-webkit-hyphens: auto;
-		   -moz-hyphens: auto;
-		        hyphens: auto;
-		-moz-text-align-last: center;
-		text-align-last: center;
-		*/
-		
-	}
-	
-	.byline,
-	.published {
-		text-align: center;
-		margin: 0;
-		padding: 0;
-	}
-	
-	.byline {
-		font-variant: small-caps;
-		font-weight: bold;
-	}
-	
-	.published { font-style: italic; }
-	
-	:first-child { margin-top: 0; }
-	
-	:last-child { margin-bottom: 0; }
 	
 }
