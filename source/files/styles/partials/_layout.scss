@@ -57,9 +57,32 @@ h1#flag {
 
 /*--------------------------------------------------------------------*/
 
-.block {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+blockquote,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+figure,
+figcaption,
+%max {
 	max-width: #{relative(650)}rem;
-	margin: 0 auto;
+	margin-right: auto !important;
+	margin-left: auto !important;
+}
+
+section hr {
+	@extend %max;
+	max-width: #{relative(750)}rem;
 }
 
 nav[role="navigation"] {

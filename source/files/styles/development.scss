@@ -17,7 +17,6 @@
 	text-transform: none;
 	letter-spacing: .05em;
 	background: $prius;
-	border: #{relative(2)}rem solid darken($prius, 10%);
 	margin: #{relative($base_margin * 2)}rem 0;
 	padding: #{baseline($base_font-size + 4, .875) / 2}em;
 	display: inline-block;

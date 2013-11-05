@@ -796,9 +796,31 @@ h1#flag a:active, h1#flag a:focus {
 }
 
 /*--------------------------------------------------------------------*/
-.block {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+blockquote,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+figure,
+figcaption,
+section hr {
   max-width: 46.42857142857143rem;
-  margin: 0 auto;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+section hr {
+  max-width: 53.57142857142857rem;
 }
 
 nav[role="navigation"] ul {
