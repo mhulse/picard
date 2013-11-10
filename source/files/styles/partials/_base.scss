@@ -36,13 +36,6 @@ a {
 	
 }
 
-hr, .hr {
-	border-top-width: #{relative(1)}rem;
-	border-top-style: solid;
-	border-top-color: $grayc;
-	margin: #{relative($base_margin * 2)}rem 0;
-}
-
 ::-moz-selection {
 	background: fade-out($smurf, .45);
 	text-shadow: none;

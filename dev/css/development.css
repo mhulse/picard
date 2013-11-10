@@ -22,7 +22,9 @@
 }
 
 .swatches {
-  margin: 0.71428571428571rem 0;
+  max-width: 46.42857142857143rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 .swatches .swatches-swatch {
   font-size: 1rem;

@@ -54,14 +54,11 @@ $serif: Cambria, Georgia, serif;
 $mono: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
 $amp: adobe-caslon-pro, Adobe Caslon Pro, Baskerville, "Goudy Old Style", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", Times, serif;
 
-// Breakpoints:
-$make-it-so: 749px;
-
-// Spacing:
+// Base styles:
 $base_padding: 10px;
+$base_margin: 10px;
 
 // Rex overrides:
 $NS: "";
 $base_font-size: 14px;
 $base_line-height: 22px;
-$base_margin: 10px;

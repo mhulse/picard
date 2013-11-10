@@ -1,0 +1,58 @@
+nav[role="navigation"] {
+	
+	ul {
+		
+		max-width: #{relative(350)}rem;
+		padding: 0;
+		
+		li {
+			
+			text-transform: uppercase;
+			list-style: none;
+			display: inline-block;
+			margin: #{relative(2)}rem;
+			padding: 0;
+			
+			@include baseline(12);
+			
+			a {
+				
+				letter-spacing: .08em;
+				background: $raven;
+				padding: #{baseline(12, .25)}em #{relative(15)}em;
+				display: block;
+				border-radius: #{relative(3)}em;
+				text-shadow: 0 #{relative(1)}em #{relative(1)}em $raven;
+				white-space: nowrap;
+				
+				&,
+				&:visited { color: $milk; }
+				&:visited:hover,
+				&:focus,
+				&:focus:hover,
+				&:hover,
+				&:active {
+					text-decoration: none;
+					background: $lobster;
+					padding: {
+						left: #{relative(20)}em;
+						right: #{relative(20)}em;
+					}
+				}
+				
+				&:active,
+				&:focus { outline: none; }
+				
+				-webkit-transition: background-color 100ms linear, padding 100ms ease-in;
+				   -moz-transition: background-color 100ms linear, padding 100ms ease-in;
+				     -o-transition: background-color 100ms linear, padding 100ms ease-in;
+				    -ms-transition: background-color 100ms linear, padding 100ms ease-in;
+				        transition: background-color 100ms linear, padding 100ms ease-in;
+				
+			}
+			
+		}
+		
+	}
+	
+}

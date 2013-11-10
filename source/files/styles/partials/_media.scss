@@ -1,6 +1,9 @@
 figure {
 	
-	margin: #{relative($base_margin)}rem 0;
+	margin: {
+		top: #{relative($base_margin)}rem;
+		bottom: #{relative($base_margin)}rem;
+	}
 	
 	img {
 		margin: 0 auto;
@@ -18,5 +21,26 @@ figcaption {
 	margin: #{relative($base_margin)}rem auto 0;
 	
 	p { line-height: inherit; }
+	
+}
+
+// Simple solution for responsive tables.
+//
+// @see http://www.maxdesign.com.au/2013/03/22/simple-responsive-table/
+// @see http://creativeandcode.com/simple-solution-for-responsive-tables/
+
+.scroll {
+	
+	width: 100%;
+	margin: #{relative($base_margin)}rem 0;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	
+	> * {
+		margin-top: 0;
+		margin-bottom: 0;
+		max-width: none;
+		max-height: none;
+	}
 	
 }

@@ -124,7 +124,6 @@ img {
 	
 	max-width: 100%;
 	max-height: 100%;
-	vertical-align: middle;
 	
 	&.reset {
 		max-width: none;
@@ -149,3 +148,15 @@ aside {
 
 @-webkit-keyframes cursor-blink { 80% { visibility: hidden; } }
         @keyframes cursor-blink { 80% { visibility: hidden; } }
+
+hr,
+.hr {
+	border: 0;
+	border-top: #{relative(1)}rem solid $gray9;
+	height: 0;
+	margin: #{relative($base_margin) * 4}rem 0;
+	padding: 0;
+	-webkit-box-sizing: content-box;
+	   -moz-box-sizing: content-box;
+	        box-sizing: content-box;
+}

@@ -17,13 +17,13 @@ h1#flag {
 	a {
 		
 		&,
-		&:visited,
+		&:visited { color: $smurf; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $smurf;
+			color: $bruise;
 			text-decoration: none;
 		}
 		
@@ -34,102 +34,37 @@ h1#flag {
 	
 }
 
-// Simple solution for responsive tables.
-//
-// @see http://www.maxdesign.com.au/2013/03/22/simple-responsive-table/
-// @see http://creativeandcode.com/simple-solution-for-responsive-tables/
-
-.scroll {
-	
-	width: 100%;
-	margin: #{relative($base_margin)}rem 0;
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
-	
-	> * {
-		margin-top: 0;
-		margin-bottom: 0;
-		max-width: none;
-		max-height: none;
-	}
-	
-}
-
 /*--------------------------------------------------------------------*/
 
+address,
+blockquote,
+dd,
+dl,
+dt,
+figcaption,
+figure,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
+li,
+ol,
 p,
 pre,
-blockquote,
-ol,
-ul,
-li,
-dl,
-dt,
-dd,
-figure,
-figcaption,
-%max {
+ul {
 	max-width: #{relative(650)}rem;
-	margin-right: auto !important;
-	margin-left: auto !important;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 section hr {
-	@extend %max;
+	border-top-color: $grayc;
 	max-width: #{relative(750)}rem;
+	margin: #{relative($base_margin) * 2}rem auto;
 }
 
-nav[role="navigation"] {
-	
-	ul {
-		
-		max-width: #{relative(350)}rem;
-		margin: #{relative($base_margin)}rem auto;
-		
-		li {
-			
-			text-transform: uppercase;
-			list-style: none;
-			display: inline-block;
-			margin: #{relative(2)}rem;
-			padding: 0;
-			
-			@include baseline(12);
-			
-			a {
-				
-				letter-spacing: .08em;
-				background: $raven;
-				padding: #{baseline(12, .25)}em #{relative(15)}em;
-				display: block;
-				border-radius: #{relative(3)}em;
-				text-shadow: 0 #{relative(1)}em #{relative(1)}em $raven;
-				white-space: nowrap;
-				
-				&,
-				&:visited { color: $milk; }
-				&:visited:hover,
-				&:focus,
-				&:focus:hover,
-				&:hover,
-				&:active {
-					background: $lobster;
-					text-decoration: none;
-				}
-				
-				&:active,
-				&:focus { outline: none; }
-				
-			}
-			
-		}
-		
-	}
-	
+.big {
+	max-width: none;
 }

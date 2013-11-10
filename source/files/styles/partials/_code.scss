@@ -2,15 +2,16 @@ pre {
 	
 	@include baseline($base_font-size, .875);
 	text-align: left;
-	color: $gray3;
-	background: $graye;
-	box-shadow: inset 0 0 #{relative(5)}em 0 fade-out($raven, .75);
+	color: $gray4;
+	background: fade-out($graye, .5);
+	//box-shadow: inset 0 0 #{relative(3)}em 0 fade-out($raven, .75);
 	word-wrap: normal;
 	overflow: auto;
 	white-space: pre;
 	-webkit-overflow-scrolling: touch;
-	border: 1px solid $grayc;
-	padding: #{relative($base_padding) * 2}rem;
+	border: 1px solid $grayd;
+	border-radius: #{relative(3)}rem;
+	padding: #{relative($base_padding) / 2}rem #{relative($base_padding)}rem;
 	
 	// Blinking cursor.
 	//
@@ -36,10 +37,13 @@ pre {
 		letter-spacing: .05em;
 		color: lighten(adjust-hue($hulk, 45), 20%);
 		text-shadow: 0 1px 0 $raven;
-		background: fade-in($gray1, .9);
+		background: $gray2;
 		box-shadow: inset 0 0 5px 0 fade-in($raven, .5);
+		border: 1px solid $raven;
 		
-		.prompt { color: lighten(adjust-hue($hulk, 90), .2); }
+		.cursor { color: $lobster; }
+		
+		.prompt { color: $hulk; }
 		
 	}
 	

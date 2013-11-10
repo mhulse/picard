@@ -431,12 +431,6 @@ body {
   line-height: 1.57142857142857;
 }
 
-address {
-  font-size: 1rem;
-  line-height: 1.17857142857143;
-  margin: 0.71428571428571rem 0;
-}
-
 h1,
 h2,
 h3,
@@ -457,7 +451,8 @@ h6,
 .sh6 {
   font-size: 1rem;
   line-height: 1.57142857142857;
-  margin: 0 0 .125em;
+  margin-top: 0;
+  margin-bottom: .125em;
 }
 
 h1,
@@ -511,108 +506,20 @@ h6,
   font-weight: normal;
 }
 
-blockquote {
-  margin: 0.71428571428571rem 1.42857142857143rem;
-}
-blockquote > :first-child {
-  margin-top: 0 !important;
-}
-blockquote > :last-child {
-  margin-bottom: 0 !important;
-}
-
-dl {
-  font-size: 1rem;
-  line-height: 1.17857142857143;
-  margin: 0.71428571428571rem 0;
-  padding: 0;
-}
-
+li,
 dt,
 dd {
-  margin: 0 0 0.35714285714286rem;
-  padding: 0;
-}
-
-dd {
-  margin-left: 0.47619047619048rem;
-}
-
-figure {
-  margin: 0.71428571428571rem 0;
-}
-
-figcaption {
-  font-size: 0.85714285714286rem;
-  line-height: 1.60416666666667;
-}
-figcaption p {
-  font-size: inherit;
-}
-figcaption > :first-child {
-  margin-top: 0 !important;
-}
-figcaption > :last-child {
-  margin-bottom: 0 !important;
-}
-
-hr,
-.hr {
-  border: 0;
-  border-top-width: 0.07142857142857rem;
-  border-style: solid;
-  height: 0;
-  margin: 0.71428571428571rem 0;
-  padding: 0;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
-
-ol,
-ul {
   font-size: 1rem;
   line-height: 1.17857142857143;
-  margin: 0.71428571428571rem 0;
-  padding: 0;
-  list-style-position: outside;
-}
-
-li {
-  margin: 0 0 0.39285714285714rem;
-  padding: 0;
-}
-
-li img {
-  display: inline;
-  vertical-align: top;
-}
-
-ol {
-  margin-left: 2.85714285714286rem;
-}
-
-li ol {
-  margin-left: 2.85714285714286rem;
+  margin-top: 0.39285714285714em;
+  margin-bottom: 0.39285714285714em;
 }
 
 p {
   font-size: 1rem;
   line-height: 1.57142857142857;
-  margin: 0.78571428571429rem 0;
-}
-
-pre {
-  font-size: 0.85714285714286rem;
-  line-height: 1.375;
-  margin: 0.71428571428571rem 0;
-}
-
-ul {
-  margin-left: 1.42857142857143rem;
-}
-
-li ul {
-  margin-left: 0.47619047619048rem;
+  margin-top: 0.78571428571429rem;
+  margin-bottom: 0.78571428571429rem;
 }
 
 small {
@@ -635,6 +542,10 @@ sup {
   top: -0.57142857142857em;
 }
 
+img {
+  vertical-align: top;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -643,7 +554,8 @@ table {
 caption {
   font-size: 0.85714285714286rem;
   line-height: 1.375;
-  padding: 0.22916666666667em 0;
+  padding-top: 0.22916666666667em;
+  padding-bottom: 0.22916666666667em;
 }
 
 th,
@@ -651,7 +563,8 @@ td {
   font-size: 1rem;
   line-height: 1.17857142857143;
   margin: 0;
-  padding: 0.19642857142857em 0;
+  padding-top: 0.19642857142857em;
+  padding-bottom: 0.19642857142857em;
 }
 
 form {
@@ -659,8 +572,9 @@ form {
 }
 
 fieldset {
-  margin: 1rem 0;
-  padding: 0.07142857142857rem 0 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 0.07142857142857rem;
 }
 
 input,
@@ -684,7 +598,8 @@ input[type="password"] {
   line-height: 1.57142857142857;
   height: 1.57142857142857rem;
   margin: 0;
-  padding: 0 0.26190476190476em;
+  padding-right: 0.26190476190476em;
+  padding-left: 0.26190476190476em;
   vertical-align: baseline;
 }
 
@@ -698,7 +613,7 @@ legend {
   font-size: 1.14285714285714rem;
   line-height: 1.203125;
   margin: 0;
-  padding: 0 0 0.34375em;
+  padding-bottom: 0.34375em;
 }
 
 select {
@@ -743,13 +658,6 @@ a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
   text-decoration: underline;
 }
 
-hr, .hr {
-  border-top-width: 0.07142857142857rem;
-  border-top-style: solid;
-  border-top-color: #cccccc;
-  margin: 1.42857142857143rem 0;
-}
-
 ::-moz-selection {
   background: rgba(19, 170, 201, 0.55);
   text-shadow: none;
@@ -774,58 +682,54 @@ h1#flag span {
   position: absolute;
   width: 1px;
 }
-h1#flag a, h1#flag a:visited, h1#flag a:visited:hover, h1#flag a:focus, h1#flag a:focus:hover, h1#flag a:hover, h1#flag a:active {
+h1#flag a, h1#flag a:visited {
   color: #13aac9;
+}
+h1#flag a:visited:hover, h1#flag a:focus, h1#flag a:focus:hover, h1#flag a:hover, h1#flag a:active {
+  color: #490a3d;
   text-decoration: none;
 }
 h1#flag a:active, h1#flag a:focus {
   outline: none;
 }
 
-.scroll {
-  width: 100%;
-  margin: 0.71428571428571rem 0;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-.scroll > * {
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: none;
-  max-height: none;
-}
-
 /*--------------------------------------------------------------------*/
+address,
+blockquote,
+dd,
+dl,
+dt,
+figcaption,
+figure,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
+li,
+ol,
 p,
 pre,
-blockquote,
-ol,
-ul,
-li,
-dl,
-dt,
-dd,
-figure,
-figcaption,
-section hr {
+ul {
   max-width: 46.42857142857143rem;
-  margin-right: auto !important;
-  margin-left: auto !important;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 section hr {
+  border-top-color: #cccccc;
   max-width: 53.57142857142857rem;
+  margin: 1.42857142857143rem auto;
+}
+
+.big {
+  max-width: none;
 }
 
 nav[role="navigation"] ul {
   max-width: 25rem;
-  margin: 0.71428571428571rem auto;
+  padding: 0;
 }
 nav[role="navigation"] ul li {
   text-transform: uppercase;
@@ -844,13 +748,20 @@ nav[role="navigation"] ul li a {
   border-radius: 0.21428571428571em;
   text-shadow: 0 0.07142857142857em 0.07142857142857em black;
   white-space: nowrap;
+  -webkit-transition: background-color 100ms linear, padding 100ms ease-in;
+  -moz-transition: background-color 100ms linear, padding 100ms ease-in;
+  -o-transition: background-color 100ms linear, padding 100ms ease-in;
+  -ms-transition: background-color 100ms linear, padding 100ms ease-in;
+  transition: background-color 100ms linear, padding 100ms ease-in;
 }
 nav[role="navigation"] ul li a, nav[role="navigation"] ul li a:visited {
   color: white;
 }
 nav[role="navigation"] ul li a:visited:hover, nav[role="navigation"] ul li a:focus, nav[role="navigation"] ul li a:focus:hover, nav[role="navigation"] ul li a:hover, nav[role="navigation"] ul li a:active {
-  background: #cc3300;
   text-decoration: none;
+  background: #cc3300;
+  padding-left: 1.42857142857143em;
+  padding-right: 1.42857142857143em;
 }
 nav[role="navigation"] ul li a:active, nav[role="navigation"] ul li a:focus {
   outline: none;
@@ -880,7 +791,8 @@ blockquote {
   border-width: 0.14285714285714rem 0;
   border-style: dashed;
   border-color: #dddddd;
-  margin: 0.71428571428571rem 0;
+  margin-top: 0.71428571428571rem;
+  margin-bottom: 0.71428571428571rem;
   padding: 0.71428571428571rem 2.85714285714286rem;
   position: relative;
 }
@@ -900,7 +812,7 @@ blockquote footer p {
 blockquote blockquote {
   border-width: 0.07142857142857rem 0;
 }
-@media (max-width: 749px) {
+@media (max-width: 53.5rem) {
   blockquote {
     padding: 0.71428571428571rem;
   }
@@ -982,15 +894,15 @@ pre {
   font-size: 1rem;
   line-height: 1.375;
   text-align: left;
-  color: #333333;
-  background: #eeeeee;
-  box-shadow: inset 0 0 0.35714285714286em 0 rgba(0, 0, 0, 0.25);
+  color: #444444;
+  background: rgba(238, 238, 238, 0.5);
   word-wrap: normal;
   overflow: auto;
   white-space: pre;
   -webkit-overflow-scrolling: touch;
-  border: 1px solid #cccccc;
-  padding: 1.42857142857143rem;
+  border: 1px solid #dddddd;
+  border-radius: 0.21428571428571rem;
+  padding: 0.35714285714286rem 0.71428571428571rem;
 }
 pre .cursor {
   -webkit-animation-duration: 2s;
@@ -1009,11 +921,15 @@ pre.terminal {
   letter-spacing: .05em;
   color: #30d259;
   text-shadow: 0 1px 0 black;
-  background: #111111;
+  background: #222222;
   box-shadow: inset 0 0 5px 0 black;
+  border: 1px solid black;
+}
+pre.terminal .cursor {
+  color: #cc3300;
 }
 pre.terminal .prompt {
-  color: #1c8181;
+  color: #4e801c;
 }
 
 code,
@@ -1132,7 +1048,8 @@ var {
 }
 
 figure {
-  margin: 0.71428571428571rem 0;
+  margin-top: 0.71428571428571rem;
+  margin-bottom: 0.71428571428571rem;
 }
 figure img {
   margin: 0 auto;
@@ -1148,6 +1065,19 @@ figcaption {
 }
 figcaption p {
   line-height: inherit;
+}
+
+.scroll {
+  width: 100%;
+  margin: 0.71428571428571rem 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.scroll > * {
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+  max-height: none;
 }
 
 table {
@@ -1267,7 +1197,6 @@ dfn[title] {
 img {
   max-width: 100%;
   max-height: 100%;
-  vertical-align: middle;
 }
 img.reset {
   max-width: none;
@@ -1294,4 +1223,16 @@ aside > :first-child {
   80% {
     visibility: hidden;
   }
+}
+
+hr,
+.hr {
+  border: 0;
+  border-top: 0.07142857142857rem solid #999999;
+  height: 0;
+  margin: 2.85714285714286rem 0;
+  padding: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }

@@ -43,7 +43,9 @@
 
 .swatches {
 	
-	margin: #{relative($base_margin)}rem 0;
+	max-width: #{relative(650)}rem;
+	margin-right: auto;
+	margin-left: auto;
 	
 	.swatches-swatch {
 		

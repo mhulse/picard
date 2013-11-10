@@ -33,7 +33,10 @@ blockquote {
 	border-style: dashed;
 	border-color: $grayd;
 	
-	margin: #{relative($base_margin)}rem 0;
+	margin: {
+		top: #{relative($base_margin)}rem;
+		bottom: #{relative($base_margin)}rem;
+	}
 	padding: #{relative($base_padding)}rem #{relative($base_padding * 4)}rem;
 	position: relative;
 	
@@ -55,7 +58,7 @@ blockquote {
 	
 	blockquote { border-width: #{relative(1)}rem 0; }
 	
-	@media (max-width: $make-it-so) {
+	@media (max-width: #{relative(749)}rem) {
 		
 		& { padding: #{relative($base_padding)}rem; }
 		
