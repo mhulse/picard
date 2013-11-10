@@ -683,23 +683,66 @@ h1#flag span {
   width: 1px;
 }
 h1#flag a {
-  text-shadow: 0 0 2.14285714285714rem #13aac9;
-  -webkit-transition: color 100ms linear, text-shadow 100ms linear;
-  -moz-transition: color 100ms linear, text-shadow 100ms linear;
-  -o-transition: color 100ms linear, text-shadow 100ms linear;
-  -ms-transition: color 100ms linear, text-shadow 100ms linear;
-  transition: color 100ms linear, text-shadow 100ms linear;
+  display: inline-block;
+  animation-duration: .3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
 }
 h1#flag a, h1#flag a:visited {
-  color: white;
+  color: #13aac9;
 }
 h1#flag a:visited:hover, h1#flag a:focus, h1#flag a:focus:hover, h1#flag a:hover, h1#flag a:active {
   color: #13aac9;
   text-decoration: none;
-  text-shadow: none;
+}
+h1#flag a:hover {
+  animation-name: jittery;
 }
 h1#flag a:active, h1#flag a:focus {
   outline: none;
+}
+
+@keyframes jittery {
+  10% {
+    transform: translate(-2px, -3px) scale(1.01, 1.01);
+  }
+
+  20% {
+    transform: translate(3px, 2px) scale(0.99, 0.99);
+  }
+
+  30% {
+    transform: translate(-4px, -5px) scale(1.01, 1.01);
+  }
+
+  40% {
+    transform: translate(2px, 3px) scale(1, 1);
+  }
+
+  50% {
+    transform: translate(-1px, -2px) scale(0.98, 0.98);
+  }
+
+  60% {
+    transform: translate(0px, 3px) scale(1.02, 1.02);
+  }
+
+  70% {
+    transform: translate(-2px, -4px) scale(1, 1);
+  }
+
+  80% {
+    transform: translate(3px, 5px) scale(0.99, 0.99);
+  }
+
+  90% {
+    transform: translate(-5px, -3px) scale(1.1, 1.1);
+  }
+
+  100% {
+    transform: translate(3px, 1px) scale(0.95, 0.95);
+  }
 }
 
 /*--------------------------------------------------------------------*/
@@ -720,7 +763,8 @@ li,
 ol,
 p,
 pre,
-ul {
+ul,
+.box {
   max-width: 46.42857142857143rem;
   margin-right: auto;
   margin-left: auto;
@@ -958,6 +1002,23 @@ var {
   word-wrap: break-word;
 }
 
+kbd {
+  font-size: smaller;
+  color: #333333;
+  text-shadow: 0 0.07142857142857em 0 white;
+  -webkit-border-radius: 0.21428571428571em;
+  -moz-border-radius: 0.21428571428571em;
+  border-radius: 0.21428571428571em;
+  -webkit-box-shadow: 0 0.07142857142857em 0 rgba(0, 0, 0, 0.2), 0 0 0 0.14285714285714em white inset;
+  -moz-box-shadow: 0 0.07142857142857em 0 rgba(0, 0, 0, 0.2), 0 0 0 0.14285714285714em white inset;
+  box-shadow: 0 0.07142857142857em 0 rgba(0, 0, 0, 0.2), 0 0 0 0.14285714285714em white inset;
+  background-color: #eeeeee;
+  border: 0.07142857142857em solid #cccccc;
+  margin: 0 .1em;
+  padding: 0 .5em;
+  display: inline-block;
+}
+
 .table {
   margin: 0.71428571428571rem 0;
   width: 100%;
@@ -1076,7 +1137,8 @@ figcaption p {
 
 .scroll {
   width: 100%;
-  margin: 0.71428571428571rem 0;
+  margin-top: 0.71428571428571rem;
+  margin-bottom: 0.71428571428571rem;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }

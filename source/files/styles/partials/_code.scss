@@ -70,6 +70,24 @@ kbd {
 	
 	@extend %code;
 	
+	font-size: smaller;
+	color: $gray3;
+	text-shadow: 0 #{relative(1)}em 0 $milk;
+	
+	-webkit-border-radius: #{relative(3)}em;
+	   -moz-border-radius: #{relative(3)}em;
+	        border-radius: #{relative(3)}em;
+	
+	-webkit-box-shadow: 0 #{relative(1)}em 0 rgba(0, 0, 0, .2), 0 0 0 #{relative(2)}em $milk inset;
+	   -moz-box-shadow: 0 #{relative(1)}em 0 rgba(0, 0, 0, .2), 0 0 0 #{relative(2)}em $milk inset;
+	        box-shadow:  0 #{relative(1)}em 0 rgba(0, 0, 0, .2), 0 0 0 #{relative(2)}em $milk inset;
+	
+	background-color: $graye;
+	border: #{relative(1)}em solid $grayc;
+	margin: 0 .1em;
+	padding: 0 .5em;
+	display: inline-block;
+	
 }
 
 samp {

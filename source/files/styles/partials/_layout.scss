@@ -16,10 +16,17 @@ h1#flag {
 	
 	a {
 		
-		text-shadow: 0 0 #{relative(30)}rem $smurf;
+		display: inline-block;
+		
+		animation: {
+			duration: .3s;
+			timing-function: ease-in-out;
+			fill-mode: forwards;
+			iteration-count: infinite;
+		}
 		
 		&,
-		&:visited { color: $milk; }
+		&:visited { color: $smurf; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
@@ -27,20 +34,28 @@ h1#flag {
 		&:active {
 			color: $smurf;
 			text-decoration: none;
-			text-shadow: none;
 		}
+		
+		&:hover { animation-name: jittery; }
 		
 		&:active,
 		&:focus { outline: none; }
 		
-		-webkit-transition: color 100ms linear, text-shadow 100ms linear;
-		   -moz-transition: color 100ms linear, text-shadow 100ms linear;
-		     -o-transition: color 100ms linear, text-shadow 100ms linear;
-		    -ms-transition: color 100ms linear, text-shadow 100ms linear;
-		        transition: color 100ms linear, text-shadow 100ms linear;
-		
 	}
 	
+}
+
+@keyframes jittery {
+	10% { transform: translate(-2px, -3px) scale(1.01, 1.01); }
+	20% { transform: translate(3px, 2px) scale(.99, .99); }
+	30% { transform: translate(-4px, -5px) scale(1.01, 1.01); }
+	40% { transform: translate(2px, 3px) scale(1, 1); }
+	50% { transform: translate(-1px, -2px) scale(.98, .98); }
+	60% { transform: translate(0px, 3px) scale(1.02, 1.02); }
+	70% { transform: translate(-2px, -4px) scale(1, 1); }
+	80% { transform: translate(3px, 5px) scale(.99, .99); }
+	90% { transform: translate(-5px, -3px) scale(1.1, 1.1); }
+	100% { transform: translate(3px, 1px) scale(.95, .95); }
 }
 
 /*--------------------------------------------------------------------*/
@@ -62,7 +77,8 @@ li,
 ol,
 p,
 pre,
-ul {
+ul,
+.box {
 	max-width: #{relative(650)}rem;
 	margin-right: auto;
 	margin-left: auto;
