@@ -11,12 +11,11 @@
 	
 	@include baseline($base_font-size + 4, .875, $optional: bold, $family: $sans);
 	
-	text-shadow: 0 #{relative(1)}em #{relative(1)}em darken($prius, 20%);
 	font-weight: normal;
-	color: $milk;
+	color: darken($bling, 20%);
 	text-transform: none;
-	letter-spacing: .05em;
-	background: $prius;
+	letter-spacing: .03em;
+	background: $bling;
 	margin: #{relative($base_margin * 2)}rem 0;
 	padding: #{baseline($base_font-size + 4, .875) / 2}em;
 	display: inline-block;
@@ -29,7 +28,7 @@
 	
 	@include baseline(16, .75, $optional: normal, $family: $mono);
 	
-	color: $gray6;
+	color: darken($bling, 10%);
 	letter-spacing: .1em;
 	margin-top: #{relative($base_margin)}rem;
 	margin-bottom: #{relative($base_margin)}rem;

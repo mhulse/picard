@@ -34,20 +34,16 @@ nav[role="navigation"] {
 				&:active {
 					text-decoration: none;
 					background: $lobster;
-					padding: {
-						left: #{relative(20)}em;
-						right: #{relative(20)}em;
-					}
 				}
 				
 				&:active,
 				&:focus { outline: none; }
 				
-				-webkit-transition: background-color 100ms linear, padding 100ms ease-in;
-				   -moz-transition: background-color 100ms linear, padding 100ms ease-in;
-				     -o-transition: background-color 100ms linear, padding 100ms ease-in;
-				    -ms-transition: background-color 100ms linear, padding 100ms ease-in;
-				        transition: background-color 100ms linear, padding 100ms ease-in;
+				-webkit-transition: background-color 75ms linear;
+				   -moz-transition: background-color 75ms linear;
+				     -o-transition: background-color 75ms linear;
+				    -ms-transition: background-color 75ms linear;
+				        transition: background-color 75ms linear;
 				
 			}
 			

@@ -1,11 +1,10 @@
 .marker {
   font: bold 1.28571428571429rem/1.06944444444444 Arial, sans-serif;
-  text-shadow: 0 0.07142857142857em 0.07142857142857em #385561;
   font-weight: normal;
-  color: white;
+  color: #997d00;
   text-transform: none;
-  letter-spacing: .05em;
-  background: #5e8da1;
+  letter-spacing: .03em;
+  background: #ffd100;
   margin: 1.42857142857143rem 0;
   padding: 0.53472222222222em;
   display: inline-block;
@@ -15,7 +14,7 @@
 
 .subtle {
   font: normal 1.14285714285714rem/1.03125 Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
-  color: #666666;
+  color: #cca700;
   letter-spacing: .1em;
   margin-top: 0.71428571428571rem;
   margin-bottom: 0.71428571428571rem;

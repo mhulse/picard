@@ -16,19 +16,28 @@ h1#flag {
 	
 	a {
 		
+		text-shadow: 0 0 #{relative(30)}rem $smurf;
+		
 		&,
-		&:visited { color: $smurf; }
+		&:visited { color: $milk; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $bruise;
+			color: $smurf;
 			text-decoration: none;
+			text-shadow: none;
 		}
 		
 		&:active,
 		&:focus { outline: none; }
+		
+		-webkit-transition: color 100ms linear, text-shadow 100ms linear;
+		   -moz-transition: color 100ms linear, text-shadow 100ms linear;
+		     -o-transition: color 100ms linear, text-shadow 100ms linear;
+		    -ms-transition: color 100ms linear, text-shadow 100ms linear;
+		        transition: color 100ms linear, text-shadow 100ms linear;
 		
 	}
 	
@@ -60,7 +69,7 @@ ul {
 }
 
 section hr {
-	border-top-color: $grayc;
+	border-top-width: #{relative(1)}rem;
 	max-width: #{relative(750)}rem;
 	margin: #{relative($base_margin) * 2}rem auto;
 }
