@@ -19,6 +19,15 @@ h1, h2, h3, h4, h5, h6 {
 	
 }
 
+// Used for `title`-free sections.
+//
+// `<h1></h1> <!-- Testing `:empty` pseudo-class. -->`
+//
+// @see https://developer.mozilla.org/en-US/docs/Web/CSS/:empty
+// @see http://camendesign.com/design/design.css
+
+h1:empty { display: none; }
+
 .sh1, .sh2, .sh3, .sh4, .sh5, .sh6 { text-transform: none; }
 
 blockquote {
@@ -103,10 +112,58 @@ ins {
 
 q { font-family: $serif; }
 
+abbr {
+	
+	font-style: italic;
+	cursor: help;
+	
+	&[title] { border-bottom: 1px dotted; }
+	
+	&[title="et cetera"] { font-family: "Hoefler Text", Palatino, Constantia, "Palatino Linotype", cursive; }
+	
+}
+
+cite { font-style: italic; }
+
+dfn {
+	
+	font-weight: bold;
+	font-style: italic;
+	
+	&[title] {
+		border-bottom: 1px dotted;
+		cursor: help;
+	}
+	
+}
+
+wbr {
+	
+	&:after { content: "\00200B"; }
+	
+}
+
 small,
 .small { font-size: smaller; }
 
-//----------------------------------------------------------------------
+span {
+	
+	// The italic version of an ampersand is more decorative and interesting
+	// than its roman counterpart.
+	//
+	// @see http://simplebits.com/notebook/2008/08/14/ampersands-2/
+	// @see http://fluidbaselinegrid.com/css/style.css
+	
+	&.amp {
+		font-size: 110%;
+		font-family: adobe-caslon-pro, Adobe Caslon Pro, Baskerville, "Goudy Old Style", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", Times, serif;;
+		font-style: italic;
+		line-height: 0;
+		vertical-align: baseline;
+		position: relative;
+	}
+	
+}
 
 .category {
 	

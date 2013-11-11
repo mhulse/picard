@@ -27,6 +27,18 @@ figcaption {
 	
 }
 
+img {
+	
+	max-width: 100%;
+	max-height: 100%;
+	
+	&.reset {
+		max-width: none;
+		max-height: none;
+	}
+	
+}
+
 // Simple solution for responsive tables.
 //
 // @see http://www.maxdesign.com.au/2013/03/22/simple-responsive-table/

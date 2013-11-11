@@ -13,7 +13,9 @@
         "partials/rex/master";
 
 // Core:
-@import "partials/base",
+@import "partials/keyframes",
+        "partials/utilities",
+        "partials/base",
         "partials/layout",
         "partials/navigation",
         "partials/type",

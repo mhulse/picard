@@ -1117,77 +1117,64 @@ p q r s t u v w x y z { | } ~
 			
 			<form class="form" id="fm" name="fm" action="" method="post">
 				
+				<input type="hidden" name="input-hidden-1" value="hidden">
+				
 				<fieldset>
 					
-					<legend>Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues.</legend>
+					<legend class="off">Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues.</legend>
 					
-					<label for="fm_input-hidden-1">Hidden</label>
-					<input type="hidden" id="fm_input-hidden-1" name="input-hidden-1" value="hidden">
+					<label>Password: <input type="password" name="input-password-1" placeholder="Enter password ..."></label>
 					
-					<label for="fm_input-button-1">Button</label>
-					<input type="button" id="fm_input-button-1" name="input-button-1" value="button">
+					<label>File: <input type="file" name="input-file-1" placeholder="Choose file ..."></label>
 					
-					<input type="checkbox" id="fm_input-checkbox-1" name="input-checkbox[]" value="checkbox">&nbsp;<label for="fm_input-checkbox-1">Checkbox</label>
-					<input type="checkbox" id="fm_input-checkbox-2" name="input-checkbox[]" value="checkbox">&nbsp;<label for="fm_input-checkbox-2">Checkbox</label>
-					<input type="checkbox" id="fm_input-checkbox-3" name="input-checkbox[]" value="checkbox">&nbsp;<label for="fm_input-checkbox-3">Checkbox</label>
-					<input type="checkbox" id="fm_input-checkbox-4" name="input-checkbox[]" value="checkbox">&nbsp;<label for="fm_input-checkbox-4">Checkbox</label>
-					<input type="checkbox" id="fm_input-checkbox-5" name="input-checkbox[]" value="checkbox">&nbsp;<label for="fm_input-checkbox-5">Checkbox</label>
+					<label>Text: <input type="text" name="input-text-1" placeholder="Text ..."></label>
 					
-					<input type="radio" id="fm_input-radio-1" name="input-radio" value="radio">&nbsp;<label for="fm_input-radio-1">Radio</label>
-					<input type="radio" id="fm_input-radio-2" name="input-radio" value="radio">&nbsp;<label for="fm_input-radio-2">Radio</label>
-					<input type="radio" id="fm_input-radio-3" name="input-radio" value="radio">&nbsp;<label for="fm_input-radio-3">Radio</label>
-					<input type="radio" id="fm_input-radio-4" name="input-radio" value="radio">&nbsp;<label for="fm_input-radio-4">Radio</label>
-					<input type="radio" id="fm_input-radio-5" name="input-radio" value="radio">&nbsp;<label for="fm_input-radio-5">Radio</label>
+					<label>
+						Select:
+						<select name="select-1">
+							<option value="option1">Option 1</option>
+							<option value="option2" selected>Option 2</option>
+							<option value="option3">Option 3</option>
+						</select>
+					</label>
 					
-					<label for="fm_input-password-1">Password</label> 
-					<input type="password" id="fm_input-password-1" name="input-password-1">
+					<label >
+						Select:
+						<select name="select-2">
+							<optgroup label="Group 1">
+								<option>Option 1.1</option>
+							</optgroup> 
+							<optgroup label="Group 2">
+								<option>Option 2.1</option>
+								<option>Option 2.2</option>
+							</optgroup>
+							<optgroup label="Group 3" disabled>
+								<option>Option 3.1</option>
+								<option>Option 3.2</option>
+								<option>Option 3.3</option>
+							</optgroup>
+						</select>
+					</label>
 					
-					<label for="fm_input-file-1">File</label>
-					<input type="file" id="fm_input-file-1" name="input-file-1">
+					<label><input type="checkbox" name="input-checkbox[]" value="checkbox"> Checkbox</label>
+					<label><input type="checkbox" name="input-checkbox[]" value="checkbox"> Checkbox</label>
+					<label><input type="checkbox" name="input-checkbox[]" value="checkbox"> Checkbox</label>
+					<label><input type="checkbox" name="input-checkbox[]" value="checkbox"> Checkbox</label>
+					<label><input type="checkbox" name="input-checkbox[]" value="checkbox"> Checkbox</label>
 					
-					<label for="fm_input-reset-1">Reset</label>
-					<input type="reset" id="fm_input-reset-1" name="input-reset-1" value="Reset">
+					<label><input type="radio" name="input-radio" value="radio"> Radio</label>
+					<label><input type="radio" name="input-radio" value="radio"> Radio</label>
+					<label><input type="radio" name="input-radio" value="radio"> Radio</label>
+					<label><input type="radio" name="input-radio" value="radio"> Radio</label>
+					<label><input type="radio" name="input-radio" value="radio"> Radio</label>
 					
-					<label for="fm_input-submit-1">Submit</label>
-					<input type="submit" id="fm_input-submit-1" name="input-submit-1" value="Submit">
+					<label>Textarea: <textarea name="textarea-1"></textarea></label>
 					
-					<label for="fm_input-default-1">Default</label>
-					<input id="fm_input-default-1" name="input-default-1">
+					<input type="reset" name="input-reset-1" value="Reset">
 					
-					<label for="fm_input-text-1">Text</label>
-					<input type="text" id="fm_input-text-1" name="input-text-1">
+					<input type="submit" name="input-submit-1" value="Submit">
 					
-					<label for="fm_input-text-2">Text</label>
-					<input type="text" id="fm_input-text-2" name="input-text-2">
-					
-					<label for="fm_input-textarea-1">Textarea</label>
-					<textarea id="fm_input-textarea-1" name="textarea-1"></textarea>
-					
-					<label for="fm_input-textarea-2">Textarea</label>
-					<textarea id="fm_input-textarea-2" name="textarea-2"></textarea>
-					
-					<label for="fm_select-1">Select</label>
-					<select id="fm_select-1" name="select-1">
-						<option value="option1">Option 1</option>
-						<option value="option2" selected>Option 2</option>
-						<option value="option3">Option 3</option>
-					</select>
-					
-					<label for="fm_select-2">Select</label>
-					<select id="fm_select-2" name="select-2">
-						<optgroup label="Group 1">
-							<option>Option 1.1</option>
-						</optgroup> 
-						<optgroup label="Group 2">
-							<option>Option 2.1</option>
-							<option>Option 2.2</option>
-						</optgroup>
-						<optgroup label="Group 3" disabled>
-							<option>Option 3.1</option>
-							<option>Option 3.2</option>
-							<option>Option 3.3</option>
-						</optgroup>
-					</select>
+					<input type="button" name="input-button-1" value="button">
 					
 					<button type="button" name="fm_button-button-1">Button</button>
 					
