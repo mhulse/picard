@@ -1,67 +1,84 @@
 .table {
 	
-	margin: #{relative($base_margin)}rem 0;
-	width: 100%;
+	empty-cells: hide;
 	
-	& caption { text-align: left; }
-	
-	& thead { vertical-align: bottom; }
-	
-	& tfoot {
-		& th,
-		& td { color: fade-out($gray6, .1); }
+	margin: {
+		top: #{relative($base_margin)}rem;
+		right: #{relative($base_margin)}rem;
 	}
 	
-	& th,
-	& td {
+	width: 100%;
+	
+	caption { text-align: left; }
+	
+	thead { vertical-align: bottom; }
+	
+	tfoot {
+		
+		vertical-align: top;
+		
+		th,
+		td { color: fade-out($gray6, .1); }
+		
+	}
+	
+	th,
+	td {
 		
 		text-align: left;
-		padding-right: 10px;
-		padding-left: 10px;
+		padding: {
+			right: 10px;
+			left: 10px;
+		}
 		
 		&:first-child { padding-left: 0; }
 		&:last-child { padding-right: 0; }
 		
 	}
 	
-	& th {
+	th {
 		color: fade-out($gray8, .1);
 		white-space: nowrap;
 	}
-	& tbody { vertical-align: top; }
+	
+	tbody { vertical-align: top; }
 	
 	&.table-border-x {
 		
-		& thead th,
-		& tbody th,
-		& tbody td { border-bottom: 1px solid fade-out($bruise, .2); }
+		thead th,
+		tbody th,
+		tbody td { border-bottom: #{relative(1)}rem solid $gray9; }
 		
 		/*
 		& th:empty,
 		& td:empty { border-bottom: 0; }
 		*/
 		
-		& tfoot th,
-		& tfoot td { border-top: 1px solid fade-out($bruise, .2); }
+		tfoot th,
+		tfoot td { border-top: #{relative(1)}rem solid $gray9; }
 		
-		& tbody tr:last-child th,
-		& tbody tr:last-child td { border-bottom: 0; }
+		tbody tr:last-child th,
+		tbody tr:last-child td { border-bottom: 0; }
 		
 	}
 	
 	&.table-border-y {
 		
-		& th,
-		& td {
-			border-right: 1px solid fade-out($bruise, .2);
-			border-left: 1px solid fade-out($bruise, .2);
+		th,
+		td {
+			
+			border: {
+				right: #{relative(1)}rem solid $gray9;
+				left: #{relative(1)}rem solid $gray9;
+			}
+			
 		}
 		
-		& th:first-child,
-		& td:first-child { border-left: 0; }
+		th:first-child,
+		td:first-child { border-left: 0; }
 		
-		& th:last-child,
-		& td:last-child { border-right: 0; }
+		th:last-child,
+		td:last-child { border-right: 0; }
 		
 	}
 	

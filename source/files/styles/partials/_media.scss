@@ -20,7 +20,10 @@ figcaption {
 	letter-spacing: .03em;
 	margin: #{relative($base_margin)}rem auto 0;
 	
-	p { line-height: inherit; }
+	p {
+		font-size: inherit;
+		line-height: inherit;
+	}
 	
 }
 
