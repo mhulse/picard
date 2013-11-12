@@ -1,64 +1,3 @@
-h1#flag {
-	
-	font: #{relative(115)}rem/#{relative(115)}rem "Hulse", Arial, sans-serif;
-	margin-bottom: #{relative($base_margin * 5)}rem;
-	
-	span {
-		border: 0;
-		clip: rect(0 0 0 0);
-		height: 1px;
-		margin: -1px;
-		overflow: hidden;
-		padding: 0;
-		position: absolute;
-		width: 1px;
-	}
-	
-	a {
-		
-		display: inline-block;
-		
-		animation: {
-			duration: .3s;
-			timing-function: ease-in-out;
-			fill-mode: forwards;
-			iteration-count: infinite;
-		}
-		
-		&,
-		&:visited { color: $smurf; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
-			color: $smurf;
-			text-decoration: none;
-		}
-		
-		&:hover { animation-name: jittery; }
-		
-		&:active,
-		&:focus { outline: none; }
-		
-	}
-	
-}
-
-hr,
-.hr {
-	border: 0;
-	border-top: #{relative(2)}rem solid $graye;
-	height: 0;
-	margin: #{relative($base_margin) * 4}rem 0;
-	padding: 0;
-	-webkit-box-sizing: content-box;
-	   -moz-box-sizing: content-box;
-	        box-sizing: content-box;
-}
-
-/*--------------------------------------------------------------------*/
-
 address,
 blockquote,
 dd,
@@ -77,12 +16,19 @@ ol,
 p,
 pre,
 ul,
-label,
 .box {
 	max-width: #{relative(650)}rem;
 	margin-right: auto;
 	margin-left: auto;
 	display: block;
+}
+
+label {
+	max-width: #{relative(350)}rem;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	padding: #{relative(5)}em;
 }
 
 section hr {
@@ -101,4 +47,16 @@ aside {
 	
 	& > :first-child { margin-top: 0; }
 	
+}
+
+hr,
+.hr {
+	border: 0;
+	border-top: #{relative(2)}rem solid $graye;
+	height: 0;
+	margin: #{relative($base_margin) * 4}rem 0;
+	padding: 0;
+	-webkit-box-sizing: content-box;
+	   -moz-box-sizing: content-box;
+	        box-sizing: content-box;
 }

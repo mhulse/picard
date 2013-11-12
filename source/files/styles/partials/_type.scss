@@ -1,3 +1,50 @@
+h1#flag {
+	
+	font: #{relative(115)}rem/#{relative(115)}rem "Hulse", Arial, sans-serif;
+	margin-bottom: #{relative($base_margin * 5)}rem;
+	
+	span {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
+	
+	a {
+		
+		display: inline-block;
+		
+		animation: {
+			duration: .3s;
+			timing-function: ease-in-out;
+			fill-mode: forwards;
+			iteration-count: infinite;
+		}
+		
+		&,
+		&:visited { color: $smurf; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $smurf;
+			text-decoration: none;
+		}
+		
+		&:hover { animation-name: jittery; }
+		
+		&:active,
+		&:focus { outline: none; }
+		
+	}
+	
+}
+
 h1, h2, h3, h4, h5, h6 {
 	
 	text-transform: uppercase;

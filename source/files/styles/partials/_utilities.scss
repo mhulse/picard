@@ -31,8 +31,10 @@
 .ghost { visibility: hidden; }
 
 .force {
-	margin-top: -1px;
-	margin-bottom: -1px;
+	margin: {
+		top: -1px;
+		bottom: -1px;
+	}
 	padding: 1px 0;
 }
 

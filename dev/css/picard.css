@@ -763,54 +763,6 @@ a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
   text-shadow: none;
 }
 
-h1#flag {
-  font: 8.21428571428571rem/8.21428571428571rem "Hulse", Arial, sans-serif;
-  margin-bottom: 3.57142857142857rem;
-}
-h1#flag span {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-h1#flag a {
-  display: inline-block;
-  animation-duration: .3s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-}
-h1#flag a, h1#flag a:visited {
-  color: #13aac9;
-}
-h1#flag a:visited:hover, h1#flag a:focus, h1#flag a:focus:hover, h1#flag a:hover, h1#flag a:active {
-  color: #13aac9;
-  text-decoration: none;
-}
-h1#flag a:hover {
-  animation-name: jittery;
-}
-h1#flag a:active, h1#flag a:focus {
-  outline: none;
-}
-
-hr,
-.hr {
-  border: 0;
-  border-top: 0.14285714285714rem solid #eeeeee;
-  height: 0;
-  margin: 2.85714285714286rem 0;
-  padding: 0;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
-
-/*--------------------------------------------------------------------*/
 address,
 blockquote,
 dd,
@@ -829,12 +781,19 @@ ol,
 p,
 pre,
 ul,
-label,
 .box {
   max-width: 46.42857142857143rem;
   margin-right: auto;
   margin-left: auto;
   display: block;
+}
+
+label {
+  max-width: 25rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  padding: 0.35714285714286em;
 }
 
 section hr {
@@ -851,6 +810,18 @@ section > :first-child,
 article > :first-child,
 aside > :first-child {
   margin-top: 0;
+}
+
+hr,
+.hr {
+  border: 0;
+  border-top: 0.14285714285714rem solid #eeeeee;
+  height: 0;
+  margin: 2.85714285714286rem 0;
+  padding: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 nav[role="navigation"] ul {
@@ -888,6 +859,41 @@ nav[role="navigation"] ul li a:visited:hover, nav[role="navigation"] ul li a:foc
   background: #cc3300;
 }
 nav[role="navigation"] ul li a:active, nav[role="navigation"] ul li a:focus {
+  outline: none;
+}
+
+h1#flag {
+  font: 8.21428571428571rem/8.21428571428571rem "Hulse", Arial, sans-serif;
+  margin-bottom: 3.57142857142857rem;
+}
+h1#flag span {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+h1#flag a {
+  display: inline-block;
+  animation-duration: .3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+h1#flag a, h1#flag a:visited {
+  color: #13aac9;
+}
+h1#flag a:visited:hover, h1#flag a:focus, h1#flag a:focus:hover, h1#flag a:hover, h1#flag a:active {
+  color: #13aac9;
+  text-decoration: none;
+}
+h1#flag a:hover {
+  animation-name: jittery;
+}
+h1#flag a:active, h1#flag a:focus {
   outline: none;
 }
 
@@ -1227,25 +1233,39 @@ kbd {
 .form label {
   color: #666666;
   letter-spacing: .05em;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
-.form input[type="text"], .form input[type="password"] {
+.form input[type="text"], .form input[type="password"], .form textarea {
   color: #333333;
-  line-height: 2.25;
   letter-spacing: .05em;
   border: 1px solid #cccccc;
-  padding: 0 .75rem;
-  box-shadow: inset 0 0.1em 0.2em 0.1em #eeeeee;
-  width: 50%;
+  box-shadow: inset 0 0.07142857142857em 0.07142857142857em 0.14285714285714em #eaeaea;
+  background: #fbfbfb;
+  width: 100%;
+}
+.form input[type="text"], .form input[type="password"] {
+  line-height: 2.25;
   height: 2.25rem;
+  padding: 0 .75rem;
 }
 .form textarea {
   height: 15rem;
-  display: block;
-  width: 100%;
-  padding: 5px;
+  padding: 0.35714285714286rem;
   resize: vertical;
+}
+.form button,
+.form input[type="button"],
+.form input[type="reset"],
+.form input[type="submit"] {
+  font-size: 1.14285714285714rem;
+  line-height: 1.375;
+  color: white;
+  letter-spacing: .05em;
+  font-weight: normal;
+  background: #cc3300;
+  padding: 0.34375em 0.6875em;
+  border: 0;
+  border-radius: 0.14285714285714em;
+  text-shadow: 0 0.07142857142857em 0.07142857142857em #661a00;
 }
 
 figure {

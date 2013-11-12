@@ -20,34 +20,49 @@
 	label {
 		color: $gray6;
 		letter-spacing: .05em;
-		margin: {
-			top: #{relative($base_font-size)}rem;
-			bottom: #{relative($base_font-size)}rem;
-		}
+	}
+	
+	%fields {
+		color: $gray3;
+		letter-spacing: .05em;
+		border: 1px solid $grayc;
+		box-shadow: inset 0 #{relative(1)}em #{relative(1)}em #{relative(2)}em lighten($grayd, 5%);
+		background: lighten($graye, 5%);
+		width: 100%;
 	}
 	
 	input {
 		
 		&[type="text"],
 		&[type="password"] {
-			color: $gray3;
+			@extend %fields;
 			line-height: 2.25;
-			letter-spacing: .05em;
-			border: 1px solid $grayc;
-			padding: 0 .75rem;
-			box-shadow: inset 0 .1em .2em .1em $graye;
-			width: 50%;
 			height: 2.25rem;
+			padding: 0 .75rem;
 		}
 		
 	}
 	
 	textarea {
+		@extend %fields;
 		height: 15rem;
-		display: block;
-		width: 100%;
-		padding: 5px;
+		padding: #{relative(5)}rem;
 		resize: vertical; // [ none | horizontal | vertical | both ]
+	}
+	
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"] {
+		@include baseline($base_font-size + 2);
+		color: $milk;
+		letter-spacing: .05em;
+		font-weight: normal;
+		background: $lobster;
+		padding: #{baseline($base_font-size + 2) / 4}em #{baseline($base_font-size + 2) / 2}em;
+		border: 0;
+		border-radius: #{relative(2)}em;
+		text-shadow: 0 #{relative(1)}em #{relative(1)}em darken($lobster, 20%);
 	}
 	
 }
