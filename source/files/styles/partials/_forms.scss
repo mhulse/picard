@@ -23,12 +23,40 @@
 	}
 	
 	%fields {
+		
 		color: $gray3;
 		letter-spacing: .05em;
-		border: 1px solid $grayc;
-		box-shadow: inset 0 #{relative(1)}em #{relative(1)}em #{relative(2)}em lighten($grayd, 5%);
+		border: #{relative(1)}rem solid $grayc;
+		box-shadow: inset 0 #{relative(1)}em #{relative(3)}em lighten($grayd, 5%);
 		background: lighten($graye, 5%);
 		width: 100%;
+		display: block;
+		
+		-webkit-transition: 0.3s linear border;
+		   -moz-transition: 0.3s linear border;
+		    -ms-transition: 0.3s linear border;
+		     -o-transition: 0.3s linear border;
+		        transition: 0.3s linear border;
+		
+		&:focus {
+			outline: 0;
+			outline: thin dotted \9; /* IE6-9 */
+			border-color: $bruise;
+			
+		}
+		
+		&[disabled] {
+			cursor: not-allowed;
+			background-color: #eaeded;
+			color: #cad2d3;
+		}
+		
+		&[readonly] {
+			background: #eee; /* menu hover bg color */
+			color: #777; /* menu text color */
+			border-color: #ccc;
+		}
+		
 	}
 	
 	input {
@@ -57,12 +85,69 @@
 		@include baseline($base_font-size + 2);
 		color: $milk;
 		letter-spacing: .05em;
+		font-family: inherit;
+		text-decoration: none;
 		font-weight: normal;
 		background: $lobster;
 		padding: #{baseline($base_font-size + 2) / 4}em #{baseline($base_font-size + 2) / 2}em;
 		border: 0;
 		border-radius: #{relative(2)}em;
 		text-shadow: 0 #{relative(1)}em #{relative(1)}em darken($lobster, 20%);
+		
+		display: inline-block;
+		zoom: 1;
+		white-space: nowrap;
+		vertical-align: baseline;
+		cursor: pointer;
+		-webkit-user-drag: none;
+		-webkit-user-select: none;
+		   -moz-user-select: none;
+		    -ms-user-select: none;
+		        user-select: none;
+		
+		-webkit-transition: 0.1s linear -webkit-box-shadow;
+		   -moz-transition: 0.1s linear -moz-box-shadow;
+		    -ms-transition: 0.1s linear box-shadow;
+		     -o-transition: 0.1s linear box-shadow;
+		        transition: 0.1s linear box-shadow;
+		
+		&::-moz-focus-inner {
+			padding: 0;
+			border: 0;
+		}
+		
+		&:hover,
+		&:focus {
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
+			background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
+			background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+			background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.10));
+			background-image: -o-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+			background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+		}
+		
+		&:focus { outline: 0; }
+		
+		&:active { box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset; }
+		
+		&[disabled] {
+			
+			&:hover,
+			&:focus,
+			&:active {
+				border: none;
+				background-image: none;
+				filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+				filter: alpha(opacity=40);
+				-khtml-opacity: 0.40;
+				-moz-opacity: 0.40;
+				opacity: 0.40;
+				cursor: not-allowed;
+				box-shadow: none;
+			}
+			
+		}
+		
 	}
 	
 }

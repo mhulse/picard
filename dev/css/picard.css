@@ -765,9 +765,7 @@ a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
 
 address,
 blockquote,
-dd,
 dl,
-dt,
 figcaption,
 figure,
 h1,
@@ -776,7 +774,6 @@ h3,
 h4,
 h5,
 h6,
-li,
 ol,
 p,
 pre,
@@ -1054,6 +1051,10 @@ span.amp {
   line-height: 1.17857142857143;
 }
 
+ul, ol, dl {
+  padding: 0;
+}
+
 dt {
   font-size: 1.14285714285714rem;
   line-height: 1.03125;
@@ -1237,10 +1238,34 @@ kbd {
 .form input[type="text"], .form input[type="password"], .form textarea {
   color: #333333;
   letter-spacing: .05em;
-  border: 1px solid #cccccc;
-  box-shadow: inset 0 0.07142857142857em 0.07142857142857em 0.14285714285714em #eaeaea;
+  border: 0.07142857142857rem solid #cccccc;
+  box-shadow: inset 0 0.07142857142857em 0.21428571428571em #eaeaea;
   background: #fbfbfb;
   width: 100%;
+  display: block;
+  -webkit-transition: 0.3s linear border;
+  -moz-transition: 0.3s linear border;
+  -ms-transition: 0.3s linear border;
+  -o-transition: 0.3s linear border;
+  transition: 0.3s linear border;
+}
+.form input[type="text"]:focus, .form input[type="password"]:focus, .form textarea:focus {
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  border-color: #490a3d;
+}
+.form input[disabled][type="text"], .form input[disabled][type="password"], .form textarea[disabled] {
+  cursor: not-allowed;
+  background-color: #eaeded;
+  color: #cad2d3;
+}
+.form input[readonly][type="text"], .form input[readonly][type="password"], .form textarea[readonly] {
+  background: #eee;
+  /* menu hover bg color */
+  color: #777;
+  /* menu text color */
+  border-color: #ccc;
 }
 .form input[type="text"], .form input[type="password"] {
   line-height: 2.25;
@@ -1260,12 +1285,82 @@ kbd {
   line-height: 1.375;
   color: white;
   letter-spacing: .05em;
+  font-family: inherit;
+  text-decoration: none;
   font-weight: normal;
   background: #cc3300;
   padding: 0.34375em 0.6875em;
   border: 0;
   border-radius: 0.14285714285714em;
   text-shadow: 0 0.07142857142857em 0.07142857142857em #661a00;
+  display: inline-block;
+  zoom: 1;
+  white-space: nowrap;
+  vertical-align: baseline;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.1s linear -webkit-box-shadow;
+  -moz-transition: 0.1s linear -moz-box-shadow;
+  -ms-transition: 0.1s linear box-shadow;
+  -o-transition: 0.1s linear box-shadow;
+  transition: 0.1s linear box-shadow;
+}
+.form button::-moz-focus-inner,
+.form input[type="button"]::-moz-focus-inner,
+.form input[type="reset"]::-moz-focus-inner,
+.form input[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.form button:hover, .form button:focus,
+.form input[type="button"]:hover,
+.form input[type="button"]:focus,
+.form input[type="reset"]:hover,
+.form input[type="reset"]:focus,
+.form input[type="submit"]:hover,
+.form input[type="submit"]:focus {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.1)));
+  background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.1));
+  background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+}
+.form button:focus,
+.form input[type="button"]:focus,
+.form input[type="reset"]:focus,
+.form input[type="submit"]:focus {
+  outline: 0;
+}
+.form button:active,
+.form input[type="button"]:active,
+.form input[type="reset"]:active,
+.form input[type="submit"]:active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
+}
+.form button[disabled]:hover, .form button[disabled]:focus, .form button[disabled]:active,
+.form input[type="button"][disabled]:hover,
+.form input[type="button"][disabled]:focus,
+.form input[type="button"][disabled]:active,
+.form input[type="reset"][disabled]:hover,
+.form input[type="reset"][disabled]:focus,
+.form input[type="reset"][disabled]:active,
+.form input[type="submit"][disabled]:hover,
+.form input[type="submit"][disabled]:focus,
+.form input[type="submit"][disabled]:active {
+  border: none;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  filter: alpha(opacity=40);
+  -khtml-opacity: 0.40;
+  -moz-opacity: 0.40;
+  opacity: 0.40;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
 figure {

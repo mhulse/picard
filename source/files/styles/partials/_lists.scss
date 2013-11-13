@@ -1,5 +1,7 @@
 // http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/
 
+ul, ol, dl { padding: 0; }
+
 dt {
 	@include baseline($base_font-size + 2, .75);
 	font-weight: bold;
