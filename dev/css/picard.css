@@ -632,6 +632,144 @@ textarea {
   vertical-align: top;
 }
 
+@-webkit-keyframes cursor-blink {
+  80% {
+    visibility: hidden;
+  }
+}
+
+@keyframes cursor-blink {
+  80% {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes jittery {
+  10% {
+    -webkit-transform: translate(-2px, -3px) scale(1.01, 1.01);
+  }
+
+  20% {
+    -webkit-transform: translate(3px, 2px) scale(0.99, 0.99);
+  }
+
+  30% {
+    -webkit-transform: translate(-4px, -5px) scale(1.01, 1.01);
+  }
+
+  40% {
+    -webkit-transform: translate(2px, 3px) scale(1, 1);
+  }
+
+  50% {
+    -webkit-transform: translate(-1px, -2px) scale(0.98, 0.98);
+  }
+
+  60% {
+    -webkit-transform: translate(0px, 3px) scale(1.02, 1.02);
+  }
+
+  70% {
+    -webkit-transform: translate(-2px, -4px) scale(1, 1);
+  }
+
+  80% {
+    -webkit-transform: translate(3px, 5px) scale(0.99, 0.99);
+  }
+
+  90% {
+    -webkit-transform: translate(-5px, -3px) scale(1.1, 1.1);
+  }
+
+  100% {
+    -webkit-transform: translate(3px, 1px) scale(0.95, 0.95);
+  }
+}
+
+@-moz-keyframes jittery {
+  10% {
+    -moz-transform: translate(-2px, -3px) scale(1.01, 1.01);
+  }
+
+  20% {
+    -moz-transform: translate(3px, 2px) scale(0.99, 0.99);
+  }
+
+  30% {
+    -moz-transform: translate(-4px, -5px) scale(1.01, 1.01);
+  }
+
+  40% {
+    -moz-transform: translate(2px, 3px) scale(1, 1);
+  }
+
+  50% {
+    -moz-transform: translate(-1px, -2px) scale(0.98, 0.98);
+  }
+
+  60% {
+    -moz-transform: translate(0px, 3px) scale(1.02, 1.02);
+  }
+
+  70% {
+    -moz-transform: translate(-2px, -4px) scale(1, 1);
+  }
+
+  80% {
+    -moz-transform: translate(3px, 5px) scale(0.99, 0.99);
+  }
+
+  90% {
+    -moz-transform: translate(-5px, -3px) scale(1.1, 1.1);
+  }
+
+  100% {
+    -moz-transform: translate(3px, 1px) scale(0.95, 0.95);
+  }
+}
+
+@-o-keyframes jittery {
+  10% {
+    -o-transform: translate(-2px, -3px) scale(1.01, 1.01);
+  }
+
+  20% {
+    -o-transform: translate(3px, 2px) scale(0.99, 0.99);
+  }
+
+  30% {
+    -o-transform: translate(-4px, -5px) scale(1.01, 1.01);
+  }
+
+  40% {
+    -o-transform: translate(2px, 3px) scale(1, 1);
+  }
+
+  50% {
+    -o-transform: translate(-1px, -2px) scale(0.98, 0.98);
+  }
+
+  60% {
+    -o-transform: translate(0px, 3px) scale(1.02, 1.02);
+  }
+
+  70% {
+    -o-transform: translate(-2px, -4px) scale(1, 1);
+  }
+
+  80% {
+    -o-transform: translate(3px, 5px) scale(0.99, 0.99);
+  }
+
+  90% {
+    -o-transform: translate(-5px, -3px) scale(1.1, 1.1);
+  }
+
+  100% {
+    -o-transform: translate(3px, 1px) scale(0.95, 0.95);
+  }
+}
+
 @keyframes jittery {
   10% {
     transform: translate(-2px, -3px) scale(1.01, 1.01);
@@ -674,16 +812,11 @@ textarea {
   }
 }
 
-@-webkit-keyframes cursor-blink {
-  80% {
-    visibility: hidden;
-  }
-}
-
-@keyframes cursor-blink {
-  80% {
-    visibility: hidden;
-  }
+.jittery {
+  -webkit-animation-name: jittery;
+  -moz-animation-name: jittery;
+  -o-animation-name: jittery;
+  animation-name: jittery;
 }
 
 .fix {
@@ -739,8 +872,11 @@ body {
   background: white;
   padding: 50px;
   min-height: 100%;
+  /*
+  // Makes Safari look shitty:
   -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+          font-smoothing: antialiased;
+  */
   text-rendering: optimizeLegibility;
 }
 
@@ -835,7 +971,7 @@ nav[role="navigation"] ul li {
   line-height: 1.83333333333333;
 }
 nav[role="navigation"] ul li a {
-  letter-spacing: .08em;
+  letter-spacing: .1em;
   background: black;
   padding: 0.45833333333333em 1.07142857142857em;
   display: block;
@@ -844,8 +980,8 @@ nav[role="navigation"] ul li a {
   white-space: nowrap;
   -webkit-transition: background-color 75ms linear;
   -moz-transition: background-color 75ms linear;
-  -o-transition: background-color 75ms linear;
   -ms-transition: background-color 75ms linear;
+  -o-transition: background-color 75ms linear;
   transition: background-color 75ms linear;
 }
 nav[role="navigation"] ul li a, nav[role="navigation"] ul li a:visited {
@@ -857,6 +993,9 @@ nav[role="navigation"] ul li a:visited:hover, nav[role="navigation"] ul li a:foc
 }
 nav[role="navigation"] ul li a:active, nav[role="navigation"] ul li a:focus {
   outline: none;
+}
+nav[role="navigation"] ul li:before {
+  content: none;
 }
 
 h1#flag {
@@ -875,9 +1014,17 @@ h1#flag span {
 }
 h1#flag a {
   display: inline-block;
+  -webkit-animation-duration: .3s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-duration: .3s;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-duration: .3s;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-iteration-count: infinite;
   animation-duration: .3s;
   animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
 h1#flag a, h1#flag a:visited {
@@ -888,6 +1035,9 @@ h1#flag a:visited:hover, h1#flag a:focus, h1#flag a:focus:hover, h1#flag a:hover
   text-decoration: none;
 }
 h1#flag a:hover {
+  -webkit-animation-name: jittery;
+  -moz-animation-name: jittery;
+  -o-animation-name: jittery;
   animation-name: jittery;
 }
 h1#flag a:active, h1#flag a:focus {
@@ -1053,6 +1203,48 @@ span.amp {
 
 ul, ol, dl {
   padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+ol {
+  counter-reset: li;
+}
+ol > li:before {
+  font-size: 0.85714285714286rem;
+  line-height: 1.83333333333333;
+  width: 1.83333333333333em;
+  content: counter(li);
+  counter-increment: li;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  border-radius: 999px;
+  display: block;
+  margin: 0.91666666666667em auto;
+  background: #333333;
+  color: #eeeeee;
+}
+ol > li:first-child:before {
+  margin-top: 0;
+}
+
+ul > li:before {
+  font-size: 0.85714285714286rem;
+  line-height: 1.83333333333333;
+  width: 1.83333333333333em;
+  content: '\00a0';
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  border-radius: 999px;
+  display: block;
+  margin: 0.91666666666667em auto;
+  background: #333333;
+  color: #eeeeee;
+}
+ul > li:before:first-child:before {
+  margin-top: 0;
 }
 
 dt {
@@ -1384,11 +1576,11 @@ figcaption p {
   line-height: inherit;
 }
 
-img {
-  max-width: 100%;
-  max-height: 100%;
+img.max-width {
+  max-width: 100% !important;
+  max-height: 100% !important;
 }
-img.reset {
+img.max-width.max-width-none {
   max-width: none;
   max-height: none;
 }

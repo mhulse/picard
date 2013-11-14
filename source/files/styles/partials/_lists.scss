@@ -2,6 +2,63 @@
 
 ul, ol, dl { padding: 0; }
 
+ul, ol { list-style: none; }
+
+ol {
+	
+	counter-reset: li;
+	
+	> li {
+		
+		&:before {
+			@include baseline($base_font-size - 2);
+			width: #{baseline($base_font-size - 2)}em;
+			content: counter(li);
+			counter-increment: li;
+			-webkit-border-radius: 999px;
+			   -moz-border-radius: 999px;
+			        border-radius: 999px;
+			display: block;
+			margin: #{baseline($base_font-size - 2) / 2}em auto;
+			background: $gray3;
+			color: $graye;
+		}
+		
+		&:first-child:before {
+			margin-top: 0;
+		}
+		
+	}
+	
+}
+
+ul {
+	
+	> li {
+		
+		&:before {
+			
+			@include baseline($base_font-size - 2);
+			width: #{baseline($base_font-size - 2)}em;
+			content: '\00a0';
+			-webkit-border-radius: 999px;
+			   -moz-border-radius: 999px;
+			        border-radius: 999px;
+			display: block;
+			margin: #{baseline($base_font-size - 2) / 2}em auto;
+			background: $gray3;
+			color: $graye;
+			
+			&:first-child:before {
+				margin-top: 0;
+			}
+			
+		}
+		
+	}
+	
+}
+
 dt {
 	@include baseline($base_font-size + 2, .75);
 	font-weight: bold;

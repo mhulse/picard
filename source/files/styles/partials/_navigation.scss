@@ -17,7 +17,7 @@ nav[role="navigation"] {
 			
 			a {
 				
-				letter-spacing: .08em;
+				letter-spacing: .1em;
 				background: $raven;
 				padding: #{baseline(12, .25)}em #{relative(15)}em;
 				display: block;
@@ -41,11 +41,13 @@ nav[role="navigation"] {
 				
 				-webkit-transition: background-color 75ms linear;
 				   -moz-transition: background-color 75ms linear;
-				     -o-transition: background-color 75ms linear;
 				    -ms-transition: background-color 75ms linear;
+				     -o-transition: background-color 75ms linear;
 				        transition: background-color 75ms linear;
 				
 			}
+			
+			&:before { content: none; }
 			
 		}
 		

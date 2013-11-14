@@ -1,3 +1,46 @@
+@-webkit-keyframes cursor-blink { 80% { visibility: hidden; } }
+        @keyframes cursor-blink { 80% { visibility: hidden; } }
+
+
+@-webkit-keyframes jittery {
+	10% { -webkit-transform: translate(-2px, -3px) scale(1.01, 1.01); }
+	20% { -webkit-transform: translate(3px, 2px) scale(.99, .99); }
+	30% { -webkit-transform: translate(-4px, -5px) scale(1.01, 1.01); }
+	40% { -webkit-transform: translate(2px, 3px) scale(1, 1); }
+	50% { -webkit-transform: translate(-1px, -2px) scale(.98, .98); }
+	60% { -webkit-transform: translate(0px, 3px) scale(1.02, 1.02); }
+	70% { -webkit-transform: translate(-2px, -4px) scale(1, 1); }
+	80% { -webkit-transform: translate(3px, 5px) scale(.99, .99); }
+	90% { -webkit-transform: translate(-5px, -3px) scale(1.1, 1.1); }
+	100% { -webkit-transform: translate(3px, 1px) scale(.95, .95); }
+}
+
+@-moz-keyframes jittery {
+	10% { -moz-transform: translate(-2px, -3px) scale(1.01, 1.01); }
+	20% { -moz-transform: translate(3px, 2px) scale(.99, .99); }
+	30% { -moz-transform: translate(-4px, -5px) scale(1.01, 1.01); }
+	40% { -moz-transform: translate(2px, 3px) scale(1, 1); }
+	50% { -moz-transform: translate(-1px, -2px) scale(.98, .98); }
+	60% { -moz-transform: translate(0px, 3px) scale(1.02, 1.02); }
+	70% { -moz-transform: translate(-2px, -4px) scale(1, 1); }
+	80% { -moz-transform: translate(3px, 5px) scale(.99, .99); }
+	90% { -moz-transform: translate(-5px, -3px) scale(1.1, 1.1); }
+	100% { -moz-transform: translate(3px, 1px) scale(.95, .95); }
+}
+
+@-o-keyframes jittery {
+	10% { -o-transform: translate(-2px, -3px) scale(1.01, 1.01); }
+	20% { -o-transform: translate(3px, 2px) scale(.99, .99); }
+	30% { -o-transform: translate(-4px, -5px) scale(1.01, 1.01); }
+	40% { -o-transform: translate(2px, 3px) scale(1, 1); }
+	50% { -o-transform: translate(-1px, -2px) scale(.98, .98); }
+	60% { -o-transform: translate(0px, 3px) scale(1.02, 1.02); }
+	70% { -o-transform: translate(-2px, -4px) scale(1, 1); }
+	80% { -o-transform: translate(3px, 5px) scale(.99, .99); }
+	90% { -o-transform: translate(-5px, -3px) scale(1.1, 1.1); }
+	100% { -o-transform: translate(3px, 1px) scale(.95, .95); }
+}
+
 @keyframes jittery {
 	10% { transform: translate(-2px, -3px) scale(1.01, 1.01); }
 	20% { transform: translate(3px, 2px) scale(.99, .99); }
@@ -11,5 +54,9 @@
 	100% { transform: translate(3px, 1px) scale(.95, .95); }
 }
 
-@-webkit-keyframes cursor-blink { 80% { visibility: hidden; } }
-        @keyframes cursor-blink { 80% { visibility: hidden; } }
+.jittery {
+	-webkit-animation-name: jittery;
+	   -moz-animation-name: jittery;
+	     -o-animation-name: jittery;
+	        animation-name: jittery;
+}

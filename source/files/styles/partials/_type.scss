@@ -18,10 +18,24 @@ h1#flag {
 		
 		display: inline-block;
 		
+		-webkit-animation: {
+			duration: .3s;
+			timing-function: ease-in-out;
+			iteration-count: infinite;
+		}
+		-moz-animation: {
+			duration: .3s;
+			timing-function: ease-in-out;
+			iteration-count: infinite;
+		}
+		-o-animation: {
+			duration: .3s;
+			timing-function: ease-in-out;
+			iteration-count: infinite;
+		}
 		animation: {
 			duration: .3s;
 			timing-function: ease-in-out;
-			fill-mode: forwards;
 			iteration-count: infinite;
 		}
 		
@@ -36,7 +50,12 @@ h1#flag {
 			text-decoration: none;
 		}
 		
-		&:hover { animation-name: jittery; }
+		&:hover {
+			-webkit-animation-name: jittery;
+			   -moz-animation-name: jittery;
+			     -o-animation-name: jittery;
+			        animation-name: jittery;
+		}
 		
 		&:active,
 		&:focus { outline: none; }
