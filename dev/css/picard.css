@@ -1565,6 +1565,9 @@ kbd kbd {
   cursor: not-allowed;
   box-shadow: none;
 }
+.form select {
+  width: 100%;
+}
 
 figure {
   margin-top: 0.71428571428571rem;
