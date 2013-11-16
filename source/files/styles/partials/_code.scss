@@ -73,6 +73,11 @@ kbd {
 	font-size: smaller;
 	color: $gray3;
 	text-shadow: 0 #{relative(1)}em 0 $milk;
+	background-color: $graye;
+	border: #{relative(1)}em solid $grayc;
+	margin: 0 .1em;
+	padding: 0 .5em;
+	display: inline-block;
 	
 	-webkit-border-radius: #{relative(3)}em;
 	   -moz-border-radius: #{relative(3)}em;
@@ -82,11 +87,18 @@ kbd {
 	   -moz-box-shadow: 0 #{relative(1)}em 0 rgba(0, 0, 0, .2), 0 0 0 #{relative(2)}em $milk inset;
 	        box-shadow:  0 #{relative(1)}em 0 rgba(0, 0, 0, .2), 0 0 0 #{relative(2)}em $milk inset;
 	
-	background-color: $graye;
-	border: #{relative(1)}em solid $grayc;
-	margin: 0 .1em;
-	padding: 0 .5em;
-	display: inline-block;
+	kbd {
+		font-size: inherit;
+		color: inherit;
+		text-shadow: none;
+		background: transparent;
+		border: 0;
+		margin: 0;
+		padding: 0;
+		display: inline;
+		border-radius: 0;
+		box-shadow: none;
+	}
 	
 }
 

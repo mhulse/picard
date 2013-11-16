@@ -1322,17 +1322,29 @@ kbd {
   font-size: smaller;
   color: #333333;
   text-shadow: 0 0.07142857142857em 0 white;
+  background-color: #eeeeee;
+  border: 0.07142857142857em solid #cccccc;
+  margin: 0 .1em;
+  padding: 0 .5em;
+  display: inline-block;
   -webkit-border-radius: 0.21428571428571em;
   -moz-border-radius: 0.21428571428571em;
   border-radius: 0.21428571428571em;
   -webkit-box-shadow: 0 0.07142857142857em 0 rgba(0, 0, 0, 0.2), 0 0 0 0.14285714285714em white inset;
   -moz-box-shadow: 0 0.07142857142857em 0 rgba(0, 0, 0, 0.2), 0 0 0 0.14285714285714em white inset;
   box-shadow: 0 0.07142857142857em 0 rgba(0, 0, 0, 0.2), 0 0 0 0.14285714285714em white inset;
-  background-color: #eeeeee;
-  border: 0.07142857142857em solid #cccccc;
-  margin: 0 .1em;
-  padding: 0 .5em;
-  display: inline-block;
+}
+kbd kbd {
+  font-size: inherit;
+  color: inherit;
+  text-shadow: none;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .table {
