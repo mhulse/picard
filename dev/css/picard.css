@@ -860,6 +860,11 @@ textarea {
   word-wrap: break-word;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   height: 100%;
   overflow-y: scroll;
@@ -872,12 +877,12 @@ body {
   background: white;
   padding: 50px;
   min-height: 100%;
-  /*
-  // Makes Safari look shitty:
-  -webkit-font-smoothing: antialiased;
-          font-smoothing: antialiased;
-  */
   text-rendering: optimizeLegibility;
+}
+@media (max-width: 53.5rem) {
+  body {
+    padding: 1.42857142857143rem;
+  }
 }
 
 a, a:visited {
@@ -1425,13 +1430,8 @@ kbd kbd {
   margin: 0;
   padding: 0;
 }
-.form fieldset legend {
-  font-weight: bold;
-  letter-spacing: -.01em;
-  border-bottom: 0.07142857142857rem solid #999999;
-  width: 100%;
-  display: block;
-  white-space: normal;
+.form fieldset legend:empty {
+  display: none;
 }
 .form label {
   color: #666666;

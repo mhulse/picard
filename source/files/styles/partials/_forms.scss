@@ -6,14 +6,7 @@
 		margin: 0;
 		padding: 0;
 		
-		legend {
-			font-weight: bold;
-			letter-spacing: -.01em;
-			border-bottom: #{relative(1)}rem solid $gray9;
-			width: 100%;
-			display: block;
-			white-space: normal; // Corrects text not wrapping in Firefox 3.
-		}
+		legend:empty { display: none; }
 		
 	}
 	
