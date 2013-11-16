@@ -1215,33 +1215,31 @@ ol {
 ol > li:before {
   font-size: 0.85714285714286rem;
   line-height: 1.83333333333333;
+  color: #333333;
+  border: 0.07142857142857rem solid #333333;
   width: 1.83333333333333em;
+  margin: 0.91666666666667em auto;
+  display: block;
   content: counter(li);
   counter-increment: li;
-  -webkit-border-radius: 999px;
-  -moz-border-radius: 999px;
-  border-radius: 999px;
-  display: block;
-  margin: 0.91666666666667em auto;
-  background: #333333;
-  color: #eeeeee;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 ol > li:first-child:before {
   margin-top: 0;
 }
 
 ul > li:before {
-  font-size: 0.85714285714286rem;
-  line-height: 1.83333333333333;
-  width: 1.83333333333333em;
-  content: '\00a0';
-  -webkit-border-radius: 999px;
-  -moz-border-radius: 999px;
-  border-radius: 999px;
-  display: block;
-  margin: 0.91666666666667em auto;
   background: #333333;
-  color: #eeeeee;
+  width: .75rem;
+  height: .75rem;
+  margin: 0.91666666666667em auto 0.45833333333333em;
+  display: block;
+  content: "";
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 ul > li:before:first-child:before {
   margin-top: 0;
