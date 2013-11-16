@@ -34,9 +34,7 @@ section hr {
 	margin: #{relative($base_margin) * 2}rem auto;
 }
 
-.big {
-	max-width: none;
-}
+.big { max-width: none; }
 
 section,
 article,
