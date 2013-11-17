@@ -39,3 +39,29 @@
 }
 
 .nono { word-wrap: break-word; }
+
+.none { max-width: none; }
+
+// Simple solution for responsive tables.
+//
+// @see http://www.maxdesign.com.au/2013/03/22/simple-responsive-table/
+// @see http://creativeandcode.com/simple-solution-for-responsive-tables/
+
+.scroll {
+	
+	width: 100%;
+	margin: {
+		top: #{relative($base_margin)}rem;
+		bottom: #{relative($base_margin)}rem;
+	}
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	
+	> * {
+		margin-top: 0;
+		margin-bottom: 0;
+		max-width: none;
+		max-height: none;
+	}
+	
+}

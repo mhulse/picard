@@ -860,9 +860,22 @@ textarea {
   word-wrap: break-word;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
+.none {
+  max-width: none;
+}
+
+.scroll {
+  width: 100%;
+  margin-top: 0.71428571428571rem;
+  margin-bottom: 0.71428571428571rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.scroll > * {
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+  max-height: none;
 }
 
 html {
@@ -904,52 +917,6 @@ a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
   text-shadow: none;
 }
 
-address,
-blockquote,
-dl,
-figcaption,
-figure,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ol,
-p,
-pre,
-ul,
-.box {
-  max-width: 46.42857142857143rem;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-}
-
-label {
-  max-width: 25rem;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  padding: 0.35714285714286em;
-}
-
-section hr {
-  border-top-width: 0.07142857142857rem;
-  max-width: 53.57142857142857rem;
-  margin: 1.42857142857143rem auto;
-}
-
-.big {
-  max-width: none;
-}
-
-section > :first-child,
-article > :first-child,
-aside > :first-child {
-  margin-top: 0;
-}
-
 hr,
 .hr {
   border: 0;
@@ -960,6 +927,51 @@ hr,
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+}
+section hr, section
+.hr {
+  border-top-width: 0.07142857142857rem;
+  max-width: 53.57142857142857rem;
+  margin: 1.42857142857143rem auto;
+}
+
+address,
+blockquote,
+dl,
+figcaption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+pre,
+ul,
+.large,
+label,
+.small {
+  max-width: 46.42857142857143rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+label,
+.small {
+  max-width: 25rem;
+}
+
+section > :first-child,
+article > :first-child,
+aside > :first-child {
+  margin-top: 0;
+}
+section > :last-child,
+article > :last-child,
+aside > :last-child {
+  margin-bottom: 0;
 }
 
 nav[role="navigation"] ul {
@@ -1185,6 +1197,7 @@ small,
 span.amp {
   font-size: 110%;
   font-family: adobe-caslon-pro, Adobe Caslon Pro, Baskerville, "Goudy Old Style", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
   font-style: italic;
   line-height: 0;
   vertical-align: baseline;
@@ -1436,6 +1449,7 @@ kbd kbd {
 .form label {
   color: #666666;
   letter-spacing: .05em;
+  padding: 0.35714285714286em;
 }
 .form input[type="text"], .form input[type="password"], .form textarea {
   color: #333333;
@@ -1590,25 +1604,7 @@ figcaption p {
   line-height: inherit;
 }
 
-img.max-width {
-  max-width: 100% !important;
-  max-height: 100% !important;
-}
-img.max-width.max-width-none {
-  max-width: none;
-  max-height: none;
-}
-
-.scroll {
-  width: 100%;
-  margin-top: 0.71428571428571rem;
-  margin-bottom: 0.71428571428571rem;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-.scroll > * {
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: none;
-  max-height: none;
+img {
+  max-width: 100%;
+  height: auto;
 }

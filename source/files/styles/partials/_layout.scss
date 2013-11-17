@@ -2,7 +2,6 @@ address,
 blockquote,
 dl,
 figcaption,
-figure,
 h1,
 h2,
 h3,
@@ -13,45 +12,19 @@ ol,
 p,
 pre,
 ul,
-.box {
-	max-width: #{relative(650)}rem;
-	margin-right: auto;
-	margin-left: auto;
-	display: block;
-}
+.large { @include max(650); }
 
-label {
+label,
+.small {
+	@extend .large;
 	max-width: #{relative(350)}rem;
-	margin-right: auto;
-	margin-left: auto;
-	display: block;
-	padding: #{relative(5)}em;
 }
-
-section hr {
-	border-top-width: #{relative(1)}rem;
-	max-width: #{relative(750)}rem;
-	margin: #{relative($base_margin) * 2}rem auto;
-}
-
-.big { max-width: none; }
 
 section,
 article,
 aside {
 	
 	& > :first-child { margin-top: 0; }
+	& > :last-child { margin-bottom: 0; }
 	
-}
-
-hr,
-.hr {
-	border: 0;
-	border-top: #{relative(2)}rem solid $graye;
-	height: 0;
-	margin: #{relative($base_margin) * 4}rem 0;
-	padding: 0;
-	-webkit-box-sizing: content-box;
-	   -moz-box-sizing: content-box;
-	        box-sizing: content-box;
 }

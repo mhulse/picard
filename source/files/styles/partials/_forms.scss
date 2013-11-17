@@ -13,6 +13,7 @@
 	label {
 		color: $gray6;
 		letter-spacing: .05em;
+		padding: #{relative(5)}em;
 	}
 	
 	%fields {
