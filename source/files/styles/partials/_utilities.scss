@@ -55,7 +55,7 @@
 		bottom: #{relative($base_margin)}rem;
 	}
 	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
+	//-webkit-overflow-scrolling: touch;
 	
 	> * {
 		margin-top: 0;

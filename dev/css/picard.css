@@ -869,7 +869,6 @@ textarea {
   margin-top: 0.71428571428571rem;
   margin-bottom: 0.71428571428571rem;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
 }
 .scroll > * {
   margin-top: 0;
