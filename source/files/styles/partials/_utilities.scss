@@ -46,6 +46,7 @@
 //
 // @see http://www.maxdesign.com.au/2013/03/22/simple-responsive-table/
 // @see http://creativeandcode.com/simple-solution-for-responsive-tables/
+// @see http://stackoverflow.com/a/10122689/922323
 
 .scroll {
 	
@@ -57,12 +58,17 @@
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 	
-	> * {
-		margin-top: 0;
-		margin-bottom: 0;
-		max-width: none;
+	> {
+		
+		img { display: block; }
+		
+		* {
+			margin-top: 0;
+			margin-bottom: 0;
+			max-width: none;
+			-webkit-transform: translateZ(0);
+		}
+		
 	}
-	
-	> img { display: block; }
 	
 }
