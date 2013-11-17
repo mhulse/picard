@@ -240,17 +240,31 @@ span {
 
 .category {
 	
-	font-family: $serif;
-	font-weight: normal;
-	font-style: italic;
-	text-transform: none;
+	@include baseline($base_font-size - 1, .75);
+	font-family: $sans;
+	font-weight: bold;
+	text-transform: uppercase;
 	letter-spacing: .03em;
-	word-spacing: .3em;
-	border-bottom: 4px double $raven;
-	margin: 0 0 10px;
-	padding: 0 10px #{baseline(14, .25)}em;
-	display: inline-block;
+	margin: {
+		top: 0;
+		bottom: 0;
+	}
+	padding: #{baseline(14, .25)}em 0;
 	
-	@include baseline(14, .75);
+	a {
+		
+		&,
+		&:visited { color: $lobster; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $lobster;
+			text-decoration: underline;
+		}
+		
+	}
+	
 	
 }
