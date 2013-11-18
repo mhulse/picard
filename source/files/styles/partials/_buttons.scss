@@ -1,0 +1,67 @@
+/**
+ * Simple button class.
+ *
+ * I wasn't able to normalize line-height of `<input type="buton">` in Firefox.
+ * Conclusion: Don't use `<input>` for buttons.
+ *
+ * @see https://github.com/yui/pure
+ */
+
+.button {
+	
+	@include baseline($base_font-size - 2);
+	font-family: $sans;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 #{relative(1)}em #{relative(1)}em darken($lobster, 20%);
+	letter-spacing: .15em;
+	color: $milk;
+	white-space: nowrap;
+	vertical-align: baseline;
+	background: $lobster;
+	border: 0;
+	border-radius: #{relative(3)}em;
+	padding: #{baseline($base_font-size - 2) / 8}em 1em;
+	display: inline-block;
+	cursor: pointer;
+	zoom: 1;
+	
+	-webkit-user-drag: none;
+	
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	
+	-webkit-transition: .1s linear -webkit-box-shadow;
+	   -moz-transition: .1s linear -moz-box-shadow;
+	    -ms-transition: .1s linear box-shadow;
+	     -o-transition: .1s linear box-shadow;
+	        transition: .1s linear box-shadow;
+	
+	&::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	}
+	
+	&,
+	&:visited {
+		color: $milk;
+		background: $lobster;
+	}
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active {
+		color: $milk;
+		text-decoration: none;
+		background: $lobster;
+	}
+	
+	&:active,
+	&:focus { outline: 0; }
+	
+}

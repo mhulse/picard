@@ -63,10 +63,8 @@
 				<div class="swatches-swatch bling"><code>@bling</code> &rsaquo; <code>#ffd100</code></div>
 				<div class="swatches-swatch goblin"><code>@goblin</code> &rsaquo; <code>#9ea301</code></div>
 				<div class="swatches-swatch hulk"><code>@hulk</code> &rsaquo; <code>#4e801c</code></div>
-				<div class="swatches-swatch prius"><code>@prius</code> &rsaquo; <code>#5e8da1</code></div>
 				<div class="swatches-swatch smurf"><code>@smurf</code> &rsaquo; <code>#13aac9</code></div>
 				<div class="swatches-swatch lobster"><code>@lobster</code> &rsaquo; <code>#c30</code></div>
-				<div class="swatches-swatch bruise"><code>@bruise</code> &rsaquo; <code>#490a3d</code></div>
 				<div class="swatches-swatch raven"><code>@raven</code> &rsaquo; <code>#000</code></div>
 				
 			</div>
@@ -881,7 +879,7 @@ p q r s t u v w x y z { | } ~
 			
 			<h1 class="marker"><code>table</code> + children</h1>
 			
-			<div class="scroll small">
+			<div class="scroll alpha">
 				<table>
 					<caption>Li Europan lingues es membres del sam familie.</caption>
 					<thead>
@@ -928,7 +926,7 @@ p q r s t u v w x y z { | } ~
 			
 			<hr>
 			
-			<div class="scroll small">
+			<div class="scroll alpha">
 				<table class="table table-border-x">
 					<caption>Li Europan lingues es membres del sam familie.</caption>
 					<thead>
@@ -975,7 +973,7 @@ p q r s t u v w x y z { | } ~
 			
 			<hr>
 			
-			<div class="scroll large">
+			<div class="scroll omega">
 				<table class="table table-border-y">
 					<caption>Li Europan lingues es membres del sam familie.</caption>
 					<thead>
@@ -1022,7 +1020,7 @@ p q r s t u v w x y z { | } ~
 			
 			<hr>
 			
-			<div class="scroll large">
+			<div class="scroll omega">
 				<table class="table table-border-x table-border-y">
 					<caption>Li Europan lingues es membres del sam familie.</caption>
 					<thead>
@@ -1077,33 +1075,33 @@ p q r s t u v w x y z { | } ~
 			
 			<form class="form" id="fm" name="fm" action="" method="post">
 				
-				<input type="hidden" name="input-hidden-1" value="hidden">
+				<input type="hidden" name="fm_hidden" value="hidden">
 				
 				<fieldset>
 					
 					<legend></legend>
 					
-					<label>Password: <input type="password" name="input-password-1" placeholder="Enter password ..."></label>
+					<label>Password: <input type="password" name="fm_password" placeholder="Enter password ..."></label>
 					
 					<hr>
 					
 					<!--
-					<label>File: <input type="file" name="input-file-1" placeholder="Choose file ..."></label>
+					<label>File: <input type="file" name="fm_file" placeholder="Choose file ..."></label>
 					
 					<hr>
 					-->
 					
-					<label>Text: <input type="text" name="input-text-1" placeholder="Text ..."></label>
+					<label>Text: <input type="text" name="fm_text-1" placeholder="Text ..."></label>
 					
-					<label>Text: <input type="text" name="input-text-2" placeholder="Text ..." disabled></label>
+					<label>Text: <input type="text" name="fm_text-2" placeholder="Text ..." disabled></label>
 					
-					<label>Text: <input type="text" name="input-text-3" placeholder="Text ..." value="Read only" readonly></label>
+					<label>Text: <input type="text" name="fm_text-3" placeholder="Text ..." value="Read only" readonly></label>
 					
 					<hr>
 					
 					<label>
 						Select:
-						<select name="select-2">
+						<select name="fm_select">
 							<optgroup label="Group 1">
 								<option value="Option 1.1">Option 1.1</option>
 							</optgroup> 
@@ -1121,51 +1119,47 @@ p q r s t u v w x y z { | } ~
 					
 					<hr>
 					
-					<label><input type="checkbox" name="input-checkbox[]" value="checkbox"> Checkbox</label>
+					<label><input type="checkbox" name="fm_checkbox[]" value="checkbox"> Checkbox</label>
 					
-					<label><input type="checkbox" name="input-checkbox[]" value="checkbox"> Checkbox</label>
+					<label><input type="checkbox" name="fm_checkbox[]" value="checkbox"> Checkbox</label>
 					
-					<label><input type="checkbox" name="input-checkbox[]" value="checkbox"> Checkbox</label>
+					<label><input type="checkbox" name="fm_checkbox[]" value="checkbox"> Checkbox</label>
 					
-					<label><input type="checkbox" name="input-checkbox[]" value="checkbox"> Checkbox</label>
+					<label><input type="checkbox" name="fm_checkbox[]" value="checkbox"> Checkbox</label>
 					
-					<label><input type="checkbox" name="input-checkbox[]" value="checkbox"> Checkbox</label>
-					
-					<hr>
-					
-					<label><input type="radio" name="input-radio" value="radio"> Radio</label>
-					
-					<label><input type="radio" name="input-radio" value="radio"> Radio</label>
-					
-					<label><input type="radio" name="input-radio" value="radio"> Radio</label>
-					
-					<label><input type="radio" name="input-radio" value="radio"> Radio</label>
-					
-					<label><input type="radio" name="input-radio" value="radio"> Radio</label>
+					<label><input type="checkbox" name="fm_checkbox[]" value="checkbox"> Checkbox</label>
 					
 					<hr>
 					
-					<label class="large">Textarea: <textarea name="textarea-1"></textarea></label>
+					<label><input type="radio" name="fm_radio" value="radio"> Radio</label>
 					
-					<label class="large">Textarea: <textarea name="textarea-2" disabled></textarea></label>
+					<label><input type="radio" name="fm_radio" value="radio"> Radio</label>
 					
-					<label class="large">Textarea: <textarea name="textarea-3" readonly>Read only</textarea></label>
+					<label><input type="radio" name="fm_radio" value="radio"> Radio</label>
 					
-					<hr>
+					<label><input type="radio" name="fm_radio" value="radio"> Radio</label>
 					
-					<input type="button" name="input-button-1" value="Button">
-					
-					<input type="reset" name="input-reset-1" value="Reset">
-					
-					<input type="submit" name="input-submit-1" value="Submit">
+					<label><input type="radio" name="fm_radio" value="radio"> Radio</label>
 					
 					<hr>
 					
-					<button type="button" name="fm_button-button-1">Button</button>
+					<label class="omega">Textarea: <textarea name="fm_textarea-1"></textarea></label>
 					
-					<button type="reset" name="fm_button-reset-1">Reset</button>
+					<label class="omega">Textarea: <textarea name="fm_textarea-2" disabled></textarea></label>
 					
-					<button type="submit" name="fm_button-submit-1">Submit</button>
+					<label class="omega">Textarea: <textarea name="fm_textarea-3" readonly>Read only</textarea></label>
+					
+					<hr>
+					
+					<a class="button" href="#">Link</a>
+					
+					<hr>
+					
+					<button type="button" name="fm_button-2">Button</button>
+					
+					<hr>
+					
+					<button type="submit" name="fm_submit-2">Submit</button> <button type="reset" name="fm_reset-2">Reset</button>
 					
 				</fieldset>
 				

@@ -12,11 +12,11 @@ ol,
 p,
 pre,
 ul,
-.large { @include max(650); }
+.omega { @include max(650); }
 
 label,
-.small {
-	@extend .large;
+.alpha {
+	@extend .omega;
 	max-width: #{relative(350)}rem;
 }
 

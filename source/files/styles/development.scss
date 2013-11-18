@@ -7,34 +7,6 @@
         "partials/rex/mixins",
         "partials/rex/variables";
 
-.marker {
-	
-	@include baseline($base_font-size + 4, .875, $optional: bold, $family: $sans);
-	
-	font-weight: normal;
-	color: darken($bling, 20%);
-	text-transform: none;
-	letter-spacing: .03em;
-	background: $bling;
-	margin: #{relative($base_margin * 2)}rem 0;
-	padding: #{baseline($base_font-size + 4, .875) / 2}em;
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
-	
-}
-
-.subtle {
-	
-	@include baseline(16, .75, $optional: normal, $family: $mono);
-	
-	color: darken($bling, 10%);
-	letter-spacing: .1em;
-	margin-top: #{relative($base_margin)}rem;
-	margin-bottom: #{relative($base_margin)}rem;
-	
-}
-
 // `:xxx` = pseudo-class & `::xxx` = pseudo-element.
 //
 // @see http://reference.sitepoint.com/css/pseudoclasses
@@ -69,10 +41,10 @@
 .bling   { background: $bling;   }
 .goblin  { background: $goblin;  }
 .hulk    { background: $hulk;    }
-.prius   { background: $prius;   }
+//.prius   { background: $prius;   }
 .smurf   { background: $smurf;   }
 .lobster { background: $lobster; }
-.bruise  { background: $bruise;  }
+//.bruise  { background: $bruise;  }
 .raven   { background: $raven;   }
 .graye   { background: $graye;   }
 .grayd   { background: $grayd;   }

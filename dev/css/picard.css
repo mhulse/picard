@@ -952,9 +952,9 @@ ol,
 p,
 pre,
 ul,
-.large,
+.omega,
 label,
-.small {
+.alpha {
   max-width: 46.42857142857143rem;
   margin-right: auto;
   margin-left: auto;
@@ -962,7 +962,7 @@ label,
 }
 
 label,
-.small {
+.alpha {
   max-width: 25rem;
 }
 
@@ -1210,6 +1210,28 @@ span.amp {
   position: relative;
 }
 
+.marker {
+  font: bold 1.28571428571429rem/1.06944444444444 Arial, sans-serif;
+  font-weight: normal;
+  color: #997d00;
+  text-transform: none;
+  letter-spacing: .03em;
+  background: #ffd100;
+  margin: 1.42857142857143rem 0;
+  padding: 0.53472222222222em;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+.subtle {
+  font: normal 1.14285714285714rem/1.03125 Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  color: #cca700;
+  letter-spacing: .1em;
+  margin-top: 0.71428571428571rem;
+  margin-bottom: 0.71428571428571rem;
+}
+
 .category {
   font-size: 0.92857142857143rem;
   line-height: 1.26923076923077;
@@ -1355,12 +1377,12 @@ kbd {
   margin: 0 .1em;
   padding: 0 .5em;
   display: inline-block;
-  -webkit-border-radius: 0.21428571428571em;
-  -moz-border-radius: 0.21428571428571em;
-  border-radius: 0.21428571428571em;
-  -webkit-box-shadow: 0 0.07142857142857em 0 rgba(0, 0, 0, 0.2), 0 0 0 0.14285714285714em white inset;
-  -moz-box-shadow: 0 0.07142857142857em 0 rgba(0, 0, 0, 0.2), 0 0 0 0.14285714285714em white inset;
-  box-shadow: 0 0.07142857142857em 0 rgba(0, 0, 0, 0.2), 0 0 0 0.14285714285714em white inset;
+  -webkit-border-radius: 0.21428571428571rem;
+  -moz-border-radius: 0.21428571428571rem;
+  border-radius: 0.21428571428571rem;
+  -webkit-box-shadow: 0 0.07142857142857rem 0 rgba(0, 0, 0, 0.2), 0 0 0 0.14285714285714rem white inset;
+  -moz-box-shadow: 0 0.07142857142857rem 0 rgba(0, 0, 0, 0.2), 0 0 0 0.14285714285714rem white inset;
+  box-shadow: 0 0.07142857142857rem 0 rgba(0, 0, 0, 0.2), 0 0 0 0.14285714285714rem white inset;
 }
 kbd kbd {
   font-size: inherit;
@@ -1448,6 +1470,95 @@ kbd kbd {
   border-right: 0;
 }
 
+/**
+ * Simple button class.
+ *
+ * I wasn't able to normalize line-height of `<input type="buton">` in Firefox.
+ * Conclusion: Don't use `<input>` for buttons.
+ *
+ * @see https://github.com/yui/pure
+ */
+.button, .form button,
+.form input[type="button"],
+.form input[type="reset"],
+.form input[type="submit"] {
+  font-size: 0.85714285714286rem;
+  line-height: 1.83333333333333;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0.07142857142857em 0.07142857142857em #661a00;
+  letter-spacing: .15em;
+  color: white;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background: #cc3300;
+  border: 0;
+  border-radius: 0.21428571428571em;
+  padding: 0.22916666666667em 1em;
+  display: inline-block;
+  cursor: pointer;
+  zoom: 1;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: .1s linear -webkit-box-shadow;
+  -moz-transition: .1s linear -moz-box-shadow;
+  -ms-transition: .1s linear box-shadow;
+  -o-transition: .1s linear box-shadow;
+  transition: .1s linear box-shadow;
+}
+.button::-moz-focus-inner, .form button::-moz-focus-inner,
+.form input[type="button"]::-moz-focus-inner,
+.form input[type="reset"]::-moz-focus-inner,
+.form input[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.button, .form button,
+.form input[type="button"],
+.form input[type="reset"],
+.form input[type="submit"], .button:visited, .form button:visited,
+.form input[type="button"]:visited,
+.form input[type="reset"]:visited,
+.form input[type="submit"]:visited {
+  color: white;
+  background: #cc3300;
+}
+.button:visited:hover, .form button:visited:hover,
+.form input[type="button"]:visited:hover,
+.form input[type="reset"]:visited:hover,
+.form input[type="submit"]:visited:hover, .button:focus, .form button:focus,
+.form input[type="button"]:focus,
+.form input[type="reset"]:focus,
+.form input[type="submit"]:focus, .button:focus:hover, .form button:focus:hover,
+.form input[type="button"]:focus:hover,
+.form input[type="reset"]:focus:hover,
+.form input[type="submit"]:focus:hover, .button:hover, .form button:hover,
+.form input[type="button"]:hover,
+.form input[type="reset"]:hover,
+.form input[type="submit"]:hover, .button:active, .form button:active,
+.form input[type="button"]:active,
+.form input[type="reset"]:active,
+.form input[type="submit"]:active {
+  color: white;
+  text-decoration: none;
+  background: #cc3300;
+}
+.button:active, .form button:active,
+.form input[type="button"]:active,
+.form input[type="reset"]:active,
+.form input[type="submit"]:active, .button:focus, .form button:focus,
+.form input[type="button"]:focus,
+.form input[type="reset"]:focus,
+.form input[type="submit"]:focus {
+  outline: 0;
+}
+
 .form fieldset {
   border: 0;
   margin: 0;
@@ -1462,6 +1573,9 @@ kbd kbd {
   padding: 0.35714285714286em;
 }
 .form input[type="text"], .form input[type="password"], .form textarea {
+  font-size: 1.14285714285714rem;
+  line-height: 1.375;
+  padding: 0.34375em;
   color: #333333;
   letter-spacing: .05em;
   text-align: center;
@@ -1470,17 +1584,21 @@ kbd kbd {
   background: #fbfbfb;
   width: 100%;
   display: block;
-  -webkit-transition: 0.3s linear border;
-  -moz-transition: 0.3s linear border;
-  -ms-transition: 0.3s linear border;
-  -o-transition: 0.3s linear border;
-  transition: 0.3s linear border;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: .3s linear border;
+  -moz-transition: .3s linear border;
+  -ms-transition: .3s linear border;
+  -o-transition: .3s linear border;
+  transition: .3s linear border;
 }
 .form input[type="text"]:focus, .form input[type="password"]:focus, .form textarea:focus {
   outline: 0;
   outline: thin dotted \9;
   /* IE6-9 */
-  border-color: #490a3d;
+  border-color: #cc3300;
 }
 .form input[disabled][type="text"], .form input[disabled][type="password"], .form textarea[disabled] {
   cursor: not-allowed;
@@ -1489,107 +1607,22 @@ kbd kbd {
 }
 .form input[readonly][type="text"], .form input[readonly][type="password"], .form textarea[readonly] {
   background: #eee;
-  /* menu hover bg color */
   color: #777;
-  /* menu text color */
   border-color: #ccc;
 }
 .form input[type="text"], .form input[type="password"] {
-  line-height: 2.25;
-  height: 2.25rem;
-  padding: 0 .75rem;
+  height: auto;
 }
 .form textarea {
-  height: 15rem;
-  padding: 0.35714285714286rem;
+  min-height: 15.71428571428571rem;
   resize: vertical;
 }
-.form button,
-.form input[type="button"],
-.form input[type="reset"],
-.form input[type="submit"] {
-  font-size: 1.14285714285714rem;
-  line-height: 1.375;
-  color: white;
-  letter-spacing: .05em;
-  font-family: inherit;
-  text-decoration: none;
-  font-weight: normal;
-  background: #cc3300;
-  padding: 0.34375em 0.6875em;
-  border: 0;
-  border-radius: 0.14285714285714em;
-  text-shadow: 0 0.07142857142857em 0.07142857142857em #661a00;
-  display: inline-block;
-  zoom: 1;
-  white-space: nowrap;
-  vertical-align: baseline;
-  cursor: pointer;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: 0.1s linear -webkit-box-shadow;
-  -moz-transition: 0.1s linear -moz-box-shadow;
-  -ms-transition: 0.1s linear box-shadow;
-  -o-transition: 0.1s linear box-shadow;
-  transition: 0.1s linear box-shadow;
-}
-.form button::-moz-focus-inner,
-.form input[type="button"]::-moz-focus-inner,
-.form input[type="reset"]::-moz-focus-inner,
-.form input[type="submit"]::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-.form button:hover, .form button:focus,
-.form input[type="button"]:hover,
-.form input[type="button"]:focus,
-.form input[type="reset"]:hover,
-.form input[type="reset"]:focus,
-.form input[type="submit"]:hover,
-.form input[type="submit"]:focus {
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.1)));
-  background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.1));
-  background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
-  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
-}
-.form button:focus,
-.form input[type="button"]:focus,
-.form input[type="reset"]:focus,
-.form input[type="submit"]:focus {
-  outline: 0;
-}
-.form button:active,
-.form input[type="button"]:active,
-.form input[type="reset"]:active,
-.form input[type="submit"]:active {
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
-}
-.form button[disabled]:hover, .form button[disabled]:focus, .form button[disabled]:active,
-.form input[type="button"][disabled]:hover,
-.form input[type="button"][disabled]:focus,
-.form input[type="button"][disabled]:active,
-.form input[type="reset"][disabled]:hover,
-.form input[type="reset"][disabled]:focus,
-.form input[type="reset"][disabled]:active,
-.form input[type="submit"][disabled]:hover,
-.form input[type="submit"][disabled]:focus,
-.form input[type="submit"][disabled]:active {
-  border: none;
-  background-image: none;
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  filter: alpha(opacity=40);
-  -khtml-opacity: 0.40;
-  -moz-opacity: 0.40;
-  opacity: 0.40;
-  cursor: not-allowed;
-  box-shadow: none;
+.form input[type="checkbox"],
+.form input[type="radio"] {
+  bottom: 0.07142857142857em;
 }
 .form select {
+  font-size: 1.14285714285714rem;
   width: 100%;
 }
 
