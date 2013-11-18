@@ -906,7 +906,7 @@ a, a:visited {
   text-decoration: none;
 }
 a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
-  color: #cc3300;
+  color: #ff6600;
   text-decoration: underline;
 }
 
@@ -969,12 +969,12 @@ label,
 section > :first-child,
 article > :first-child,
 aside > :first-child {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 section > :last-child,
 article > :last-child,
 aside > :last-child {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 nav[role="navigation"] ul {
@@ -998,11 +998,11 @@ nav[role="navigation"] ul li a {
   border-radius: 0.21428571428571em;
   text-shadow: 0 0.07142857142857em 0.07142857142857em black;
   white-space: nowrap;
-  -webkit-transition: background-color 75ms linear;
-  -moz-transition: background-color 75ms linear;
-  -ms-transition: background-color 75ms linear;
-  -o-transition: background-color 75ms linear;
-  transition: background-color 75ms linear;
+  -webkit-transition: background-color 100ms linear;
+  -moz-transition: background-color 100ms linear;
+  -ms-transition: background-color 100ms linear;
+  -o-transition: background-color 100ms linear;
+  transition: background-color 100ms linear;
 }
 nav[role="navigation"] ul li a, nav[role="navigation"] ul li a:visited {
   color: white;
@@ -1011,7 +1011,7 @@ nav[role="navigation"] ul li a:visited:hover, nav[role="navigation"] ul li a:foc
   text-decoration: none;
   background: #cc3300;
 }
-nav[role="navigation"] ul li a:active, nav[role="navigation"] ul li a:focus {
+nav[role="navigation"] ul li a:focus, nav[role="navigation"] ul li a:active {
   outline: none;
 }
 nav[role="navigation"] ul li:before {
@@ -1049,12 +1049,17 @@ h1#flag a {
   animation-duration: .3s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+  -webkit-transition: color 1s linear;
+  -moz-transition: color 1s linear;
+  -ms-transition: color 1s linear;
+  -o-transition: color 1s linear;
+  transition: color 1s linear;
 }
 h1#flag a, h1#flag a:visited {
   color: #13aac9;
 }
 h1#flag a:visited:hover, h1#flag a:focus, h1#flag a:focus:hover, h1#flag a:hover, h1#flag a:active {
-  color: #13aac9;
+  color: #1d678f;
   text-decoration: none;
 }
 h1#flag a:hover {
@@ -1069,6 +1074,13 @@ h1#flag a:active, h1#flag a:focus {
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  -webkit-transition: color 100ms linear;
+  -moz-transition: color 100ms linear;
+  -ms-transition: color 100ms linear;
+  -o-transition: color 100ms linear;
+  transition: color 100ms linear;
 }
 h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
   color: #4e801c;
@@ -1233,21 +1245,54 @@ span.amp {
 }
 
 .category {
-  font-size: 0.92857142857143rem;
-  line-height: 1.26923076923077;
+  font-size: 0.85714285714286rem;
+  line-height: 1.375;
   font-family: Arial, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: .03em;
+  letter-spacing: .1em;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 0.39285714285714em 0;
+  padding: 0.45833333333333em 0;
 }
 .category a, .category a:visited {
-  color: #cc3300;
+  color: #666666;
 }
 .category a:visited:hover, .category a:focus, .category a:focus:hover, .category a:hover, .category a:active {
-  color: #cc3300;
+  color: black;
+  text-decoration: none;
+}
+
+.body p {
+  font-size: 1.14285714285714rem;
+  line-height: 1.375;
+  margin-top: 1.375em;
+  margin-bottom: 1.375em;
+}
+.body > :first-child {
+  margin-top: 0 !important;
+}
+.body > :last-child {
+  margin-bottom: 0 !important;
+}
+
+.meta {
+  font-size: 1rem;
+  line-height: 1.375;
+  color: #666666;
+  border: 0.14285714285714rem solid #cccccc;
+  font-style: italic;
+  margin-top: 2.14285714285714rem;
+  margin-bottom: 2.14285714285714rem;
+  padding: 1.375em;
+  background: rgba(238, 238, 238, 0.5);
+}
+.meta a, .meta a:visited {
+  font-weight: bold;
+  color: #666666;
+}
+.meta a:visited:hover, .meta a:focus, .meta a:focus:hover, .meta a:hover, .meta a:active {
+  color: black;
   text-decoration: underline;
 }
 
@@ -1268,7 +1313,7 @@ ol > li:before {
   color: #333333;
   border: 0.07142857142857rem solid #333333;
   width: 1.83333333333333em;
-  margin: 0.91666666666667em auto;
+  margin: 0.71428571428571em auto 0.35714285714286em;
   display: block;
   content: counter(li);
   counter-increment: li;
@@ -1284,7 +1329,7 @@ ul > li:before {
   background: #333333;
   width: .75rem;
   height: .75rem;
-  margin: 0.91666666666667em auto 0.45833333333333em;
+  margin: 0.71428571428571em auto 0.35714285714286em;
   display: block;
   content: "";
   -webkit-border-radius: 50%;
@@ -1547,7 +1592,7 @@ kbd kbd {
 .form input[type="submit"]:active {
   color: white;
   text-decoration: none;
-  background: #cc3300;
+  background: #ff6600;
 }
 .button:active, .form button:active,
 .form input[type="button"]:active,
