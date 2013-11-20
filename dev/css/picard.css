@@ -872,12 +872,14 @@ textarea {
   -webkit-overflow-scrolling: touch;
 }
 .scroll > img {
+  max-width: none;
   display: block;
 }
 .scroll > * {
   margin-top: 0;
   margin-bottom: 0;
-  max-width: none;
+}
+.scroll * {
   -webkit-transform: translateZ(0);
 }
 

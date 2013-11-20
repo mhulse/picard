@@ -60,15 +60,18 @@
 	
 	> {
 		
-		img { display: block; }
+		img {
+			max-width: none;
+			display: block;
+		}
 		
 		* {
 			margin-top: 0;
 			margin-bottom: 0;
-			max-width: none;
-			-webkit-transform: translateZ(0);
 		}
 		
 	}
+	
+	* { -webkit-transform: translateZ(0); }
 	
 }
