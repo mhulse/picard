@@ -4,7 +4,6 @@
 <head>
 	
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
 	<title><!--@echo title--> | v<!--@echo version--> | <!--@echo NODE_ENV--></title>
 	<meta name="description" content="<!--@echo description-->">
@@ -13,9 +12,11 @@
 	
 	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 	
+	<!--[if !IE]><!-->
 	<link rel="stylesheet" href="./css/<!-- @echo name -->.css">
 	<link rel="stylesheet" href="./css/development.css">
 	<link rel="stylesheet" href="./fonts/hulse.css">
+	<!--<![endif]-->
 	
 	<!-- @endif -->
 	
@@ -1201,8 +1202,8 @@ p q r s t u v w x y z { | } ~
 		
 	</main>
 	
+	<!--[if !IE]><!-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	
 	<script>
 		
 		$(document).ready(function() {});
@@ -1212,6 +1213,7 @@ p q r s t u v w x y z { | } ~
 		$(window).resize(function() {});
 		
 	</script>
+	<!--<![endif]-->
 	
 </body>
 </html>
