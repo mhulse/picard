@@ -21,26 +21,26 @@ h1#flag {
 		
 		display: inline-block;
 		
-		-webkit-animation: {
-			duration: .3s;
-			timing-function: ease-in-out;
-			iteration-count: infinite;
-		}
-		-moz-animation: {
-			duration: .3s;
-			timing-function: ease-in-out;
-			iteration-count: infinite;
-		}
-		-o-animation: {
-			duration: .3s;
-			timing-function: ease-in-out;
-			iteration-count: infinite;
-		}
-		animation: {
-			duration: .3s;
-			timing-function: ease-in-out;
-			iteration-count: infinite;
-		}
+		// -webkit-animation: {
+		// 	duration: .3s;
+		// 	timing-function: ease-in-out;
+		// 	iteration-count: infinite;
+		// }
+		// -moz-animation: {
+		// 	duration: .3s;
+		// 	timing-function: ease-in-out;
+		// 	iteration-count: infinite;
+		// }
+		// -o-animation: {
+		// 	duration: .3s;
+		// 	timing-function: ease-in-out;
+		// 	iteration-count: infinite;
+		// }
+		// animation: {
+		// 	duration: .3s;
+		// 	timing-function: ease-in-out;
+		// 	iteration-count: infinite;
+		// }
 		
 		&,
 		&:visited { color: $smurf; }
@@ -53,12 +53,12 @@ h1#flag {
 			text-decoration: none;
 		}
 		
-		&:hover {
-			-webkit-animation-name: jittery;
-			   -moz-animation-name: jittery;
-			     -o-animation-name: jittery;
-			        animation-name: jittery;
-		}
+		// &:hover {
+		// 	-webkit-animation-name: jittery;
+		// 	   -moz-animation-name: jittery;
+		// 	     -o-animation-name: jittery;
+		// 	        animation-name: jittery;
+		// }
 		
 		&:active,
 		&:focus {
@@ -93,11 +93,11 @@ h1, h2, h3, h4, h5, h6 {
 			text-decoration: none;
 		}
 		
-		-webkit-transition: color 100ms linear;
-		   -moz-transition: color 100ms linear;
-		    -ms-transition: color 100ms linear;
-		     -o-transition: color 100ms linear;
-		        transition: color 100ms linear;
+		// -webkit-transition: color 100ms linear;
+		//    -moz-transition: color 100ms linear;
+		//     -ms-transition: color 100ms linear;
+		//      -o-transition: color 100ms linear;
+		//         transition: color 100ms linear;
 		
 	}
 	

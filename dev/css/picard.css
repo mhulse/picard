@@ -1039,18 +1039,6 @@ h1#flag span {
 }
 h1#flag a {
   display: inline-block;
-  -webkit-animation-duration: .3s;
-  -webkit-animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-duration: .3s;
-  -moz-animation-timing-function: ease-in-out;
-  -moz-animation-iteration-count: infinite;
-  -o-animation-duration: .3s;
-  -o-animation-timing-function: ease-in-out;
-  -o-animation-iteration-count: infinite;
-  animation-duration: .3s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
   -webkit-transition: color 1s linear;
   -moz-transition: color 1s linear;
   -ms-transition: color 1s linear;
@@ -1064,25 +1052,12 @@ h1#flag a:visited:hover, h1#flag a:focus, h1#flag a:focus:hover, h1#flag a:hover
   color: #1d678f;
   text-decoration: none;
 }
-h1#flag a:hover {
-  -webkit-animation-name: jittery;
-  -moz-animation-name: jittery;
-  -o-animation-name: jittery;
-  animation-name: jittery;
-}
 h1#flag a:active, h1#flag a:focus {
   outline: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
-}
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  -webkit-transition: color 100ms linear;
-  -moz-transition: color 100ms linear;
-  -ms-transition: color 100ms linear;
-  -o-transition: color 100ms linear;
-  transition: color 100ms linear;
 }
 h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
   color: #4e801c;
