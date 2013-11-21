@@ -2,24 +2,27 @@ nav[role="navigation"] {
 	
 	ul {
 		
-		max-width: #{relative(350)}rem;
+		margin: {
+			top: #{relative($base_margin)}rem;
+			bottom: #{relative($base_margin)}rem;
+		}
 		padding: 0;
 		
 		li {
 			
-			text-transform: uppercase;
 			list-style: none;
 			display: inline-block;
 			margin: #{relative(2)}rem;
 			padding: 0;
 			
-			@include baseline(12);
-			
 			a {
 				
+				@include baseline($base_font-size - 2);
+				font-weight: normal;
 				letter-spacing: .1em;
+				text-transform: uppercase;
 				background: $raven;
-				padding: #{baseline(12, .25)}em #{relative(15)}em;
+				padding: #{baseline($base_font-size - 2, .25)}em #{relative(15)}em;
 				display: block;
 				border-radius: #{relative(3)}em;
 				text-shadow: 0 #{relative(1)}em #{relative(1)}em $raven;
@@ -32,6 +35,7 @@ nav[role="navigation"] {
 				&:focus:hover,
 				&:hover,
 				&:active {
+					color: $milk;
 					text-decoration: none;
 					background: $lobster;
 				}
@@ -39,11 +43,11 @@ nav[role="navigation"] {
 				&:focus,
 				&:active { outline: none; }
 				
-				-webkit-transition: background-color 100ms linear;
-				   -moz-transition: background-color 100ms linear;
-				    -ms-transition: background-color 100ms linear;
-				     -o-transition: background-color 100ms linear;
-				        transition: background-color 100ms linear;
+				// -webkit-transition: background-color 100ms linear;
+				//    -moz-transition: background-color 100ms linear;
+				//     -ms-transition: background-color 100ms linear;
+				//      -o-transition: background-color 100ms linear;
+				//         transition: background-color 100ms linear;
 				
 			}
 			

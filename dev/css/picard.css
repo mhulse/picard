@@ -980,36 +980,34 @@ aside > :last-child {
 }
 
 nav[role="navigation"] ul {
-  max-width: 25rem;
+  margin-top: 0.71428571428571rem;
+  margin-bottom: 0.71428571428571rem;
   padding: 0;
 }
 nav[role="navigation"] ul li {
-  text-transform: uppercase;
   list-style: none;
   display: inline-block;
   margin: 0.14285714285714rem;
   padding: 0;
-  font-size: 0.85714285714286rem;
-  line-height: 1.83333333333333;
 }
 nav[role="navigation"] ul li a {
+  font-size: 0.85714285714286rem;
+  line-height: 1.83333333333333;
+  font-weight: normal;
   letter-spacing: .1em;
+  text-transform: uppercase;
   background: black;
   padding: 0.45833333333333em 1.07142857142857em;
   display: block;
   border-radius: 0.21428571428571em;
   text-shadow: 0 0.07142857142857em 0.07142857142857em black;
   white-space: nowrap;
-  -webkit-transition: background-color 100ms linear;
-  -moz-transition: background-color 100ms linear;
-  -ms-transition: background-color 100ms linear;
-  -o-transition: background-color 100ms linear;
-  transition: background-color 100ms linear;
 }
 nav[role="navigation"] ul li a, nav[role="navigation"] ul li a:visited {
   color: white;
 }
 nav[role="navigation"] ul li a:visited:hover, nav[role="navigation"] ul li a:focus, nav[role="navigation"] ul li a:focus:hover, nav[role="navigation"] ul li a:hover, nav[role="navigation"] ul li a:active {
+  color: white;
   text-decoration: none;
   background: #cc3300;
 }
@@ -1222,22 +1220,33 @@ span.amp {
 }
 
 .category {
+  margin-top: 0.71428571428571rem;
+  margin-bottom: 0.71428571428571rem;
+  display: inline-block;
+}
+.category a,
+.category span {
   font-size: 0.85714285714286rem;
   line-height: 1.375;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-weight: normal;
   letter-spacing: .1em;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0.45833333333333em 0;
+  text-transform: uppercase;
+  padding: 0 .25em;
+  display: block;
+  border-radius: 0.21428571428571em;
+}
+.category span {
+  color: #333333;
 }
 .category a, .category a:visited {
-  color: #666666;
+  color: black;
 }
 .category a:visited:hover, .category a:focus, .category a:focus:hover, .category a:hover, .category a:active {
-  color: black;
+  color: #cc3300;
   text-decoration: none;
+}
+.category a:focus, .category a:active {
+  outline: none;
 }
 
 .body p {
@@ -1263,6 +1272,8 @@ span.amp {
   margin-bottom: 2.14285714285714rem;
   padding: 1.375em;
   background: rgba(238, 238, 238, 0.5);
+  -webkit-box-shadow: inset 0 0 0.71428571428571em 0 rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 0.71428571428571em 0 rgba(0, 0, 0, 0.3);
 }
 .meta a, .meta a:visited {
   font-weight: bold;

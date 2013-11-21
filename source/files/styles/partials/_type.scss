@@ -280,29 +280,42 @@ span {
 
 .category {
 	
-	@include baseline($base_font-size - 2, .75);
-	font-family: $sans;
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: .1em;
 	margin: {
-		top: 0;
-		bottom: 0;
+		top: #{relative($base_margin)}rem;
+		bottom: #{relative($base_margin)}rem;
 	}
-	padding: #{baseline($base_font-size - 2, .25)}em 0;
+	display: inline-block;
+	
+	a,
+	span {
+		
+		@include baseline($base_font-size - 2, .75);
+		font-weight: normal;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+		padding: 0 .25em;
+		display: block;
+		border-radius: #{relative(3)}em;
+		
+	}
+	
+	span { color: $gray3; }
 	
 	a {
 		
 		&,
-		&:visited { color: $gray6; }
+		&:visited { color: $raven; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $raven;
+			color: $lobster;
 			text-decoration: none;
 		}
+		
+		&:focus,
+		&:active { outline: none; }
 		
 	}
 	
@@ -336,6 +349,8 @@ span {
 	}
 	padding: #{baseline($base_font-size, .875)}em;
 	background: fade-out($graye, .5);
+	-webkit-box-shadow: inset 0 0 #{relative(10)}em 0 rgba(0, 0, 0, .3);
+	         box-shadow: inset 0 0 #{relative(10)}em 0 rgba(0, 0, 0, .3);
 	
 	a {
 		
