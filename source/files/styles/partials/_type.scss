@@ -293,13 +293,15 @@ span {
 		font-weight: normal;
 		letter-spacing: .1em;
 		text-transform: uppercase;
-		padding: 0 .25em;
+		border-bottom: #{relative(2)}rem solid $raven;
 		display: block;
-		border-radius: #{relative(3)}em;
 		
 	}
 	
-	span { color: $gray3; }
+	span {
+		color: $gray9;
+		border-bottom-color: $gray9;
+	}
 	
 	a {
 		
@@ -310,8 +312,9 @@ span {
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $lobster;
+			color: $juice;
 			text-decoration: none;
+			border-bottom-color: $lobster;
 		}
 		
 		&:focus,
