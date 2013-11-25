@@ -35,9 +35,15 @@ nav[role="navigation"] {
 				&:focus:hover,
 				&:hover,
 				&:active {
+					
 					color: $milk;
 					text-decoration: none;
 					background: $lobster;
+					
+					-webkit-box-shadow: inset 0 0 #{relative(5)}em 0 darken($lobster, 20%);
+					   -moz-box-shadow: inset 0 0 #{relative(5)}em 0 darken($lobster, 20%);
+					        box-shadow: inset 0 0 #{relative(5)}em 0 darken($lobster, 20%);
+					
 				}
 				
 				&:focus,
