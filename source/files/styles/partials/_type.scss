@@ -163,6 +163,7 @@ mark {
 	background: fade-out($duck, .1);
 	padding: #{relative(1)}em #{relative(3)}em;
 	-webkit-border-radius: #{relative(3)}em;
+	   -moz-border-radius: #{relative(3)}em;
 	        border-radius: #{relative(3)}em;
 }
 
@@ -374,6 +375,38 @@ span {
 		&:hover,
 		&:active {
 			color: $raven;
+			text-decoration: underline;
+		}
+		
+	}
+	
+}
+
+.warn {
+	
+	@include baseline($base_font-size - 2, .75);
+	letter-spacing: .03em;
+	color: darken($chili, 10%);
+	border: #{relative(1)}rem solid lighten($chili, 40%);
+	-webkit-border-radius: #{relative(3)}em;
+	   -moz-border-radius: #{relative(3)}em;
+	        border-radius: #{relative(3)}em;
+	background: lighten($chili, 45%);
+	padding: #{baseline($base_font-size - 2, .75) / 2 }rem;
+	
+	a {
+		
+		&,
+		&:visited {
+			font-weight: bold;
+			color: $chili;
+		}
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $chili;
 			text-decoration: underline;
 		}
 		

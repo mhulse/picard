@@ -1146,6 +1146,7 @@ mark {
   background: rgba(243, 243, 21, 0.9);
   padding: 0.07142857142857em 0.21428571428571em;
   -webkit-border-radius: 0.21428571428571em;
+  -moz-border-radius: 0.21428571428571em;
   border-radius: 0.21428571428571em;
 }
 
@@ -1316,6 +1317,27 @@ span.amp {
 }
 .meta a:visited:hover, .meta a:focus, .meta a:focus:hover, .meta a:hover, .meta a:active {
   color: black;
+  text-decoration: underline;
+}
+
+.warn {
+  font-size: 0.85714285714286rem;
+  line-height: 1.375;
+  letter-spacing: .03em;
+  color: #cc0000;
+  border: 0.07142857142857rem solid #ffcccc;
+  -webkit-border-radius: 0.21428571428571em;
+  -moz-border-radius: 0.21428571428571em;
+  border-radius: 0.21428571428571em;
+  background: #ffe5e5;
+  padding: 0.6875rem;
+}
+.warn a, .warn a:visited {
+  font-weight: bold;
+  color: red;
+}
+.warn a:visited:hover, .warn a:focus, .warn a:focus:hover, .warn a:hover, .warn a:active {
+  color: red;
   text-decoration: underline;
 }
 
