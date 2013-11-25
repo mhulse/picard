@@ -151,7 +151,7 @@ blockquote {
 	
 	blockquote { border-width: #{relative(1)}rem 0; }
 	
-	@media (max-width: #{relative(749)}rem) {
+	@media (max-width: #{relative($base_breakpoint-max)}rem) {
 		
 		& { padding: #{relative($base_padding)}rem; }
 		
@@ -176,8 +176,8 @@ del,
 ins {
 	line-height: 0;
 	letter-spacing: .05em;
-	border-radius: 2px;
-	padding: 1px 3px;
+	border-radius: #{relative(2)}rem;
+	padding: #{relative(1)}rem #{relative(3)}rem;
 	position: relative;
 }
 del {
@@ -201,7 +201,7 @@ abbr {
 	font-style: italic;
 	cursor: help;
 	
-	&[title] { border-bottom: 1px dotted; }
+	&[title] { border-bottom: #{relative(1)}rem dotted; }
 	
 	&[title="et cetera"] { font-family: "Hoefler Text", Palatino, Constantia, "Palatino Linotype", cursive; }
 	
@@ -215,7 +215,7 @@ dfn {
 	font-style: italic;
 	
 	&[title] {
-		border-bottom: 1px dotted;
+		border-bottom: #{relative(1)}rem dotted;
 		cursor: help;
 	}
 	
@@ -344,16 +344,22 @@ span {
 	
 	@include baseline($base_font-size, .875);
 	color: $gray6;
-	border: #{relative(2)}rem solid $grayc;
+	border: #{relative(1)}rem solid $grayb;
 	font-style: italic;
 	margin: {
 		top: #{relative($base_margin * 3)}rem;
 		bottom: #{relative($base_margin * 3)}rem;
 	}
-	padding: #{baseline($base_font-size, .875)}em;
-	background: fade-out($graye, .5);
+	padding: #{baseline($base_font-size, .375)}em #{baseline($base_font-size)}em;
+	background: lighten($graye, 5%);
+	
+	// box-shadow: inset 0 #{relative(10)}em #{relative(10)}em -#{relative(11)}em $grayc,
+	//             inset 0 -#{relative(11)}em #{relative(10)}em -#{relative(10)}em $grayc,
+	//             0 0 #{relative(5)}em 0 rgba(0, 0, 0, .3);
+	
 	-webkit-box-shadow: inset 0 0 #{relative(10)}em 0 rgba(0, 0, 0, .3);
-	         box-shadow: inset 0 0 #{relative(10)}em 0 rgba(0, 0, 0, .3);
+	   -moz-box-shadow: inset 0 0 #{relative(10)}em 0 rgba(0, 0, 0, .3);
+	        box-shadow: inset 0 0 #{relative(10)}em 0 rgba(0, 0, 0, .3);
 	
 	a {
 		

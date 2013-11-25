@@ -1,12 +1,10 @@
 // Picard helpers:
-@import "partials/variables",
-        "partials/mixins";
+@import "partials/variables";
 
 // External helpers:
 @import "partials/rex/functions",
         "partials/rex/mixins",
-        "partials/rex/variables",
-        "partials/flex.scss";
+        "partials/rex/variables";
 
 // Normalization:
 @import "partials/normalize",

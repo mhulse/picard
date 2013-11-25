@@ -32,8 +32,6 @@ $chili: #f00;
 $frog: #008b45;
 
 // Fonts:
-//
-// @see http://www.awayback.com/revised-font-stack/
 $sans: Arial, sans-serif;
 $serif: Cambria, Georgia, serif;
 $mono: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
@@ -42,6 +40,10 @@ $amp: adobe-caslon-pro, Adobe Caslon Pro, Baskerville, "Goudy Old Style", Palati
 // Base styles:
 $base_padding: 10px;
 $base_margin: 10px;
+
+// Breakpoints:
+$base_breakpoint-max: 749px;
+$base_breakpoint-min: 750px;
 
 // Rex overrides:
 $NS: "";

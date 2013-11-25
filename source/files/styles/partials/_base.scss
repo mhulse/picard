@@ -13,7 +13,7 @@ body {
 	min-height: 100%;
 	text-rendering: optimizeLegibility;
 	
-	@media (max-width: #{relative(749)}rem) {
+	@media (max-width: #{relative($base_breakpoint-max)}rem) {
 		
 		& { padding: #{relative($base_padding * 2)}rem; }
 		
@@ -55,7 +55,10 @@ hr,
 	border: 0;
 	border-top: #{relative(2)}rem solid $graye;
 	height: 0;
-	margin: #{relative($base_margin) * 4}rem 0;
+	margin: {
+		top: #{relative($base_margin) * 4}rem;
+		bottom: #{relative($base_margin) * 4}rem;
+	}
 	padding: 0;
 	-webkit-box-sizing: content-box;
 	   -moz-box-sizing: content-box;
@@ -63,8 +66,19 @@ hr,
 	
 	section & {
 		border-top-width: #{relative(1)}rem;
-		max-width: #{relative(750)}rem;
-		margin: #{relative($base_margin) * 2}rem auto;
+		margin: {
+			top: #{relative($base_margin) * 2}rem;
+			bottom: #{relative($base_margin) * 2}rem;
+		}
 	}
+	
+}
+
+section,
+article,
+aside {
+	
+	> :first-child { margin-top: 0 !important; }
+	> :last-child { margin-bottom: 0 !important; }
 	
 }

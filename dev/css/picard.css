@@ -927,7 +927,8 @@ hr,
   border: 0;
   border-top: 0.14285714285714rem solid #eeeeee;
   height: 0;
-  margin: 2.85714285714286rem 0;
+  margin-top: 2.85714285714286rem;
+  margin-bottom: 2.85714285714286rem;
   padding: 0;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -936,11 +937,22 @@ hr,
 section hr, section
 .hr {
   border-top-width: 0.07142857142857rem;
-  max-width: 53.57142857142857rem;
-  margin: 1.42857142857143rem auto;
+  margin-top: 1.42857142857143rem;
+  margin-bottom: 1.42857142857143rem;
 }
 
-address,
+section > :first-child,
+article > :first-child,
+aside > :first-child {
+  margin-top: 0 !important;
+}
+section > :last-child,
+article > :last-child,
+aside > :last-child {
+  margin-bottom: 0 !important;
+}
+
+.l150, .l250, .l350, label, .l450, .l550, .l650, address,
 blockquote,
 dl,
 figcaption,
@@ -953,30 +965,51 @@ h6,
 ol,
 p,
 pre,
-ul,
-.omega,
-label,
-.alpha {
-  max-width: 46.42857142857143rem;
+ul, .l750, section hr {
   margin-right: auto;
   margin-left: auto;
   display: block;
 }
 
-label,
-.alpha {
+.l150 {
+  max-width: 10.71428571428571rem;
+}
+
+.l250 {
+  max-width: 17.85714285714286rem;
+}
+
+.l350, label {
   max-width: 25rem;
 }
 
-section > :first-child,
-article > :first-child,
-aside > :first-child {
-  margin-top: 0 !important;
+.l450 {
+  max-width: 32.14285714285715rem;
 }
-section > :last-child,
-article > :last-child,
-aside > :last-child {
-  margin-bottom: 0 !important;
+
+.l550 {
+  max-width: 39.28571428571429rem;
+}
+
+.l650, address,
+blockquote,
+dl,
+figcaption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+pre,
+ul {
+  max-width: 46.42857142857143rem;
+}
+
+.l750, section hr {
+  max-width: 53.57142857142857rem;
 }
 
 nav[role="navigation"] ul {
@@ -1126,8 +1159,8 @@ del,
 ins {
   line-height: 0;
   letter-spacing: .05em;
-  border-radius: 2px;
-  padding: 1px 3px;
+  border-radius: 0.14285714285714rem;
+  padding: 0.07142857142857rem 0.21428571428571rem;
   position: relative;
 }
 
@@ -1159,7 +1192,7 @@ abbr {
   cursor: help;
 }
 abbr[title] {
-  border-bottom: 1px dotted;
+  border-bottom: 0.07142857142857rem dotted;
 }
 abbr[title="et cetera"] {
   font-family: "Hoefler Text", Palatino, Constantia, "Palatino Linotype", cursive;
@@ -1174,7 +1207,7 @@ dfn {
   font-style: italic;
 }
 dfn[title] {
-  border-bottom: 1px dotted;
+  border-bottom: 0.07142857142857rem dotted;
   cursor: help;
 }
 
@@ -1267,13 +1300,14 @@ span.amp {
   font-size: 1rem;
   line-height: 1.375;
   color: #666666;
-  border: 0.14285714285714rem solid #cccccc;
+  border: 0.07142857142857rem solid #bbbbbb;
   font-style: italic;
   margin-top: 2.14285714285714rem;
   margin-bottom: 2.14285714285714rem;
-  padding: 1.375em;
-  background: rgba(238, 238, 238, 0.5);
+  padding: 0.58928571428571em 1.57142857142857em;
+  background: #fbfbfb;
   -webkit-box-shadow: inset 0 0 0.71428571428571em 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 0.71428571428571em 0 rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 0.71428571428571em 0 rgba(0, 0, 0, 0.3);
 }
 .meta a, .meta a:visited {
@@ -1448,13 +1482,13 @@ kbd kbd {
 }
 .table tfoot th,
 .table tfoot td {
-  color: rgba(102, 102, 102, 0.9);
+  color: #666666;
 }
 .table th,
 .table td {
   text-align: left;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 0.71428571428571rem;
+  padding-left: 0.71428571428571rem;
 }
 .table th:first-child,
 .table td:first-child {
@@ -1465,7 +1499,6 @@ kbd kbd {
   padding-right: 0;
 }
 .table th {
-  color: rgba(136, 136, 136, 0.9);
   white-space: nowrap;
 }
 .table tbody {

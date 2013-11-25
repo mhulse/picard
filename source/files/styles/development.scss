@@ -1,6 +1,5 @@
 // Picard helpers:
-@import "partials/variables",
-        "partials/mixins";
+@import "partials/variables";
 
 // External helpers:
 @import "partials/rex/functions",
@@ -15,8 +14,7 @@
 .swatches {
 	
 	max-width: #{relative(650)}rem;
-	margin-right: auto;
-	margin-left: auto;
+	margin: #{relative($base_margin)}rem auto;
 	
 	.swatches-swatch {
 		
@@ -35,32 +33,32 @@
 		padding: #{relative(3)}em #{relative(5)}em;
 	}
 	
+	.milk    { background: $milk;    }
+	.bling   { background: $bling;   }
+	.goblin  { background: $goblin;  }
+	.hulk    { background: $hulk;    }
+	//.prius   { background: $prius;   }
+	.smurf   { background: $smurf;   }
+	.lobster { background: $lobster; }
+	.dusk    { background: $dusk;    }
+	.juice   { background: $juice;   }
+	.raven   { background: $raven;   }
+	.graye   { background: $graye;   }
+	.grayd   { background: $grayd;   }
+	.grayc   { background: $grayc;   }
+	.grayb   { background: $grayb;   }
+	.graya   { background: $graya;   }
+	.gray9   { background: $gray9;   }
+	.gray8   { background: $gray8;   }
+	.gray7   { background: $gray7;   }
+	.gray6   { background: $gray6;   }
+	.gray5   { background: $gray5;   }
+	.gray4   { background: $gray4;   }
+	.gray3   { background: $gray3;   }
+	.gray2   { background: $gray2;   }
+	.gray1   { background: $gray1;   }
+	.duck    { background: $duck;    }
+	.chili   { background: $chili;   }
+	.frog    { background: $frog;    }
+	
 }
-
-.milk    { background: $milk;    }
-.bling   { background: $bling;   }
-.goblin  { background: $goblin;  }
-.hulk    { background: $hulk;    }
-//.prius   { background: $prius;   }
-.smurf   { background: $smurf;   }
-.lobster { background: $lobster; }
-.dusk    { background: $dusk;    }
-.juice   { background: $juice;   }
-.raven   { background: $raven;   }
-.graye   { background: $graye;   }
-.grayd   { background: $grayd;   }
-.grayc   { background: $grayc;   }
-.grayb   { background: $grayb;   }
-.graya   { background: $graya;   }
-.gray9   { background: $gray9;   }
-.gray8   { background: $gray8;   }
-.gray7   { background: $gray7;   }
-.gray6   { background: $gray6;   }
-.gray5   { background: $gray5;   }
-.gray4   { background: $gray4;   }
-.gray3   { background: $gray3;   }
-.gray2   { background: $gray2;   }
-.gray1   { background: $gray1;   }
-.duck    { background: $duck;    }
-.chili   { background: $chili;   }
-.frog    { background: $frog;    }

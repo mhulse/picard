@@ -1,3 +1,40 @@
+%base {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
+
+.l150 {
+	@extend %base;
+	max-width: #{relative(150)}rem;
+}
+.l250 {
+	@extend %base;
+	max-width: #{relative(250)}rem;
+}
+.l350 {
+	@extend %base;
+	max-width: #{relative(350)}rem;
+}
+.l450 {
+	@extend %base;
+	max-width: #{relative(450)}rem;
+}
+.l550 {
+	@extend %base;
+	max-width: #{relative(550)}rem;
+}
+.l650 {
+	@extend %base;
+	max-width: #{relative(650)}rem;
+}
+.l750 {
+	@extend %base;
+	max-width: #{relative(750)}rem;
+}
+
+label { @extend .l350; }
+
 address,
 blockquote,
 dl,
@@ -11,20 +48,6 @@ h6,
 ol,
 p,
 pre,
-ul,
-.omega { @include max(650); }
+ul { @extend .l650; }
 
-label,
-.alpha {
-	@extend .omega;
-	max-width: #{relative(350)}rem;
-}
-
-section,
-article,
-aside {
-	
-	> :first-child { margin-top: 0 !important; }
-	> :last-child { margin-bottom: 0 !important; }
-	
-}
+section hr { @extend .l750; }

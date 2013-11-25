@@ -1,7 +1,6 @@
 .swatches {
   max-width: 46.42857142857143rem;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0.71428571428571rem auto;
 }
 .swatches .swatches-swatch {
   font-size: 1rem;
@@ -16,107 +15,81 @@
   background: rgba(0, 0, 0, 0.5);
   padding: 0.21428571428571em 0.35714285714286em;
 }
-
-.milk {
+.swatches .milk {
   background: white;
 }
-
-.bling {
+.swatches .bling {
   background: #ffd100;
 }
-
-.goblin {
+.swatches .goblin {
   background: #9ea301;
 }
-
-.hulk {
+.swatches .hulk {
   background: #4e801c;
 }
-
-.smurf {
+.swatches .smurf {
   background: #13aac9;
 }
-
-.lobster {
+.swatches .lobster {
   background: #cc3300;
 }
-
-.dusk {
+.swatches .dusk {
   background: #1d678f;
 }
-
-.juice {
+.swatches .juice {
   background: #ff6600;
 }
-
-.raven {
+.swatches .raven {
   background: black;
 }
-
-.graye {
+.swatches .graye {
   background: #eeeeee;
 }
-
-.grayd {
+.swatches .grayd {
   background: #dddddd;
 }
-
-.grayc {
+.swatches .grayc {
   background: #cccccc;
 }
-
-.grayb {
+.swatches .grayb {
   background: #bbbbbb;
 }
-
-.graya {
+.swatches .graya {
   background: #aaaaaa;
 }
-
-.gray9 {
+.swatches .gray9 {
   background: #999999;
 }
-
-.gray8 {
+.swatches .gray8 {
   background: #888888;
 }
-
-.gray7 {
+.swatches .gray7 {
   background: #777777;
 }
-
-.gray6 {
+.swatches .gray6 {
   background: #666666;
 }
-
-.gray5 {
+.swatches .gray5 {
   background: #555555;
 }
-
-.gray4 {
+.swatches .gray4 {
   background: #444444;
 }
-
-.gray3 {
+.swatches .gray3 {
   background: #333333;
 }
-
-.gray2 {
+.swatches .gray2 {
   background: #222222;
 }
-
-.gray1 {
+.swatches .gray1 {
   background: #111111;
 }
-
-.duck {
+.swatches .duck {
   background: #f3f315;
 }
-
-.chili {
+.swatches .chili {
   background: red;
 }
-
-.frog {
+.swatches .frog {
   background: #008b45;
 }
