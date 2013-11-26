@@ -283,48 +283,6 @@ span {
 	
 }
 
-.label {
-	
-	@include baseline($base_font-size - 2, .75);
-	text-transform: uppercase;
-	letter-spacing: .1em;
-	font-weight: normal;
-	color: $gray8;
-	margin: {
-		top: #{relative($base_margin)}rem;
-		bottom: #{relative($base_margin)}rem;
-	}
-	
-	a,
-	span {
-		border-bottom: #{relative(2)}rem solid $grayd;
-		display: inline-block;
-	}
-	
-	a {
-		
-		&,
-		&:visited {
-			color: $gray3;
-			border-bottom-color: $gray1;
-		}
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
-			color: $juice;
-			text-decoration: none;
-			border-bottom-color: $lobster;
-		}
-		
-		&:focus,
-		&:active { outline: none; }
-		
-	}
-	
-}
-
 .body {
 	
 	p {
@@ -467,38 +425,13 @@ p.meta {
 	
 }
 
-.head {
-	
-	@include baseline(18, .675);
-	font-weight: bold;
-	text-transform: none;
-	color: $gray8;
-	margin-bottom: #{relative($base_margin)}rem;
-	
-	a {
-		
-		&,
-		&:visited { color: $gray6; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
-			color: $raven;
-			text-decoration: none;
-		}
-		
-	}
-	
-}
-
-.reverse {
+.label {
 	
 	@include baseline($base_font-size - 2, .75);
-	font-weight: normal;
+	text-transform: uppercase;
 	letter-spacing: .1em;
-	text-shadow: 0 #{relative(1)}em #{relative(1)}em $raven;
-	color: $milk;
+	font-weight: normal;
+	color: $gray8;
 	margin: {
 		top: #{relative($base_margin)}rem;
 		bottom: #{relative($base_margin)}rem;
@@ -506,33 +439,55 @@ p.meta {
 	
 	a,
 	span {
-		background: $gray6;
-		padding: #{baseline($base_font-size - 2, .75) / 4}em #{baseline($base_font-size - 2, .75) / 2}em;
+		border-bottom: #{relative(2)}rem solid $grayd;
+		padding: #{relative(1)}em #{relative(5)}em;
 		display: inline-block;
-		-webkit-border-radius: #{relative($base_radii)}em;
-		   -moz-border-radius: #{relative($base_radii)}em;
-		        border-radius: #{relative($base_radii)}em;
 	}
 	
 	a {
 		
 		&,
 		&:visited {
-			color: $bling;
-			background: $gray3;
+			color: $gray3;
+			border-bottom-color: $gray1;
 		}
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $bling;
+			color: $juice;
 			text-decoration: none;
-			background: $raven;
+			border-bottom-color: $lobster;
 		}
 		
 		&:focus,
 		&:active { outline: none; }
+		
+	}
+	
+}
+
+.head {
+	
+	@include baseline($base_font-size + 2, .675);
+	font-weight: bold;
+	text-transform: none;
+	color: mix($dusk, $milk, 65%);
+	margin-bottom: #{relative($base_margin)}rem;
+	
+	a {
+		
+		&,
+		&:visited { color: $dusk; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $dusk;
+			text-decoration: underline;
+		}
 		
 	}
 	

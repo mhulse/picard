@@ -14,7 +14,7 @@ figure {
 
 figcaption {
 	
-	@include baseline(12, .75);
+	@include baseline($base_font-size - 2, .75);
 	text-transform: uppercase;
 	text-shadow: 0 #{relative(1)}em #{relative(1)}em $raven;
 	letter-spacing: .05em;
@@ -31,9 +31,8 @@ figcaption {
 	
 	padding: #{baseline($base_font-size - 2, .75) / 2 }rem;
 	margin-top: #{relative(2)}rem;
-	padding: #{baseline(12, .75) / 2}em #{baseline(12, .75)}em;
+	padding: #{baseline($base_font-size, .75) / 2}em #{baseline($base_font-size, .75)}em;
 	
-	border: #{relative(2)}rem solid $gray9;
 	-webkit-border-radius: #{relative($base_radii)}em;
 	   -moz-border-radius: #{relative($base_radii)}em;
 	        border-radius: #{relative($base_radii)}em;

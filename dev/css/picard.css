@@ -937,9 +937,9 @@ hr,
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-section hr, section
+aside hr, section hr, aside
+.hr, section
 .hr {
-  border-top-width: 0.07142857142857rem;
   margin-top: 1.42857142857143rem;
   margin-bottom: 1.42857142857143rem;
 }
@@ -1022,7 +1022,8 @@ h6,
 ol,
 p,
 pre,
-ul, .x7, section hr {
+ul, .x7, aside hr,
+section hr {
   margin-right: auto;
   margin-left: auto;
   display: block;
@@ -1063,7 +1064,8 @@ ul {
   max-width: 46.42857142857143rem;
 }
 
-.x7, section hr {
+.x7, aside hr,
+section hr {
   max-width: 53.57142857142857rem;
 }
 
@@ -1319,34 +1321,6 @@ span.amp {
   margin-bottom: 0.71428571428571rem;
 }
 
-.label {
-  font-size: 0.85714285714286rem;
-  line-height: 1.375;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  font-weight: normal;
-  color: #888888;
-  margin-top: 0.71428571428571rem;
-  margin-bottom: 0.71428571428571rem;
-}
-.label a,
-.label span {
-  border-bottom: 0.14285714285714rem solid #dddddd;
-  display: inline-block;
-}
-.label a, .label a:visited {
-  color: #333333;
-  border-bottom-color: #111111;
-}
-.label a:visited:hover, .label a:focus, .label a:focus:hover, .label a:hover, .label a:active {
-  color: #ff6600;
-  text-decoration: none;
-  border-bottom-color: #cc3300;
-}
-.label a:focus, .label a:active {
-  outline: none;
-}
-
 .body p {
   font-size: 1.14285714285714rem;
   line-height: 1.375;
@@ -1448,52 +1422,49 @@ p.meta:hover {
   text-decoration: underline;
 }
 
-.head {
-  font-size: 1.28571428571429rem;
-  line-height: 0.825;
-  font-weight: bold;
-  text-transform: none;
-  color: #888888;
-  margin-bottom: 0.71428571428571rem;
-}
-.head a, .head a:visited {
-  color: #666666;
-}
-.head a:visited:hover, .head a:focus, .head a:focus:hover, .head a:hover, .head a:active {
-  color: black;
-  text-decoration: none;
-}
-
-.reverse {
+.label {
   font-size: 0.85714285714286rem;
   line-height: 1.375;
-  font-weight: normal;
+  text-transform: uppercase;
   letter-spacing: .1em;
-  text-shadow: 0 0.07142857142857em 0.07142857142857em black;
-  color: white;
+  font-weight: normal;
+  color: #888888;
   margin-top: 0.71428571428571rem;
   margin-bottom: 0.71428571428571rem;
 }
-.reverse a,
-.reverse span {
-  background: #666666;
-  padding: 0.34375em 0.6875em;
+.label a,
+.label span {
+  border-bottom: 0.14285714285714rem solid #dddddd;
+  padding: 0.07142857142857em 0.35714285714286em;
   display: inline-block;
-  -webkit-border-radius: 0.21428571428571em;
-  -moz-border-radius: 0.21428571428571em;
-  border-radius: 0.21428571428571em;
 }
-.reverse a, .reverse a:visited {
-  color: #ffd100;
-  background: #333333;
+.label a, .label a:visited {
+  color: #333333;
+  border-bottom-color: #111111;
 }
-.reverse a:visited:hover, .reverse a:focus, .reverse a:focus:hover, .reverse a:hover, .reverse a:active {
-  color: #ffd100;
+.label a:visited:hover, .label a:focus, .label a:focus:hover, .label a:hover, .label a:active {
+  color: #ff6600;
   text-decoration: none;
-  background: black;
+  border-bottom-color: #cc3300;
 }
-.reverse a:focus, .reverse a:active {
+.label a:focus, .label a:active {
   outline: none;
+}
+
+.head {
+  font-size: 1.14285714285714rem;
+  line-height: 0.928125;
+  font-weight: bold;
+  text-transform: none;
+  color: #6c9cb6;
+  margin-bottom: 0.71428571428571rem;
+}
+.head a, .head a:visited {
+  color: #1d678f;
+}
+.head a:visited:hover, .head a:focus, .head a:focus:hover, .head a:hover, .head a:active {
+  color: #1d678f;
+  text-decoration: underline;
 }
 
 pre {
@@ -1848,8 +1819,7 @@ figcaption {
   background: linear-gradient(to bottom, #222222 0, #111111 100%);
   padding: 0.6875rem;
   margin-top: 0.14285714285714rem;
-  padding: 0.6875em 1.375em;
-  border: 0.14285714285714rem solid #999999;
+  padding: 0.58928571428571em 1.17857142857143em;
   -webkit-border-radius: 0.21428571428571em;
   -moz-border-radius: 0.21428571428571em;
   border-radius: 0.21428571428571em;
@@ -1875,4 +1845,16 @@ figcaption > :last-child {
 img {
   max-width: 100%;
   height: auto;
+}
+
+#search input[type="search"] {
+  font-size: 1.14285714285714rem;
+  line-height: 1.375;
+  border: 0.07142857142857rem solid #cccccc;
+  padding: 0.34375em;
+  background: white;
+  -webkit-appearance: textfield;
+}
+#search input[type="search"]::-webkit-search-decoration, #search input[type="search"]::-webkit-search-cancel-button, #search input[type="search"]::-webkit-search-results-button, #search input[type="search"]::-webkit-search-results-decoration {
+  display: none;
 }

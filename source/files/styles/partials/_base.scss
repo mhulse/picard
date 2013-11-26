@@ -64,8 +64,9 @@ hr,
 	   -moz-box-sizing: content-box;
 	        box-sizing: content-box;
 	
+	aside &,
 	section & {
-		border-top-width: #{relative(1)}rem;
+		//border-top-width: #{relative(1)}rem;
 		margin: {
 			top: #{relative($base_margin) * 2}rem;
 			bottom: #{relative($base_margin) * 2}rem;
