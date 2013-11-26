@@ -15,15 +15,51 @@ figure {
 figcaption {
 	
 	@include baseline(12, .75);
-	
 	text-transform: uppercase;
-	letter-spacing: .03em;
-	margin: #{relative($base_margin)}rem auto 0;
+	text-shadow: 0 #{relative(1)}em #{relative(1)}em $raven;
+	letter-spacing: .05em;
+	word-spacing: .25em;
+	color: $grayd;
+	
+	background: $gray1;
+	background: -webkit-linear-gradient(top, $gray2 0, $gray1 100%);
+	background:    -moz-linear-gradient(top, $gray2 0, $gray1 100%);
+	background:     -ms-linear-gradient(top, $gray2 0, $gray1 100%);
+	background:      -o-linear-gradient(top, $gray2 0, $gray1 100%);
+	background:        -webkit-gradient(linear, left top, left bottom, color-stop(0, $gray2), color-stop(100%, $gray1));
+	background:         linear-gradient(to bottom, $gray2 0, $gray1 100%);
+	
+	padding: #{baseline($base_font-size - 2, .75) / 2 }rem;
+	margin-top: #{relative(2)}rem;
+	padding: #{baseline(12, .75) / 2}em #{baseline(12, .75)}em;
+	
+	border: #{relative(2)}rem solid $gray9;
+	-webkit-border-radius: #{relative($base_radii)}em;
+	   -moz-border-radius: #{relative($base_radii)}em;
+	        border-radius: #{relative($base_radii)}em;
 	
 	p {
 		font-size: inherit;
 		line-height: inherit;
 	}
+	
+	a {
+		
+		&,
+		&:visited { color: $juice; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $juice;
+			text-decoration: underline;
+		}
+		
+	}
+	
+	> :first-child { margin-top: 0 !important; }
+	> :last-child { margin-bottom: 0 !important; }
 	
 }
 

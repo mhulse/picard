@@ -116,21 +116,21 @@ h1:empty { display: none; }
 
 blockquote {
 	
-	@include baseline(18, .875);
+	@include baseline(20);
 	
 	font-family: serif;
 	font-style: italic;
-	
-	color: $gray3;
+	letter-spacing: .03em;
+	color: $gray6;
 	border-width: #{relative(2)}rem 0;
 	border-style: dashed;
 	border-color: $grayd;
 	
 	margin: {
-		top: #{relative($base_margin)}rem;
-		bottom: #{relative($base_margin)}rem;
+		top: #{relative($base_margin) * 2}rem;
+		bottom: #{relative($base_margin) * 2}rem;
 	}
-	padding: #{relative($base_padding)}rem #{relative($base_padding * 4)}rem;
+	padding: #{baseline(20)}em #{baseline(20) * 2}em;
 	position: relative;
 	
 	p {
@@ -149,11 +149,13 @@ blockquote {
 		
 	}
 	
+	* { max-width: none; }
+	
 	blockquote { border-width: #{relative(1)}rem 0; }
 	
 	@media (max-width: #{relative($base_breakpoint-max)}rem) {
 		
-		& { padding: #{relative($base_padding)}rem; }
+		& { padding: #{baseline(20)}em; }
 		
 	}
 	
@@ -162,9 +164,9 @@ blockquote {
 mark {
 	background: fade-out($duck, .1);
 	padding: #{relative(1)}em #{relative(3)}em;
-	-webkit-border-radius: #{relative(3)}em;
-	   -moz-border-radius: #{relative(3)}em;
-	        border-radius: #{relative(3)}em;
+	-webkit-border-radius: #{relative($base_radii)}em;
+	   -moz-border-radius: #{relative($base_radii)}em;
+	        border-radius: #{relative($base_radii)}em;
 }
 
 s {
@@ -177,9 +179,11 @@ del,
 ins {
 	line-height: 0;
 	letter-spacing: .05em;
-	border-radius: #{relative(2)}rem;
 	padding: #{relative(1)}rem #{relative(3)}rem;
 	position: relative;
+	-webkit-border-radius: #{relative($base_radii) - 1}em;
+	   -moz-border-radius: #{relative($base_radii) - 1}em;
+	        border-radius: #{relative($base_radii) - 1}em;
 }
 del {
 	color: fade-out(darken($chili, 20%), .1);
@@ -279,35 +283,31 @@ span {
 	
 }
 
-.category {
+.label {
 	
+	@include baseline($base_font-size - 2, .75);
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-weight: normal;
+	color: $gray8;
 	margin: {
 		top: #{relative($base_margin)}rem;
 		bottom: #{relative($base_margin)}rem;
 	}
-	display: inline-block;
 	
 	a,
 	span {
-		
-		@include baseline($base_font-size - 2, .75);
-		font-weight: normal;
-		letter-spacing: .1em;
-		text-transform: uppercase;
-		border-bottom: #{relative(2)}rem solid $raven;
-		display: block;
-		
-	}
-	
-	span {
-		color: $gray9;
-		border-bottom-color: $gray9;
+		border-bottom: #{relative(2)}rem solid $grayd;
+		display: inline-block;
 	}
 	
 	a {
 		
 		&,
-		&:visited { color: $raven; }
+		&:visited {
+			color: $gray3;
+			border-bottom-color: $gray1;
+		}
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
@@ -322,7 +322,6 @@ span {
 		&:active { outline: none; }
 		
 	}
-	
 	
 }
 
@@ -349,9 +348,9 @@ span {
 	border: #{relative(1)}rem solid $grayb;
 	background: lighten($graye, 5%);
 	
-	-webkit-border-radius: #{relative(3)}em;
-	   -moz-border-radius: #{relative(3)}em;
-	        border-radius: #{relative(3)}em;
+	-webkit-border-radius: #{relative($base_radii)}em;
+	   -moz-border-radius: #{relative($base_radii)}em;
+	        border-radius: #{relative($base_radii)}em;
 	
 	a {
 		
@@ -432,9 +431,9 @@ p.meta {
 	letter-spacing: .03em;
 	color: darken($chili, 10%);
 	border: #{relative(2)}rem solid lighten($chili, 35%);
-	-webkit-border-radius: #{relative(3)}em;
-	   -moz-border-radius: #{relative(3)}em;
-	        border-radius: #{relative(3)}em;
+	-webkit-border-radius: #{relative($base_radii)}em;
+	   -moz-border-radius: #{relative($base_radii)}em;
+	        border-radius: #{relative($base_radii)}em;
 	background: lighten($chili, 45%);
 	background: -webkit-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
 	background:    -moz-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
@@ -463,6 +462,77 @@ p.meta {
 			color: $chili;
 			text-decoration: underline;
 		}
+		
+	}
+	
+}
+
+.head {
+	
+	@include baseline(18, .675);
+	font-weight: bold;
+	text-transform: none;
+	color: $gray8;
+	margin-bottom: #{relative($base_margin)}rem;
+	
+	a {
+		
+		&,
+		&:visited { color: $gray6; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $raven;
+			text-decoration: none;
+		}
+		
+	}
+	
+}
+
+.reverse {
+	
+	@include baseline($base_font-size - 2, .75);
+	font-weight: normal;
+	letter-spacing: .1em;
+	text-shadow: 0 #{relative(1)}em #{relative(1)}em $raven;
+	color: $milk;
+	margin: {
+		top: #{relative($base_margin)}rem;
+		bottom: #{relative($base_margin)}rem;
+	}
+	
+	a,
+	span {
+		background: $gray6;
+		padding: #{baseline($base_font-size - 2, .75) / 4}em #{baseline($base_font-size - 2, .75) / 2}em;
+		display: inline-block;
+		-webkit-border-radius: #{relative($base_radii)}em;
+		   -moz-border-radius: #{relative($base_radii)}em;
+		        border-radius: #{relative($base_radii)}em;
+	}
+	
+	a {
+		
+		&,
+		&:visited {
+			color: $bling;
+			background: $gray3;
+		}
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $bling;
+			text-decoration: none;
+			background: $raven;
+		}
+		
+		&:focus,
+		&:active { outline: none; }
 		
 	}
 	

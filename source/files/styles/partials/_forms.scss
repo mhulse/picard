@@ -44,9 +44,7 @@
 		
 		&:focus {
 			outline: 0;
-			outline: thin dotted \9; /* IE6-9 */
 			border-color: $lobster;
-			
 		}
 		
 		&[disabled] {

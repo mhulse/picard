@@ -22,11 +22,14 @@
 	vertical-align: baseline;
 	background: $lobster;
 	border: 0;
-	border-radius: #{relative(3)}em;
 	padding: #{baseline($base_font-size - 2) / 8}em 1em;
 	display: inline-block;
 	cursor: pointer;
 	zoom: 1;
+	
+	-webkit-border-radius: #{relative($base_radii)}em;
+	   -moz-border-radius: #{relative($base_radii)}em;
+	        border-radius: #{relative($base_radii)}em;
 	
 	-webkit-user-drag: none;
 	

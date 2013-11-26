@@ -24,9 +24,12 @@ nav[role="navigation"] {
 				background: $raven;
 				padding: #{baseline($base_font-size - 2, .25)}em #{relative(15)}em;
 				display: block;
-				border-radius: #{relative(3)}em;
 				text-shadow: 0 #{relative(1)}em #{relative(1)}em $raven;
 				white-space: nowrap;
+				
+				-webkit-border-radius: #{relative($base_radii)}em;
+				   -moz-border-radius: #{relative($base_radii)}em;
+				        border-radius: #{relative($base_radii)}em;
 				
 				&,
 				&:visited { color: $milk; }

@@ -1,44 +1,11 @@
-%base {
-	margin-right: auto;
-	margin-left: auto;
-	display: block;
-}
+label { @extend .x3; }
 
-.l150 {
-	@extend %base;
-	max-width: #{relative(150)}rem;
-}
-.l250 {
-	@extend %base;
-	max-width: #{relative(250)}rem;
-}
-.l350 {
-	@extend %base;
-	max-width: #{relative(350)}rem;
-}
-.l450 {
-	@extend %base;
-	max-width: #{relative(450)}rem;
-}
-.l550 {
-	@extend %base;
-	max-width: #{relative(550)}rem;
-}
-.l650 {
-	@extend %base;
-	max-width: #{relative(650)}rem;
-}
-.l750 {
-	@extend %base;
-	max-width: #{relative(750)}rem;
-}
+blockquote { @extend .x4; }
 
-label { @extend .l350; }
+figcaption { @extend .x5; }
 
 address,
-blockquote,
 dl,
-figcaption,
 h1,
 h2,
 h3,
@@ -48,6 +15,20 @@ h6,
 ol,
 p,
 pre,
-ul { @extend .l650; }
+ul { @extend .x6; }
 
-section hr { @extend .l750; }
+section hr { @extend .x7; }
+
+.x1, .x2, .x3, .x4, .x5, .x6, .x7 { 
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
+
+.x1 { max-width: #{relative(150)}rem; }
+.x2 { max-width: #{relative(250)}rem; }
+.x3 { max-width: #{relative(350)}rem; }
+.x4 { max-width: #{relative(450)}rem; }
+.x5 { max-width: #{relative(550)}rem; }
+.x6 { max-width: #{relative(650)}rem; }
+.x7 { max-width: #{relative(750)}rem; }
