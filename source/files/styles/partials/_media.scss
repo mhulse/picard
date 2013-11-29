@@ -45,13 +45,13 @@ figcaption {
 	a {
 		
 		&,
-		&:visited { color: $juice; }
+		&:visited { color: $bling; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $juice;
+			color: $bling;
 			text-decoration: underline;
 		}
 		

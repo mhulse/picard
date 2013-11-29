@@ -1741,7 +1741,7 @@ kbd kbd {
   letter-spacing: .05em;
   padding: 0.35714285714286em;
 }
-.form input[type="text"], .form input[type="password"], .form textarea {
+.form input[type="text"], .form input[type="password"], .form input[type="search"], .form textarea {
   font-size: 1.14285714285714rem;
   line-height: 1.375;
   padding: 0.34375em;
@@ -1749,36 +1749,86 @@ kbd kbd {
   letter-spacing: .05em;
   text-align: center;
   border: 0.07142857142857rem solid #cccccc;
-  box-shadow: inset 0 0.07142857142857em 0.21428571428571em #eaeaea;
   background: #fbfbfb;
   width: 100%;
   display: block;
+  -webkit-box-shadow: inset 0 0.07142857142857em 0.21428571428571em #cccccc;
+  -moz-box-shadow: inset 0 0.07142857142857em 0.21428571428571em #cccccc;
+  box-shadow: inset 0 0.07142857142857em 0.21428571428571em #cccccc;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0;
   -webkit-transition: .3s linear border;
   -moz-transition: .3s linear border;
   -ms-transition: .3s linear border;
   -o-transition: .3s linear border;
   transition: .3s linear border;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
-.form input[type="text"]:focus, .form input[type="password"]:focus, .form textarea:focus {
-  outline: 0;
+.form input[type="text"]::-webkit-input-placeholder, .form input[type="password"]::-webkit-input-placeholder, .form input[type="search"]::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+.form input[type="text"]:-moz-placeholder, .form input[type="password"]:-moz-placeholder, .form input[type="search"]:-moz-placeholder, .form textarea:-moz-placeholder {
+  color: #999999;
+}
+.form input[type="text"]::-moz-placeholder, .form input[type="password"]::-moz-placeholder, .form input[type="search"]::-moz-placeholder, .form textarea::-moz-placeholder {
+  color: #999999;
+}
+.form input[type="text"]:-ms-input-placeholder, .form input[type="password"]:-ms-input-placeholder, .form input[type="search"]:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
+  color: #999999;
+}
+.form input[type="text"]:focus, .form input[type="password"]:focus, .form input[type="search"]:focus, .form textarea:focus, .form input[type="text"]:active, .form input[type="password"]:active, .form input[type="search"]:active, .form textarea:active {
+  outline: none;
+}
+.form input[type="text"]:focus, .form input[type="password"]:focus, .form input[type="search"]:focus, .form textarea:focus {
   border-color: #cc3300;
 }
-.form input[disabled][type="text"], .form input[disabled][type="password"], .form textarea[disabled] {
+.form input[disabled][type="text"], .form input[disabled][type="password"], .form input[disabled][type="search"], .form textarea[disabled] {
   cursor: not-allowed;
   background-color: #eaeded;
   color: #cad2d3;
 }
-.form input[readonly][type="text"], .form input[readonly][type="password"], .form textarea[readonly] {
+.form input[readonly][type="text"], .form input[readonly][type="password"], .form input[readonly][type="search"], .form textarea[readonly] {
   background: #eee;
   color: #777;
   border-color: #ccc;
 }
 .form input[type="text"], .form input[type="password"] {
   height: auto;
+}
+.form input[type="search"] {
+  background: #eeeeee;
+  background: -webkit-linear-gradient(top, #eeeeee 0, #fbfbfb 100%);
+  background: -moz-linear-gradient(top, #eeeeee 0, #fbfbfb 100%);
+  background: -ms-linear-gradient(top, #eeeeee 0, #fbfbfb 100%);
+  background: -o-linear-gradient(top, #eeeeee 0, #fbfbfb 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eeeeee), color-stop(100%, #fbfbfb));
+  background: linear-gradient(to bottom, #eeeeee 0, #fbfbfb 100%);
+  padding: 0.6875em;
+  -webkit-border-radius: 0 0 0.35714285714286em 0.35714285714286em;
+  -moz-border-radius: 0 0 0.35714285714286em 0.35714285714286em;
+  -ms-border-radius: 0 0 0.35714285714286em 0.35714285714286em;
+  -o-border-radius: 0 0 0.35714285714286em 0.35714285714286em;
+  border-radius: 0 0 0.35714285714286em 0.35714285714286em;
+  border: 0 none;
+  border-top: 0.21428571428571rem solid #999999;
+  display: block;
+}
+.form input[type="search"]:focus {
+  border-color: black;
+}
+.form input[type="search"]::-webkit-search-decoration, .form input[type="search"]::-webkit-search-cancel-button, .form input[type="search"]::-webkit-search-results-button, .form input[type="search"]::-webkit-search-results-decoration {
+  display: none;
 }
 .form textarea {
   min-height: 15.71428571428571rem;
@@ -1829,10 +1879,10 @@ figcaption p {
   line-height: inherit;
 }
 figcaption a, figcaption a:visited {
-  color: #ff6600;
+  color: #ffd100;
 }
 figcaption a:visited:hover, figcaption a:focus, figcaption a:focus:hover, figcaption a:hover, figcaption a:active {
-  color: #ff6600;
+  color: #ffd100;
   text-decoration: underline;
 }
 figcaption > :first-child {
@@ -1845,16 +1895,4 @@ figcaption > :last-child {
 img {
   max-width: 100%;
   height: auto;
-}
-
-#search input[type="search"] {
-  font-size: 1.14285714285714rem;
-  line-height: 1.375;
-  border: 0.07142857142857rem solid #cccccc;
-  padding: 0.34375em;
-  background: white;
-  -webkit-appearance: textfield;
-}
-#search input[type="search"]::-webkit-search-decoration, #search input[type="search"]::-webkit-search-cancel-button, #search input[type="search"]::-webkit-search-results-button, #search input[type="search"]::-webkit-search-results-decoration {
-  display: none;
 }
