@@ -18,8 +18,8 @@
 	
 	%fields {
 		
-		@include baseline(16);
-		padding: #{baseline(16) / 4}em;
+		@include baseline($base_font-size);
+		padding: #{baseline($base_font-size) / 4}em;
 		
 		color: $gray3;
 		letter-spacing: .05em;
@@ -104,7 +104,7 @@
 			background:        -webkit-gradient(linear, left top, left bottom, color-stop(0, $graye), color-stop(100%, lighten($graye, 5%)));
 			background:         linear-gradient(to bottom, $graye 0, lighten($graye, 5%) 100%);
 			
-			padding: #{baseline(16) / 2}em;
+			padding: #{baseline($base_font-size) / 2}em;
 			
 			-webkit-border-radius: 0 0 #{relative($base_radii + 2)}em #{relative($base_radii + 2)}em;
 			   -moz-border-radius: 0 0 #{relative($base_radii + 2)}em #{relative($base_radii + 2)}em;
@@ -143,7 +143,7 @@
 	input[type="radio"] { bottom: #{relative(1)}em; }
 	
 	select {
-		font-size: #{relative(16)}rem;
+		font-size: #{relative($base_font-size)}rem;
 		width: 100%;
 	}
 	
