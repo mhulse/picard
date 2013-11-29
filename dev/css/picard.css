@@ -1742,8 +1742,8 @@ kbd kbd {
   padding: 0.35714285714286em;
 }
 .form input[type="text"], .form input[type="password"], .form input[type="search"], .form textarea {
-  font-size: 1rem;
-  line-height: 1.57142857142857;
+  font-size: 1.14285714285714rem;
+  line-height: 1.375;
   padding: 0.39285714285714em;
   color: #333333;
   letter-spacing: .05em;
@@ -1820,6 +1820,9 @@ kbd kbd {
   -ms-border-radius: 0 0 0.35714285714286em 0.35714285714286em;
   -o-border-radius: 0 0 0.35714285714286em 0.35714285714286em;
   border-radius: 0 0 0.35714285714286em 0.35714285714286em;
+  -webkit-box-shadow: inset 0 0.07142857142857em 0.21428571428571em #cccccc, 0 0.07142857142857em 0.07142857142857em rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 0.07142857142857em 0.21428571428571em #cccccc, 0 0.07142857142857em 0.07142857142857em rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0.07142857142857em 0.21428571428571em #cccccc, 0 0.07142857142857em 0.07142857142857em rgba(0, 0, 0, 0.2);
   border: 0 none;
   border-top: 0.21428571428571rem solid #999999;
   display: block;
@@ -1929,7 +1932,6 @@ img {
   background: #eeeeee;
   display: block;
   border: 0.07142857142857rem solid #aaaaaa;
-  border-bottom-width: 0.14285714285714rem;
   -webkit-box-shadow: inset 0 0 0.35714285714286em 0 rgba(0, 0, 0, 0.25);
   -moz-box-shadow: inset 0 0 0.35714285714286em 0 rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 0 0.35714285714286em 0 rgba(0, 0, 0, 0.25);
@@ -1945,8 +1947,8 @@ img {
 }
 
 .pager {
-  font-size: 0.85714285714286rem;
-  line-height: 1.375;
+  font-size: 0.92857142857143rem;
+  line-height: 1.69230769230769;
   text-transform: uppercase;
   letter-spacing: .1em;
   margin-top: 0.71428571428571rem;
@@ -1954,14 +1956,22 @@ img {
 }
 .pager > * {
   display: inline-block;
-  margin: 0 0.17857142857143em;
-  padding: 0.22916666666667em 0.71428571428571em;
+  margin: 0.17857142857143em;
+  padding: 0.21153846153846em 0.71428571428571em;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
 .pager > :first-child:before {
-  content: '\2770\00a0';
+  content: '\2039\00a0';
 }
 .pager > :last-child:after {
-  content: '\00a0\2771';
+  content: '\00a0\203A';
+}
+.pager > :first-child:before,
+.pager > :last-child:after {
+  position: relative;
+  top: -0.07142857142857em;
 }
 .pager a,
 .pager .pager-current {
@@ -1986,4 +1996,5 @@ img {
   color: #1d678f;
   text-decoration: none;
   background: #eeeeee;
+  border-color: #1d678f;
 }

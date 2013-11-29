@@ -18,7 +18,6 @@
 		background: $graye;
 		display: block;
 		border: #{relative(1)}rem solid $graya;
-		border-bottom-width: #{relative(2)}rem;
 		
 		-webkit-box-shadow: inset 0 0 #{relative(5)}em 0 rgba($raven, .25);
 		   -moz-box-shadow: inset 0 0 #{relative(5)}em 0 rgba($raven, .25);
@@ -43,7 +42,7 @@
 
 .pager {
 	
-	@include baseline($base_font-size - 2, .75);
+	@include baseline($base_font-size - 1);
 	text-transform: uppercase;
 	letter-spacing: .1em;
 	margin: {
@@ -56,14 +55,22 @@
 		* {
 			
 			display: inline-block;
-			margin: 0 #{relative($base_margin / 4)}em;
-			padding: #{baseline($base_font-size - 2, .25) / 2}em #{relative($base_padding)}em;
+			margin: #{relative($base_margin / 4)}em;
+			padding: #{baseline($base_font-size - 1) / 8}em #{relative($base_padding)}em;
+			
+			-webkit-background-clip: padding;
+			   -moz-background-clip: padding;
+			        background-clip: padding-box;
 			
 		}
 		
-		:first-child:before { content: '\2770\00a0'; }
-		
-		:last-child:after { content: '\00a0\2771'; }
+		:first-child:before { content: '\2039\00a0'; }
+		:last-child:after { content: '\00a0\203A'; }
+		:first-child:before,
+		:last-child:after {
+			position: relative;
+			top: -#{relative(1)}em
+		}
 		
 	}
 	
@@ -100,6 +107,7 @@
 			color: $dusk;
 			text-decoration: none;
 			background: $graye;
+			border-color: $dusk;
 		}
 		
 	}
