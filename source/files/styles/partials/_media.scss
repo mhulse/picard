@@ -1,8 +1,8 @@
 figure {
 	
 	margin: {
-		top: #{relative($base_margin)}rem;
-		bottom: #{relative($base_margin)}rem;
+		top: #{relative($base_margin * 2)}rem;
+		bottom: #{relative($base_margin * 2)}rem;
 	}
 	
 	img {
@@ -29,13 +29,29 @@ figcaption {
 	background:        -webkit-gradient(linear, left top, left bottom, color-stop(0, $gray2), color-stop(100%, $gray1));
 	background:         linear-gradient(to bottom, $gray2 0, $gray1 100%);
 	
-	padding: #{baseline($base_font-size - 2, .75) / 2 }rem;
-	margin-top: #{relative(2)}rem;
-	padding: #{baseline($base_font-size, .75) / 2}em #{baseline($base_font-size, .75)}em;
+	margin-top: #{relative(13)}rem;
+	padding: #{baseline($base_font-size, .75)}em;
 	
-	-webkit-border-radius: #{relative($base_radii)}em;
-	   -moz-border-radius: #{relative($base_radii)}em;
-	        border-radius: #{relative($base_radii)}em;
+	// Caption triangle:
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		border-style: solid;
+		top: -9px;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+		display: block;
+		width: 0;
+		border-width: 0 10px 10px;
+		border-color: $gray2 transparent;
+		-webkit-transform: rotate(360deg);
+	}
+	
+	-webkit-border-radius: #{relative($base_radii * 2)}em;
+	   -moz-border-radius: #{relative($base_radii * 2)}em;
+	        border-radius: #{relative($base_radii * 2)}em;
 	
 	p {
 		font-size: inherit;

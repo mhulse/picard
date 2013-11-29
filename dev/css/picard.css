@@ -1844,8 +1844,8 @@ kbd kbd {
 }
 
 figure {
-  margin-top: 0.71428571428571rem;
-  margin-bottom: 0.71428571428571rem;
+  margin-top: 1.42857142857143rem;
+  margin-bottom: 1.42857142857143rem;
 }
 figure img {
   margin: 0 auto;
@@ -1867,12 +1867,26 @@ figcaption {
   background: -o-linear-gradient(top, #222222 0, #111111 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #222222), color-stop(100%, #111111));
   background: linear-gradient(to bottom, #222222 0, #111111 100%);
-  padding: 0.6875rem;
-  margin-top: 0.14285714285714rem;
-  padding: 0.58928571428571em 1.17857142857143em;
-  -webkit-border-radius: 0.21428571428571em;
-  -moz-border-radius: 0.21428571428571em;
-  border-radius: 0.21428571428571em;
+  margin-top: 0.92857142857143rem;
+  padding: 1.17857142857143em;
+  position: relative;
+  -webkit-border-radius: 0.42857142857143em;
+  -moz-border-radius: 0.42857142857143em;
+  border-radius: 0.42857142857143em;
+}
+figcaption::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  top: -9px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  display: block;
+  width: 0;
+  border-width: 0 10px 10px;
+  border-color: #222222 transparent;
+  -webkit-transform: rotate(360deg);
 }
 figcaption p {
   font-size: inherit;
