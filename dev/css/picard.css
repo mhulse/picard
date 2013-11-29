@@ -1870,9 +1870,12 @@ figcaption {
   margin-top: 0.92857142857143rem;
   padding: 1.17857142857143em;
   position: relative;
-  -webkit-border-radius: 0.42857142857143em;
-  -moz-border-radius: 0.42857142857143em;
-  border-radius: 0.42857142857143em;
+  -webkit-border-radius: 0.42857142857143rem;
+  -moz-border-radius: 0.42857142857143rem;
+  border-radius: 0.42857142857143rem;
+  -webkit-box-shadow: 0 0 0.14285714285714rem rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 0 0 0.14285714285714rem rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 0.14285714285714rem rgba(0, 0, 0, 0.9);
 }
 figcaption::after {
   content: "";

@@ -49,9 +49,13 @@ figcaption {
 		-webkit-transform: rotate(360deg);
 	}
 	
-	-webkit-border-radius: #{relative($base_radii * 2)}em;
-	   -moz-border-radius: #{relative($base_radii * 2)}em;
-	        border-radius: #{relative($base_radii * 2)}em;
+	-webkit-border-radius: #{relative($base_radii * 2)}rem;
+	   -moz-border-radius: #{relative($base_radii * 2)}rem;
+	        border-radius: #{relative($base_radii * 2)}rem;
+	
+	-webkit-box-shadow: 0 0 #{relative(2)}rem rgba(0, 0, 0, .9);
+	   -moz-box-shadow: 0 0 #{relative(2)}rem rgba(0, 0, 0, .9);
+	        box-shadow: 0 0 #{relative(2)}rem rgba(0, 0, 0, .9);
 	
 	p {
 		font-size: inherit;
