@@ -2,11 +2,10 @@
 	
 	> li {
 		
-		line-height: 1;
 		display: inline-block;
-		letter-spacing: .05em;
-		vertical-align: middle;
-		margin: #{relative($base_margin / 4)}rem #{relative($base_margin / 2)}rem;
+		letter-spacing: .03em;
+		vertical-align: bottom;
+		margin: .25rem;
 		
 		&:before { content: none; }
 		
@@ -14,26 +13,26 @@
 	
 	a {
 		
-		padding: .25em .5em;
-		background: $graye;
+		padding: 0 .05em .15em;
+		line-height: 1;
 		display: block;
-		border: #{relative(1)}rem solid $graya;
 		
-		-webkit-box-shadow: inset 0 0 #{relative(5)}em 0 rgba($raven, .25);
-		   -moz-box-shadow: inset 0 0 #{relative(5)}em 0 rgba($raven, .25);
-		        box-shadow: inset 0 0 #{relative(5)}em 0 rgba($raven, .25);
+		// h-offset, v-offset, blur, color
+		text-shadow: 0 #{relative(1)}rem #{relative(1)}rem rgba($raven, .25);
 		
 		&,
-		&:visited { color: $gray6; }
+		&:visited {
+			color: $gray6;
+			border-bottom: #{relative(3)}em solid $gray3;
+		}
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $graye;
+			color: $raven;
 			text-decoration: none;
-			background: $gray3;
-			border-color: $raven;
+			border-bottom-color: $lobster;
 		}
 		
 	}
