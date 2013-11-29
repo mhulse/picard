@@ -1997,4 +1997,7 @@ img {
   text-decoration: none;
   background: #eeeeee;
   border-color: #1d678f;
+  -webkit-box-shadow: 0 0 0.14285714285714em rgba(38, 134, 185, 0.5);
+  -moz-box-shadow: 0 0 0.14285714285714em rgba(38, 134, 185, 0.5);
+  box-shadow: 0 0 0.14285714285714em rgba(38, 134, 185, 0.5);
 }

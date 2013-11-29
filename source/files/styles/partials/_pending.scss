@@ -104,10 +104,17 @@
 		&:focus:hover,
 		&:hover,
 		&:active {
+			
 			color: $dusk;
 			text-decoration: none;
 			background: $graye;
 			border-color: $dusk;
+			
+			// h-offset, v-offset, blur, spread, color
+			-webkit-box-shadow: 0 0 #{relative(2)}em rgba(lighten($dusk, 10%), .5);
+			   -moz-box-shadow: 0 0 #{relative(2)}em rgba(lighten($dusk, 10%), .5);
+			        box-shadow: 0 0 #{relative(2)}em rgba(lighten($dusk, 10%), .5);
+			
 		}
 		
 	}
