@@ -96,33 +96,33 @@
 			
 			@extend %fields;
 			
-			background: $graye;
-			background: -webkit-linear-gradient(top, $graye 0, lighten($graye, 5%) 100%);
-			background:    -moz-linear-gradient(top, $graye 0, lighten($graye, 5%) 100%);
-			background:     -ms-linear-gradient(top, $graye 0, lighten($graye, 5%) 100%);
-			background:      -o-linear-gradient(top, $graye 0, lighten($graye, 5%) 100%);
-			background:        -webkit-gradient(linear, left top, left bottom, color-stop(0, $graye), color-stop(100%, lighten($graye, 5%)));
-			background:         linear-gradient(to bottom, $graye 0, lighten($graye, 5%) 100%);
+			background: $grayd;
+			background: -webkit-linear-gradient(top, $grayd 0, $milk 100%);
+			background:    -moz-linear-gradient(top, $grayd 0, $milk 100%);
+			background:     -ms-linear-gradient(top, $grayd 0, $milk 100%);
+			background:      -o-linear-gradient(top, $grayd 0, $milk 100%);
+			background:        -webkit-gradient(linear, left top, left bottom, color-stop(0, $grayd), color-stop(100%, $milk));
+			background:         linear-gradient(to bottom, $grayd 0, $milk 100%);
 			
 			padding: #{baseline($base_font-size) / 2}em;
 			
-			-webkit-border-radius: 0 0 #{relative($base_radii + 2)}em #{relative($base_radii + 2)}em;
-			   -moz-border-radius: 0 0 #{relative($base_radii + 2)}em #{relative($base_radii + 2)}em;
-			    -ms-border-radius: 0 0 #{relative($base_radii + 2)}em #{relative($base_radii + 2)}em;
-			     -o-border-radius: 0 0 #{relative($base_radii + 2)}em #{relative($base_radii + 2)}em;
-			        border-radius: 0 0 #{relative($base_radii + 2)}em #{relative($base_radii + 2)}em;
+			-webkit-border-radius: 0 0 #{relative($base_radii * 2)}rem #{relative($base_radii * 2)}rem;
+			   -moz-border-radius: 0 0 #{relative($base_radii * 2)}rem #{relative($base_radii * 2)}rem;
+			    -ms-border-radius: 0 0 #{relative($base_radii * 2)}rem #{relative($base_radii * 2)}rem;
+			     -o-border-radius: 0 0 #{relative($base_radii * 2)}rem #{relative($base_radii * 2)}rem;
+			        border-radius: 0 0 #{relative($base_radii * 2)}rem #{relative($base_radii * 2)}rem;
 			
 			// h-offset, v-offset, blur, spread, color
-			-webkit-box-shadow: inset 0 #{relative(1)}em #{relative(3)}em $grayc, 0 #{relative(1)}em #{relative(1)}em rgba($raven, .2);
-			   -moz-box-shadow: inset 0 #{relative(1)}em #{relative(3)}em $grayc, 0 #{relative(1)}em #{relative(1)}em rgba($raven, .2);
-			        box-shadow: inset 0 #{relative(1)}em #{relative(3)}em $grayc, 0 #{relative(1)}em #{relative(1)}em rgba($raven, .2);
+			-webkit-box-shadow: inset 0 #{relative(1)}rem #{relative(5)}rem rgba($raven, .5), 0 #{relative(3)}rem #{relative(1)}rem rgba($raven, .05);
+			   -moz-box-shadow: inset 0 #{relative(1)}rem #{relative(5)}rem rgba($raven, .5), 0 #{relative(3)}rem #{relative(1)}rem rgba($raven, .05);
+			        box-shadow: inset 0 #{relative(1)}rem #{relative(5)}rem rgba($raven, .5), 0 #{relative(3)}rem #{relative(1)}rem rgba($raven, .05);
 			
 			border: 0 none;
-			border-top: #{relative(3)}rem solid $gray9;
+			border-top: #{relative(3)}rem solid $raven;
 			
 			display: block;
 			
-			&:focus { border-color: $raven; }
+			&:focus { border-color: $lobster; }
 			
 			&::-webkit-search-decoration,
 			&::-webkit-search-cancel-button,

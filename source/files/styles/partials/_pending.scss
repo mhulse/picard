@@ -1,49 +1,99 @@
-.cloud {
+// .pager {
 	
-	> li {
-		
-		display: inline-block;
-		letter-spacing: .03em;
-		vertical-align: bottom;
-		margin: .25rem;
-		
-		&:before { content: none; }
-		
-	}
+// 	margin: {
+// 		top: #{relative($base_margin)}rem;
+// 		bottom: 0;
+// 	}
 	
-	a {
+// 	> {
 		
-		padding: 0 .05em .15em;
-		line-height: 1;
-		display: block;
+// 		* {
+			
+// 			@include baseline($base_font-size - 3);
+// 			text-transform: uppercase;
+// 			font-weight: bold;
+// 			letter-spacing: .1em;
+			
+// 			display: inline-block;
+// 			margin: #{relative($base_margin / 4)}em;
+// 			padding: .05em 1em;
+			
+// 			-webkit-background-clip: padding;
+// 			   -moz-background-clip: padding;
+// 			        background-clip: padding-box;
+			
+// 		}
 		
-		// h-offset, v-offset, blur, color
-		text-shadow: 0 #{relative(1)}rem #{relative(1)}rem rgba($raven, .25);
+// 		:first-child,
+// 		:last-child {
+			
+// 			display: inline-block;
+			
+// 			@media (max-width: #{relative($base_breakpoint-max)}rem) {
+				
+// 				& {
+					
+// 					display: block;
+					
+// 				}
+				
+// 			}
+			
+// 		}
 		
-		&,
-		&:visited {
-			color: $gray6;
-			border-bottom: #{relative(3)}em solid $gray3;
-		}
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
-			color: $raven;
-			text-decoration: none;
-			border-bottom-color: $lobster;
-		}
+// 		:first-child:before { content: '\2039\00a0'; }
+// 		:last-child:after { content: '\00a0\203A'; }
+// 		:first-child:before,
+// 		:last-child:after {
+// 			position: relative;
+// 			top: -#{relative(1)}em
+// 		}
 		
-	}
+// 	}
 	
-}
+// 	a,
+// 	.pager-current {
+		
+// 	}
+	
+// 	.pager-current {
+		
+// 		color: darken($bling, 40%);
+// 		background: $bling;
+// 		//text-shadow: 0 #{relative(1)}em 0 darken($dusk, 20%);
+// 		border-color: darken($bling, 10%);
+		
+// 		-webkit-border-radius: #{relative($base_radii)}em;
+// 		   -moz-border-radius: #{relative($base_radii)}em;
+// 		    -ms-border-radius: #{relative($base_radii)}em;
+// 		     -o-border-radius: #{relative($base_radii)}em;
+// 		        border-radius: #{relative($base_radii)}em;
+		
+// 	}
+	
+// 	a {
+		
+// 		&,
+// 		&:visited { color: $gray3; }
+// 		&:visited:hover,
+// 		&:focus,
+// 		&:focus:hover,
+// 		&:hover,
+// 		&:active {
+			
+// 			color: $bling;
+// 			text-decoration: none;
+// 			background: $gray1;
+// 			border-color: darken($bling, 30%);
+			
+// 		}
+		
+// 	}
+	
+// }
 
 .pager {
 	
-	@include baseline($base_font-size - 1);
-	text-transform: uppercase;
-	letter-spacing: .1em;
 	margin: {
 		top: #{relative($base_margin)}rem;
 		bottom: 0;
@@ -53,9 +103,11 @@
 		
 		* {
 			
+			@include baseline($base_font-size - 2);
+			text-transform: uppercase;
 			display: inline-block;
 			margin: #{relative($base_margin / 4)}em;
-			padding: #{baseline($base_font-size - 1) / 8}em #{relative($base_padding)}em;
+			padding: .05em 1em;
 			
 			-webkit-background-clip: padding;
 			   -moz-background-clip: padding;
@@ -63,56 +115,33 @@
 			
 		}
 		
+		//li:before { content: none; }
+		
 		:first-child:before { content: '\2039\00a0'; }
 		:last-child:after { content: '\00a0\203A'; }
+		
 		:first-child:before,
 		:last-child:after {
 			position: relative;
 			top: -#{relative(1)}em
 		}
 		
-	}
-	
-	a,
-	.pager-current {
-		
-		background: rgba($graye, .5);
-		border: #{relative(1)}rem solid $grayd;
-		
-		-webkit-border-radius: #{relative($base_radii)}em;
-		   -moz-border-radius: #{relative($base_radii)}em;
-		    -ms-border-radius: #{relative($base_radii)}em;
-		     -o-border-radius: #{relative($base_radii)}em;
-		        border-radius: #{relative($base_radii)}em;
-		
-	}
-	
-	.pager-current {
-		color: $milk;
-		background: $dusk;
-		text-shadow: 0 #{relative(1)}em 0 darken($dusk, 20%);
-		border-color: darken($dusk, 10%);
-	}
-	
-	a {
-		
-		&,
-		&:visited { color: $dusk; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
+		li {
 			
-			color: $dusk;
-			text-decoration: none;
-			background: $graye;
-			border-color: $dusk;
-			
-			// h-offset, v-offset, blur, spread, color
-			-webkit-box-shadow: 0 0 #{relative(2)}em rgba(lighten($dusk, 10%), .5);
-			   -moz-box-shadow: 0 0 #{relative(2)}em rgba(lighten($dusk, 10%), .5);
-			        box-shadow: 0 0 #{relative(2)}em rgba(lighten($dusk, 10%), .5);
+			&:first-child,
+			&:last-child {
+				
+				@media (max-width: #{relative($base_breakpoint-max)}rem) {
+					
+					& {
+						
+						display: block;
+						
+					}
+					
+				}
+				
+			}
 			
 		}
 		

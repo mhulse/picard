@@ -4,7 +4,7 @@ ul, ol, dl { padding: 0; }
 
 ul, ol { list-style: none; }
 
-ol {
+.li1 {
 	
 	counter-reset: li;
 	
@@ -30,7 +30,7 @@ ol {
 	
 }
 
-ul {
+.li2 {
 	
 	> li {
 		
