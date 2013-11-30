@@ -1,97 +1,3 @@
-// .pager {
-	
-// 	margin: {
-// 		top: #{relative($base_margin)}rem;
-// 		bottom: 0;
-// 	}
-	
-// 	> {
-		
-// 		* {
-			
-// 			@include baseline($base_font-size - 3);
-// 			text-transform: uppercase;
-// 			font-weight: bold;
-// 			letter-spacing: .1em;
-			
-// 			display: inline-block;
-// 			margin: #{relative($base_margin / 4)}em;
-// 			padding: .05em 1em;
-			
-// 			-webkit-background-clip: padding;
-// 			   -moz-background-clip: padding;
-// 			        background-clip: padding-box;
-			
-// 		}
-		
-// 		:first-child,
-// 		:last-child {
-			
-// 			display: inline-block;
-			
-// 			@media (max-width: #{relative($base_breakpoint-max)}rem) {
-				
-// 				& {
-					
-// 					display: block;
-					
-// 				}
-				
-// 			}
-			
-// 		}
-		
-// 		:first-child:before { content: '\2039\00a0'; }
-// 		:last-child:after { content: '\00a0\203A'; }
-// 		:first-child:before,
-// 		:last-child:after {
-// 			position: relative;
-// 			top: -#{relative(1)}em
-// 		}
-		
-// 	}
-	
-// 	a,
-// 	.pager-current {
-		
-// 	}
-	
-// 	.pager-current {
-		
-// 		color: darken($bling, 40%);
-// 		background: $bling;
-// 		//text-shadow: 0 #{relative(1)}em 0 darken($dusk, 20%);
-// 		border-color: darken($bling, 10%);
-		
-// 		-webkit-border-radius: #{relative($base_radii)}em;
-// 		   -moz-border-radius: #{relative($base_radii)}em;
-// 		    -ms-border-radius: #{relative($base_radii)}em;
-// 		     -o-border-radius: #{relative($base_radii)}em;
-// 		        border-radius: #{relative($base_radii)}em;
-		
-// 	}
-	
-// 	a {
-		
-// 		&,
-// 		&:visited { color: $gray3; }
-// 		&:visited:hover,
-// 		&:focus,
-// 		&:focus:hover,
-// 		&:hover,
-// 		&:active {
-			
-// 			color: $bling;
-// 			text-decoration: none;
-// 			background: $gray1;
-// 			border-color: darken($bling, 30%);
-			
-// 		}
-		
-// 	}
-	
-// }
-
 .pager {
 	
 	margin: {
@@ -101,48 +7,61 @@
 	
 	> {
 		
-		* {
-			
-			@include baseline($base_font-size - 2);
-			text-transform: uppercase;
-			display: inline-block;
-			margin: #{relative($base_margin / 4)}em;
-			padding: .05em 1em;
-			
-			-webkit-background-clip: padding;
-			   -moz-background-clip: padding;
-			        background-clip: padding-box;
-			
-		}
-		
-		//li:before { content: none; }
-		
-		:first-child:before { content: '\2039\00a0'; }
-		:last-child:after { content: '\00a0\203A'; }
-		
-		:first-child:before,
-		:last-child:after {
-			position: relative;
-			top: -#{relative(1)}em
-		}
-		
 		li {
 			
-			&:first-child,
-			&:last-child {
+			display: inline-block;
+			margin: #{relative($base_margin / 4)}em;
+			
+			a,
+			span {
+				@include baseline($base_font-size - 2);
+				text-transform: uppercase;
+				padding: .25em .5em;
+				letter-spacing: .05em;
+			}
+			
+			.pager-current {
+				color: $milk;
+				background: $dusk;
+				-webkit-border-radius: #{relative($base_radii)}rem;
+				   -moz-border-radius: #{relative($base_radii)}rem;
+				        border-radius: #{relative($base_radii)}rem;
+			}
+			
+			&:first-child > a:before { content: '\2039\00a0'; }
+			&:last-child > a:after { content: '\00a0\203A'; }
+			
+			&:first-child > a:before,
+			&:last-child > a:after {
+				position: relative;
+				top: -#{relative(1)}em;
+			}
+			
+			&:not(:first-child):not(:last-child) {
 				
 				@media (max-width: #{relative($base_breakpoint-max)}rem) {
 					
-					& {
-						
-						display: block;
-						
-					}
+					& { display: none; }
 					
 				}
 				
 			}
 			
+		}
+		
+	}
+	
+	a {
+		
+		&,
+		&:visited { color: $dusk; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $smurf;
+			text-decoration: none;
 		}
 		
 	}
