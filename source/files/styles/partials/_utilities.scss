@@ -68,11 +68,10 @@
 		* {
 			margin-top: 0;
 			margin-bottom: 0;
+			-webkit-transform: translateZ(0);
 		}
 		
 	}
-	
-	* { -webkit-transform: translateZ(0); }
 	
 	figure & { margin: 0; }
 	
