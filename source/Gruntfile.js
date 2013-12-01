@@ -25,6 +25,51 @@ module.exports = function(grunt) {
 		
 		pkg : grunt.file.readJSON('package.json'),
 		
+		/*----------------------------------( BANNERS )----------------------------------*/
+		
+		/**
+		 * Short and long banners.
+		 *
+		 * @see http://gruntjs.com/getting-started#an-example-gruntfile
+		 */
+		
+		banner : {
+			
+			'short' : '/*! ' +
+			          '<%= pkg.title || pkg.name %>' +
+			          '<%= pkg.version ? " v" + pkg.version : "" %>' +
+			          '<%= pkg.licenses ? " | " + _.pluck(pkg.licenses, "type").join(", ") : "" %>' +
+			          '<%= pkg.homepage ? " | " + pkg.homepage : "" %>' +
+			          ' */',
+			
+			'long' : '/**\n' +
+			         ' * <%= pkg.title || pkg.name %>\n' +
+			         '<%= pkg.description ? " * " + pkg.description + "\\n" : "" %>' +
+			         ' *\n' +
+			         '<%= pkg.author.name ? " * @author " + pkg.author.name + "\\n" : "" %>' +
+			         '<%= pkg.author.url ? " * @link " + pkg.author.url + "\\n" : "" %>' +
+			         '<%= pkg.homepage ? " * @docs " + pkg.homepage + "\\n" : "" %>' +
+			         ' * @copyright Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>.\n' +
+			         '<%= pkg.licenses ? " * @license Released under the " + _.pluck(pkg.licenses, "type").join(", ") + ".\\n" : "" %>' +
+			         '<%= pkg.version ? " * @version " + pkg.version + "\\n" : "" %>' +
+			         ' * @date <%= grunt.template.today("yyyy/mm/dd") %>\n' +
+			         ' */\n\n',
+			
+		},
+		
+		/*----------------------------------( VERSIONING )----------------------------------*/
+		
+		/**
+		 * Build date and version.
+		 *
+		 * @see http://tanepiper.com/blog/2012/11/25/building-and-testing-javascript-with-gruntjs/
+		 * @see http://blog.stevenlevithan.com/archives/date-time-format
+		 */
+		
+		now : grunt.template.today('yyyymmdd'), // Alternative: yyyymmddhhMMss
+		
+		ver : 1, // Increment if more than one build is needed in a single day.
+		
 		/*----------------------------------( BOWER )----------------------------------*/
 		
 		/**
@@ -68,6 +113,7 @@ module.exports = function(grunt) {
 				
 				'<%= jshint.init %>',
 				'./files/styles/**/*',
+				'./files/scripts/**/*',
 				'./files/templates/**/*',
 				
 			],
@@ -96,6 +142,7 @@ module.exports = function(grunt) {
 			init : [
 				
 				'./Gruntfile.js',
+				'./files/scripts/**/*',
 				
 			],
 			
@@ -147,6 +194,46 @@ module.exports = function(grunt) {
 				
 			],
 			
+			prod : [
+				
+				'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/**/*',
+				
+			],
+			
+		},
+		
+		/*----------------------------------( UGLIFY )----------------------------------*/
+		
+		/**
+		 * Minify files with UglifyJS.
+		 *
+		 * @see https://github.com/gruntjs/grunt-contrib-uglify
+		 * @see http://lisperator.net/uglifyjs/
+		 */
+		
+		uglify : {
+			
+			prod : {
+				
+				options : {
+					
+					banner : '<%= banner.short %>',
+					
+				},
+				
+				files : {
+					
+					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/scripts/<%= pkg.name %>.min.js' : [
+						'./files/scripts/jquery.*.js',
+						'./files/scripts/wwpd.js',
+						'./files/scripts/wwpd.mod.*.js',
+						'./files/scripts/wwpd.init.js'
+					],
+					
+				}
+				
+			}
+			
 		},
 		
 		/*----------------------------------( SASS )----------------------------------*/
@@ -162,18 +249,41 @@ module.exports = function(grunt) {
 			
 			options : {
 				
-				noCache: true,      // Don't cache to sassc files.
 				precision : 14,     // How many digits of precision to use when outputting decimal numbers.
-				style : 'expanded', // Output style. Can be nested, compact, compressed, expanded.
+				noCache: true,      // Don't cache to sassc files.
 				
 			},
 			
 			dev : {
 				
+				options : {
+					
+					banner : '<%= banner.long %>',
+					style : 'expanded', // Output style. Can be nested, compact, compressed, expanded.
+					
+				},
+				
 				files : {
 					
 					'../dev/css/<%= pkg.name %>.css' : './files/styles/<%= pkg.name %>.scss',
 					'../dev/css/development.css' : './files/styles/development.scss',
+					
+				},
+				
+			},
+			
+			prod : {
+				
+				options : {
+					
+					banner : '<%= banner.short %>',
+					style : 'compressed',
+					
+				},
+				
+				files : {
+					
+					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/css/<%= pkg.name %>.min.css' : './files/styles/<%= pkg.name %>.scss',
 					
 				},
 				
@@ -202,6 +312,8 @@ module.exports = function(grunt) {
 					name : '<%= pkg.name %>',
 					version : '<%= pkg.version %>',
 					homepage : '<%= pkg.homepage %>',
+					now : '<%= now %>',
+					ver : '<%= ver %>',
 					
 				},
 				
@@ -209,19 +321,19 @@ module.exports = function(grunt) {
 			
 			dev : {
 				
-				files: [
+				src : './files/templates/index.html',
+				dest : '../dev/index.html'
+				
+			},
+			
+			prod : {
+				
+				files : {
 					
-					{
-						
-						expand: true,
-						cwd: './files/templates/',
-						src: ['**/*.html'],
-						dest: '../dev/',
-						ext: '.html',
-						
-					},
+					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/index.html' : './files/templates/index.html',
+					'../prod/index.html' : './files/templates/latest.html'
 					
-				],
+				},
 				
 			},
 			
@@ -243,10 +355,23 @@ module.exports = function(grunt) {
 				expand : true,
 				cwd : './files/',
 				src : [
-					'images/**/*',
 					'fonts/**/*',
+					'images/**/*',
+					'scripts/**/*',
 				],
 				dest : '../dev/',
+				
+			},
+			
+			prod : {
+				
+				expand : true,
+				cwd : './files/',
+				src : [
+					'fonts/**/*',
+					'images/**/*',
+				],
+				dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/'
 				
 			},
 			
@@ -268,6 +393,8 @@ module.exports = function(grunt) {
 	
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	
 	grunt.loadNpmTasks('grunt-env');
 	
 	grunt.loadNpmTasks('grunt-preprocess');
@@ -286,6 +413,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('init', ['jshint',]);
 	
 	grunt.registerTask('dev', ['env:dev', 'clean:dev', 'sass:dev', 'preprocess:dev', 'copy:dev',]);
+	
+	grunt.registerTask('prod', ['env:prod', 'clean:prod', 'sass:prod', 'uglify:prod', 'preprocess:prod', 'copy:prod',]);
 	
 	grunt.registerTask('default', ['init', 'dev',]);
 	

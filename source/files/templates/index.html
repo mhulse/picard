@@ -10,15 +10,24 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
+	<!--[if !IE]><!-->
+	
 	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 	
-	<!--[if !IE]><!-->
 	<link rel="stylesheet" href="./css/<!-- @echo name -->.css">
 	<link rel="stylesheet" href="./css/development.css">
-	<link rel="stylesheet" href="./fonts/hulse.css">
-	<!--<![endif]-->
 	
 	<!-- @endif -->
+	
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
+	
+	<link rel="stylesheet" href="http://picard.mhulse.com/<!-- @echo path -->/css/picard.min.css">
+	
+	<!-- @endif -->
+	
+	<!--<![endif]-->
+	
+	<link rel="canonical" href="">
 	
 </head>
 <body ontouchstart>
@@ -533,7 +542,7 @@
 			
 			<figure>
 				
-				<img src="./images/picard1.jpg" width="1200" alt="Jean-Luc Picard">
+				<img src="./images/junk/picard1.jpg" width="1200" alt="Jean-Luc Picard">
 				
 				<figcaption>Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores.</figcaption>
 				
@@ -541,7 +550,7 @@
 			
 			<figure>
 				
-				<div class="scroll"><img src="./images/picard1.jpg" width="1200" alt="Jean-Luc Picard"></div>
+				<div class="scroll"><img src="./images/junk/picard1.jpg" width="1200" alt="Jean-Luc Picard"></div>
 				
 				<figcaption>Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores.</figcaption>
 				
@@ -549,7 +558,7 @@
 			
 			<figure>
 				
-				<img src="./images/picard4.jpg" alt="Jean-Luc Picard">
+				<img src="./images/junk/picard4.jpg" alt="Jean-Luc Picard">
 				
 				<figcaption>
 					
@@ -725,7 +734,7 @@ p q r s t u v w x y z { | } ~
 			
 			<ol class="li1">
 				<li>Li Europan lingues es membres del sam familie.</li>
-				<li><img width="250" src="./images/picard2.jpg"></li>
+				<li><img width="250" src="./images/junk/picard2.jpg"></li>
 				<li>Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues.</li>
 			</ol>
 			
@@ -756,7 +765,7 @@ p q r s t u v w x y z { | } ~
 			
 			<ul class="li2">
 				<li>Lor separat existentie es un myth.</li>
-				<li>Li Europan <img width="150" src="./images/picard3.jpg"> lingues es membres del sam familie. Lor separat existentie es un myth.</li>
+				<li>Li Europan <img width="150" src="./images/junk/picard3.jpg"> lingues es membres del sam familie. Lor separat existentie es un myth.</li>
 				<li>At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.</li>
 			</ul>
 			
@@ -1327,7 +1336,15 @@ p q r s t u v w x y z { | } ~
 	</main>
 	
 	<!--[if !IE]><!-->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	
+	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+	
+	<script src="./scripts/wwpd.init.js"></script>
+	<script src="./scripts/wwpd.mod.twitter.js"></script>
+	<script src="./scripts/wwpd.js"></script>
+	
 	<script>
 		
 		$(document).ready(function() {});
@@ -1337,6 +1354,18 @@ p q r s t u v w x y z { | } ~
 		$(window).resize(function() {});
 		
 	</script>
+	
+	<!-- @endif -->
+	
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script>if(!window.jQuery){document.write('<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.3.min.js"><\/script>');}</script>
+	
+	<script src="http://picard.mhulse.com/<!-- @echo path -->/scripts/picard.min.js"></script>
+	
+	<!-- @endif -->
+	
 	<!--<![endif]-->
 	
 </body>

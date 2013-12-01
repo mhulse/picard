@@ -75,5 +75,7 @@
 	"worker"        : false,    // If Web Worker script symbols should be allowed.
 	"wsh"           : false,    // If the Windows Scripting Host environment globals should be predefined.
 	"yui"           : false,    // YUI variables should be predefined.
-	"globals"       : {}        // A map of global variables, with keys as names and a boolean value to determine if they are assignable.
+	"globals"       : {         // A map of global variables, with keys as names and a boolean value to determine if they are assignable.
+		"WWPD": true
+	}
 }
