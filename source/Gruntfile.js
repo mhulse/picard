@@ -291,6 +291,33 @@ module.exports = function(grunt) {
 			
 		},
 		
+		/*----------------------------------( ASCIIFY )----------------------------------*/
+		
+		/**
+		 * Ascii awesomizer. A Grunt task for better banners and hot logs.
+		 *
+		 * @see https://github.com/olizilla/grunt-asciify
+		 * @see https://github.com/olizilla/figlet-js/tree/master/fonts
+		 * @see http://www.figlet.org/examples.html
+		 */
+		
+		asciify : {
+			
+			banner : {
+				
+				options : {
+					
+					font : 'trek',
+					log : false,
+					
+				},
+				
+				text : '<%= pkg.name %> - <%= pkg.version %>',
+				
+			},
+			
+		},
+		
 		/*----------------------------------( PREPROCESS )----------------------------------*/
 		
 		/**
@@ -307,6 +334,7 @@ module.exports = function(grunt) {
 				
 				context : {
 					
+					banner : '<!--!\n<%= asciify_banner %>-->',
 					title : '<%= pkg.title %>',
 					description : '<%= pkg.description %>',
 					name : '<%= pkg.name %>',
@@ -385,19 +413,21 @@ module.exports = function(grunt) {
 	
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	
-	grunt.loadNpmTasks('grunt-contrib-clean');
-	
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	
-	grunt.loadNpmTasks('grunt-contrib-uglify');
 	
 	grunt.loadNpmTasks('grunt-env');
 	
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	
+	grunt.loadNpmTasks('grunt-contrib-sass');
+	
+	grunt.loadNpmTasks('grunt-asciify');
+	
 	grunt.loadNpmTasks('grunt-preprocess');
+	
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	
 	//----------------------------------
 	
@@ -410,12 +440,12 @@ module.exports = function(grunt) {
 	
 	//----------------------------------
 	
-	grunt.registerTask('init', ['jshint',]);
+	grunt.registerTask('init', ['jshint', 'asciify',]);
 	
-	grunt.registerTask('dev', ['env:dev', 'clean:dev', 'sass:dev', 'preprocess:dev', 'copy:dev',]);
+	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'sass:dev', 'preprocess:dev', 'copy:dev',]);
 	
-	grunt.registerTask('prod', ['env:prod', 'clean:prod', 'sass:prod', 'uglify:prod', 'preprocess:prod', 'copy:prod',]);
+	grunt.registerTask('prod', ['init', 'env:prod', 'clean:prod', 'sass:prod', 'uglify:prod', 'preprocess:prod', 'copy:prod',]);
 	
-	grunt.registerTask('default', ['init', 'dev',]);
+	grunt.registerTask('default', ['dev',]);
 	
 };
