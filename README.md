@@ -4,29 +4,25 @@
 
 ---
 
-## WTF this?
+## Q: What's this?
 
-A really **REALLY** _boring_ blog "theme", yo. <img width="20" height="20" align="absmiddle" src="https://github.global.ssl.fastly.net/images/icons/emoji/smile.png" alt=":smile:" title=":smile:" class="emoji">
+**A:** It's a blog theme for [mhulse.com](http://mhulse.com).
 
-## TNG &hellip; WTH?
+## Q: Why TNG?
 
-**BOOYAH!** Star Trek _fracking_ **ROCKS** son! <img width="20" height="20" align="absmiddle" src="https://github.global.ssl.fastly.net/images/icons/emoji/metal.png" alt=":metal:" title=":metal:" class="emoji">
+**A:** Because Star Trek [_fracking_](http://youtu.be/r7KcpgQKo2I?t=19s) **ROCKS**! <img width="20" height="20" align="absmiddle" src="https://github.global.ssl.fastly.net/images/icons/emoji/metal.png" alt=":metal:" title=":metal:" class="emoji">
 
-## Demo?
+## Q: Demo?
 
-Hey man, chillax, 'sall good. <img width="20" height="20" align="absmiddle" src="https://github.global.ssl.fastly.net/images/icons/emoji/beer.png" alt=":beer:" title=":beer:" class="emoji">
+**A:** Here:
 
 DEVELOPMENT | PRODUCTION
 :-: | :-:
 [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://mhulse.github.io/picard/dev/&chs=240x240)](http://mhulse.github.io/picard/dev/) | [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://mhulse.github.io/picard/prod/&chs=240x240)](http://mhulse.github.io/picard/prod/)
 
-## ROTFLMAO @ ur design
+## Q: Um, what were you thinking?
 
-Don't hate the playa, hate the game. <img width="20" height="20" align="absmiddle" src="https://github.global.ssl.fastly.net/images/icons/emoji/mahjong.png" alt=":mahjong:" title=":mahjong:" class="emoji">
-
-## OMG, why `<center>` evrtng?
-
-Left justification is so played out, everybody got it! <img width="20" height="20" align="absmiddle" src="https://github.global.ssl.fastly.net/images/icons/emoji/eyes.png" alt=":eyes:" title=":eyes:" class="emoji">
+**A:** Tea. Earl Grey. Hot. <img width="20" height="20" align="absmiddle" src="https://github.global.ssl.fastly.net/images/icons/emoji/coffee.png" alt=":coffee:" title=":coffee:" class="emoji">
 
 ---
 
