@@ -383,7 +383,6 @@ module.exports = function(grunt) {
 				expand : true,
 				cwd : './files/',
 				src : [
-					'fonts/**/*',
 					'images/**/*',
 					'scripts/**/*',
 				],
@@ -396,7 +395,6 @@ module.exports = function(grunt) {
 				expand : true,
 				cwd : './files/',
 				src : [
-					'fonts/**/*',
 					'images/**/*',
 				],
 				dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/'
