@@ -22,7 +22,7 @@ DEVELOPMENT | PRODUCTION
 
 ## Q: Um, what were you thinking?
 
-**A:** Tea. Earl Grey. Hot. <img width="20" height="20" align="absmiddle" src="https://github.global.ssl.fastly.net/images/icons/emoji/coffee.png" alt=":coffee:" title=":coffee:" class="emoji">
+**A:** [Tea. Earl Grey. Hot.](http://youtu.be/R2IJdfxWtPM) <img width="20" height="20" align="absmiddle" src="https://github.global.ssl.fastly.net/images/icons/emoji/coffee.png" alt=":coffee:" title=":coffee:" class="emoji">
 
 ---
 
