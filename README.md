@@ -14,7 +14,7 @@
 
 ## Q: Demo?
 
-**A:** Here:
+**A:** See here:
 
 DEVELOPMENT | PRODUCTION
 :-: | :-:
