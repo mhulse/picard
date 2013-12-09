@@ -67,3 +67,122 @@
 	}
 	
 }
+
+.social {
+	
+	font-size: 1rem;
+	line-height: 1;
+	
+	// Defaults:
+	a {
+		
+		&,
+		&:visited { color: $gray9; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: darken($gray9, 20%);
+			text-decoration: none;
+		}
+		
+	}
+	
+	a.social-twitter {
+		
+		&,
+		&:visited { color: #41b7d8; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active { color: darken(#41b7d8, 20%); }
+		
+	}
+	
+	a.social-facebook {
+		
+		&,
+		&:visited { color: #3b5997; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active { color: darken(#3b5997, 20%); }
+		
+	}
+	
+	a.social-google-plus {
+		
+		&,
+		&:visited { color: #d64937; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active { color: darken(#d64937, 20%); }
+		
+	}
+	
+	a.social-linkedin {
+		
+		&,
+		&:visited { color: #0073b2; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active { color: darken(#0073b2, 20%); }
+		
+	}
+	
+	a.social-pinterest {
+		
+		&,
+		&:visited { color: #cb2027; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active { color: darken(#cb2027, 20%); }
+		
+	}
+	
+	a.social-vk {
+		
+		&,
+		&:visited { color: #54769b; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active { color: darken(#54769b, 20%); }
+		
+	}
+	
+	a.social-xing {
+		
+		&,
+		&:visited { color: #006567; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active { color: darken(#006567, 20%); }
+		
+	}
+	
+	a.social-tumblr {
+		
+		&,
+		&:visited { color: #35465c; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active { color: darken(#35465c, 20%); }
+		
+	}
+	
+}
