@@ -1877,7 +1877,7 @@ kbd kbd {
   -moz-box-shadow: inset 0 0.07142857142857rem 0.35714285714286rem rgba(0, 0, 0, 0.5), 0 0.21428571428571rem 0.07142857142857rem rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 0.07142857142857rem 0.35714285714286rem rgba(0, 0, 0, 0.5), 0 0.21428571428571rem 0.07142857142857rem rgba(0, 0, 0, 0.05);
   border: 0 none;
-  border-top: 0.21428571428571rem solid black;
+  border-top: 0.28571428571429rem solid black;
   display: block;
 }
 .form input[type="search"]:focus {
@@ -1971,27 +1971,40 @@ img {
 }
 
 .pager {
+  border-width: 0.14285714285714rem 0.07142857142857rem 0.07142857142857rem;
+  border-style: solid;
+  border-color: #999999 #cccccc #cccccc;
+  background: white;
   margin-top: 0.71428571428571rem;
   margin-bottom: 0;
+  padding: 0.35714285714286rem;
+  display: inline-block;
+  -webkit-box-shadow: 0 0.14285714285714rem 0.07142857142857rem rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0.14285714285714rem 0.07142857142857rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.14285714285714rem 0.07142857142857rem rgba(0, 0, 0, 0.1);
 }
 .pager > li {
+  margin: 0;
+  padding: 0;
   display: inline-block;
-  margin: 0.17857142857143em;
 }
 .pager > li a,
 .pager > li span {
   font-size: 0.85714285714286rem;
   line-height: 1.83333333333333;
   text-transform: uppercase;
-  padding: .25em .5em;
   letter-spacing: .05em;
-}
-.pager > li .pager-current {
-  color: white;
-  background: #1d678f;
+  margin: 0 .25em;
+  padding: .5em 1em;
+  display: inline-block;
   -webkit-border-radius: 0.21428571428571rem;
   -moz-border-radius: 0.21428571428571rem;
   border-radius: 0.21428571428571rem;
+}
+.pager > li .pager-current {
+  color: white;
+  font-weight: bold;
+  background: black;
 }
 .pager > li:first-child > a:before {
   content: '\2039\00a0';
@@ -2009,11 +2022,12 @@ img {
   }
 }
 .pager a, .pager a:visited {
-  color: #1d678f;
+  color: #666666;
 }
 .pager a:visited:hover, .pager a:focus, .pager a:focus:hover, .pager a:hover, .pager a:active {
-  color: #13aac9;
+  color: white;
   text-decoration: none;
+  background: #666666;
 }
 
 .social {

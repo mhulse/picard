@@ -1,31 +1,48 @@
 .pager {
 	
+	border-width: #{relative(2)}rem #{relative(1)}rem #{relative(1)}rem;
+	border-style: solid;
+	border-color: $gray9 $grayc $grayc;
+	background: $milk;
 	margin: {
 		top: #{relative($base_margin)}rem;
 		bottom: 0;
 	}
+	padding: #{relative($base_padding) / 2}rem;
+	display: inline-block;
+	
+	-webkit-box-shadow: 0 #{relative(2)}rem #{relative(1)}rem rgba(0, 0, 0, .1);
+	   -moz-box-shadow: 0 #{relative(2)}rem #{relative(1)}rem rgba(0, 0, 0, .1);
+	        box-shadow: 0 #{relative(2)}rem #{relative(1)}rem rgba(0, 0, 0, .1);
 	
 	> {
 		
 		li {
 			
+			margin: 0;
+			padding: 0;
 			display: inline-block;
-			margin: #{relative($base_margin / 4)}em;
 			
 			a,
 			span {
+				
 				@include baseline($base_font-size - 2);
 				text-transform: uppercase;
-				padding: .25em .5em;
 				letter-spacing: .05em;
+				margin: 0 .25em;
+				padding: .5em 1em;
+				display: inline-block;
+				
+				-webkit-border-radius: #{relative($base_radii)}rem;
+				   -moz-border-radius: #{relative($base_radii)}rem;
+				        border-radius: #{relative($base_radii)}rem;
+				
 			}
 			
 			.pager-current {
 				color: $milk;
-				background: $dusk;
-				-webkit-border-radius: #{relative($base_radii)}rem;
-				   -moz-border-radius: #{relative($base_radii)}rem;
-				        border-radius: #{relative($base_radii)}rem;
+				font-weight: bold;
+				background: $raven;
 			}
 			
 			&:first-child > a:before { content: '\2039\00a0'; }
@@ -54,14 +71,17 @@
 	a {
 		
 		&,
-		&:visited { color: $dusk; }
+		&:visited { color: $gray6; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $smurf;
+			
+			color: $milk;
 			text-decoration: none;
+			background: $gray6;
+			
 		}
 		
 	}
