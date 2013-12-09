@@ -1,4 +1,4 @@
-# Picard
+# Picard: [Make it so](http://youtu.be/oiSn2JuDQSc).
 
 [![Jean-Luc Picard](picard.gif)](http://www.youtube.com/watch?v=-ZxHAZChcYU)
 
