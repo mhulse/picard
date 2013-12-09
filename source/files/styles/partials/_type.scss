@@ -318,18 +318,43 @@ span {
 
 .marker {
 	
-	@include baseline($base_font-size + 4, .875, $optional: bold, $family: $sans);
-	
 	font-weight: normal;
-	color: darken($bling, 20%);
 	text-transform: none;
-	letter-spacing: .03em;
-	background: $bling;
-	margin: #{relative($base_margin * 2)}rem 0;
-	padding: #{baseline($base_font-size + 4, .875) / 2}em;
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
+	margin: {
+		top: #{relative($base_margin * 2)}rem;
+		bottom: #{relative($base_margin * 2)}rem;
+	}
+	
+	a,
+	span {
+		@include baseline($base_font-size + 4, .875, $optional: bold, $family: $sans);
+		font-weight: bold;
+		letter-spacing: .03em;
+		padding: #{baseline($base_font-size + 4, .875) / 2}em;
+		display: inline-block;
+	}
+	
+	span {
+		color: fade-out(darken($bling, 20%), .5);
+		background: fade-out($bling, .5);
+	}
+	
+	a {
+		
+		background: $bling;
+		
+		&,
+		&:visited { color: darken($bling, 20%); }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $bling;
+			background: darken($bling, 20%);
+		}
+		
+	}
 	
 }
 

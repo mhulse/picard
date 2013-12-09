@@ -1329,17 +1329,32 @@ span.amp {
 }
 
 .marker {
-  font: bold 1.28571428571429rem/1.06944444444444 Arial, sans-serif;
   font-weight: normal;
-  color: #997d00;
   text-transform: none;
+  margin-top: 1.42857142857143rem;
+  margin-bottom: 1.42857142857143rem;
+}
+.marker a,
+.marker span {
+  font: bold 1.28571428571429rem/1.06944444444444 Arial, sans-serif;
+  font-weight: bold;
   letter-spacing: .03em;
-  background: #ffd100;
-  margin: 1.42857142857143rem 0;
   padding: 0.53472222222222em;
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
+}
+.marker span {
+  color: rgba(153, 125, 0, 0.5);
+  background: rgba(255, 209, 0, 0.5);
+}
+.marker a {
+  background: #ffd100;
+}
+.marker a, .marker a:visited {
+  color: #997d00;
+}
+.marker a:visited:hover, .marker a:focus, .marker a:focus:hover, .marker a:hover, .marker a:active {
+  color: #ffd100;
+  background: #997d00;
 }
 
 .subtle {
