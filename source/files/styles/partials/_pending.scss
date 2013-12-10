@@ -223,3 +223,29 @@
 	&:focus { outline: 0; }
 	
 }
+
+.boring {
+	
+	@include baseline($base_font-size - 1, .875);
+	font-style: italic;
+	letter-spacing: .03em;
+	color: $gray6;
+	
+	&:first-line { color: $gray3; }
+	
+	a {
+		
+		&,
+		&:visited { color: $dusk; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $dusk;
+			font-style: underline;
+		}
+		
+	}
+	
+}

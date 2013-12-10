@@ -2102,3 +2102,21 @@ img {
 .figbutton:active, .figbutton:focus {
   outline: 0;
 }
+
+.boring {
+  font-size: 0.92857142857143rem;
+  line-height: 1.48076923076923;
+  font-style: italic;
+  letter-spacing: .03em;
+  color: #666666;
+}
+.boring:first-line {
+  color: #333333;
+}
+.boring a, .boring a:visited {
+  color: #1d678f;
+}
+.boring a:visited:hover, .boring a:focus, .boring a:focus:hover, .boring a:hover, .boring a:active {
+  color: #1d678f;
+  font-style: underline;
+}
