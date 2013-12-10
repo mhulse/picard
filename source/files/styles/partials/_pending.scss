@@ -206,3 +206,20 @@
 	}
 	
 }
+
+.figbutton {
+	
+	float: right;
+	margin-left: #{relative($base_margin)}rem;
+	margin-bottom: #{relative($base_margin)}rem;
+	
+	img {
+		text-decoration: none;
+		border: 0 none;
+	}
+	
+	// Assuming it's an href:
+	&:active,
+	&:focus { outline: 0; }
+	
+}

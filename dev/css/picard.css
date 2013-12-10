@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2013 Micky Hulse.
  * @version 0.1.0
- * @date 2013/12/08
+ * @date 2013/12/09
  */
 
 
@@ -1951,18 +1951,18 @@ figcaption p {
   font-size: inherit;
   line-height: inherit;
 }
+figcaption p:first-of-type {
+  margin-top: 0 !important;
+}
+figcaption p:last-of-type {
+  margin-bottom: 0 !important;
+}
 figcaption a, figcaption a:visited {
   color: #ff6600;
 }
 figcaption a:visited:hover, figcaption a:focus, figcaption a:focus:hover, figcaption a:hover, figcaption a:active {
   color: #ffd100;
   text-decoration: none;
-}
-figcaption > :first-child {
-  margin-top: 0 !important;
-}
-figcaption > :last-child {
-  margin-bottom: 0 !important;
 }
 
 img {
@@ -2088,4 +2088,17 @@ img {
 }
 .social a.social-tumblr:visited:hover, .social a.social-tumblr:focus, .social a.social-tumblr:focus:hover, .social a.social-tumblr:hover, .social a.social-tumblr:active {
   color: #10151b;
+}
+
+.figbutton {
+  float: right;
+  margin-left: 0.71428571428571rem;
+  margin-bottom: 0.71428571428571rem;
+}
+.figbutton img {
+  text-decoration: none;
+  border: 0 none;
+}
+.figbutton:active, .figbutton:focus {
+  outline: 0;
 }

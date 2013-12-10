@@ -60,8 +60,13 @@ figcaption {
 	        box-shadow: 0 0 #{relative(2)}rem rgba(0, 0, 0, .9);
 	
 	p {
+		
 		font-size: inherit;
 		line-height: inherit;
+		
+		&:first-of-type { margin-top: 0 !important; }
+		&:last-of-type { margin-bottom: 0 !important; }
+		
 	}
 	
 	a {
@@ -79,8 +84,8 @@ figcaption {
 		
 	}
 	
-	> :first-child { margin-top: 0 !important; }
-	> :last-child { margin-bottom: 0 !important; }
+	// > :first-child { margin-top: 0 !important; }
+	// > :last-child { margin-bottom: 0 !important; }
 	
 }
 
