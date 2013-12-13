@@ -246,4 +246,16 @@ a.social-tumblr {
 		
 	}
 	
+	small {
+		font-size: 1em;
+		display: block;
+	}
+	
+	@media (max-width: #{relative($base_breakpoint-max)}rem) {
+		
+		span { display: block; }
+		span span { display: none; }
+		
+	}
+	
 }

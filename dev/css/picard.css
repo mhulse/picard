@@ -2107,3 +2107,15 @@ a.social-tumblr, a.social-tumblr:visited, a.social-tumblr:visited:hover, a.socia
   color: #1d678f;
   font-style: underline;
 }
+.boring small {
+  font-size: 1em;
+  display: block;
+}
+@media (max-width: 53.5rem) {
+  .boring span {
+    display: block;
+  }
+  .boring span span {
+    display: none;
+  }
+}
