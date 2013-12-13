@@ -88,122 +88,120 @@
 	
 }
 
-.social {
+a.social {
 	
-	font-size: 1rem;
-	line-height: 1;
+	font-family: $serif;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	word-spacing: -.05em;
 	
-	// Defaults:
-	a {
-		
-		&,
-		&:visited { color: $gray9; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
-			color: darken($gray9, 20%);
-			text-decoration: none;
-		}
-		
+	&,
+	&:visited { color: $gray9; }
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active {
+		color: darken($gray9, 20%);
+		text-decoration: none;
 	}
 	
-	a.social-twitter {
-		
-		&,
-		&:visited { color: #41b7d8; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active { color: darken(#41b7d8, 20%); }
-		
-	}
+}
+
+a.social-twitter {
 	
-	a.social-facebook {
-		
-		&,
-		&:visited { color: #3b5997; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active { color: darken(#3b5997, 20%); }
-		
-	}
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #41b7d8; }
 	
-	a.social-google-plus {
-		
-		&,
-		&:visited { color: #d64937; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active { color: darken(#d64937, 20%); }
-		
-	}
+}
+
+a.social-facebook {
 	
-	a.social-linkedin {
-		
-		&,
-		&:visited { color: #0073b2; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active { color: darken(#0073b2, 20%); }
-		
-	}
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #3b5997; }
 	
-	a.social-pinterest {
-		
-		&,
-		&:visited { color: #cb2027; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active { color: darken(#cb2027, 20%); }
-		
-	}
+}
+
+a.social-google-plus {
 	
-	a.social-vk {
-		
-		&,
-		&:visited { color: #54769b; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active { color: darken(#54769b, 20%); }
-		
-	}
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #d64937; }
 	
-	a.social-xing {
-		
-		&,
-		&:visited { color: #006567; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active { color: darken(#006567, 20%); }
-		
-	}
+}
+
+a.social-linkedin {
 	
-	a.social-tumblr {
-		
-		&,
-		&:visited { color: #35465c; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active { color: darken(#35465c, 20%); }
-		
-	}
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #0073b2; }
+	
+}
+
+a.social-pinterest {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #cb2027; }
+	
+}
+
+a.social-vk {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #54769b; }
+	
+}
+
+a.social-xing {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #006567; }
+	
+}
+
+a.social-tumblr {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #34465d; }
 	
 }
 

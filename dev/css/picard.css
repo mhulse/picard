@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2013 Micky Hulse.
  * @version 0.1.0
- * @date 2013/12/10
+ * @date 2013/12/12
  */
 
 
@@ -2030,64 +2030,51 @@ img {
   background: #666666;
 }
 
-.social {
-  font-size: 1rem;
-  line-height: 1;
+a.social {
+  font-family: Cambria, Georgia, serif;
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  word-spacing: -.05em;
 }
-.social a, .social a:visited {
+a.social, a.social:visited {
   color: #999999;
 }
-.social a:visited:hover, .social a:focus, .social a:focus:hover, .social a:hover, .social a:active {
+a.social:visited:hover, a.social:focus, a.social:focus:hover, a.social:hover, a.social:active {
   color: #666666;
   text-decoration: none;
 }
-.social a.social-twitter, .social a.social-twitter:visited {
+
+a.social-twitter, a.social-twitter:visited, a.social-twitter:visited:hover, a.social-twitter:focus, a.social-twitter:focus:hover, a.social-twitter:hover, a.social-twitter:active {
   color: #41b7d8;
 }
-.social a.social-twitter:visited:hover, .social a.social-twitter:focus, .social a.social-twitter:focus:hover, .social a.social-twitter:hover, .social a.social-twitter:active {
-  color: #1e7b95;
-}
-.social a.social-facebook, .social a.social-facebook:visited {
+
+a.social-facebook, a.social-facebook:visited, a.social-facebook:visited:hover, a.social-facebook:focus, a.social-facebook:focus:hover, a.social-facebook:hover, a.social-facebook:active {
   color: #3b5997;
 }
-.social a.social-facebook:visited:hover, .social a.social-facebook:focus, .social a.social-facebook:focus:hover, .social a.social-facebook:hover, .social a.social-facebook:active {
-  color: #1e2e4e;
-}
-.social a.social-google-plus, .social a.social-google-plus:visited {
+
+a.social-google-plus, a.social-google-plus:visited, a.social-google-plus:visited:hover, a.social-google-plus:focus, a.social-google-plus:focus:hover, a.social-google-plus:hover, a.social-google-plus:active {
   color: #d64937;
 }
-.social a.social-google-plus:visited:hover, .social a.social-google-plus:focus, .social a.social-google-plus:focus:hover, .social a.social-google-plus:hover, .social a.social-google-plus:active {
-  color: #8b291c;
-}
-.social a.social-linkedin, .social a.social-linkedin:visited {
+
+a.social-linkedin, a.social-linkedin:visited, a.social-linkedin:visited:hover, a.social-linkedin:focus, a.social-linkedin:focus:hover, a.social-linkedin:hover, a.social-linkedin:active {
   color: #0073b2;
 }
-.social a.social-linkedin:visited:hover, .social a.social-linkedin:focus, .social a.social-linkedin:focus:hover, .social a.social-linkedin:hover, .social a.social-linkedin:active {
-  color: #00314c;
-}
-.social a.social-pinterest, .social a.social-pinterest:visited {
+
+a.social-pinterest, a.social-pinterest:visited, a.social-pinterest:visited:hover, a.social-pinterest:focus, a.social-pinterest:focus:hover, a.social-pinterest:hover, a.social-pinterest:active {
   color: #cb2027;
 }
-.social a.social-pinterest:visited:hover, .social a.social-pinterest:focus, .social a.social-pinterest:focus:hover, .social a.social-pinterest:hover, .social a.social-pinterest:active {
-  color: #731216;
-}
-.social a.social-vk, .social a.social-vk:visited {
+
+a.social-vk, a.social-vk:visited, a.social-vk:visited:hover, a.social-vk:focus, a.social-vk:focus:hover, a.social-vk:hover, a.social-vk:active {
   color: #54769b;
 }
-.social a.social-vk:visited:hover, .social a.social-vk:focus, .social a.social-vk:focus:hover, .social a.social-vk:hover, .social a.social-vk:active {
-  color: #304459;
-}
-.social a.social-xing, .social a.social-xing:visited {
+
+a.social-xing, a.social-xing:visited, a.social-xing:visited:hover, a.social-xing:focus, a.social-xing:focus:hover, a.social-xing:hover, a.social-xing:active {
   color: #006567;
 }
-.social a.social-xing:visited:hover, .social a.social-xing:focus, .social a.social-xing:focus:hover, .social a.social-xing:hover, .social a.social-xing:active {
-  color: #000101;
-}
-.social a.social-tumblr, .social a.social-tumblr:visited {
-  color: #35465c;
-}
-.social a.social-tumblr:visited:hover, .social a.social-tumblr:focus, .social a.social-tumblr:focus:hover, .social a.social-tumblr:hover, .social a.social-tumblr:active {
-  color: #10151b;
+
+a.social-tumblr, a.social-tumblr:visited, a.social-tumblr:visited:hover, a.social-tumblr:focus, a.social-tumblr:focus:hover, a.social-tumblr:hover, a.social-tumblr:active {
+  color: #34465d;
 }
 
 .figbutton {
