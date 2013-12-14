@@ -1848,13 +1848,13 @@ kbd kbd {
 }
 .form input[disabled][type="text"], .form input[disabled][type="password"], .form input[disabled][type="search"], .form textarea[disabled] {
   cursor: not-allowed;
-  background-color: #eaeded;
-  color: #cad2d3;
+  background: #eeeeee;
+  color: #cccccc;
 }
 .form input[readonly][type="text"], .form input[readonly][type="password"], .form input[readonly][type="search"], .form textarea[readonly] {
-  background: #eee;
-  color: #777;
-  border-color: #ccc;
+  background: #eeeeee;
+  color: #777777;
+  border-color: #cccccc;
 }
 .form input[type="text"], .form input[type="password"] {
   height: auto;

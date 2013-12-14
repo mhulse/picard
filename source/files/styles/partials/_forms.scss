@@ -70,14 +70,14 @@
 		
 		&[disabled] {
 			cursor: not-allowed;
-			background-color: #eaeded;
-			color: #cad2d3;
+			background: $graye;
+			color: $grayc;
 		}
 		
 		&[readonly] {
-			background: #eee;
-			color: #777;
-			border-color: #ccc;
+			background: $graye;
+			color: $gray7;
+			border-color: $grayc;
 		}
 		
 	}
