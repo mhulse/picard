@@ -259,3 +259,12 @@ a.social-tumblr {
 	}
 	
 }
+
+// Gist embeds:
+.gist { text-align: left; }
+.gist-file {
+	margin: {
+		top: #{relative($base_margin)}rem;
+		bottom: #{relative($base_margin)}rem;
+	}
+}

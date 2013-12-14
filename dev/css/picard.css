@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2013 Micky Hulse.
  * @version 0.1.0
- * @date 2013/12/12
+ * @date 2013/12/13
  */
 
 
@@ -2118,4 +2118,13 @@ a.social-tumblr, a.social-tumblr:visited, a.social-tumblr:visited:hover, a.socia
   .boring span span {
     display: none;
   }
+}
+
+.gist {
+  text-align: left;
+}
+
+.gist-file {
+  margin-top: 0.71428571428571rem;
+  margin-bottom: 0.71428571428571rem;
 }
