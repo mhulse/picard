@@ -884,7 +884,7 @@ textarea {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
-.scroll > img {
+.scroll img:first-of-type {
   max-width: none;
   display: block;
 }

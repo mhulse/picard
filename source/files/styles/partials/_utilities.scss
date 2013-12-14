@@ -58,19 +58,15 @@
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 	
-	> {
-		
-		img {
-			max-width: none;
-			display: block;
-		}
-		
-		* {
-			margin-top: 0;
-			margin-bottom: 0;
-			-webkit-transform: translateZ(0);
-		}
-		
+	img:first-of-type {
+		max-width: none;
+		display: block;
+	}
+	
+	> * {
+		margin-top: 0;
+		margin-bottom: 0;
+		-webkit-transform: translateZ(0);
 	}
 	
 	figure & { margin: 0; }
