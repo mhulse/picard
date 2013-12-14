@@ -1971,17 +1971,17 @@ img {
 }
 
 .pager {
-  border-width: 0.14285714285714rem 0.07142857142857rem 0.07142857142857rem;
+  color: #cccccc;
+  border-width: 0.07142857142857rem 0 0;
   border-style: solid;
-  border-color: #999999 #cccccc #cccccc;
-  background: white;
+  border-color: #1d678f;
   margin-top: 0.71428571428571rem;
   margin-bottom: 0;
-  padding: 0.35714285714286rem;
+  padding: 0.35714285714286rem 0.71428571428571rem;
   display: inline-block;
-  -webkit-box-shadow: 0 0.14285714285714rem 0.07142857142857rem rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 0.14285714285714rem 0.07142857142857rem rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0.14285714285714rem 0.07142857142857rem rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 -0.21428571428571rem rgba(29, 103, 143, 0.1);
+  -moz-box-shadow: 0 -0.21428571428571rem rgba(29, 103, 143, 0.1);
+  box-shadow: 0 -0.21428571428571rem rgba(29, 103, 143, 0.1);
 }
 .pager > li {
   margin: 0;
@@ -1995,7 +1995,7 @@ img {
   text-transform: uppercase;
   letter-spacing: .05em;
   margin: 0 .25em;
-  padding: .5em 1em;
+  padding: .1em .75em;
   display: inline-block;
   -webkit-border-radius: 0.21428571428571rem;
   -moz-border-radius: 0.21428571428571rem;
@@ -2004,17 +2004,20 @@ img {
 .pager > li .pager-current {
   color: white;
   font-weight: bold;
-  background: black;
-}
-.pager > li:first-child > a:before {
-  content: '\2039\00a0';
-}
-.pager > li:last-child > a:after {
-  content: '\00a0\203A';
+  background: #1d678f;
 }
 .pager > li:first-child > a:before, .pager > li:last-child > a:after {
-  position: relative;
-  top: -0.07142857142857em;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  display: inline-block;
+}
+.pager > li:first-child > a:before {
+  content: "\f0d9\00a0";
+}
+.pager > li:last-child > a:after {
+  content: "\00a0\f0da";
 }
 @media (max-width: 53.5rem) {
   .pager > li:not(:first-child):not(:last-child) {
@@ -2022,12 +2025,12 @@ img {
   }
 }
 .pager a, .pager a:visited {
-  color: #666666;
+  color: #1d678f;
 }
 .pager a:visited:hover, .pager a:focus, .pager a:focus:hover, .pager a:hover, .pager a:active {
-  color: white;
+  color: #1d678f;
   text-decoration: none;
-  background: #666666;
+  background: rgba(29, 103, 143, 0.1);
 }
 
 a.social {

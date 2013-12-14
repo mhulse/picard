@@ -1,19 +1,20 @@
 .pager {
 	
-	border-width: #{relative(2)}rem #{relative(1)}rem #{relative(1)}rem;
+	color: $grayc;
+	border-width: #{relative(1)}rem 0 0;
 	border-style: solid;
-	border-color: $gray9 $grayc $grayc;
-	background: $milk;
+	border-color: $dusk;
+	//background: $graye;
 	margin: {
 		top: #{relative($base_margin)}rem;
 		bottom: 0;
 	}
-	padding: #{relative($base_padding) / 2}rem;
+	padding: #{relative($base_padding) / 2}rem #{relative($base_padding)}rem;
 	display: inline-block;
 	
-	-webkit-box-shadow: 0 #{relative(2)}rem #{relative(1)}rem rgba(0, 0, 0, .1);
-	   -moz-box-shadow: 0 #{relative(2)}rem #{relative(1)}rem rgba(0, 0, 0, .1);
-	        box-shadow: 0 #{relative(2)}rem #{relative(1)}rem rgba(0, 0, 0, .1);
+	-webkit-box-shadow: 0 -#{relative(3)}rem rgba($dusk, .1);
+	   -moz-box-shadow: 0 -#{relative(3)}rem rgba($dusk, .1);
+	        box-shadow: 0 -#{relative(3)}rem rgba($dusk, .1);
 	
 	> {
 		
@@ -30,7 +31,7 @@
 				text-transform: uppercase;
 				letter-spacing: .05em;
 				margin: 0 .25em;
-				padding: .5em 1em;
+				padding: .1em .75em;
 				display: inline-block;
 				
 				-webkit-border-radius: #{relative($base_radii)}rem;
@@ -42,16 +43,24 @@
 			.pager-current {
 				color: $milk;
 				font-weight: bold;
-				background: $raven;
+				background: $dusk;
 			}
 			
-			&:first-child > a:before { content: '\2039\00a0'; }
-			&:last-child > a:after { content: '\00a0\203A'; }
+			%chevron {
+				font-family: FontAwesome;
+				font-style: normal;
+				font-weight: normal;
+				text-decoration: inherit;
+				display: inline-block;
+			}
 			
-			&:first-child > a:before,
+			&:first-child > a:before {
+				@extend %chevron;
+				content: "\f0d9\00a0";
+			}
 			&:last-child > a:after {
-				position: relative;
-				top: -#{relative(1)}em;
+				@extend %chevron;
+				content: "\00a0\f0da";
 			}
 			
 			&:not(:first-child):not(:last-child) {
@@ -71,17 +80,15 @@
 	a {
 		
 		&,
-		&:visited { color: $gray6; }
+		&:visited { color: $dusk; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			
-			color: $milk;
+			color: $dusk;
 			text-decoration: none;
-			background: $gray6;
-			
+			background: rgba($dusk, .1);
 		}
 		
 	}
