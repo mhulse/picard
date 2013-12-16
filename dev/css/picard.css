@@ -1940,3 +1940,8 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+iframe[id^='twitter-widget-'],
+.twitter-timeline {
+  width: 100%;
+}
