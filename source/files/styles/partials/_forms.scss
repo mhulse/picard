@@ -58,10 +58,22 @@
 		   -moz-background-clip: padding;
 		        background-clip: padding-box;
 		
-		&::-webkit-input-placeholder { color: $gray9; }
-		&:-moz-placeholder { color: $gray9; }
-		&::-moz-placeholder { color: $gray9; }
-		&:-ms-input-placeholder { color: $gray9; }
+		&::-webkit-input-placeholder {
+			text-align: center;
+			color: $gray9;
+		}
+		&:-moz-placeholder {
+			text-align: center;
+			color: $gray9;
+		}
+		&::-moz-placeholder {
+			text-align: center;
+			color: $gray9;
+		}
+		&:-ms-input-placeholder {
+			text-align: center;
+			color: $gray9;
+		}
 		
 		&:focus,
 		&:active { outline: none; }

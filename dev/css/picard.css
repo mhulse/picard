@@ -1809,15 +1809,19 @@ kbd kbd {
   background-clip: padding-box;
 }
 .form input[type="text"]::-webkit-input-placeholder, .form input[type="password"]::-webkit-input-placeholder, .form input[type="search"]::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
+  text-align: center;
   color: #999999;
 }
 .form input[type="text"]:-moz-placeholder, .form input[type="password"]:-moz-placeholder, .form input[type="search"]:-moz-placeholder, .form textarea:-moz-placeholder {
+  text-align: center;
   color: #999999;
 }
 .form input[type="text"]::-moz-placeholder, .form input[type="password"]::-moz-placeholder, .form input[type="search"]::-moz-placeholder, .form textarea::-moz-placeholder {
+  text-align: center;
   color: #999999;
 }
 .form input[type="text"]:-ms-input-placeholder, .form input[type="password"]:-ms-input-placeholder, .form input[type="search"]:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
+  text-align: center;
   color: #999999;
 }
 .form input[type="text"]:focus, .form input[type="password"]:focus, .form input[type="search"]:focus, .form textarea:focus, .form input[type="text"]:active, .form input[type="password"]:active, .form input[type="search"]:active, .form textarea:active {
