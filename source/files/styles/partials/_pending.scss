@@ -1,0 +1,40 @@
+// Use now in place of <i>:
+#footer_menu li:nth-child(n+1):before { content: "/"; }
+
+.boring {
+	
+	@include baseline($base_font-size - 1, .875);
+	font-style: italic;
+	letter-spacing: .03em;
+	color: $gray6;
+	
+	&:first-line { color: $gray3; }
+	
+	a {
+		
+		&,
+		&:visited { color: $dusk; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $dusk;
+			font-style: underline;
+		}
+		
+	}
+	
+	small {
+		font-size: 1em;
+		display: block;
+	}
+	
+	@media (max-width: #{relative($base_breakpoint-max)}rem) {
+		
+		span { display: block; }
+		span span { display: none; }
+		
+	}
+	
+}
