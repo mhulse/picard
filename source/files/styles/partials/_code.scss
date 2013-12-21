@@ -14,7 +14,7 @@ pre {
 	
 	-webkit-border-radius: #{relative($base_radii)}em;
 	   -moz-border-radius: #{relative($base_radii)}em;
-	        border-radius: #{relative($base_radii)}em;
+			border-radius: #{relative($base_radii)}em;
 	
 	// Blinking cursor.
 	//
@@ -22,13 +22,13 @@ pre {
 	
 	.cursor {
 		-webkit-animation-duration: 2s;
-		        animation-duration: 2s;
+				animation-duration: 2s;
 		-webkit-animation-name: cursor-blink;
-		        animation-name: cursor-blink;
+				animation-name: cursor-blink;
 		-webkit-animation-iteration-count: infinite;
-		        animation-iteration-count: infinite;
+				animation-iteration-count: infinite;
 		-webkit-animation-timing-function: steps(2, start);
-		        animation-timing-function: steps(2, start);
+				animation-timing-function: steps(2, start);
 	}
 	
 	// Prompt style.
@@ -44,7 +44,7 @@ pre {
 		border: 1px solid $raven;
 		-webkit-box-shadow: inset 0 0 #{relative(5)}rem 0 fade-in($raven, .75);
 		   -moz-box-shadow: inset 0 0 #{relative(5)}rem 0 fade-in($raven, .75);
-		        box-shadow: inset 0 0 #{relative(5)}rem 0 fade-in($raven, .75);
+				box-shadow: inset 0 0 #{relative(5)}rem 0 fade-in($raven, .75);
 		
 		.cursor {
 			color: transparent;
@@ -75,6 +75,14 @@ code,
 	word-wrap: break-word;      // IE 5+
 }
 
+code {
+	color: darken($bling, 20%);
+	padding: 0 4px;
+	background: fade-out($bling, .9);
+	border: 1px solid fade-out(darken($bling, 20%), .9);
+	border-radius: 3px;
+}
+
 kbd {
 	
 	@extend %code;
@@ -90,15 +98,15 @@ kbd {
 	
 	-webkit-background-clip: padding;
 	   -moz-background-clip: padding;
-	        background-clip: padding-box;
+			background-clip: padding-box;
 	
 	-webkit-border-radius: #{relative($base_radii)}em;
 	   -moz-border-radius: #{relative($base_radii)}em;
-	        border-radius: #{relative($base_radii)}em;
+			border-radius: #{relative($base_radii)}em;
 	
 	-webkit-box-shadow: 0 #{relative(1)}rem 0 fade-out($raven, .8), 0 0 0 #{relative(2)}rem $milk inset;
 	   -moz-box-shadow: 0 #{relative(1)}rem 0 fade-out($raven, .8), 0 0 0 #{relative(2)}rem $milk inset;
-	        box-shadow: 0 #{relative(1)}rem 0 fade-out($raven, .8), 0 0 0 #{relative(2)}rem $milk inset;
+			box-shadow: 0 #{relative(1)}rem 0 fade-out($raven, .8), 0 0 0 #{relative(2)}rem $milk inset;
 	
 	kbd {
 		font-size: inherit;
@@ -112,7 +120,7 @@ kbd {
 		box-shadow: none;
 		-webkit-border-radius: 0;
 		   -moz-border-radius: 0;
-		        border-radius: 0;
+				border-radius: 0;
 	}
 	
 }

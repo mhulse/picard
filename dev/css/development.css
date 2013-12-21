@@ -3,11 +3,11 @@
  * Make it so.
  *
  * @author Micky Hulse
- * @link http://mhulse.com
+ * @link http://mky.io
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2013 Micky Hulse.
  * @version 0.1.0
- * @date 2013/12/17
+ * @date 2013/12/21
  */
 
 
@@ -104,5 +104,5 @@
   background: red;
 }
 .swatches .frog {
-  background: #008b45;
+  background: #00cc00;
 }

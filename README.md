@@ -6,7 +6,7 @@
 
 ## Q: What's this?
 
-**A:** It's a blog theme for [mhulse.com](http://mhulse.com).
+**A:** It's a funky blog theme for [mky.io](http://mky.io).
 
 ## Q: Why TNG?
 
@@ -27,7 +27,7 @@ DEVELOPMENT | PRODUCTION
 
 ---
 
-Copyright &copy; [Micky Hulse](http://mhulse.com) 2013-2014. **All rights reserved.**
+Copyright &copy; [Micky Hulse](http://mky.io) 2013-2014. **All rights reserved.**
 
 Unauthorized use and/or duplication of this material, without express and written permission from the owner, is strictly prohibited.
 

@@ -474,15 +474,50 @@ p.meta {
 	
 }
 
-.warn {
-	
+%callout {
 	@include baseline($base_font-size - 2, .75);
 	letter-spacing: .03em;
-	color: darken($chili, 10%);
-	border: #{relative(2)}rem solid lighten($chili, 35%);
+	padding: #{baseline($base_font-size - 2, .75) / 2}rem;
 	-webkit-border-radius: #{relative($base_radii)}em;
 	   -moz-border-radius: #{relative($base_radii)}em;
 	        border-radius: #{relative($base_radii)}em;
+	
+	a {
+		
+		&,
+		&:visited { font-weight: bold; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active { text-decoration: underline; }
+		
+	}
+	
+}
+
+.callout-info {
+	
+	@extend %callout;
+	
+	color: darken($frog, 10%);
+	border: #{relative(2)}rem solid lighten($frog, 35%);
+	background: lighten($frog, 45%);
+	background: -webkit-linear-gradient(top, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
+	background:    -moz-linear-gradient(top, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
+	background:     -ms-linear-gradient(top, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
+	background:      -o-linear-gradient(top, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
+	background:        -webkit-gradient(linear, left top, left bottom, color-stop(0, mix(lighten($frog, 45%), $milk, 35%)), color-stop(100%, lighten($frog, 45%)));
+	background:         linear-gradient(to bottom, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
+	
+}
+
+.callout-warn {
+	
+	@extend %callout;
+	
+	color: darken($chili, 10%);
+	border: #{relative(2)}rem solid lighten($chili, 35%);
 	background: lighten($chili, 45%);
 	background: -webkit-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
 	background:    -moz-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
@@ -490,27 +525,16 @@ p.meta {
 	background:      -o-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
 	background:        -webkit-gradient(linear, left top, left bottom, color-stop(0, mix(lighten($chili, 45%), $milk, 35%)), color-stop(100%, lighten($chili, 45%)));
 	background:         linear-gradient(to bottom, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
-	padding: #{baseline($base_font-size - 2, .75) / 2 }rem;
-	
-	// -webkit-box-shadow: 0 #{relative(3)}rem fade-out($chili, .9);
-	//    -moz-box-shadow: 0 #{relative(3)}rem fade-out($chili, .9);
-	//         box-shadow: 0 #{relative(3)}rem fade-out($chili, .9);
 	
 	a {
 		
 		&,
-		&:visited {
-			font-weight: bold;
-			color: $chili;
-		}
+		&:visited,
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
-		&:active {
-			color: $chili;
-			text-decoration: underline;
-		}
+		&:active { color: $chili; }
 		
 	}
 	

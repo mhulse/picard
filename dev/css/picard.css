@@ -3,11 +3,11 @@
  * Make it so.
  *
  * @author Micky Hulse
- * @link http://mhulse.com
+ * @link http://mky.io
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2013 Micky Hulse.
  * @version 0.1.0
- * @date 2013/12/17
+ * @date 2013/12/21
  */
 
 
@@ -1087,7 +1087,7 @@ del {
 }
 
 ins {
-  color: #008b45;
+  color: #00cc00;
   text-decoration: none;
 }
 ins:before {
@@ -1276,15 +1276,37 @@ p.meta:hover {
   background: white;
 }
 
-.warn {
+.callout-info, .callout-warn {
   font-size: 0.85714285714286rem;
   line-height: 1.375;
   letter-spacing: .03em;
-  color: #cc0000;
-  border: 0.14285714285714rem solid #ffb3b3;
+  padding: 0.6875rem;
   -webkit-border-radius: 0.21428571428571em;
   -moz-border-radius: 0.21428571428571em;
   border-radius: 0.21428571428571em;
+}
+.callout-info a, .callout-warn a, .callout-info a:visited, .callout-warn a:visited {
+  font-weight: bold;
+}
+.callout-info a:visited:hover, .callout-warn a:visited:hover, .callout-info a:focus, .callout-warn a:focus, .callout-info a:focus:hover, .callout-warn a:focus:hover, .callout-info a:hover, .callout-warn a:hover, .callout-info a:active, .callout-warn a:active {
+  text-decoration: underline;
+}
+
+.callout-info {
+  color: #009900;
+  border: 0.14285714285714rem solid #80ff80;
+  background: #b3ffb3;
+  background: -webkit-linear-gradient(top, #e4ffe4 0, #b3ffb3 100%);
+  background: -moz-linear-gradient(top, #e4ffe4 0, #b3ffb3 100%);
+  background: -ms-linear-gradient(top, #e4ffe4 0, #b3ffb3 100%);
+  background: -o-linear-gradient(top, #e4ffe4 0, #b3ffb3 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e4ffe4), color-stop(100%, #b3ffb3));
+  background: linear-gradient(to bottom, #e4ffe4 0, #b3ffb3 100%);
+}
+
+.callout-warn {
+  color: #cc0000;
+  border: 0.14285714285714rem solid #ffb3b3;
   background: #ffe5e5;
   background: -webkit-linear-gradient(top, #fff5f5 0, #ffe5e5 100%);
   background: -moz-linear-gradient(top, #fff5f5 0, #ffe5e5 100%);
@@ -1292,15 +1314,9 @@ p.meta:hover {
   background: -o-linear-gradient(top, #fff5f5 0, #ffe5e5 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff5f5), color-stop(100%, #ffe5e5));
   background: linear-gradient(to bottom, #fff5f5 0, #ffe5e5 100%);
-  padding: 0.6875rem;
 }
-.warn a, .warn a:visited {
-  font-weight: bold;
+.callout-warn a, .callout-warn a:visited, .callout-warn a:visited:hover, .callout-warn a:focus, .callout-warn a:focus:hover, .callout-warn a:hover, .callout-warn a:active {
   color: red;
-}
-.warn a:visited:hover, .warn a:focus, .warn a:focus:hover, .warn a:hover, .warn a:active {
-  color: red;
-  text-decoration: underline;
 }
 
 .label {
@@ -1553,6 +1569,14 @@ var {
   white-space: -moz-pre-wrap;
   white-space: -hp-pre-wrap;
   word-wrap: break-word;
+}
+
+code {
+  color: #997d00;
+  padding: 0 4px;
+  background: rgba(255, 209, 0, 0.1);
+  border: 1px solid rgba(153, 125, 0, 0.1);
+  border-radius: 3px;
 }
 
 kbd {
