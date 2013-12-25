@@ -7,7 +7,7 @@
 	"couch"         : false,    // If CouchDB globals should be predefined.
 	"curly"         : true,     // If curly braces around all blocks should be required.
 	"debug"         : false,    // If debugger statements should be allowed.
-	"devel"         : false,    // If logging globals should be predefined (console, alert, etc.).
+	"devel"         : true,     // If logging globals should be predefined (console, alert, etc.).
 	"dojo"          : false,    // If Dojo Toolkit globals should be predefined.
 	"eqeqeq"        : false,    // If === should be required.
 	"eqnull"        : false,    // If == null comparisons should be tolerated.

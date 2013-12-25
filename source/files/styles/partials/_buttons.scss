@@ -9,20 +9,20 @@
 
 .button {
 	
-	@include baseline($base_font-size - 2);
+	@include baseline($base_font-size + 3);
 	font-family: $sans;
 	font-weight: normal;
-	text-transform: uppercase;
+	//text-transform: uppercase;
 	text-align: center;
 	text-decoration: none;
-	text-shadow: 0 #{relative(1)}em #{relative(1)}em darken($lobster, 20%);
-	letter-spacing: .15em;
+	text-shadow: 0 #{relative(1)}em #{relative(1)}em darken($dusk, 20%);
+	letter-spacing: .1em;
 	color: $milk;
 	white-space: nowrap;
 	vertical-align: baseline;
-	background: $lobster;
-	border: 0;
-	padding: #{baseline($base_font-size - 2) / 8}em 1em;
+	background: $dusk;
+	border: #{relative(2)}rem solid fade-out(darken($dusk, 20%), .3);
+	padding: #{baseline($base_font-size - 2) / 3}em 3em;
 	display: inline-block;
 	cursor: pointer;
 	zoom: 1;
@@ -31,6 +31,10 @@
 	   -moz-border-radius: #{relative($base_radii)}em;
 	        border-radius: #{relative($base_radii)}em;
 	
+	-webkit-box-shadow: inset 0 #{relative(1)}em #{relative(10)}em 0 darken($dusk, 10%), 0 #{relative(2)}em fade-out(darken($dusk, 20%), .75);
+	   -moz-box-shadow: inset 0 #{relative(1)}em #{relative(10)}em 0 darken($dusk, 10%), 0 #{relative(2)}em fade-out(darken($dusk, 20%), .75);
+	        box-shadow: inset 0 #{relative(1)}em #{relative(10)}em 0 darken($dusk, 10%), 0 #{relative(2)}em fade-out(darken($dusk, 20%), .75);
+	
 	-webkit-user-drag: none;
 	
 	-webkit-user-select: none;
@@ -38,11 +42,11 @@
 	    -ms-user-select: none;
 	        user-select: none;
 	
-	-webkit-transition: .1s linear -webkit-box-shadow;
-	   -moz-transition: .1s linear -moz-box-shadow;
-	    -ms-transition: .1s linear box-shadow;
-	     -o-transition: .1s linear box-shadow;
-	        transition: .1s linear box-shadow;
+	-webkit-transition: .1s linear;
+	   -moz-transition: .1s linear;
+	    -ms-transition: .1s linear;
+	     -o-transition: .1s linear;
+	        transition: .1s linear;
 	
 	&::-moz-focus-inner {
 		padding: 0;
@@ -52,7 +56,7 @@
 	&,
 	&:visited {
 		color: $milk;
-		background: $lobster;
+		background: $dusk;
 	}
 	&:visited:hover,
 	&:focus,
@@ -61,7 +65,7 @@
 	&:active {
 		color: $milk;
 		text-decoration: none;
-		background: $juice;
+		background: $smurf;
 	}
 	
 	&:active,

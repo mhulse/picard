@@ -31,6 +31,7 @@
 		color: $milk;
 		background: fade-out($raven, .5);
 		padding: #{relative(3)}em #{relative(5)}em;
+		border: 0;
 	}
 	
 	.milk    { background: $milk;    }

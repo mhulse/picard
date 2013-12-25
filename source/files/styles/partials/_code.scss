@@ -9,7 +9,7 @@ pre {
 	overflow: auto;
 	white-space: pre;
 	-webkit-overflow-scrolling: touch;
-	border: 1px solid $grayd;
+	border: #{relative(1)}rem solid $grayd;
 	padding: #{relative($base_padding) / 2}rem #{relative($base_padding)}rem;
 	
 	-webkit-border-radius: #{relative($base_radii)}em;
@@ -39,9 +39,9 @@ pre {
 		
 		letter-spacing: .05em;
 		color: lighten(adjust-hue($hulk, 45), 20%);
-		text-shadow: 0 1px 0 $raven;
+		text-shadow: 0 #{relative(1)}em 0 $raven;
 		background: darken($hulk, 25%);
-		border: 1px solid $raven;
+		border: #{relative(1)}rem solid $raven;
 		-webkit-box-shadow: inset 0 0 #{relative(5)}rem 0 fade-in($raven, .75);
 		   -moz-box-shadow: inset 0 0 #{relative(5)}rem 0 fade-in($raven, .75);
 				box-shadow: inset 0 0 #{relative(5)}rem 0 fade-in($raven, .75);
@@ -76,11 +76,14 @@ code,
 }
 
 code {
-	color: darken($bling, 20%);
-	padding: 0 4px;
-	background: fade-out($bling, .9);
-	border: 1px solid fade-out(darken($bling, 20%), .9);
-	border-radius: 3px;
+	letter-spacing: .05em;
+	color: $gray3;
+	background: fade-out($grayc, .5);
+	border: 1px solid fade-out($grayc, .25);
+	padding: 0 #{relative(3)}rem;
+	-webkit-border-radius: #{relative($base_radii)}em;
+	   -moz-border-radius: #{relative($base_radii)}em;
+			border-radius: #{relative($base_radii)}em;
 }
 
 kbd {
@@ -108,21 +111,6 @@ kbd {
 	   -moz-box-shadow: 0 #{relative(1)}rem 0 fade-out($raven, .8), 0 0 0 #{relative(2)}rem $milk inset;
 			box-shadow: 0 #{relative(1)}rem 0 fade-out($raven, .8), 0 0 0 #{relative(2)}rem $milk inset;
 	
-	kbd {
-		font-size: inherit;
-		color: inherit;
-		text-shadow: none;
-		background: transparent;
-		border: 0;
-		margin: 0;
-		padding: 0;
-		display: inline;
-		box-shadow: none;
-		-webkit-border-radius: 0;
-		   -moz-border-radius: 0;
-				border-radius: 0;
-	}
-	
 }
 
 samp {
@@ -135,6 +123,25 @@ var {
 	
 	@extend %code;
 	
+}
+
+pre code,
+pre kbd,
+pre samp,
+pre var,
+kbd kbd {
+	font-size: inherit;
+	color: inherit;
+	text-shadow: none;
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	display: inline;
+	box-shadow: none;
+	-webkit-border-radius: 0;
+	   -moz-border-radius: 0;
+			border-radius: 0;
 }
 
 // Gist embeds:

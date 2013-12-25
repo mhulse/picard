@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2013 Micky Hulse.
  * @version 0.1.0
- * @date 2013/12/21
+ * @date 2013/12/25
  */
 
 
@@ -1198,11 +1198,27 @@ span.amp {
   font-size: 1.14285714285714rem;
   line-height: 1.03125;
   font-weight: normal;
-  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  font-family: monospace, serif;
   color: #cca700;
   letter-spacing: .1em;
   margin-top: 0.71428571428571rem;
   margin-bottom: 0.71428571428571rem;
+}
+
+.marker code,
+.subtle code {
+  font-size: inherit;
+  color: inherit;
+  text-shadow: none;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 
 .body p {
@@ -1293,27 +1309,24 @@ p.meta:hover {
 }
 
 .callout-info {
-  color: #009900;
-  border: 0.14285714285714rem solid #80ff80;
+  color: green;
+  border: 0.14285714285714rem solid rgba(0, 153, 0, 0.5);
   background: #b3ffb3;
-  background: -webkit-linear-gradient(top, #e4ffe4 0, #b3ffb3 100%);
-  background: -moz-linear-gradient(top, #e4ffe4 0, #b3ffb3 100%);
-  background: -ms-linear-gradient(top, #e4ffe4 0, #b3ffb3 100%);
-  background: -o-linear-gradient(top, #e4ffe4 0, #b3ffb3 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e4ffe4), color-stop(100%, #b3ffb3));
-  background: linear-gradient(to bottom, #e4ffe4 0, #b3ffb3 100%);
+  -webkit-box-shadow: inset 0 0 0.71428571428571rem rgba(0, 255, 0, 0.7), 0 0 0 0.21428571428571rem rgba(0, 204, 0, 0.1);
+  -moz-box-shadow: inset 0 0 0.71428571428571rem rgba(0, 255, 0, 0.7), 0 0 0 0.21428571428571rem rgba(0, 204, 0, 0.1);
+  box-shadow: inset 0 0 0.71428571428571rem rgba(0, 255, 0, 0.7), 0 0 0 0.21428571428571rem rgba(0, 204, 0, 0.1);
+}
+.callout-info a, .callout-info a:visited, .callout-info a:visited:hover, .callout-info a:focus, .callout-info a:focus:hover, .callout-info a:hover, .callout-info a:active {
+  color: #00cc00;
 }
 
 .callout-warn {
-  color: #cc0000;
-  border: 0.14285714285714rem solid #ffb3b3;
+  color: #b30000;
+  border: 0.14285714285714rem solid rgba(204, 0, 0, 0.5);
   background: #ffe5e5;
-  background: -webkit-linear-gradient(top, #fff5f5 0, #ffe5e5 100%);
-  background: -moz-linear-gradient(top, #fff5f5 0, #ffe5e5 100%);
-  background: -ms-linear-gradient(top, #fff5f5 0, #ffe5e5 100%);
-  background: -o-linear-gradient(top, #fff5f5 0, #ffe5e5 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff5f5), color-stop(100%, #ffe5e5));
-  background: linear-gradient(to bottom, #fff5f5 0, #ffe5e5 100%);
+  -webkit-box-shadow: inset 0 0 0.71428571428571rem rgba(255, 51, 51, 0.7), 0 0 0 0.21428571428571rem rgba(255, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 0 0.71428571428571rem rgba(255, 51, 51, 0.7), 0 0 0 0.21428571428571rem rgba(255, 0, 0, 0.1);
+  box-shadow: inset 0 0 0.71428571428571rem rgba(255, 51, 51, 0.7), 0 0 0 0.21428571428571rem rgba(255, 0, 0, 0.1);
 }
 .callout-warn a, .callout-warn a:visited, .callout-warn a:visited:hover, .callout-warn a:focus, .callout-warn a:focus:hover, .callout-warn a:hover, .callout-warn a:active {
   color: red;
@@ -1484,7 +1497,7 @@ pre {
   overflow: auto;
   white-space: pre;
   -webkit-overflow-scrolling: touch;
-  border: 1px solid #dddddd;
+  border: 0.07142857142857rem solid #dddddd;
   padding: 0.35714285714286rem 0.71428571428571rem;
   -webkit-border-radius: 0.21428571428571em;
   -moz-border-radius: 0.21428571428571em;
@@ -1506,9 +1519,9 @@ pre .prompt {
 pre.terminal {
   letter-spacing: .05em;
   color: #30d259;
-  text-shadow: 0 1px 0 black;
+  text-shadow: 0 0.07142857142857em 0 black;
   background: #0e1705;
-  border: 1px solid black;
+  border: 0.07142857142857rem solid black;
   -webkit-box-shadow: inset 0 0 0.35714285714286rem 0 black;
   -moz-box-shadow: inset 0 0 0.35714285714286rem 0 black;
   box-shadow: inset 0 0 0.35714285714286rem 0 black;
@@ -1527,7 +1540,7 @@ kbd,
 samp,
 var {
   font-size: inherit;
-  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  font-family: monospace, serif;
   font-weight: normal;
   font-style: normal;
   letter-spacing: normal;
@@ -1542,11 +1555,14 @@ var {
 }
 
 code {
-  color: #997d00;
-  padding: 0 4px;
-  background: rgba(255, 209, 0, 0.1);
-  border: 1px solid rgba(153, 125, 0, 0.1);
-  border-radius: 3px;
+  letter-spacing: .05em;
+  color: #333333;
+  background: rgba(204, 204, 204, 0.5);
+  border: 1px solid rgba(204, 204, 204, 0.75);
+  padding: 0 0.21428571428571rem;
+  -webkit-border-radius: 0.21428571428571em;
+  -moz-border-radius: 0.21428571428571em;
+  border-radius: 0.21428571428571em;
 }
 
 kbd {
@@ -1568,6 +1584,11 @@ kbd {
   -moz-box-shadow: 0 0.07142857142857rem 0 rgba(0, 0, 0, 0.2), 0 0 0 0.14285714285714rem white inset;
   box-shadow: 0 0.07142857142857rem 0 rgba(0, 0, 0, 0.2), 0 0 0 0.14285714285714rem white inset;
 }
+
+pre code,
+pre kbd,
+pre samp,
+pre var,
 kbd kbd {
   font-size: inherit;
   color: inherit;
@@ -1676,37 +1697,39 @@ kbd kbd {
 .form input[type="button"],
 .form input[type="reset"],
 .form input[type="submit"] {
-  font-size: 0.85714285714286rem;
-  line-height: 1.83333333333333;
+  font-size: 1.21428571428571rem;
+  line-height: 1.29411764705882;
   font-family: Arial, sans-serif;
   font-weight: normal;
-  text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  text-shadow: 0 0.07142857142857em 0.07142857142857em #661a00;
-  letter-spacing: .15em;
+  text-shadow: 0 0.07142857142857em 0.07142857142857em #0c2a3a;
+  letter-spacing: .1em;
   color: white;
   white-space: nowrap;
   vertical-align: baseline;
-  background: #cc3300;
-  border: 0;
-  padding: 0.22916666666667em 1em;
+  background: #1d678f;
+  border: 0.14285714285714rem solid rgba(12, 42, 58, 0.7);
+  padding: 0.61111111111111em 3em;
   display: inline-block;
   cursor: pointer;
   zoom: 1;
   -webkit-border-radius: 0.21428571428571em;
   -moz-border-radius: 0.21428571428571em;
   border-radius: 0.21428571428571em;
+  -webkit-box-shadow: inset 0 0.07142857142857em 0.71428571428571em 0 #144865, 0 0.14285714285714em rgba(12, 42, 58, 0.25);
+  -moz-box-shadow: inset 0 0.07142857142857em 0.71428571428571em 0 #144865, 0 0.14285714285714em rgba(12, 42, 58, 0.25);
+  box-shadow: inset 0 0.07142857142857em 0.71428571428571em 0 #144865, 0 0.14285714285714em rgba(12, 42, 58, 0.25);
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transition: .1s linear -webkit-box-shadow;
-  -moz-transition: .1s linear -moz-box-shadow;
-  -ms-transition: .1s linear box-shadow;
-  -o-transition: .1s linear box-shadow;
-  transition: .1s linear box-shadow;
+  -webkit-transition: .1s linear;
+  -moz-transition: .1s linear;
+  -ms-transition: .1s linear;
+  -o-transition: .1s linear;
+  transition: .1s linear;
 }
 .button::-moz-focus-inner, .form button::-moz-focus-inner,
 .form input[type="button"]::-moz-focus-inner,
@@ -1723,7 +1746,7 @@ kbd kbd {
 .form input[type="reset"]:visited,
 .form input[type="submit"]:visited {
   color: white;
-  background: #cc3300;
+  background: #1d678f;
 }
 .button:visited:hover, .form button:visited:hover,
 .form input[type="button"]:visited:hover,
@@ -1743,7 +1766,7 @@ kbd kbd {
 .form input[type="submit"]:active {
   color: white;
   text-decoration: none;
-  background: #ff6600;
+  background: #13aac9;
 }
 .button:active, .form button:active,
 .form input[type="button"]:active,
@@ -1985,4 +2008,8 @@ iframe[id^='twitter-widget-'],
   .boring span span {
     display: none;
   }
+}
+
+.js #disqus {
+  display: none;
 }

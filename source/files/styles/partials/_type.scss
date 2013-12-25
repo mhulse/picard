@@ -374,6 +374,26 @@ span {
 	margin-bottom: #{relative($base_margin)}rem;
 }
 
+.marker,
+.subtle {
+	
+	code {
+		font-size: inherit;
+		color: inherit;
+		text-shadow: none;
+		background: transparent;
+		border: 0;
+		margin: 0;
+		padding: 0;
+		display: inline;
+		box-shadow: none;
+		-webkit-border-radius: 0;
+		   -moz-border-radius: 0;
+				border-radius: 0;
+	}
+	
+}
+
 .body {
 	
 	p {
@@ -475,6 +495,7 @@ p.meta {
 }
 
 %callout {
+	
 	@include baseline($base_font-size - 2, .75);
 	letter-spacing: .03em;
 	padding: #{baseline($base_font-size - 2, .75) / 2}rem;
@@ -500,15 +521,32 @@ p.meta {
 	
 	@extend %callout;
 	
-	color: darken($frog, 10%);
-	border: #{relative(2)}rem solid lighten($frog, 35%);
+	color: darken($frog, 15%);
+	border: #{relative(2)}rem solid fade-out(darken($frog, 10%), .5);
 	background: lighten($frog, 45%);
-	background: -webkit-linear-gradient(top, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
-	background:    -moz-linear-gradient(top, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
-	background:     -ms-linear-gradient(top, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
-	background:      -o-linear-gradient(top, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
-	background:        -webkit-gradient(linear, left top, left bottom, color-stop(0, mix(lighten($frog, 45%), $milk, 35%)), color-stop(100%, lighten($frog, 45%)));
-	background:         linear-gradient(to bottom, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
+	
+	// background: -webkit-linear-gradient(top, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
+	// background:    -moz-linear-gradient(top, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
+	// background:     -ms-linear-gradient(top, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
+	// background:      -o-linear-gradient(top, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
+	// background:        -webkit-gradient(linear, left top, left bottom, color-stop(0, mix(lighten($frog, 45%), $milk, 35%)), color-stop(100%, lighten($frog, 45%)));
+	// background:         linear-gradient(to bottom, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
+	
+	-webkit-box-shadow: inset 0 0 #{relative(10)}rem rgba(lighten($frog, 10%), .7), 0 0 0 #{relative(3)}rem rgba($frog, .1);
+	   -moz-box-shadow: inset 0 0 #{relative(10)}rem rgba(lighten($frog, 10%), .7), 0 0 0 #{relative(3)}rem rgba($frog, .1);
+	        box-shadow: inset 0 0 #{relative(10)}rem rgba(lighten($frog, 10%), .7), 0 0 0 #{relative(3)}rem rgba($frog, .1);
+	
+	a {
+		
+		&,
+		&:visited,
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active { color: $frog; }
+		
+	}
 	
 }
 
@@ -516,15 +554,20 @@ p.meta {
 	
 	@extend %callout;
 	
-	color: darken($chili, 10%);
-	border: #{relative(2)}rem solid lighten($chili, 35%);
+	color: darken($chili, 15%);
+	border: #{relative(2)}rem solid fade-out(darken($chili, 10%), .5);
 	background: lighten($chili, 45%);
-	background: -webkit-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
-	background:    -moz-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
-	background:     -ms-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
-	background:      -o-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
-	background:        -webkit-gradient(linear, left top, left bottom, color-stop(0, mix(lighten($chili, 45%), $milk, 35%)), color-stop(100%, lighten($chili, 45%)));
-	background:         linear-gradient(to bottom, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
+	
+	// background: -webkit-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
+	// background:    -moz-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
+	// background:     -ms-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
+	// background:      -o-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
+	// background:        -webkit-gradient(linear, left top, left bottom, color-stop(0, mix(lighten($chili, 45%), $milk, 35%)), color-stop(100%, lighten($chili, 45%)));
+	// background:         linear-gradient(to bottom, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
+	
+	-webkit-box-shadow: inset 0 0 #{relative(10)}rem rgba(lighten($chili, 10%), .7), 0 0 0 #{relative(3)}rem rgba($chili, .1);
+	   -moz-box-shadow: inset 0 0 #{relative(10)}rem rgba(lighten($chili, 10%), .7), 0 0 0 #{relative(3)}rem rgba($chili, .1);
+	        box-shadow: inset 0 0 #{relative(10)}rem rgba(lighten($chili, 10%), .7), 0 0 0 #{relative(3)}rem rgba($chili, .1);
 	
 	a {
 		

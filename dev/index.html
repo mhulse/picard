@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="no-js">
 
 <!--!
    dBBBBBb     dBP     dBBBP  dBBBBBb   dBBBBBb     dBBBBb                             dBBBBP      dBBBb          dBBBBP
@@ -36,6 +36,16 @@
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 	
 	<!--<![endif]-->
+	
+	<script>
+		
+		;(function(window, document) {
+			
+			document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+			
+		}(window, document));
+		
+	</script>
 	
 	<!-- Use when not on mky.io: -->
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="//mky.io/apple-touch-icon-144x144-precomposed.png">
@@ -322,11 +332,11 @@
 			
 			<h1 id="callout" class="marker"><a href="#callout">Callout</a></h1>
 			
-			<p class="callout-info"><i class="fa fa-info-circle"></i> Li lingues differe solmen in li <code>grammatica</code>, li <code>pronunciation</code> e li plu commun vocabules.</p>
+			<p class="callout-info"><i class="fa fa-info-circle"></i> Li lingues differe solmen in li <code>grammatica</code>, li <code>pronunciation</code> e li plu commun vocabules. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules.</p>
 			
 			<hr>
 			
-			<p class="callout-warn"><i class="fa fa-exclamation-circle"></i> Li lingues differe solmen in li <code>grammatica</code>, li <code>pronunciation</code> e li plu commun vocabules.</p>
+			<p class="callout-warn"><i class="fa fa-exclamation-circle"></i> Li lingues differe solmen in li <code>grammatica</code>, li <code>pronunciation</code> e li plu commun vocabules. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules.</p>
 			
 		</section>
 		
@@ -758,16 +768,21 @@
 				
 				<section id="comments">
 					
-					<p class="callout-warn">
-						<i class="fa fa-exclamation-circle"></i> The owner of this site doesn't necessarily condone the comments here, nor do they review every post.
-						<br>
-						<b><a href="http://help.disqus.com/customer/portal/topics/215154/articles" target="_blank">Not seeing your comment</a></b>? Disqus users, <b><a href="http://help.disqus.com/customer/portal/articles/960202-verifying-your-disqus-account" target="_blank">have you verified your account</a></b>?
-					</p>
+					<h1></h1>
 					
-					<!--
-					<div id="disqus_thread" class="x6"></div>
-					<script>var disqus_shortname='mhulse';(function(){var dsq=document.createElement('script');dsq.async=true;dsq.src='http://'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script>
-					-->
+					<p><a class="button disqus" href="#disqus_thread">Load comments</a></p>
+					
+					<div id="disqus">
+						
+						<p class="callout-warn">
+							<i class="fa fa-exclamation-circle"></i> The owner of this site doesn't necessarily condone the comments here, nor do they review every post.
+							<br>
+							<b><a href="http://help.disqus.com/customer/portal/topics/215154/articles" target="_blank">Not seeing your comment</a></b>? Disqus users, <b><a href="http://help.disqus.com/customer/portal/articles/960202-verifying-your-disqus-account" target="_blank">have you verified your account</a></b>?
+						</p>
+						
+						<div id="disqus_thread" class="x6" data-disqus='{"shortname" : "mhulse", "url" : "http://git.local/mhulse/picard/dev/"}'></div>
+						
+					</div>
 					
 				</section>
 				
@@ -1495,6 +1510,7 @@ p q r s t u v w x y z { | } ~
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
 	
 	<script src="./scripts/wwpd.js"></script>
+	<script src="./scripts/wwpd.mod.disqus.js"></script>
 	<script src="./scripts/wwpd.mod.twitter.js"></script>
 	<script src="./scripts/wwpd.init.js"></script>
 	
@@ -1516,3 +1532,4 @@ p q r s t u v w x y z { | } ~
 	
 </body>
 </html>
+

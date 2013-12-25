@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2013 Micky Hulse.
  * @version 0.1.0
- * @date 2013/12/21
+ * @date 2013/12/25
  */
 
 
@@ -27,6 +27,7 @@
   color: white;
   background: rgba(0, 0, 0, 0.5);
   padding: 0.21428571428571em 0.35714285714286em;
+  border: 0;
 }
 .swatches .milk {
   background: white;
