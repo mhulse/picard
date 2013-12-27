@@ -77,10 +77,9 @@ code,
 
 code {
 	letter-spacing: .05em;
-	color: $gray3;
-	background: fade-out($grayc, .5);
-	border: 1px solid fade-out($grayc, .25);
-	padding: 0 #{relative(3)}rem;
+	color: $bruise;
+	background: rgba($bruise, .25);
+	padding: #{relative(2)}rem #{relative(3)}rem;
 	-webkit-border-radius: #{relative($base_radii)}em;
 	   -moz-border-radius: #{relative($base_radii)}em;
 			border-radius: #{relative($base_radii)}em;

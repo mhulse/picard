@@ -79,6 +79,21 @@ h1#flag {
 		
 	}
 	
+	position: relative;
+	&:before {
+		font-family: FontAwesome;
+		font-size: 1rem;
+		font-style: normal;
+		font-weight: normal;
+		color: $bling;
+		line-height: 1;
+		margin-left: 50px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		content: "\f069";
+	}
+	
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -206,15 +221,16 @@ ins {
 	        border-radius: #{relative($base_radii) - 1}em;
 }
 del {
-	color: fade-out(darken($chili, 20%), .1);
-	background: fade-out($chili, .9);
-	-webkit-text-decoration-color: fade-out($chili, .5);
-	   -moz-text-decoration-color: fade-out($chili, .5);
-	        text-decoration-color: fade-out($chili, .5);
+	color: darken($chili, 50%);
+	background: fade-out($chili, .5);
+	// -webkit-text-decoration-color: fade-out($chili, .5);
+	//    -moz-text-decoration-color: fade-out($chili, .5);
+	//         text-decoration-color: fade-out($chili, .5);
 }
 ins {
-	color: $frog;
+	color: darken($frog, 50%);
 	text-decoration: none;
+	background: fade-out($frog, .5);
 	&:before { content: "["; }
 	&:after { content: "]"; }
 }
@@ -356,8 +372,8 @@ span {
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $bling;
-			background: darken($bling, 20%);
+			color: darken($bling, 20%);
+			background: lighten($bling, 25%);
 		}
 		
 	}
@@ -365,7 +381,7 @@ span {
 }
 
 .subtle {
-	@include baseline(16, .75);
+	@include baseline($base_font-size + 8, .75);
 	font-weight: normal;
 	font-family: $mono;
 	color: darken($bling, 10%);
@@ -494,24 +510,34 @@ p.meta {
 	
 }
 
-%callout {
+.callout {
 	
 	@include baseline($base_font-size - 2, .75);
+	color: $gray3;
+	background-color: $grayd;
 	letter-spacing: .03em;
 	padding: #{baseline($base_font-size - 2, .75) / 2}rem;
-	-webkit-border-radius: #{relative($base_radii)}em;
-	   -moz-border-radius: #{relative($base_radii)}em;
-	        border-radius: #{relative($base_radii)}em;
+	-webkit-border-radius: #{relative($base_radii) * 2}em;
+	   -moz-border-radius: #{relative($base_radii) * 2}em;
+	        border-radius: #{relative($base_radii) * 2}em;
 	
 	a {
 		
+		font-weight: bold;
+		
 		&,
-		&:visited { font-weight: bold; }
+		&:visited {
+			color: $gray3;
+			text-decoration: none;
+		}
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
-		&:active { text-decoration: underline; }
+		&:active {
+			color: $gray3;
+			text-decoration: underline;
+		}
 		
 	}
 	
@@ -519,22 +545,8 @@ p.meta {
 
 .callout-info {
 	
-	@extend %callout;
-	
-	color: darken($frog, 15%);
-	border: #{relative(2)}rem solid fade-out(darken($frog, 10%), .5);
-	background: lighten($frog, 45%);
-	
-	// background: -webkit-linear-gradient(top, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
-	// background:    -moz-linear-gradient(top, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
-	// background:     -ms-linear-gradient(top, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
-	// background:      -o-linear-gradient(top, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
-	// background:        -webkit-gradient(linear, left top, left bottom, color-stop(0, mix(lighten($frog, 45%), $milk, 35%)), color-stop(100%, lighten($frog, 45%)));
-	// background:         linear-gradient(to bottom, mix(lighten($frog, 45%), $milk, 35%) 0, lighten($frog, 45%) 100%);
-	
-	-webkit-box-shadow: inset 0 0 #{relative(10)}rem rgba(lighten($frog, 10%), .7), 0 0 0 #{relative(3)}rem rgba($frog, .1);
-	   -moz-box-shadow: inset 0 0 #{relative(10)}rem rgba(lighten($frog, 10%), .7), 0 0 0 #{relative(3)}rem rgba($frog, .1);
-	        box-shadow: inset 0 0 #{relative(10)}rem rgba(lighten($frog, 10%), .7), 0 0 0 #{relative(3)}rem rgba($frog, .1);
+	color: darken($ice, 60%);
+	background-color: $ice;
 	
 	a {
 		
@@ -544,30 +556,16 @@ p.meta {
 		&:focus,
 		&:focus:hover,
 		&:hover,
-		&:active { color: $frog; }
+		&:active { color: darken($ice, 60%); }
 		
 	}
 	
 }
 
-.callout-warn {
+.callout-success {
 	
-	@extend %callout;
-	
-	color: darken($chili, 15%);
-	border: #{relative(2)}rem solid fade-out(darken($chili, 10%), .5);
-	background: lighten($chili, 45%);
-	
-	// background: -webkit-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
-	// background:    -moz-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
-	// background:     -ms-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
-	// background:      -o-linear-gradient(top, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
-	// background:        -webkit-gradient(linear, left top, left bottom, color-stop(0, mix(lighten($chili, 45%), $milk, 35%)), color-stop(100%, lighten($chili, 45%)));
-	// background:         linear-gradient(to bottom, mix(lighten($chili, 45%), $milk, 35%) 0, lighten($chili, 45%) 100%);
-	
-	-webkit-box-shadow: inset 0 0 #{relative(10)}rem rgba(lighten($chili, 10%), .7), 0 0 0 #{relative(3)}rem rgba($chili, .1);
-	   -moz-box-shadow: inset 0 0 #{relative(10)}rem rgba(lighten($chili, 10%), .7), 0 0 0 #{relative(3)}rem rgba($chili, .1);
-	        box-shadow: inset 0 0 #{relative(10)}rem rgba(lighten($chili, 10%), .7), 0 0 0 #{relative(3)}rem rgba($chili, .1);
+	color: darken($frog, 60%);
+	background-color: $frog;
 	
 	a {
 		
@@ -577,7 +575,45 @@ p.meta {
 		&:focus,
 		&:focus:hover,
 		&:hover,
-		&:active { color: $chili; }
+		&:active { color: darken($frog, 60%); }
+		
+	}
+	
+}
+
+.callout-warning {
+	
+	color: darken($duck, 60%);
+	background-color: $duck;
+	
+	a {
+		
+		&,
+		&:visited,
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active { color: darken($duck, 60%); }
+		
+	}
+	
+}
+
+.callout-error {
+	
+	color: darken($chili, 60%);
+	background-color: $chili;
+	
+	a {
+		
+		&,
+		&:visited,
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active { color: darken($chili, 60%); }
 		
 	}
 	

@@ -40,3 +40,13 @@
 }
 
 .js #disqus { display: none; }
+
+
+.silly:before {
+	font-family: FontAwesome;
+	font-size: inherit;
+	font-style: normal;
+	font-weight: normal;
+	color: $bling;
+	content: "\f069\00a0";
+}

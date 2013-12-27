@@ -18,7 +18,7 @@ WWPD.register(function() {
 		
 		if ($disqus_thread.length) {
 			
-			$('.disqus').click(function(e) {
+			$('.disqus').one('click.disqus', function(e) {
 				
 				var data = $disqus_thread.data('disqus'),
 				    i;
@@ -35,20 +35,20 @@ WWPD.register(function() {
 					
 				}
 				
-				$(this).fadeOut(500, function() {
+				//$this.fadeOut(500, function() {
+				
+				$disqus.fadeIn(1000, function() {
 					
-					$disqus.fadeIn(1000, function() {
-						
-						$.ajax({
-							type: 'GET',
-							url: 'http://' + window.disqus_shortname + '.disqus.com/embed.js',
-							dataType: 'script',
-							cache: true
-						});
-						
+					$.ajax({
+						type: 'GET',
+						url: 'http://' + window.disqus_shortname + '.disqus.com/embed.js',
+						dataType: 'script',
+						cache: true
 					});
 					
 				});
+				
+				//});
 				
 			});
 			

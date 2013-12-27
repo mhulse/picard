@@ -36,18 +36,15 @@ figcaption {
 	position: relative;
 	&::after {
 		content: "";
-		position: absolute;
+		border-width: 0 #{relative(10)}rem #{relative(10)}rem;
 		border-style: solid;
-		top: -9px;
-		right: 0;
-		left: 0;
-		// Example on this pae might work better for centering:
-		// http://www.yuiblog.com/blog/2010/11/22/css-quick-tip-css-arrows-and-shapes-without-markup/
-		margin: 0 auto;
-		display: block;
-		width: 0;
-		border-width: 0 10px 10px;
 		border-color: $gray2 transparent;
+		// http://www.yuiblog.com/blog/2010/11/22/css-quick-tip-css-arrows-and-shapes-without-markup/
+		width: 0;
+		margin-left: -#{relative(10)}rem;
+		position: absolute;
+		top: -#{relative(9)}rem;
+		left: 50%;
 		-webkit-transform: rotate(360deg);
 	}
 	

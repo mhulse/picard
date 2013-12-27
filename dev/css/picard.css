@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2013 Micky Hulse.
  * @version 0.1.0
- * @date 2013/12/25
+ * @date 2013/12/27
  */
 
 
@@ -957,6 +957,7 @@ h1#flag {
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
+  position: relative;
 }
 h1#flag span {
   border: 0;
@@ -985,6 +986,19 @@ h1#flag a:visited:hover, h1#flag a:focus, h1#flag a:focus:hover, h1#flag a:hover
 }
 h1#flag a:active, h1#flag a:focus {
   outline: none;
+}
+h1#flag:before {
+  font-family: FontAwesome;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: normal;
+  color: #ffd100;
+  line-height: 1;
+  margin-left: 50px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  content: "\f069";
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1054,7 +1068,7 @@ blockquote a:visited:hover, blockquote a:focus, blockquote a:focus:hover, blockq
 }
 
 mark {
-  background: rgba(243, 243, 21, 0.9);
+  background: rgba(254, 239, 179, 0.9);
   padding: 0.07142857142857em 0.21428571428571em;
   -webkit-border-radius: 0.21428571428571em;
   -moz-border-radius: 0.21428571428571em;
@@ -1062,9 +1076,9 @@ mark {
 }
 
 s {
-  -webkit-text-decoration-color: rgba(255, 0, 0, 0.5);
-  -moz-text-decoration-color: rgba(255, 0, 0, 0.5);
-  text-decoration-color: rgba(255, 0, 0, 0.5);
+  -webkit-text-decoration-color: rgba(255, 186, 186, 0.5);
+  -moz-text-decoration-color: rgba(255, 186, 186, 0.5);
+  text-decoration-color: rgba(255, 186, 186, 0.5);
 }
 
 del,
@@ -1079,16 +1093,14 @@ ins {
 }
 
 del {
-  color: rgba(153, 0, 0, 0.9);
-  background: rgba(255, 0, 0, 0.1);
-  -webkit-text-decoration-color: rgba(255, 0, 0, 0.5);
-  -moz-text-decoration-color: rgba(255, 0, 0, 0.5);
-  text-decoration-color: rgba(255, 0, 0, 0.5);
+  color: #ba0000;
+  background: rgba(255, 186, 186, 0.5);
 }
 
 ins {
-  color: #00cc00;
+  color: #68941e;
   text-decoration: none;
+  background: rgba(223, 242, 191, 0.5);
 }
 ins:before {
   content: "[";
@@ -1190,13 +1202,13 @@ span.amp {
   color: #997d00;
 }
 .marker a:visited:hover, .marker a:focus, .marker a:focus:hover, .marker a:hover, .marker a:active {
-  color: #ffd100;
-  background: #997d00;
+  color: #997d00;
+  background: #ffe880;
 }
 
 .subtle {
-  font-size: 1.14285714285714rem;
-  line-height: 1.03125;
+  font-size: 1.57142857142857rem;
+  line-height: 0.75;
   font-weight: normal;
   font-family: monospace, serif;
   color: #cca700;
@@ -1292,44 +1304,59 @@ p.meta:hover {
   background: white;
 }
 
-.callout-info, .callout-warn {
+.callout {
   font-size: 0.85714285714286rem;
   line-height: 1.375;
+  color: #333333;
+  background-color: #dddddd;
   letter-spacing: .03em;
   padding: 0.6875rem;
-  -webkit-border-radius: 0.21428571428571em;
-  -moz-border-radius: 0.21428571428571em;
-  border-radius: 0.21428571428571em;
+  -webkit-border-radius: 0.42857142857143em;
+  -moz-border-radius: 0.42857142857143em;
+  border-radius: 0.42857142857143em;
 }
-.callout-info a, .callout-warn a, .callout-info a:visited, .callout-warn a:visited {
+.callout a {
   font-weight: bold;
 }
-.callout-info a:visited:hover, .callout-warn a:visited:hover, .callout-info a:focus, .callout-warn a:focus, .callout-info a:focus:hover, .callout-warn a:focus:hover, .callout-info a:hover, .callout-warn a:hover, .callout-info a:active, .callout-warn a:active {
+.callout a, .callout a:visited {
+  color: #333333;
+  text-decoration: none;
+}
+.callout a:visited:hover, .callout a:focus, .callout a:focus:hover, .callout a:hover, .callout a:active {
+  color: #333333;
   text-decoration: underline;
 }
 
 .callout-info {
-  color: green;
-  border: 0.14285714285714rem solid rgba(0, 153, 0, 0.5);
-  background: #b3ffb3;
-  -webkit-box-shadow: inset 0 0 0.71428571428571rem rgba(0, 255, 0, 0.7), 0 0 0 0.21428571428571rem rgba(0, 204, 0, 0.1);
-  -moz-box-shadow: inset 0 0 0.71428571428571rem rgba(0, 255, 0, 0.7), 0 0 0 0.21428571428571rem rgba(0, 204, 0, 0.1);
-  box-shadow: inset 0 0 0.71428571428571rem rgba(0, 255, 0, 0.7), 0 0 0 0.21428571428571rem rgba(0, 204, 0, 0.1);
+  color: #0d5476;
+  background-color: #bde5f8;
 }
 .callout-info a, .callout-info a:visited, .callout-info a:visited:hover, .callout-info a:focus, .callout-info a:focus:hover, .callout-info a:hover, .callout-info a:active {
-  color: #00cc00;
+  color: #0d5476;
 }
 
-.callout-warn {
-  color: #b30000;
-  border: 0.14285714285714rem solid rgba(204, 0, 0, 0.5);
-  background: #ffe5e5;
-  -webkit-box-shadow: inset 0 0 0.71428571428571rem rgba(255, 51, 51, 0.7), 0 0 0 0.21428571428571rem rgba(255, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 0 0.71428571428571rem rgba(255, 51, 51, 0.7), 0 0 0 0.21428571428571rem rgba(255, 0, 0, 0.1);
-  box-shadow: inset 0 0 0.71428571428571rem rgba(255, 51, 51, 0.7), 0 0 0 0.21428571428571rem rgba(255, 0, 0, 0.1);
+.callout-success {
+  color: #4a6a15;
+  background-color: #dff2bf;
 }
-.callout-warn a, .callout-warn a:visited, .callout-warn a:visited:hover, .callout-warn a:focus, .callout-warn a:focus:hover, .callout-warn a:hover, .callout-warn a:active {
-  color: red;
+.callout-success a, .callout-success a:visited, .callout-success a:visited:hover, .callout-success a:focus, .callout-success a:focus:hover, .callout-success a:hover, .callout-success a:active {
+  color: #4a6a15;
+}
+
+.callout-warning {
+  color: #7d6502;
+  background-color: #feefb3;
+}
+.callout-warning a, .callout-warning a:visited, .callout-warning a:visited:hover, .callout-warning a:focus, .callout-warning a:focus:hover, .callout-warning a:hover, .callout-warning a:active {
+  color: #7d6502;
+}
+
+.callout-error {
+  color: #870000;
+  background-color: #ffbaba;
+}
+.callout-error a, .callout-error a:visited, .callout-error a:visited:hover, .callout-error a:focus, .callout-error a:focus:hover, .callout-error a:hover, .callout-error a:active {
+  color: #870000;
 }
 
 .label {
@@ -1556,10 +1583,9 @@ var {
 
 code {
   letter-spacing: .05em;
-  color: #333333;
-  background: rgba(204, 204, 204, 0.5);
-  border: 1px solid rgba(204, 204, 204, 0.75);
-  padding: 0 0.21428571428571rem;
+  color: #504375;
+  background: rgba(80, 67, 117, 0.25);
+  padding: 0.14285714285714rem 0.21428571428571rem;
   -webkit-border-radius: 0.21428571428571em;
   -moz-border-radius: 0.21428571428571em;
   border-radius: 0.21428571428571em;
@@ -1703,33 +1729,29 @@ kbd kbd {
   font-weight: normal;
   text-align: center;
   text-decoration: none;
-  text-shadow: 0 0.07142857142857em 0.07142857142857em #0c2a3a;
+  text-shadow: 0 0.07142857142857rem 0.07142857142857rem #4d3f00;
   letter-spacing: .1em;
   color: white;
   white-space: nowrap;
   vertical-align: baseline;
-  background: #1d678f;
-  border: 0.14285714285714rem solid rgba(12, 42, 58, 0.7);
-  padding: 0.61111111111111em 3em;
+  background: #997d00;
+  border: 0.14285714285714rem solid #665400;
+  margin: 0.71428571428571rem 0;
+  padding: 0.30555555555556em 2em;
   display: inline-block;
   cursor: pointer;
   zoom: 1;
-  -webkit-border-radius: 0.21428571428571em;
-  -moz-border-radius: 0.21428571428571em;
-  border-radius: 0.21428571428571em;
-  -webkit-box-shadow: inset 0 0.07142857142857em 0.71428571428571em 0 #144865, 0 0.14285714285714em rgba(12, 42, 58, 0.25);
-  -moz-box-shadow: inset 0 0.07142857142857em 0.71428571428571em 0 #144865, 0 0.14285714285714em rgba(12, 42, 58, 0.25);
-  box-shadow: inset 0 0.07142857142857em 0.71428571428571em 0 #144865, 0 0.14285714285714em rgba(12, 42, 58, 0.25);
+  -webkit-border-radius: 0.21428571428571rem;
+  -moz-border-radius: 0.21428571428571rem;
+  border-radius: 0.21428571428571rem;
+  -webkit-box-shadow: inset 0 0.07142857142857rem 0.71428571428571rem 0 #b39200, 0 0.14285714285714em rgba(204, 167, 0, 0.25);
+  -moz-box-shadow: inset 0 0.07142857142857rem 0.71428571428571rem 0 #b39200, 0 0.14285714285714em rgba(204, 167, 0, 0.25);
+  box-shadow: inset 0 0.07142857142857rem 0.71428571428571rem 0 #b39200, 0 0.14285714285714em rgba(204, 167, 0, 0.25);
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transition: .1s linear;
-  -moz-transition: .1s linear;
-  -ms-transition: .1s linear;
-  -o-transition: .1s linear;
-  transition: .1s linear;
 }
 .button::-moz-focus-inner, .form button::-moz-focus-inner,
 .form input[type="button"]::-moz-focus-inner,
@@ -1746,7 +1768,6 @@ kbd kbd {
 .form input[type="reset"]:visited,
 .form input[type="submit"]:visited {
   color: white;
-  background: #1d678f;
 }
 .button:visited:hover, .form button:visited:hover,
 .form input[type="button"]:visited:hover,
@@ -1766,7 +1787,7 @@ kbd kbd {
 .form input[type="submit"]:active {
   color: white;
   text-decoration: none;
-  background: #13aac9;
+  background: #b39200;
 }
 .button:active, .form button:active,
 .form input[type="button"]:active,
@@ -1936,16 +1957,14 @@ figcaption {
 }
 figcaption::after {
   content: "";
-  position: absolute;
+  border-width: 0 0.71428571428571rem 0.71428571428571rem;
   border-style: solid;
-  top: -9px;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
-  display: block;
-  width: 0;
-  border-width: 0 10px 10px;
   border-color: #222222 transparent;
+  width: 0;
+  margin-left: -0.71428571428571rem;
+  position: absolute;
+  top: -0.64285714285714rem;
+  left: 50%;
   -webkit-transform: rotate(360deg);
 }
 figcaption p {
@@ -2012,4 +2031,13 @@ iframe[id^='twitter-widget-'],
 
 .js #disqus {
   display: none;
+}
+
+.silly:before {
+  font-family: FontAwesome;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: normal;
+  color: #ffd100;
+  content: "\f069\00a0";
 }

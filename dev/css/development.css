@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2013 Micky Hulse.
  * @version 0.1.0
- * @date 2013/12/25
+ * @date 2013/12/27
  */
 
 
@@ -32,6 +32,12 @@
 .swatches .milk {
   background: white;
 }
+.swatches .lobster {
+  background: #cc3300;
+}
+.swatches .juice {
+  background: #ff6600;
+}
 .swatches .bling {
   background: #ffd100;
 }
@@ -44,14 +50,11 @@
 .swatches .smurf {
   background: #13aac9;
 }
-.swatches .lobster {
-  background: #cc3300;
-}
 .swatches .dusk {
   background: #1d678f;
 }
-.swatches .juice {
-  background: #ff6600;
+.swatches .bruise {
+  background: #504375;
 }
 .swatches .raven {
   background: black;
@@ -98,12 +101,15 @@
 .swatches .gray1 {
   background: #111111;
 }
-.swatches .duck {
-  background: #f3f315;
-}
-.swatches .chili {
-  background: red;
+.swatches .ice {
+  background: #bde5f8;
 }
 .swatches .frog {
-  background: #00cc00;
+  background: #dff2bf;
+}
+.swatches .duck {
+  background: #feefb3;
+}
+.swatches .chili {
+  background: #ffbaba;
 }
