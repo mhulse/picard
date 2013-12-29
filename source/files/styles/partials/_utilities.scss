@@ -72,3 +72,13 @@
 	figure & { margin: 0; }
 	
 }
+
+// http://css-tricks.com/examples/IconFont/
+[data-icon]:before {
+	font-family: FontAwesome;
+	font-size: inherit;
+	font-style: normal;
+	font-weight: normal;
+	content: attr(data-icon);
+	speak: none;
+}
