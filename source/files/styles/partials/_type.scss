@@ -26,27 +26,6 @@ h1#flag {
 		
 		display: inline-block;
 		
-		// -webkit-animation: {
-		// 	duration: .3s;
-		// 	timing-function: ease-in-out;
-		// 	iteration-count: infinite;
-		// }
-		// -moz-animation: {
-		// 	duration: .3s;
-		// 	timing-function: ease-in-out;
-		// 	iteration-count: infinite;
-		// }
-		// -o-animation: {
-		// 	duration: .3s;
-		// 	timing-function: ease-in-out;
-		// 	iteration-count: infinite;
-		// }
-		// animation: {
-		// 	duration: .3s;
-		// 	timing-function: ease-in-out;
-		// 	iteration-count: infinite;
-		// }
-		
 		&,
 		&:visited { color: $smurf; }
 		&:visited:hover,
@@ -58,23 +37,10 @@ h1#flag {
 			text-decoration: none;
 		}
 		
-		// &:hover {
-		// 	-webkit-animation-name: jittery;
-		// 	   -moz-animation-name: jittery;
-		// 	     -o-animation-name: jittery;
-		// 	        animation-name: jittery;
-		// }
-		
 		&:active,
-		&:focus {
-			outline: none;
-			//-webkit-transform: scale3d(0.9, 0.9, 1);
-		}
+		&:focus { outline: none; }
 		
 		-webkit-transition: color 250ms linear;
-		   -moz-transition: color 250ms linear;
-		    -ms-transition: color 250ms linear;
-		     -o-transition: color 250ms linear;
 		        transition: color 250ms linear;
 		
 	}
@@ -112,12 +78,6 @@ h1, h2, h3, h4, h5, h6 {
 			color: $goblin;
 			text-decoration: none;
 		}
-		
-		// -webkit-transition: color 100ms linear;
-		//    -moz-transition: color 100ms linear;
-		//     -ms-transition: color 100ms linear;
-		//      -o-transition: color 100ms linear;
-		//         transition: color 100ms linear;
 		
 	}
 	
@@ -199,9 +159,7 @@ blockquote {
 mark {
 	background: fade-out($duck, .1);
 	padding: #{relative(1)}em #{relative(3)}em;
-	-webkit-border-radius: #{relative($base_radii)}em;
-	   -moz-border-radius: #{relative($base_radii)}em;
-	        border-radius: #{relative($base_radii)}em;
+	border-radius: #{relative($base_radii)}em;
 }
 
 s {
@@ -216,23 +174,21 @@ ins {
 	letter-spacing: .05em;
 	padding: #{relative(1)}rem #{relative(3)}rem;
 	position: relative;
-	-webkit-border-radius: #{relative($base_radii) - 1}em;
-	   -moz-border-radius: #{relative($base_radii) - 1}em;
-	        border-radius: #{relative($base_radii) - 1}em;
+	border-radius: #{relative($base_radii) - 1}em;
 }
 del {
 	color: darken($chili, 50%);
 	background: fade-out($chili, .5);
-	// -webkit-text-decoration-color: fade-out($chili, .5);
-	//    -moz-text-decoration-color: fade-out($chili, .5);
-	//         text-decoration-color: fade-out($chili, .5);
 }
 ins {
+	
 	color: darken($frog, 50%);
 	text-decoration: none;
 	background: fade-out($frog, .5);
+	
 	&:before { content: "["; }
 	&:after { content: "]"; }
+	
 }
 
 q {
@@ -248,7 +204,7 @@ abbr {
 	
 	&[title] { border-bottom: #{relative(1)}rem dotted; }
 	
-	&[title="et cetera"] { font-family: "Hoefler Text", Palatino, Constantia, "Palatino Linotype", cursive; }
+	&[title="et cetera"] { font-family: $etc; }
 	
 }
 
@@ -285,7 +241,7 @@ span {
 	
 	&.amp {
 		font-size: 110%;
-		font-family: adobe-caslon-pro, Adobe Caslon Pro, Baskerville, "Goudy Old Style", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", Times, serif;;
+		font-family: $amp;
 		font-weight: normal;
 		font-style: italic;
 		line-height: 0;
@@ -361,9 +317,7 @@ span {
 		padding: 0;
 		display: inline;
 		box-shadow: none;
-		-webkit-border-radius: 0;
-		   -moz-border-radius: 0;
-				border-radius: 0;
+		border-radius: 0;
 	}
 	
 }

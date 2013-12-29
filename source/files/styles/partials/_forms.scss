@@ -20,7 +20,6 @@
 		
 		@include baseline($base_font-size + 2);
 		padding: #{baseline($base_font-size) / 4}em;
-		
 		color: $gray3;
 		letter-spacing: .05em;
 		text-align: center;
@@ -28,35 +27,20 @@
 		background: lighten($graye, 5%);
 		width: 100%;
 		display: block;
-		
 		// h-offset, v-offset, blur, spread, color
-		-webkit-box-shadow: inset 0 #{relative(1)}em #{relative(3)}em $grayc;
-		   -moz-box-shadow: inset 0 #{relative(1)}em #{relative(3)}em $grayc;
-		        box-shadow: inset 0 #{relative(1)}em #{relative(3)}em $grayc;
-		
+		box-shadow: inset 0 #{relative(1)}em #{relative(3)}em $grayc;
 		-webkit-box-sizing: border-box;
 		   -moz-box-sizing: border-box;
 		        box-sizing: border-box;
-		
 		-webkit-appearance: none;
 		   -moz-appearance: none;
 		        appearance: none;
-		
-		-webkit-border-radius: 0;
-		   -moz-border-radius: 0;
-		    -ms-border-radius: 0;
-		     -o-border-radius: 0;
-		        border-radius: 0;
-		
+		border-radius: 0;
 		-webkit-transition: .3s linear border;
-		   -moz-transition: .3s linear border;
-		    -ms-transition: .3s linear border;
-		     -o-transition: .3s linear border;
 		        transition: .3s linear border;
-		
 		-webkit-background-clip: padding;
 		   -moz-background-clip: padding;
-		        background-clip: padding-box;
+				background-clip: padding-box;
 		
 		&::-webkit-input-placeholder {
 			text-align: center;
@@ -107,31 +91,14 @@
 		&[type="search"] {
 			
 			@extend %fields;
-			
 			background: $grayd;
-			background: -webkit-linear-gradient(top, $grayd 0, $milk 100%);
-			background:    -moz-linear-gradient(top, $grayd 0, $milk 100%);
-			background:     -ms-linear-gradient(top, $grayd 0, $milk 100%);
-			background:      -o-linear-gradient(top, $grayd 0, $milk 100%);
-			background:        -webkit-gradient(linear, left top, left bottom, color-stop(0, $grayd), color-stop(100%, $milk));
-			background:         linear-gradient(to bottom, $grayd 0, $milk 100%);
-			
+			background: linear-gradient(to bottom, $grayd 0, $milk 100%);
 			padding: #{baseline($base_font-size) / 2}em;
-			
-			-webkit-border-radius: 0 0 #{relative($base_radii * 2)}rem #{relative($base_radii * 2)}rem;
-			   -moz-border-radius: 0 0 #{relative($base_radii * 2)}rem #{relative($base_radii * 2)}rem;
-			    -ms-border-radius: 0 0 #{relative($base_radii * 2)}rem #{relative($base_radii * 2)}rem;
-			     -o-border-radius: 0 0 #{relative($base_radii * 2)}rem #{relative($base_radii * 2)}rem;
-			        border-radius: 0 0 #{relative($base_radii * 2)}rem #{relative($base_radii * 2)}rem;
-			
+			border-radius: 0 0 #{relative($base_radii * 2)}rem #{relative($base_radii * 2)}rem;
 			// h-offset, v-offset, blur, spread, color
-			-webkit-box-shadow: inset 0 #{relative(1)}rem #{relative(5)}rem rgba($raven, .5), 0 #{relative(3)}rem #{relative(1)}rem rgba($raven, .05);
-			   -moz-box-shadow: inset 0 #{relative(1)}rem #{relative(5)}rem rgba($raven, .5), 0 #{relative(3)}rem #{relative(1)}rem rgba($raven, .05);
-			        box-shadow: inset 0 #{relative(1)}rem #{relative(5)}rem rgba($raven, .5), 0 #{relative(3)}rem #{relative(1)}rem rgba($raven, .05);
-			
+			box-shadow: inset 0 #{relative(1)}rem #{relative(5)}rem rgba($raven, .5), 0 #{relative(3)}rem #{relative(1)}rem rgba($raven, .05);
 			border: 0 none;
 			border-top: #{relative(4)}rem solid $raven;
-			
 			display: block;
 			
 			&:focus { border-color: $lobster; }

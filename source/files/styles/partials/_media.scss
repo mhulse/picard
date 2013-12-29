@@ -20,17 +20,12 @@ figcaption {
 	letter-spacing: .05em;
 	word-spacing: .25em;
 	color: $grayd;
-	
 	background: $gray1;
-	background: -webkit-linear-gradient(top, $gray2 0, $gray1 100%);
-	background:    -moz-linear-gradient(top, $gray2 0, $gray1 100%);
-	background:     -ms-linear-gradient(top, $gray2 0, $gray1 100%);
-	background:      -o-linear-gradient(top, $gray2 0, $gray1 100%);
-	background:        -webkit-gradient(linear, left top, left bottom, color-stop(0, $gray2), color-stop(100%, $gray1));
-	background:         linear-gradient(to bottom, $gray2 0, $gray1 100%);
-	
+	background: linear-gradient(to bottom, $gray2 0, $gray1 100%);
 	margin-top: #{relative(13)}rem;
 	padding: #{baseline($base_font-size, .75)}em;
+	border-radius: #{relative($base_radii * 2)}rem;
+	box-shadow: 0 0 #{relative(2)}rem rgba(0, 0, 0, .9);
 	
 	// Caption triangle:
 	position: relative;
@@ -47,14 +42,6 @@ figcaption {
 		left: 50%;
 		-webkit-transform: rotate(360deg);
 	}
-	
-	-webkit-border-radius: #{relative($base_radii * 2)}rem;
-	   -moz-border-radius: #{relative($base_radii * 2)}rem;
-	        border-radius: #{relative($base_radii * 2)}rem;
-	
-	-webkit-box-shadow: 0 0 #{relative(2)}rem rgba(0, 0, 0, .9);
-	   -moz-box-shadow: 0 0 #{relative(2)}rem rgba(0, 0, 0, .9);
-	        box-shadow: 0 0 #{relative(2)}rem rgba(0, 0, 0, .9);
 	
 	p {
 		
@@ -80,9 +67,6 @@ figcaption {
 		}
 		
 	}
-	
-	// > :first-child { margin-top: 0 !important; }
-	// > :last-child { margin-bottom: 0 !important; }
 	
 }
 

@@ -60,8 +60,10 @@ hr,
 		bottom: #{relative($base_margin) * 4}rem;
 	}
 	padding: 0;
+	
 	-webkit-box-sizing: content-box;
 	   -moz-box-sizing: content-box;
+	    -ms-box-sizing: content-box;
 	        box-sizing: content-box;
 	
 	aside &,

@@ -63,7 +63,8 @@
 		display: block;
 	}
 	
-	> * {
+	> *,
+	img:first-of-type {
 		margin-top: 0;
 		margin-bottom: 0;
 		-webkit-transform: translateZ(0);

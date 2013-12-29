@@ -4,16 +4,9 @@ iframe[id^='twitter-widget-'],
 .cloud {
 	
 	> li {
-		
 		display: inline-block;
-		//letter-spacing: .03em;
 		text-transform: lowercase;
-		//font-weight: bolder;
-		//vertical-align: baseline;
 		margin: .1rem .25rem;
-		
-		//&:before { content: none; }
-		
 	}
 	
 	a {
@@ -21,14 +14,8 @@ iframe[id^='twitter-widget-'],
 		line-height: 1;
 		display: block;
 		
-		// h-offset, v-offset, blur, color
-		//text-shadow: 0 #{relative(1)}rem #{relative(1)}rem rgba($raven, .25);
-		
 		&,
-		&:visited {
-			color: $dusk;
-			//border-bottom: #{relative(3)}em solid $gray3;
-		}
+		&:visited { color: $dusk; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
@@ -36,7 +23,6 @@ iframe[id^='twitter-widget-'],
 		&:active {
 			color: $smurf;
 			text-decoration: none;
-			//border-bottom-color: $lobster;
 		}
 		
 	}
@@ -50,10 +36,7 @@ iframe[id^='twitter-widget-'],
 	font-style: italic;
 	border: #{relative(1)}rem solid $grayb;
 	background: lighten($graye, 5%);
-	
-	-webkit-border-radius: #{relative($base_radii)}em;
-	   -moz-border-radius: #{relative($base_radii)}em;
-	        border-radius: #{relative($base_radii)}em;
+	border-radius: #{relative($base_radii)}em;
 	
 	a {
 		
@@ -76,54 +59,35 @@ iframe[id^='twitter-widget-'],
 
 ul.meta {
 	
+	// h-offset, v-offset, blur, spread, color
+	box-shadow: 0 #{relative(3)}rem fade-out($raven, .9);
+	
 	> li {
 		
 		border-bottom: #{relative(1)}rem solid $grayb;
 		margin: 0;
 		padding: #{baseline($base_font-size, .875) / 2}em;
 		background: lighten($graye, 5%);
-		
-		-webkit-box-shadow: inset 0 0 #{relative(10)}em 0 rgba($raven, .2);
-		   -moz-box-shadow: inset 0 0 #{relative(10)}em 0 rgba($raven, .2);
-		        box-shadow: inset 0 0 #{relative(10)}em 0 rgba($raven, .2);
+		box-shadow: inset 0 0 #{relative(10)}em 0 rgba($raven, .2);
 		
 		&:last-child { border-bottom: 0; }
 		
-		//&:before { content: none; }
-		
 	}
-	
-	// h-offset, v-offset, blur, spread, color
-	-webkit-box-shadow: 0 #{relative(3)}rem fade-out($raven, .9);
-	   -moz-box-shadow: 0 #{relative(3)}rem fade-out($raven, .9);
-	        box-shadow: 0 #{relative(3)}rem fade-out($raven, .9);
 	
 }
 
 p.meta {
-	
 	padding: #{baseline($base_font-size, .375)}em #{baseline($base_font-size)}em;
-	
-	// box-shadow: inset 0 #{relative(10)}em #{relative(10)}em -#{relative(11)}em $grayc,
-	//             inset 0 -#{relative(11)}em #{relative(10)}em -#{relative(10)}em $grayc,
-	//             0 0 #{relative(5)}em 0 rgba(0, 0, 0, .3);
-	
-	-webkit-box-shadow: inset 0 0 #{relative(10)}em 0 rgba($raven, .2), 0 #{relative(3)}rem fade-out($raven, .9);
-	   -moz-box-shadow: inset 0 0 #{relative(10)}em 0 rgba($raven, .2), 0 #{relative(3)}rem fade-out($raven, .9);
-	        box-shadow: inset 0 0 #{relative(10)}em 0 rgba($raven, .2), 0 #{relative(3)}rem fade-out($raven, .9);
-	
+	box-shadow: inset 0 0 #{relative(10)}em 0 rgba($raven, .2), 0 #{relative(3)}rem fade-out($raven, .9);
 }
 
 ul.meta > li,
 p.meta {
 	
-	&:hover { background: $milk; }
-	
 	-webkit-transition: background-color 200ms linear;
-	   -moz-transition: background-color 200ms linear;
-	    -ms-transition: background-color 200ms linear;
-	     -o-transition: background-color 200ms linear;
 	        transition: background-color 200ms linear;
+	
+	&:hover { background: $milk; }
 	
 }
 
@@ -134,9 +98,7 @@ p.meta {
 	background-color: $grayd;
 	letter-spacing: .03em;
 	padding: #{relative($base_padding * 2)}rem;
-	-webkit-border-radius: #{relative($base_radii) * 2}em;
-	   -moz-border-radius: #{relative($base_radii) * 2}em;
-	        border-radius: #{relative($base_radii) * 2}em;
+	border-radius: #{relative($base_radii) * 2}em;
 	
 	a {
 		
@@ -250,17 +212,12 @@ p.meta {
 	border-width: #{relative(5)}rem 0 0;
 	border-style: solid;
 	border-color: $grayd;
-	//background: $graye;
 	margin: {
 		top: #{relative($base_margin)}rem;
 		bottom: 0;
 	}
 	padding: #{relative($base_padding) / 2}rem 0;
 	display: inline-block;
-	
-	// -webkit-box-shadow: 0 -#{relative(3)}rem rgba($dusk, .1);
-	//    -moz-box-shadow: 0 -#{relative(3)}rem rgba($dusk, .1);
-	//         box-shadow: 0 -#{relative(3)}rem rgba($dusk, .1);
 	
 	> {
 		
@@ -272,18 +229,13 @@ p.meta {
 			
 			a,
 			span {
-				
 				@include baseline($base_font-size - 2);
 				text-transform: uppercase;
 				letter-spacing: .05em;
 				margin: 0 .25em;
 				padding: .1em .75em;
 				display: inline-block;
-				
-				-webkit-border-radius: #{relative($base_radii)}rem;
-				   -moz-border-radius: #{relative($base_radii)}rem;
-				        border-radius: #{relative($base_radii)}rem;
-				
+				border-radius: #{relative($base_radii)}rem;
 			}
 			
 			.pager-current {
@@ -452,7 +404,6 @@ a.social-tumblr {
 
 // Use now in place of <i>:
 //#footer_menu li:nth-child(n+1):before { content: "/"; }
-
 .boring {
 	
 	@include baseline($base_font-size - 1, .875);

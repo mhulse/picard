@@ -12,18 +12,14 @@
 	@include baseline($base_font-size + 3);
 	font-family: $sans;
 	font-weight: normal;
-	//text-transform: uppercase;
 	text-align: center;
 	text-decoration: none;
-	// text-shadow: 0 #{relative(1)}rem #{relative(1)}rem darken($bling, 35%);
 	letter-spacing: .1em;
 	color: darken($bling, 20%);
 	white-space: nowrap;
 	vertical-align: baseline;
 	width: 100%;
 	background: $bling;
-	
-	// border: #{relative(2)}rem solid darken($bling, 30%);
 	border: 0;
 	margin: {
 		top: #{relative($base_margin)}rem;
@@ -32,17 +28,8 @@
 	padding: #{baseline($base_font-size - 2) / 6}em 2em;
 	cursor: pointer;
 	zoom: 1;
-	
-	-webkit-border-radius: #{relative($base_radii)}rem;
-	   -moz-border-radius: #{relative($base_radii)}rem;
-	        border-radius: #{relative($base_radii)}rem;
-	
-	// -webkit-box-shadow: inset 0 #{relative(1)}rem #{relative(10)}rem 0 darken($bling, 15%), 0 #{relative(2)}em fade-out(darken($bling, 10%), .75);
-	//    -moz-box-shadow: inset 0 #{relative(1)}rem #{relative(10)}rem 0 darken($bling, 15%), 0 #{relative(2)}em fade-out(darken($bling, 10%), .75);
-	//         box-shadow: inset 0 #{relative(1)}rem #{relative(10)}rem 0 darken($bling, 15%), 0 #{relative(2)}em fade-out(darken($bling, 10%), .75);
-	
+	border-radius: #{relative($base_radii)}rem;
 	-webkit-user-drag: none;
-	
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 	    -ms-user-select: none;

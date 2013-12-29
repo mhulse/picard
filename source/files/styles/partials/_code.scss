@@ -1,3 +1,10 @@
+pre {
+	word-wrap: normal;
+	overflow: auto;
+	white-space: pre;
+	-webkit-overflow-scrolling: touch;
+}
+
 .pre {
 	
 	@include baseline($base_font-size, .875);
@@ -5,16 +12,9 @@
 	color: $gray4;
 	background: fade-out($graye, .5);
 	//box-shadow: inset 0 0 #{relative(3)}em 0 fade-out($raven, .75);
-	word-wrap: normal;
-	overflow: auto;
-	white-space: pre;
-	-webkit-overflow-scrolling: touch;
 	border: #{relative(1)}rem solid $grayd;
 	padding: #{relative($base_padding) / 2}rem #{relative($base_padding)}rem;
-	
-	-webkit-border-radius: #{relative($base_radii)}em;
-	   -moz-border-radius: #{relative($base_radii)}em;
-			border-radius: #{relative($base_radii)}em;
+	border-radius: #{relative($base_radii)}em;
 	
 	// Blinking cursor.
 	// @see http://fredericiana.com/2012/11/04/html5-blink-tag/
@@ -39,9 +39,7 @@
 		text-shadow: 0 #{relative(1)}em 0 $raven;
 		background: darken($hulk, 25%);
 		border: #{relative(1)}rem solid $raven;
-		-webkit-box-shadow: inset 0 0 #{relative(5)}rem 0 fade-in($raven, .75);
-		   -moz-box-shadow: inset 0 0 #{relative(5)}rem 0 fade-in($raven, .75);
-				box-shadow: inset 0 0 #{relative(5)}rem 0 fade-in($raven, .75);
+		box-shadow: inset 0 0 #{relative(5)}rem 0 fade-in($raven, .75);
 		
 		.cursor {
 			color: transparent;
@@ -77,15 +75,11 @@ code {
 	color: $bruise;
 	background: rgba($bruise, .25);
 	padding: #{relative(2)}rem #{relative(3)}rem;
-	-webkit-border-radius: #{relative($base_radii)}em;
-	   -moz-border-radius: #{relative($base_radii)}em;
-			border-radius: #{relative($base_radii)}em;
+	border-radius: #{relative($base_radii)}em;
 }
 
 kbd {
-	
 	@extend %code;
-	
 	font-size: smaller;
 	color: $gray3;
 	text-shadow: 0 #{relative(1)}em 0 $milk;
@@ -94,32 +88,16 @@ kbd {
 	margin: 0 .1em;
 	padding: 0 .5em;
 	display: inline-block;
-	
 	-webkit-background-clip: padding;
 	   -moz-background-clip: padding;
 			background-clip: padding-box;
-	
-	-webkit-border-radius: #{relative($base_radii)}em;
-	   -moz-border-radius: #{relative($base_radii)}em;
-			border-radius: #{relative($base_radii)}em;
-	
-	-webkit-box-shadow: 0 #{relative(1)}rem 0 fade-out($raven, .8), 0 0 0 #{relative(2)}rem $milk inset;
-	   -moz-box-shadow: 0 #{relative(1)}rem 0 fade-out($raven, .8), 0 0 0 #{relative(2)}rem $milk inset;
-			box-shadow: 0 #{relative(1)}rem 0 fade-out($raven, .8), 0 0 0 #{relative(2)}rem $milk inset;
-	
+	border-radius: #{relative($base_radii)}em;
+	box-shadow: 0 #{relative(1)}rem 0 fade-out($raven, .8), 0 0 0 #{relative(2)}rem $milk inset;
 }
 
-samp {
-	
-	@extend %code;
-	
-}
+samp { @extend %code; }
 
-var {
-	
-	@extend %code;
-	
-}
+var { @extend %code; }
 
 pre code,
 pre kbd,
@@ -135,9 +113,7 @@ kbd kbd {
 	padding: 0;
 	display: inline;
 	box-shadow: none;
-	-webkit-border-radius: 0;
-	   -moz-border-radius: 0;
-			border-radius: 0;
+	border-radius: 0;
 }
 
 // Gist embeds:

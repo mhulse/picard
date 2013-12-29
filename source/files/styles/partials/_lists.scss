@@ -1,8 +1,8 @@
-// http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/
-
 ul, ol, dl { padding: 0; }
 
 ul, ol { list-style: none; }
+
+// http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/
 
 .li1 {
 	
@@ -19,9 +19,7 @@ ul, ol { list-style: none; }
 			display: block;
 			content: counter(li);
 			counter-increment: li;
-			-webkit-border-radius: 50%;
-			   -moz-border-radius: 50%;
-			        border-radius: 50%;
+			border-radius: 50%;
 		}
 		
 		&:first-child:before { margin-top: 0; }
@@ -42,9 +40,7 @@ ul, ol { list-style: none; }
 			margin: #{relative($base_margin)}em auto #{relative($base_margin / 2)}em;
 			display: block;
 			content: "";
-			-webkit-border-radius: 50%;
-			   -moz-border-radius: 50%;
-			        border-radius: 50%;
+			border-radius: 50%;
 			
 			&:first-child:before { margin-top: 0; }
 			

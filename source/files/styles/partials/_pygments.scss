@@ -58,58 +58,6 @@
 		
 	}
 	
-	ul {
-		
-		position: absolute;
-		right: 3px;
-		top: 0;
-		
-		&,
-		li {
-			margin: 0;
-			padding: 0;
-		}
-		
-		li {
-			
-			float: right;
-			display: inline;
-			margin: 0 2px 0;
-			
-			a {
-				
-				font-weight: bold;
-				font-family: Arial, Helvetica, sans-serif;
-				font-size: x-small;
-				line-height: 1;
-				text-transform: uppercase;
-				letter-spacing: .1em;
-				word-spacing: .2em;
-				background: #101010;
-				border-bottom-left-radius: 10px;
-				-moz-border-radius-bottomleft: 10px;
-				-webkit-border-bottom-left-radius: 10px;
-				border-bottom-right-radius: 10px;
-				-moz-border-radius-bottomright: 10px;
-				-webkit-border-bottom-right-radius: 10px;
-				padding: 1em;
-				display: block;
-				
-				&:visited:hover,
-				&:focus,
-				&:focus:hover,
-				&:hover,
-				&:active {
-					padding-top: 1.5em;
-					background: #404040;
-				}
-				
-			}
-			
-		}
-		
-	}
-	
 	.hll { background-color: #49483e }
 	.c { color: #75715e } // Comment
 	.err { color: #960050; background-color: #1e0010 } // Error
