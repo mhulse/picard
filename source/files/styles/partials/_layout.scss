@@ -1,3 +1,6 @@
+button,
+.button { @extend .x1; }
+
 label { @extend .x3; }
 
 blockquote { @extend .x4; }

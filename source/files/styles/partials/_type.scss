@@ -295,48 +295,6 @@ span {
 	
 }
 
-.cloud {
-	
-	> li {
-		
-		display: inline-block;
-		//letter-spacing: .03em;
-		text-transform: lowercase;
-		//font-weight: bolder;
-		//vertical-align: baseline;
-		margin: .1rem .25rem;
-		
-		//&:before { content: none; }
-		
-	}
-	
-	a {
-		
-		line-height: 1;
-		display: block;
-		
-		// h-offset, v-offset, blur, color
-		//text-shadow: 0 #{relative(1)}rem #{relative(1)}rem rgba($raven, .25);
-		
-		&,
-		&:visited {
-			color: $dusk;
-			//border-bottom: #{relative(3)}em solid $gray3;
-		}
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
-			color: $smurf;
-			text-decoration: none;
-			//border-bottom-color: $lobster;
-		}
-		
-	}
-	
-}
-
 .marker {
 	
 	font-size: 1rem;
@@ -357,8 +315,8 @@ span {
 	}
 	
 	span {
-		color: fade-out(darken($bling, 20%), .5);
-		background: fade-out($bling, .5);
+		color: $gray6;
+		background: $graye;
 	}
 	
 	a {
@@ -381,7 +339,7 @@ span {
 }
 
 .subtle {
-	@include baseline($base_font-size + 8, .75);
+	@include baseline($base_font-size + 4, .75);
 	font-weight: normal;
 	font-family: $mono;
 	color: darken($bling, 10%);
@@ -422,200 +380,6 @@ span {
 	
 	> :first-child { margin-top: 0 !important; }
 	> :last-child { margin-bottom: 0 !important; }
-	
-}
-
-.meta {
-	
-	@include baseline($base_font-size, .875);
-	color: $gray6;
-	font-style: italic;
-	border: #{relative(1)}rem solid $grayb;
-	background: lighten($graye, 5%);
-	
-	-webkit-border-radius: #{relative($base_radii)}em;
-	   -moz-border-radius: #{relative($base_radii)}em;
-	        border-radius: #{relative($base_radii)}em;
-	
-	a {
-		
-		&,
-		&:visited {
-			font-weight: bold;
-			color: $gray6;
-		}
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
-			color: $raven;
-			text-decoration: underline;
-		}
-		
-	}
-	
-}
-
-ul.meta {
-	
-	> li {
-		
-		border-bottom: #{relative(1)}rem solid $grayb;
-		margin: 0;
-		padding: #{baseline($base_font-size, .875) / 2}em;
-		background: lighten($graye, 5%);
-		
-		-webkit-box-shadow: inset 0 0 #{relative(10)}em 0 rgba($raven, .2);
-		   -moz-box-shadow: inset 0 0 #{relative(10)}em 0 rgba($raven, .2);
-		        box-shadow: inset 0 0 #{relative(10)}em 0 rgba($raven, .2);
-		
-		&:last-child { border-bottom: 0; }
-		
-		//&:before { content: none; }
-		
-	}
-	
-	// h-offset, v-offset, blur, spread, color
-	-webkit-box-shadow: 0 #{relative(3)}rem fade-out($raven, .9);
-	   -moz-box-shadow: 0 #{relative(3)}rem fade-out($raven, .9);
-	        box-shadow: 0 #{relative(3)}rem fade-out($raven, .9);
-	
-}
-
-p.meta {
-	
-	padding: #{baseline($base_font-size, .375)}em #{baseline($base_font-size)}em;
-	
-	// box-shadow: inset 0 #{relative(10)}em #{relative(10)}em -#{relative(11)}em $grayc,
-	//             inset 0 -#{relative(11)}em #{relative(10)}em -#{relative(10)}em $grayc,
-	//             0 0 #{relative(5)}em 0 rgba(0, 0, 0, .3);
-	
-	-webkit-box-shadow: inset 0 0 #{relative(10)}em 0 rgba($raven, .2), 0 #{relative(3)}rem fade-out($raven, .9);
-	   -moz-box-shadow: inset 0 0 #{relative(10)}em 0 rgba($raven, .2), 0 #{relative(3)}rem fade-out($raven, .9);
-	        box-shadow: inset 0 0 #{relative(10)}em 0 rgba($raven, .2), 0 #{relative(3)}rem fade-out($raven, .9);
-	
-}
-
-ul.meta > li,
-p.meta {
-	
-	&:hover { background: $milk; }
-	
-	-webkit-transition: background-color 200ms linear;
-	   -moz-transition: background-color 200ms linear;
-	    -ms-transition: background-color 200ms linear;
-	     -o-transition: background-color 200ms linear;
-	        transition: background-color 200ms linear;
-	
-}
-
-.callout {
-	
-	@include baseline($base_font-size - 2, .75);
-	color: $gray3;
-	background-color: $grayd;
-	letter-spacing: .03em;
-	padding: #{baseline($base_font-size - 2, .75) / 2}rem;
-	-webkit-border-radius: #{relative($base_radii) * 2}em;
-	   -moz-border-radius: #{relative($base_radii) * 2}em;
-	        border-radius: #{relative($base_radii) * 2}em;
-	
-	a {
-		
-		font-weight: bold;
-		
-		&,
-		&:visited {
-			color: $gray3;
-			text-decoration: none;
-		}
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
-			color: $gray3;
-			text-decoration: underline;
-		}
-		
-	}
-	
-}
-
-.callout-info {
-	
-	color: darken($ice, 60%);
-	background-color: $ice;
-	
-	a {
-		
-		&,
-		&:visited,
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active { color: darken($ice, 60%); }
-		
-	}
-	
-}
-
-.callout-success {
-	
-	color: darken($frog, 60%);
-	background-color: $frog;
-	
-	a {
-		
-		&,
-		&:visited,
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active { color: darken($frog, 60%); }
-		
-	}
-	
-}
-
-.callout-warning {
-	
-	color: darken($duck, 60%);
-	background-color: $duck;
-	
-	a {
-		
-		&,
-		&:visited,
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active { color: darken($duck, 60%); }
-		
-	}
-	
-}
-
-.callout-error {
-	
-	color: darken($chili, 60%);
-	background-color: $chili;
-	
-	a {
-		
-		&,
-		&:visited,
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active { color: darken($chili, 60%); }
-		
-	}
 	
 }
 
@@ -687,216 +451,85 @@ p.meta {
 	
 }
 
-.pager {
+.pub {
 	
-	color: $grayc;
-	border-width: #{relative(1)}rem 0 0;
-	border-style: solid;
-	border-color: $dusk;
-	//background: $graye;
+	font-size: 1rem;
+	font-weight: normal;
+	text-transform: none;
 	margin: {
-		top: #{relative($base_margin)}rem;
-		bottom: 0;
+		top: 0;
+		bottom: #{relative($base_margin)}rem;
 	}
-	padding: #{relative($base_padding) / 2}rem #{relative($base_padding)}rem;
-	display: inline-block;
+	padding: 0;
 	
-	-webkit-box-shadow: 0 -#{relative(3)}rem rgba($dusk, .1);
-	   -moz-box-shadow: 0 -#{relative(3)}rem rgba($dusk, .1);
-	        box-shadow: 0 -#{relative(3)}rem rgba($dusk, .1);
-	
-	> {
-		
-		li {
-			
-			margin: 0;
-			padding: 0;
-			display: inline-block;
-			
-			a,
-			span {
-				
-				@include baseline($base_font-size - 2);
-				text-transform: uppercase;
-				letter-spacing: .05em;
-				margin: 0 .25em;
-				padding: .1em .75em;
-				display: inline-block;
-				
-				-webkit-border-radius: #{relative($base_radii)}rem;
-				   -moz-border-radius: #{relative($base_radii)}rem;
-				        border-radius: #{relative($base_radii)}rem;
-				
-			}
-			
-			.pager-current {
-				color: $milk;
-				font-weight: bold;
-				background: $dusk;
-			}
-			
-			%chevron {
-				font-family: FontAwesome;
-				font-style: normal;
-				font-weight: normal;
-				text-decoration: inherit;
-				display: inline-block;
-			}
-			
-			&:first-child > a:before {
-				@extend %chevron;
-				content: "\f0d9\00a0";
-			}
-			&:last-child > a:after {
-				@extend %chevron;
-				content: "\00a0\f0da";
-			}
-			
-			&:not(:first-child):not(:last-child) {
-				
-				@media (max-width: #{relative($base_breakpoint-max)}rem) {
-					
-					& { display: none; }
-					
-				}
-				
-			}
-			
-		}
-		
+	a,
+	span {
+		@include baseline($base_font-size - 3, .875);
+		letter-spacing: .15em;
+		text-transform: uppercase;
+		padding: #{baseline($base_font-size - 3, .875) / 6}em 1em;
+		background: $graye;
+		display: inline-block;
 	}
+	
+	span { color: $gray9; }
 	
 	a {
 		
+		background: $grayd;
+		
 		&,
-		&:visited { color: $dusk; }
+		&:visited { color: $gray3; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $dusk;
-			text-decoration: none;
-			background: rgba($dusk, .1);
+			color: $graye;
+			background: $gray3;
 		}
 		
 	}
 	
 }
 
-a.social {
-	
-	font-family: $serif;
-	text-transform: none;
-	font-weight: normal;
+%more {
+	font-family: FontAwesome;
 	font-style: normal;
-	word-spacing: -.05em;
+	font-weight: normal;
+	text-decoration: inherit;
+	color: $gray9;
+	display: inline-block;
+}
+
+.more {
 	
-	&,
-	&:visited { color: $gray9; }
-	&:visited:hover,
-	&:focus,
-	&:focus:hover,
-	&:hover,
-	&:active {
-		color: darken($gray9, 20%);
-		text-decoration: none;
+	font-size: smaller;
+	text-transform: uppercase;
+	letter-spacing: .08em;
+	
+	&:before {
+		@extend %more;
+		content: "\f141\00a0";
+	}
+	&:after {
+		@extend %more;
+		content: "\00a0\f141";
 	}
 	
-}
-
-a.social-twitter {
-	
-	&,
-	&:visited,
-	&:visited:hover,
-	&:focus,
-	&:focus:hover,
-	&:hover,
-	&:active { color: #41b7d8; }
-	
-}
-
-a.social-facebook {
-	
-	&,
-	&:visited,
-	&:visited:hover,
-	&:focus,
-	&:focus:hover,
-	&:hover,
-	&:active { color: #3b5997; }
-	
-}
-
-a.social-google-plus {
-	
-	&,
-	&:visited,
-	&:visited:hover,
-	&:focus,
-	&:focus:hover,
-	&:hover,
-	&:active { color: #d64937; }
-	
-}
-
-a.social-linkedin {
-	
-	&,
-	&:visited,
-	&:visited:hover,
-	&:focus,
-	&:focus:hover,
-	&:hover,
-	&:active { color: #0073b2; }
-	
-}
-
-a.social-pinterest {
-	
-	&,
-	&:visited,
-	&:visited:hover,
-	&:focus,
-	&:focus:hover,
-	&:hover,
-	&:active { color: #cb2027; }
-	
-}
-
-a.social-vk {
-	
-	&,
-	&:visited,
-	&:visited:hover,
-	&:focus,
-	&:focus:hover,
-	&:hover,
-	&:active { color: #54769b; }
-	
-}
-
-a.social-xing {
-	
-	&,
-	&:visited,
-	&:visited:hover,
-	&:focus,
-	&:focus:hover,
-	&:hover,
-	&:active { color: #006567; }
-	
-}
-
-a.social-tumblr {
-	
-	&,
-	&:visited,
-	&:visited:hover,
-	&:focus,
-	&:focus:hover,
-	&:hover,
-	&:active { color: #34465d; }
+	a {
+		
+		&,
+		&:visited { color: $lobster; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $juice;
+			text-decoration: none;
+		}
+		
+	}
 	
 }

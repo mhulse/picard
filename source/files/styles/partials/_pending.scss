@@ -1,5 +1,5 @@
 // Use now in place of <i>:
-#footer_menu li:nth-child(n+1):before { content: "/"; }
+//#footer_menu li:nth-child(n+1):before { content: "/"; }
 
 .boring {
 	
@@ -49,4 +49,14 @@
 	font-weight: normal;
 	color: $bling;
 	content: "\f069\00a0";
+}
+
+// http://css-tricks.com/examples/IconFont/
+[data-icon]:before {
+	font-family: FontAwesome;
+	font-size: inherit;
+	font-style: normal;
+	font-weight: normal;
+	content: attr(data-icon);
+	speak: none;
 }
