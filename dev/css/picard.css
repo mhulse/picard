@@ -1337,10 +1337,10 @@ span.amp {
   content: "\00a0\f141";
 }
 .more a, .more a:visited {
-  color: #cc3300;
+  color: #1d678f;
 }
 .more a:visited:hover, .more a:focus, .more a:focus:hover, .more a:hover, .more a:active {
-  color: #ff6600;
+  color: #13aac9;
   text-decoration: none;
 }
 
