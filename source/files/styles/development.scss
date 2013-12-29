@@ -24,10 +24,10 @@
 	}
 	
 	code {
-		text-shadow: 0 #{relative(1)}em 0 rgba($raven, .8);
+		text-shadow: 0 #{relative(1)}rem 0 rgba($raven, .8);
 		color: $milk;
 		background: rgba($raven, .5);
-		padding: #{relative(3)}em #{relative(5)}em;
+		padding: #{relative(3)}rem #{relative(5)}rem;
 		border: 0;
 	}
 	

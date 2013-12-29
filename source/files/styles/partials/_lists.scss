@@ -15,7 +15,7 @@ ul, ol { list-style: none; }
 			color: $gray3;
 			border: #{relative(1)}rem solid $gray3;
 			width: #{baseline($base_font-size - 2)}em;
-			margin: #{relative($base_margin)}em auto #{relative($base_margin / 2)}em;
+			margin: #{relative($base_margin)}rem auto #{relative($base_margin / 2)}rem;
 			display: block;
 			content: counter(li);
 			counter-increment: li;
@@ -37,7 +37,7 @@ ul, ol { list-style: none; }
 			background: $gray3;
 			width: .75rem;
 			height: .75rem;
-			margin: #{relative($base_margin)}em auto #{relative($base_margin / 2)}em;
+			margin: #{relative($base_margin)}rem auto #{relative($base_margin / 2)}rem;
 			display: block;
 			content: "";
 			border-radius: 50%;

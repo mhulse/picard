@@ -9,14 +9,14 @@
 
 .button {
 	
-	@include baseline($base_font-size + 3);
+	@include baseline($base_font-size + 2);
 	font-family: $sans;
 	font-weight: normal;
 	text-align: center;
 	text-decoration: none;
 	letter-spacing: .1em;
 	color: darken($bling, 20%);
-	white-space: nowrap;
+	//white-space: nowrap;
 	vertical-align: baseline;
 	width: 100%;
 	background: $bling;
@@ -25,7 +25,10 @@
 		top: #{relative($base_margin)}rem;
 		bottom: #{relative($base_margin)}rem;
 	}
-	padding: #{baseline($base_font-size - 2) / 6}em 2em;
+	padding: {
+		top: #{baseline($base_font-size + 2) / 6}em;
+		bottom: #{baseline($base_font-size + 2) / 6}em;
+	}
 	cursor: pointer;
 	zoom: 1;
 	border-radius: #{relative($base_radii)}rem;

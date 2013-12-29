@@ -16,7 +16,7 @@ figcaption {
 	
 	@include baseline($base_font-size - 2, .75);
 	text-transform: uppercase;
-	text-shadow: 0 #{relative(1)}em #{relative(1)}em $raven;
+	text-shadow: 0 #{relative(1)}rem #{relative(1)}rem $raven;
 	letter-spacing: .05em;
 	word-spacing: .25em;
 	color: $grayd;
@@ -25,7 +25,7 @@ figcaption {
 	margin-top: #{relative(13)}rem;
 	padding: #{baseline($base_font-size, .75)}em;
 	border-radius: #{relative($base_radii * 2)}rem;
-	box-shadow: 0 0 #{relative(2)}rem rgba(0, 0, 0, .9);
+	box-shadow: 0 0 #{relative(2)}rem rgba($raven, .9);
 	
 	// Caption triangle:
 	position: relative;
