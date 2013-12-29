@@ -504,9 +504,9 @@ span {
 
 .more {
 	
-	font-size: smaller;
-	text-transform: uppercase;
-	letter-spacing: .08em;
+	//font-size: smaller;
+	text-transform: lowercase;
+	letter-spacing: .05em;
 	
 	&:before {
 		@extend %more;

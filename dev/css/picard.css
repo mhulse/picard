@@ -1326,9 +1326,8 @@ span.amp {
 }
 
 .more {
-  font-size: smaller;
-  text-transform: uppercase;
-  letter-spacing: .08em;
+  text-transform: lowercase;
+  letter-spacing: .05em;
 }
 .more:before {
   content: "\f141\00a0";
