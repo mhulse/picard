@@ -157,15 +157,9 @@ blockquote {
 }
 
 mark {
-	background: fade-out($duck, .1);
+	background: rgba($duck, .9);
 	padding: #{relative(1)}em #{relative(3)}em;
 	border-radius: #{relative($base_radii)}em;
-}
-
-s {
-	-webkit-text-decoration-color: fade-out($chili, .5);
-	   -moz-text-decoration-color: fade-out($chili, .5);
-	        text-decoration-color: fade-out($chili, .5);
 }
 
 del,
@@ -178,13 +172,13 @@ ins {
 }
 del {
 	color: darken($chili, 50%);
-	background: fade-out($chili, .5);
+	background: rgba($chili, .5);
 }
 ins {
 	
 	color: darken($frog, 50%);
 	text-decoration: none;
-	background: fade-out($frog, .5);
+	background: rgba($frog, .5);
 	
 	&:before { content: "["; }
 	&:after { content: "]"; }

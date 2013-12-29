@@ -40,12 +40,12 @@ a {
 }
 
 ::-moz-selection {
-	background: fade-out($smurf, .45);
+	background: rgba($smurf, .55);
 	text-shadow: none;
 }
 
 ::selection {
-	background: fade-out($smurf, .45);
+	background: rgba($smurf, .55);
 	text-shadow: none;
 }
 

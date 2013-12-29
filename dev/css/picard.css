@@ -1083,12 +1083,6 @@ mark {
   border-radius: 0.21428571428571em;
 }
 
-s {
-  -webkit-text-decoration-color: rgba(255, 186, 186, 0.5);
-  -moz-text-decoration-color: rgba(255, 186, 186, 0.5);
-  text-decoration-color: rgba(255, 186, 186, 0.5);
-}
-
 del,
 ins {
   line-height: 0;
@@ -1373,7 +1367,7 @@ pre {
   text-shadow: 0 0.07142857142857em 0 black;
   background: #0e1705;
   border: 0.07142857142857rem solid black;
-  box-shadow: inset 0 0 0.35714285714286rem 0 black;
+  box-shadow: inset 0 0 0.35714285714286rem 0 rgba(0, 0, 0, 0.75);
 }
 .pre.terminal .cursor {
   color: transparent;
