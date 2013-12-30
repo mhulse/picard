@@ -4,6 +4,10 @@ pre {
 	font-family: $mono;
 	text-align: left;
 	word-wrap: normal;
+	margin: {
+		top: #{relative($base_margin)}rem;
+		bottom: #{relative($base_margin)}rem;
+	}
 	padding: #{relative($base_padding) / 2}rem #{relative($base_padding)}rem;
 	overflow: auto;
 	white-space: pre;
