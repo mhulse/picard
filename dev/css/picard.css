@@ -735,6 +735,7 @@ figure .scroll {
 html {
   height: 100%;
   overflow-y: scroll;
+  -webkit-tap-highlight-color: rgba(19, 170, 201, 0.55);
 }
 
 body {
@@ -752,9 +753,6 @@ body {
   }
 }
 
-a {
-  -webkit-tap-highlight-color: rgba(19, 170, 201, 0.55);
-}
 a, a:visited {
   color: #cc3300;
   text-decoration: none;
