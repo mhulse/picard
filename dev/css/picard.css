@@ -1334,21 +1334,26 @@ span.amp {
 }
 
 pre {
+  font-family: monospace, serif;
+  text-align: left;
   word-wrap: normal;
   overflow: auto;
   white-space: pre;
   -webkit-overflow-scrolling: touch;
 }
 
-.pre {
+.pre,
+.pygments pre {
   font-size: 1rem;
   line-height: 1.375;
-  text-align: left;
+  padding: 0.35714285714286rem 0.71428571428571rem;
+  border-radius: 0.21428571428571rem;
+}
+
+.pre {
   color: #444444;
   background: rgba(238, 238, 238, 0.5);
   border: 0.07142857142857rem solid #dddddd;
-  padding: 0.35714285714286rem 0.71428571428571rem;
-  border-radius: 0.21428571428571rem;
 }
 .pre .cursor {
   -webkit-animation-duration: 2s;
@@ -1378,6 +1383,192 @@ pre {
 }
 .pre.terminal .prompt {
   color: #4e801c;
+}
+
+.pygments pre {
+  letter-spacing: .05em;
+  text-shadow: 0 0.07142857142857rem 0 black;
+  border: 0.07142857142857rem solid black;
+  background: #222222;
+  box-shadow: inset 0 0 0.35714285714286rem 0 rgba(0, 0, 0, 0.75);
+}
+.pygments .hll {
+  background-color: #49483e;
+}
+.pygments .c {
+  color: #75715e;
+}
+.pygments .err {
+  color: #960050;
+  background-color: #1e0010;
+}
+.pygments .k {
+  color: #66d9ef;
+}
+.pygments .l {
+  color: #ae81ff;
+}
+.pygments .n {
+  color: #f8f8f2;
+}
+.pygments .o {
+  color: #f92672;
+}
+.pygments .p {
+  color: #f8f8f2;
+}
+.pygments .cm {
+  color: #75715e;
+}
+.pygments .cp {
+  color: #75715e;
+}
+.pygments .c1 {
+  color: #75715e;
+}
+.pygments .cs {
+  color: #75715e;
+}
+.pygments .ge {
+  font-style: italic;
+}
+.pygments .gs {
+  font-weight: bold;
+}
+.pygments .kc {
+  color: #66d9ef;
+}
+.pygments .kd {
+  color: #66d9ef;
+}
+.pygments .kn {
+  color: #f92672;
+}
+.pygments .kp {
+  color: #66d9ef;
+}
+.pygments .kr {
+  color: #66d9ef;
+}
+.pygments .kt {
+  color: #66d9ef;
+}
+.pygments .ld {
+  color: #e6db74;
+}
+.pygments .m {
+  color: #ae81ff;
+}
+.pygments .s {
+  color: #e6db74;
+}
+.pygments .na {
+  color: #a6e22e;
+}
+.pygments .nb {
+  color: #f8f8f2;
+}
+.pygments .nc {
+  color: #a6e22e;
+}
+.pygments .no {
+  color: #66d9ef;
+}
+.pygments .nd {
+  color: #a6e22e;
+}
+.pygments .ni {
+  color: #f8f8f2;
+}
+.pygments .ne {
+  color: #a6e22e;
+}
+.pygments .nf {
+  color: #a6e22e;
+}
+.pygments .nl {
+  color: #f8f8f2;
+}
+.pygments .nn {
+  color: #f8f8f2;
+}
+.pygments .nx {
+  color: #a6e22e;
+}
+.pygments .py {
+  color: #f8f8f2;
+}
+.pygments .nt {
+  color: #f92672;
+}
+.pygments .nv {
+  color: #f8f8f2;
+}
+.pygments .ow {
+  color: #f92672;
+}
+.pygments .w {
+  color: #f8f8f2;
+}
+.pygments .mf {
+  color: #ae81ff;
+}
+.pygments .mh {
+  color: #ae81ff;
+}
+.pygments .mi {
+  color: #ae81ff;
+}
+.pygments .mo {
+  color: #ae81ff;
+}
+.pygments .sb {
+  color: #e6db74;
+}
+.pygments .sc {
+  color: #e6db74;
+}
+.pygments .sd {
+  color: #e6db74;
+}
+.pygments .s2 {
+  color: #e6db74;
+}
+.pygments .se {
+  color: #ae81ff;
+}
+.pygments .sh {
+  color: #e6db74;
+}
+.pygments .si {
+  color: #e6db74;
+}
+.pygments .sx {
+  color: #e6db74;
+}
+.pygments .sr {
+  color: #e6db74;
+}
+.pygments .s1 {
+  color: #e6db74;
+}
+.pygments .ss {
+  color: #e6db74;
+}
+.pygments .bp {
+  color: #f8f8f2;
+}
+.pygments .vc {
+  color: #f8f8f2;
+}
+.pygments .vg {
+  color: #f8f8f2;
+}
+.pygments .vi {
+  color: #f8f8f2;
+}
+.pygments .il {
+  color: #ae81ff;
 }
 
 code,
@@ -1764,230 +1955,6 @@ figcaption a:visited:hover, figcaption a:focus, figcaption a:focus:hover, figcap
 img {
   max-width: 100%;
   height: auto;
-}
-
-.pygments {
-  color: #ccc !important;
-  background: #202020;
-  border: 1px solid #999;
-  position: relative;
-  overflow: auto;
-  text-align: left;
-}
-.pygments table {
-  margin: 0;
-}
-.pygments table .linenos {
-  vertical-align: top;
-  background: #353535;
-  display: block;
-  text-decoration: none;
-  color: #888;
-  text-align: right;
-}
-.pygments table th,
-.pygments table td {
-  border: 0 none;
-  padding: 0;
-}
-.pygments table pre {
-  font-size: 1rem;
-  line-height: 1.375;
-  font-family: monospace, serif;
-  margin: 0;
-  padding: 0.71428571428571rem;
-}
-.pygments a {
-  text-decoration: none;
-  color: #808080;
-}
-.pygments a:visited {
-  color: #808080;
-}
-.pygments a:visited:hover, .pygments a:focus, .pygments a:focus:hover, .pygments a:hover, .pygments a:active {
-  text-decoration: none;
-  color: #fff;
-}
-.pygments a:active, .pygments a:focus {
-  outline: 0;
-}
-.pygments .hll {
-  background-color: #49483e;
-}
-.pygments .c {
-  color: #75715e;
-}
-.pygments .err {
-  color: #960050;
-  background-color: #1e0010;
-}
-.pygments .k {
-  color: #66d9ef;
-}
-.pygments .l {
-  color: #ae81ff;
-}
-.pygments .n {
-  color: #f8f8f2;
-}
-.pygments .o {
-  color: #f92672;
-}
-.pygments .p {
-  color: #f8f8f2;
-}
-.pygments .cm {
-  color: #75715e;
-}
-.pygments .cp {
-  color: #75715e;
-}
-.pygments .c1 {
-  color: #75715e;
-}
-.pygments .cs {
-  color: #75715e;
-}
-.pygments .ge {
-  font-style: italic;
-}
-.pygments .gs {
-  font-weight: bold;
-}
-.pygments .kc {
-  color: #66d9ef;
-}
-.pygments .kd {
-  color: #66d9ef;
-}
-.pygments .kn {
-  color: #f92672;
-}
-.pygments .kp {
-  color: #66d9ef;
-}
-.pygments .kr {
-  color: #66d9ef;
-}
-.pygments .kt {
-  color: #66d9ef;
-}
-.pygments .ld {
-  color: #e6db74;
-}
-.pygments .m {
-  color: #ae81ff;
-}
-.pygments .s {
-  color: #e6db74;
-}
-.pygments .na {
-  color: #a6e22e;
-}
-.pygments .nb {
-  color: #f8f8f2;
-}
-.pygments .nc {
-  color: #a6e22e;
-}
-.pygments .no {
-  color: #66d9ef;
-}
-.pygments .nd {
-  color: #a6e22e;
-}
-.pygments .ni {
-  color: #f8f8f2;
-}
-.pygments .ne {
-  color: #a6e22e;
-}
-.pygments .nf {
-  color: #a6e22e;
-}
-.pygments .nl {
-  color: #f8f8f2;
-}
-.pygments .nn {
-  color: #f8f8f2;
-}
-.pygments .nx {
-  color: #a6e22e;
-}
-.pygments .py {
-  color: #f8f8f2;
-}
-.pygments .nt {
-  color: #f92672;
-}
-.pygments .nv {
-  color: #f8f8f2;
-}
-.pygments .ow {
-  color: #f92672;
-}
-.pygments .w {
-  color: #f8f8f2;
-}
-.pygments .mf {
-  color: #ae81ff;
-}
-.pygments .mh {
-  color: #ae81ff;
-}
-.pygments .mi {
-  color: #ae81ff;
-}
-.pygments .mo {
-  color: #ae81ff;
-}
-.pygments .sb {
-  color: #e6db74;
-}
-.pygments .sc {
-  color: #e6db74;
-}
-.pygments .sd {
-  color: #e6db74;
-}
-.pygments .s2 {
-  color: #e6db74;
-}
-.pygments .se {
-  color: #ae81ff;
-}
-.pygments .sh {
-  color: #e6db74;
-}
-.pygments .si {
-  color: #e6db74;
-}
-.pygments .sx {
-  color: #e6db74;
-}
-.pygments .sr {
-  color: #e6db74;
-}
-.pygments .s1 {
-  color: #e6db74;
-}
-.pygments .ss {
-  color: #e6db74;
-}
-.pygments .bp {
-  color: #f8f8f2;
-}
-.pygments .vc {
-  color: #f8f8f2;
-}
-.pygments .vg {
-  color: #f8f8f2;
-}
-.pygments .vi {
-  color: #f8f8f2;
-}
-.pygments .il {
-  color: #ae81ff;
 }
 
 iframe[id^='twitter-widget-'],
