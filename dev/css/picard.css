@@ -1339,8 +1339,6 @@ pre {
   font-family: monospace, serif;
   text-align: left;
   word-wrap: normal;
-  margin-top: 0.71428571428571rem;
-  margin-bottom: 0.71428571428571rem;
   padding: 0.35714285714286rem 0.71428571428571rem;
   overflow: auto;
   white-space: pre;
@@ -1385,6 +1383,8 @@ pre.terminal .prompt {
 
 .pygments {
   background: #222222;
+  margin-top: 0.71428571428571rem;
+  margin-bottom: 0.71428571428571rem;
 }
 .pygments table {
   margin: 0;
