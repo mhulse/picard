@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "normalize-css": "2.1.3",
+    "fastclick": "0.6.10",
     "rex": "https://github.com/mhulse/rex.git"
   },
   "exportsOverride": {

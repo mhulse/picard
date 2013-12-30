@@ -1,4 +1,4 @@
-/*jshint -W062, expr:true */
+/* jshint -W062, expr:true */
 
 WWPD.register(function() {
 	

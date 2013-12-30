@@ -142,7 +142,7 @@ module.exports = function(grunt) {
 			init : [
 				
 				'./Gruntfile.js',
-				'./files/scripts/**/*',
+				'./files/scripts/wwpd.*.js',
 				
 			],
 			
@@ -224,7 +224,8 @@ module.exports = function(grunt) {
 				files : {
 					
 					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/scripts/<%= pkg.name %>.min.js' : [
-						'./files/scripts/jquery.*.js',
+						'./files/scripts/fastclick.js',
+						//'./files/scripts/jquery.*.js',
 						'./files/scripts/wwpd.js',
 						'./files/scripts/wwpd.mod.*.js',
 						'./files/scripts/wwpd.init.js'

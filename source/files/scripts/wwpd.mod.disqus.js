@@ -1,8 +1,6 @@
-/*jshint -W062, expr:true */
-
+/* jshint -W062, expr:true */
 
 // Load Disqus comments on click.
-// HTML: 
 WWPD.register(function() {
 	
 	'use strict';
