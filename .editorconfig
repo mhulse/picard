@@ -12,7 +12,6 @@ indent_size = 4
 indent_style = tab
 
 [*.{py,rst,ini}]
-indent_size = 4
 indent_style = space
 
 [*.bat]
