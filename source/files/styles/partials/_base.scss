@@ -23,6 +23,8 @@ body {
 
 a {
 	
+	-webkit-tap-highlight-color: rgba($smurf, .55);
+	
 	&,
 	&:visited {
 		color: $lobster;
