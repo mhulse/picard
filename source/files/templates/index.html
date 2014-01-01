@@ -1638,13 +1638,20 @@ p q r s t u v w x y z { | } ~
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script>if(!window.jQuery){document.write('<script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.3.min.js"><\/script>');}</script>
 	
-	<script src="//static.mky.io/<!-- @echo name -->/prod/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/scripts/<!-- @echo name -->.min.js"></script>
+	<script src="//mky.io/<!-- @echo name -->/prod/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/scripts/<!-- @echo name -->.min.js"></script>
 	
 	<!-- @endif -->
 	
 	<!--<![endif]-->
 	
-	<script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-46485001-1');ga('send','pageview');</script>
+	<script>
+		(function(p,i,c,a,r,d){p.GoogleAnalyticsObject=a;p[a]||(p[a]=
+		function(){(p[a].q=p[a].q||[]).push(arguments)});p[a].a=+new Date;
+		r=i.createElement(c);d=i.getElementsByTagName(c)[0];
+		r.src='//www.google-analytics.com/analytics.js';
+		d.parentNode.insertBefore(r,d)}(window,document,'script','ga'));
+		ga('create','UA-46485001-1');ga('send','pageview');
+	</script>
 	
 </body>
 </html>
