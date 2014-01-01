@@ -872,7 +872,8 @@ ol,
 p,
 pre,
 ul, .x7, aside hr,
-section hr {
+section hr,
+article hr {
   margin-right: auto;
   margin-left: auto;
   display: block;
@@ -920,7 +921,8 @@ ul {
 }
 
 .x7, aside hr,
-section hr {
+section hr,
+article hr {
   max-width: 53.57142857142857rem;
 }
 

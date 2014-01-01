@@ -21,7 +21,8 @@ pre,
 ul { @extend .x6; }
 
 aside,
-section {
+section,
+article {
 	
 	& hr { @extend .x7; }
 	
