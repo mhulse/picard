@@ -812,11 +812,11 @@ ul, ol {
 }
 
 .li1,
-.body ul {
+.body ol {
   counter-reset: li;
 }
 .li1 > li:before,
-.body ul > li:before {
+.body ol > li:before {
   font-size: 0.85714285714286rem;
   line-height: 1.83333333333333;
   color: #333333;
@@ -829,12 +829,12 @@ ul, ol {
   border-radius: 50%;
 }
 .li1 > li:first-child:before,
-.body ul > li:first-child:before {
+.body ol > li:first-child:before {
   margin-top: 0;
 }
 
 .li2 > li:before,
-.body ol > li:before {
+.body ul > li:before {
   background: #333333;
   width: .75rem;
   height: .75rem;
@@ -844,7 +844,7 @@ ul, ol {
   border-radius: 50%;
 }
 .li2 > li:before:first-child:before,
-.body ol > li:before:first-child:before {
+.body ul > li:before:first-child:before {
   margin-top: 0;
 }
 

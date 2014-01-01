@@ -5,7 +5,7 @@ ul, ol { list-style: none; }
 // http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/
 
 .li1,
-.body ul {
+.body ol {
 	
 	counter-reset: li;
 	
@@ -30,7 +30,7 @@ ul, ol { list-style: none; }
 }
 
 .li2,
-.body ol {
+.body ul {
 	
 	> li {
 		
