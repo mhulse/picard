@@ -1224,10 +1224,10 @@ span.amp {
 }
 
 .body p {
-  font-size: 1.28571428571429rem;
-  line-height: 1.22222222222222;
-  margin-top: 1.22222222222222em;
-  margin-bottom: 1.22222222222222em;
+  font-size: 1.21428571428571rem;
+  line-height: 1.29411764705882;
+  margin-top: 1.29411764705882em;
+  margin-bottom: 1.29411764705882em;
 }
 .body > :first-child {
   margin-top: 0 !important;

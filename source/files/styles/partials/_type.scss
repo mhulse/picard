@@ -317,11 +317,11 @@ span {
 .body {
 	
 	p {
-		@include baseline($base_font-size + 4);
+		@include baseline($base_font-size + 3);
 		// Using `em` keeps it on the baseline:
 		margin: {
-			top: #{baseline($base_font-size + 4)}em;
-			bottom: #{baseline($base_font-size + 4)}em;
+			top: #{baseline($base_font-size + 3)}em;
+			bottom: #{baseline($base_font-size + 3)}em;
 		}
 	}
 	
