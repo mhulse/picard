@@ -1667,61 +1667,46 @@ kbd kbd {
   margin-bottom: 0.71428571428571rem;
 }
 
-.table,
-.body table {
+.table {
   empty-cells: hide;
   margin-top: 0.71428571428571rem;
   margin-right: 0.71428571428571rem;
   width: 100%;
 }
-.table caption,
-.body table caption {
+.table caption {
   text-align: left;
 }
-.table thead,
-.body table thead {
+.table thead {
   vertical-align: bottom;
 }
-.table tfoot,
-.body table tfoot {
+.table tfoot {
   vertical-align: top;
 }
 .table tfoot th,
-.table tfoot td,
-.body table tfoot th,
-.body table tfoot td {
+.table tfoot td {
   color: #666666;
 }
 .table th,
-.table td,
-.body table th,
-.body table td {
+.table td {
   text-align: left;
   padding-right: 0.71428571428571rem;
   padding-left: 0.71428571428571rem;
 }
 .table th:first-child,
-.table td:first-child,
-.body table th:first-child,
-.body table td:first-child {
+.table td:first-child {
   padding-left: 0;
 }
 .table th:last-child,
-.table td:last-child,
-.body table th:last-child,
-.body table td:last-child {
+.table td:last-child {
   padding-right: 0;
 }
-.table th,
-.body table th {
+.table th {
   white-space: nowrap;
 }
-.table tbody,
-.body table tbody {
+.table tbody {
   vertical-align: top;
 }
-.table.table-border-x,
-.body table.table-border-x {
+.table.table-border-x {
   /*
   & th:empty,
   & td:empty { border-bottom: 0; }
@@ -1729,41 +1714,28 @@ kbd kbd {
 }
 .table.table-border-x thead th,
 .table.table-border-x tbody th,
-.table.table-border-x tbody td,
-.body table.table-border-x thead th,
-.body table.table-border-x tbody th,
-.body table.table-border-x tbody td {
+.table.table-border-x tbody td {
   border-bottom: 0.07142857142857rem solid #999999;
 }
 .table.table-border-x tfoot th,
-.table.table-border-x tfoot td,
-.body table.table-border-x tfoot th,
-.body table.table-border-x tfoot td {
+.table.table-border-x tfoot td {
   border-top: 0.07142857142857rem solid #999999;
 }
 .table.table-border-x tbody tr:last-child th,
-.table.table-border-x tbody tr:last-child td,
-.body table.table-border-x tbody tr:last-child th,
-.body table.table-border-x tbody tr:last-child td {
+.table.table-border-x tbody tr:last-child td {
   border-bottom: 0;
 }
 .table.table-border-y th,
-.table.table-border-y td,
-.body table.table-border-y th,
-.body table.table-border-y td {
+.table.table-border-y td {
   border-right: 0.07142857142857rem solid #999999;
   border-left: 0.07142857142857rem solid #999999;
 }
 .table.table-border-y th:first-child,
-.table.table-border-y td:first-child,
-.body table.table-border-y th:first-child,
-.body table.table-border-y td:first-child {
+.table.table-border-y td:first-child {
   border-left: 0;
 }
 .table.table-border-y th:last-child,
-.table.table-border-y td:last-child,
-.body table.table-border-y th:last-child,
-.body table.table-border-y td:last-child {
+.table.table-border-y td:last-child {
   border-right: 0;
 }
 
