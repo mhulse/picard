@@ -20,9 +20,9 @@ p,
 pre,
 ul { @extend .x6; }
 
-aside,
 section,
-article {
+article,
+aside {
 	
 	& hr { @extend .x7; }
 	

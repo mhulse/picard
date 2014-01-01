@@ -811,10 +811,12 @@ ul, ol {
   list-style: none;
 }
 
-.li1 {
+.li1
+.body ul {
   counter-reset: li;
 }
-.li1 > li:before {
+.li1
+.body ul > li:before {
   font-size: 0.85714285714286rem;
   line-height: 1.83333333333333;
   color: #333333;
@@ -826,11 +828,13 @@ ul, ol {
   counter-increment: li;
   border-radius: 50%;
 }
-.li1 > li:first-child:before {
+.li1
+.body ul > li:first-child:before {
   margin-top: 0;
 }
 
-.li2 > li:before {
+.li2
+.body ol > li:before {
   background: #333333;
   width: .75rem;
   height: .75rem;
@@ -839,7 +843,8 @@ ul, ol {
   content: "";
   border-radius: 50%;
 }
-.li2 > li:before:first-child:before {
+.li2
+.body ol > li:before:first-child:before {
   margin-top: 0;
 }
 
@@ -871,9 +876,9 @@ h6,
 ol,
 p,
 pre,
-ul, .x7, aside hr,
-section hr,
-article hr {
+ul, .x7, section hr,
+article hr,
+aside hr {
   margin-right: auto;
   margin-left: auto;
   display: block;
@@ -920,9 +925,9 @@ ul {
   max-width: 46.42857142857143rem;
 }
 
-.x7, aside hr,
-section hr,
-article hr {
+.x7, section hr,
+article hr,
+aside hr {
   max-width: 53.57142857142857rem;
 }
 
@@ -1219,10 +1224,10 @@ span.amp {
 }
 
 .body p {
-  font-size: 1.14285714285714rem;
-  line-height: 1.375;
-  margin-top: 1.375em;
-  margin-bottom: 1.375em;
+  font-size: 1.28571428571429rem;
+  line-height: 1.22222222222222;
+  margin-top: 1.22222222222222em;
+  margin-bottom: 1.22222222222222em;
 }
 .body > :first-child {
   margin-top: 0 !important;
@@ -1662,75 +1667,103 @@ kbd kbd {
   margin-bottom: 0.71428571428571rem;
 }
 
-.table {
+.table
+.body table {
   empty-cells: hide;
   margin-top: 0.71428571428571rem;
   margin-right: 0.71428571428571rem;
   width: 100%;
 }
-.table caption {
+.table
+.body table caption {
   text-align: left;
 }
-.table thead {
+.table
+.body table thead {
   vertical-align: bottom;
 }
-.table tfoot {
+.table
+.body table tfoot {
   vertical-align: top;
 }
-.table tfoot th,
-.table tfoot td {
+.table
+.body table tfoot th,
+.table
+.body table tfoot td {
   color: #666666;
 }
-.table th,
-.table td {
+.table
+.body table th,
+.table
+.body table td {
   text-align: left;
   padding-right: 0.71428571428571rem;
   padding-left: 0.71428571428571rem;
 }
-.table th:first-child,
-.table td:first-child {
+.table
+.body table th:first-child,
+.table
+.body table td:first-child {
   padding-left: 0;
 }
-.table th:last-child,
-.table td:last-child {
+.table
+.body table th:last-child,
+.table
+.body table td:last-child {
   padding-right: 0;
 }
-.table th {
+.table
+.body table th {
   white-space: nowrap;
 }
-.table tbody {
+.table
+.body table tbody {
   vertical-align: top;
 }
-.table.table-border-x {
+.table
+.body table.table-border-x {
   /*
   & th:empty,
   & td:empty { border-bottom: 0; }
   */
 }
-.table.table-border-x thead th,
-.table.table-border-x tbody th,
-.table.table-border-x tbody td {
+.table
+.body table.table-border-x thead th,
+.table
+.body table.table-border-x tbody th,
+.table
+.body table.table-border-x tbody td {
   border-bottom: 0.07142857142857rem solid #999999;
 }
-.table.table-border-x tfoot th,
-.table.table-border-x tfoot td {
+.table
+.body table.table-border-x tfoot th,
+.table
+.body table.table-border-x tfoot td {
   border-top: 0.07142857142857rem solid #999999;
 }
-.table.table-border-x tbody tr:last-child th,
-.table.table-border-x tbody tr:last-child td {
+.table
+.body table.table-border-x tbody tr:last-child th,
+.table
+.body table.table-border-x tbody tr:last-child td {
   border-bottom: 0;
 }
-.table.table-border-y th,
-.table.table-border-y td {
+.table
+.body table.table-border-y th,
+.table
+.body table.table-border-y td {
   border-right: 0.07142857142857rem solid #999999;
   border-left: 0.07142857142857rem solid #999999;
 }
-.table.table-border-y th:first-child,
-.table.table-border-y td:first-child {
+.table
+.body table.table-border-y th:first-child,
+.table
+.body table.table-border-y td:first-child {
   border-left: 0;
 }
-.table.table-border-y th:last-child,
-.table.table-border-y td:last-child {
+.table
+.body table.table-border-y th:last-child,
+.table
+.body table.table-border-y td:last-child {
   border-right: 0;
 }
 
