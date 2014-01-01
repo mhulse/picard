@@ -1382,6 +1382,7 @@ pre.terminal .prompt {
 }
 
 .pygments {
+  color: #f8f8f2;
   background: #222222;
   margin-top: 0.71428571428571rem;
   margin-bottom: 0.71428571428571rem;
