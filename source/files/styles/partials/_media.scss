@@ -1,13 +1,20 @@
 figure {
 	
 	margin: {
-		top: #{relative($base_margin * 2)}rem;
-		bottom: #{relative($base_margin * 2)}rem;
+		top: #{relative($base_margin)}rem;
+		bottom: #{relative($base_margin)}rem;
 	}
 	
 	img {
 		margin: 0 auto;
 		display: block;
+	}
+	
+	.body & {
+		margin: {
+			top: #{relative($base_margin * 2)}rem;
+			bottom: #{relative($base_margin * 2)}rem;
+		}
 	}
 	
 }

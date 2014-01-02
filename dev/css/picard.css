@@ -1925,12 +1925,16 @@ kbd kbd {
 }
 
 figure {
-  margin-top: 1.42857142857143rem;
-  margin-bottom: 1.42857142857143rem;
+  margin-top: 0.71428571428571rem;
+  margin-bottom: 0.71428571428571rem;
 }
 figure img {
   margin: 0 auto;
   display: block;
+}
+.body figure {
+  margin-top: 1.42857142857143rem;
+  margin-bottom: 1.42857142857143rem;
 }
 
 figcaption {
