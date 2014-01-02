@@ -5,9 +5,9 @@
  * @author Micky Hulse
  * @link http://mky.io
  * @docs https://github.com/mhulse/picard
- * @copyright Copyright (c) 2013 Micky Hulse.
+ * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 0.1.0
- * @date 2013/12/31
+ * @date 2014/01/01
  */
 
 
@@ -1223,7 +1223,7 @@ span.amp {
   border-radius: 0;
 }
 
-.body p {
+.body > p {
   font-size: 1.21428571428571rem;
   line-height: 1.29411764705882;
   margin-top: 1.29411764705882em;

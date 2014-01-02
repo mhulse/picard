@@ -316,17 +316,22 @@ span {
 
 .body {
 	
-	p {
-		@include baseline($base_font-size + 3);
-		// Using `em` keeps it on the baseline:
-		margin: {
-			top: #{baseline($base_font-size + 3)}em;
-			bottom: #{baseline($base_font-size + 3)}em;
+	> {
+		
+		p {
+			@include baseline($base_font-size + 3);
+			// Using `em` keeps it on the baseline:
+			margin: {
+				top: #{baseline($base_font-size + 3)}em;
+				bottom: #{baseline($base_font-size + 3)}em;
+			}
 		}
+		
+		:first-child { margin-top: 0 !important; }
+		
+		:last-child { margin-bottom: 0 !important; }
+		
 	}
-	
-	> :first-child { margin-top: 0 !important; }
-	> :last-child { margin-bottom: 0 !important; }
 	
 }
 
