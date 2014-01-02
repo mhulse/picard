@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 0.1.0
- * @date 2014/01/01
+ * @date 2014/01/02
  */
 
 
@@ -775,7 +775,7 @@ a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
 hr,
 .hr {
   border: 0;
-  border-top: 0.14285714285714rem solid #eeeeee;
+  border-top: 0.28571428571429rem solid #eeeeee;
   height: 0;
   margin-top: 2.85714285714286rem;
   margin-bottom: 2.85714285714286rem;
@@ -789,6 +789,7 @@ section hr, article hr, aside hr, section
 .hr, article
 .hr, aside
 .hr {
+  border-top-width: 0.14285714285714rem;
   border-color: #cccccc;
   margin-top: 1.42857142857143rem;
   margin-bottom: 1.42857142857143rem;

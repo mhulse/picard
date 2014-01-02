@@ -57,6 +57,34 @@
 	
 	<link rel="canonical" href="">
 	
+	<style>
+		
+		.scroll-wrap { position: relative; }
+		.scroll-overlay {
+			font-size: 1em;
+			line-height: 1;
+			letter-spacing: .1em;
+			text-transform: lowercase;
+			text-shadow: 0 1px 3px #000, 0 1px 3px #000, 0 1px 3px #000, 0 1px 3px #000;
+			text-align: center;
+			color: #fff;
+			position: absolute;
+			width: 100%;
+			bottom: 15px;
+			left: 0;
+			opacity: .35;
+		}
+		.scroll-overlay::before,
+		.scroll-overlay::after {
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+		}
+		.scroll-overlay::before { content: "\f0a5\00a0"; }
+		.scroll-overlay::after { content: "\00a0\f0a4"; }
+		
+	</style>
+	
 </head>
 <body>
 	
@@ -676,7 +704,7 @@
 			
 			<figure>
 				
-				<a href="#"><img src="./images/junk/picard1.jpg" width="1200" alt="Jean-Luc Picard"></a>
+				<div class="scroll"><img src="./images/junk/picard1.jpg" width="1000" alt="Jean-Luc Picard"></div>
 				
 				<figcaption>Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. <a class="social social-pinterest" target="_blank" href="http://pinterest.com/pin/create/button/?url=YOUR-URL&amp;description=YOUR-DESCRIPTION&amp;media=YOUR-IMAGE-SRC"><i class="fa fa-lg fa-pinterest" aria-hidden="true"></i> Pin it!</a></figcaption>
 				
@@ -716,7 +744,9 @@
 			
 			<hr>
 			
-			<div class="hr"></div>
+			<h2 class="subtle"><code>.hr</code></h2>
+			
+			<div class="hr x7"></div>
 			
 		</section>
 		
@@ -1622,7 +1652,66 @@ p q r s t u v w x y z { | } ~
 	
 	<script>
 		
-		$(document).ready(function() {});
+		$(document).ready(function() {
+			
+			
+			$.fn.hasVerticalScrollBar = function () {
+				
+				return (this[0].clientHeight < this[0].scrollHeight) ? true : false;
+				
+			}
+			
+			$.fn.hasHorizontalScrollBar = function() {
+				
+				return (this[0].clientWidth < this[0].scrollWidth) ? true : false;
+				
+			}
+			
+			var $scroll = $('img').closest('.scroll'),
+			    $scroll_wrap = $('<div />', {
+			    	'class': 'scroll-wrap'
+			    }),
+			    $scroll_overlay = $('<div />', {
+			    	'class': 'scroll-overlay'
+			    }),
+			    resizeTimer;
+			
+			$scroll.wrap($scroll_wrap);
+			$scroll_overlay
+				.text('Scroll')
+				.hide()
+				.insertAfter($scroll);
+			
+			$scroll.on('foo', function() {
+				
+				var $this = $(this),
+				    $that = $this.parent('.scroll-wrap').find('.scroll-overlay');
+				
+				if ($this.hasHorizontalScrollBar()) {
+					$that.show();
+					console.log('show');
+				} else {
+					$that.hide();
+					console.log('hide');
+				}
+				
+			});
+			
+			$scroll.trigger('foo');
+			
+			$(window).resize(function() {
+				
+				clearTimeout(resizeTimer);
+				
+				resizeTimer = setTimeout(function() {
+					
+					$scroll.trigger('foo');
+					
+				}, 100);
+				
+			});
+			
+		});
 		
 		$(window).load(function() {});
 		
