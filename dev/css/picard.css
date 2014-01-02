@@ -785,9 +785,11 @@ hr,
   -ms-box-sizing: content-box;
   box-sizing: content-box;
 }
-aside hr, section hr, aside
-.hr, section
+section hr, article hr, aside hr, section
+.hr, article
+.hr, aside
 .hr {
+  border-color: #cccccc;
   margin-top: 1.42857142857143rem;
   margin-bottom: 1.42857142857143rem;
 }

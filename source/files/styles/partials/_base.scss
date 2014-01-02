@@ -67,8 +67,10 @@ hr,
 	    -ms-box-sizing: content-box;
 	        box-sizing: content-box;
 	
-	aside &,
-	section & {
+	section &,
+	article &,
+	aside & {
+		border-color: $grayc;
 		//border-top-width: #{relative(1)}rem;
 		margin: {
 			top: #{relative($base_margin) * 2}rem;
