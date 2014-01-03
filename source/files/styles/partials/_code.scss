@@ -55,8 +55,9 @@ pre {
 
 .pygments {
 	
-	color: #f8f8f2;
+	color: $grayc;
 	background: $gray2;
+	border: #{relative(5)}rem solid $grayd;
 	margin: {
 		top: #{relative($base_margin)}rem;
 		bottom: #{relative($base_margin)}rem;
