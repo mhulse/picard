@@ -791,9 +791,9 @@ hr,
   -ms-box-sizing: content-box;
   box-sizing: content-box;
 }
-section hr, article hr, aside hr, section
-.hr, article
+article hr, aside hr, section hr, article
 .hr, aside
+.hr, section
 .hr {
   border-top-width: 0.14285714285714rem;
   border-color: #cccccc;
@@ -886,7 +886,7 @@ h5,
 h6,
 p,
 pre, .x7, article hr,
-aside
+aside hr,
 section hr {
   margin-right: auto;
   margin-left: auto;
@@ -935,7 +935,7 @@ pre {
 }
 
 .x7, article hr,
-aside
+aside hr,
 section hr {
   max-width: 53.57142857142857rem;
 }
