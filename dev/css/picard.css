@@ -874,7 +874,9 @@ dd {
 .form button,
 .form input[type="button"],
 .form input[type="reset"],
-.form input[type="submit"], .x2, .x3, label, .x4, blockquote, .x5, figcaption, .x6, address,
+.form input[type="submit"], .x2, .x3, label, .x4, blockquote,
+ol,
+ul, .x5, figcaption, .x6, address,
 dl,
 h1,
 h2,
@@ -882,12 +884,10 @@ h3,
 h4,
 h5,
 h6,
-ol,
 p,
-pre,
-ul, .x7, section hr,
-article hr,
-aside hr {
+pre, .x7, article hr,
+aside
+section hr {
   margin-right: auto;
   margin-left: auto;
   display: block;
@@ -911,7 +911,9 @@ aside hr {
   max-width: 25rem;
 }
 
-.x4, blockquote {
+.x4, blockquote,
+ol,
+ul {
   max-width: 32.14285714285715rem;
 }
 
@@ -927,16 +929,14 @@ h3,
 h4,
 h5,
 h6,
-ol,
 p,
-pre,
-ul {
+pre {
   max-width: 46.42857142857143rem;
 }
 
-.x7, section hr,
-article hr,
-aside hr {
+.x7, article hr,
+aside
+section hr {
   max-width: 53.57142857142857rem;
 }
 
