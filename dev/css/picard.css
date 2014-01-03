@@ -834,7 +834,7 @@ ul, ol {
   font-weight: bold;
   color: #cca700;
   margin-top: 0.71428571428571rem;
-  margin-bottom: 0.11904761904762rem;
+  margin-bottom: 0.17857142857143rem;
   display: block;
   content: counter(li,lower-roman);
   counter-increment: li;
@@ -849,6 +849,7 @@ ul, ol {
 .li2 > li::before,
 .body ul > li::before {
   content: counter(li,square);
+  margin-bottom: 0.11904761904762rem;
 }
 
 dt {
@@ -1336,10 +1337,10 @@ span.amp {
   content: "\00a0\f141";
 }
 .more a, .more a:visited {
-  color: #1d678f;
+  color: #cc3300;
 }
 .more a:visited:hover, .more a:focus, .more a:focus:hover, .more a:hover, .more a:active {
-  color: #13aac9;
+  color: #ff6600;
   text-decoration: none;
 }
 
@@ -2136,14 +2137,13 @@ p.meta:hover {
 
 .pager {
   color: #999999;
-  border-width: 0.35714285714286rem 0 0;
-  border-style: solid;
-  border-color: #dddddd;
+  background: #dddddd;
   margin-top: 0.71428571428571rem;
   margin-bottom: 0;
-  padding: 0.35714285714286rem 0;
+  padding: 0.35714285714286rem;
   display: inline-block;
   width: auto;
+  border-radius: 0.21428571428571rem;
 }
 .pager > li {
   margin: 0;
@@ -2167,10 +2167,10 @@ p.meta:hover {
   background: #333333;
 }
 .pager > li:first-child > a:before {
-  content: "\f0d9\00a0";
+  content: "\f177\00a0";
 }
 .pager > li:last-child > a:after {
-  content: "\00a0\f0da";
+  content: "\00a0\f178";
 }
 @media (max-width: 53.5rem) {
   .pager > li:not(:first-child):not(:last-child) {
@@ -2183,7 +2183,7 @@ p.meta:hover {
 .pager a:visited:hover, .pager a:focus, .pager a:focus:hover, .pager a:hover, .pager a:active {
   color: #333333;
   text-decoration: none;
-  background: #dddddd;
+  background: #eeeeee;
 }
 
 a.social {

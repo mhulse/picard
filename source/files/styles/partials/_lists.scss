@@ -19,7 +19,7 @@ ul, ol { list-style: none; }
 			color: darken($bling, 10%);
 			margin: {
 				top: #{relative($base_margin)}rem;
-				bottom: #{relative($base_margin / 6)}rem;
+				bottom: #{relative($base_margin / 4)}rem;
 			}
 			display: block;
 			content: counter(li, lower-roman);
@@ -37,7 +37,10 @@ ul, ol { list-style: none; }
 	
 	> li {
 		
-		&::before { content: counter(li, square); }
+		&::before {
+			content: counter(li, square);
+			margin-bottom: #{relative($base_margin / 6)}rem;
+		}
 		
 	}
 	

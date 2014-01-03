@@ -472,13 +472,13 @@ span {
 	a {
 		
 		&,
-		&:visited { color: $dusk; }
+		&:visited { color: $lobster; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $smurf;
+			color: $juice;
 			text-decoration: none;
 		}
 		

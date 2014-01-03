@@ -209,16 +209,18 @@ p.meta {
 .pager {
 	
 	color: $gray9;
-	border-width: #{relative(5)}rem 0 0;
-	border-style: solid;
-	border-color: $grayd;
+	//border-width: #{relative(5)}rem 0 0;
+	//border-style: solid;
+	//border-color: $grayd;
+	background: $grayd;
 	margin: {
 		top: #{relative($base_margin)}rem;
 		bottom: 0;
 	}
-	padding: #{relative($base_padding) / 2}rem 0;
+	padding: #{relative($base_padding) / 2}rem;
 	display: inline-block;
 	width: auto;
+	border-radius: #{relative($base_radii)}rem;
 	
 	> {
 		
@@ -247,11 +249,11 @@ p.meta {
 			
 			&:first-child > a:before {
 				@extend %chevron;
-				content: "\f0d9\00a0";
+				content: "\f177\00a0";
 			}
 			&:last-child > a:after {
 				@extend %chevron;
-				content: "\00a0\f0da";
+				content: "\00a0\f178";
 			}
 			
 			&:not(:first-child):not(:last-child) {
@@ -279,7 +281,7 @@ p.meta {
 		&:active {
 			color: $gray3;
 			text-decoration: none;
-			background: $grayd;
+			background: $graye;
 		}
 		
 	}
