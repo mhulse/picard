@@ -2275,3 +2275,37 @@ a.social-tumblr, a.social-tumblr:visited, a.social-tumblr:visited:hover, a.socia
   color: #ffd100;
   content: "\f069\00a0";
 }
+
+.scroll-wrap {
+  position: relative;
+}
+
+.scroll-overlay {
+  font-size: 1em;
+  line-height: 1;
+  letter-spacing: .1em;
+  text-transform: lowercase;
+  text-shadow: 0 0.07142857142857rem 0.21428571428571rem black, 0 0.07142857142857rem 0.21428571428571rem black, 0 0.07142857142857rem 0.21428571428571rem black, 0 0.07142857142857rem 0.21428571428571rem black;
+  text-align: center;
+  color: white;
+  position: absolute;
+  width: 100%;
+  top: 0.71428571428571rem;
+  left: 0;
+  opacity: .5;
+}
+
+.scroll-overlay::before,
+.scroll-overlay::after {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.scroll-overlay::before {
+  content: "\f0a5\00a0";
+}
+
+.scroll-overlay::after {
+  content: "\00a0\f0a4";
+}
