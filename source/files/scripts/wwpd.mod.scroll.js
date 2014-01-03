@@ -33,10 +33,10 @@ WWPD.register(function() {
 		
 		if ($this.hasHorizontalScrollBar()) {
 			$that.show();
-			console.log('show');
+			//console.log('show');
 		} else {
 			$that.hide();
-			console.log('hide');
+			//console.log('hide');
 		}
 		
 	});

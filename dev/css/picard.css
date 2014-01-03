@@ -1991,6 +1991,12 @@ figcaption a:visited:hover, figcaption a:focus, figcaption a:focus:hover, figcap
   color: #ffd100;
   text-decoration: none;
 }
+figcaption .social {
+  margin-left: 0.35714285714286rem;
+}
+figcaption .social i {
+  margin-right: 0.14285714285714rem;
+}
 
 img {
   border: 0;

@@ -75,6 +75,14 @@ figcaption {
 		
 	}
 	
+	.social {
+		
+		margin-left: #{relative(5)}rem;
+		
+		i { margin-right: #{relative(2)}rem; }
+		
+	}
+	
 }
 
 img {
