@@ -3,27 +3,30 @@ ul, ol, dl { padding: 0; }
 ul, ol { list-style: none; }
 
 // http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/
-
+// http://css-tricks.com/numbering-in-style/
 .li1,
-.body ol {
+.li2,
+.body ol,
+.body ul {
 	
 	counter-reset: li;
 	
 	> li {
 		
-		&:before {
-			@include baseline($base_font-size - 2);
-			color: $gray3;
-			border: #{relative(1)}rem solid $gray3;
-			width: #{baseline($base_font-size - 2)}em;
-			margin: #{relative($base_margin)}rem auto #{relative($base_margin / 2)}rem;
+		&::before {
+			font-family: $serif;
+			font-weight: bold;
+			color: darken($bling, 10%);
+			margin: {
+				top: #{relative($base_margin)}rem;
+				bottom: #{relative($base_margin / 6)}rem;
+			}
 			display: block;
-			content: counter(li);
+			content: counter(li, lower-roman);
 			counter-increment: li;
-			border-radius: 50%;
 		}
 		
-		&:first-child:before { margin-top: 0; }
+		&:first-child::before { margin-top: 0; }
 		
 	}
 	
@@ -34,19 +37,7 @@ ul, ol { list-style: none; }
 	
 	> li {
 		
-		&:before {
-			
-			background: $gray3;
-			width: .75rem;
-			height: .75rem;
-			margin: #{relative($base_margin)}rem auto #{relative($base_margin / 2)}rem;
-			display: block;
-			content: "";
-			border-radius: 50%;
-			
-			&:first-child:before { margin-top: 0; }
-			
-		}
+		&::before { content: counter(li, square); }
 		
 	}
 	

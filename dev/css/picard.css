@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 0.1.0
- * @date 2014/01/02
+ * @date 2014/01/03
  */
 
 
@@ -821,40 +821,34 @@ ul, ol {
 }
 
 .li1,
-.body ol {
+.li2,
+.body ol,
+.body ul {
   counter-reset: li;
 }
-.li1 > li:before,
-.body ol > li:before {
-  font-size: 0.85714285714286rem;
-  line-height: 1.83333333333333;
-  color: #333333;
-  border: 0.07142857142857rem solid #333333;
-  width: 1.83333333333333em;
-  margin: 0.71428571428571rem auto 0.35714285714286rem;
+.li1 > li::before,
+.li2 > li::before,
+.body ol > li::before,
+.body ul > li::before {
+  font-family: Cambria, Georgia, serif;
+  font-weight: bold;
+  color: #cca700;
+  margin-top: 0.71428571428571rem;
+  margin-bottom: 0.11904761904762rem;
   display: block;
-  content: counter(li);
+  content: counter(li,lower-roman);
   counter-increment: li;
-  border-radius: 50%;
 }
-.li1 > li:first-child:before,
-.body ol > li:first-child:before {
+.li1 > li:first-child::before,
+.li2 > li:first-child::before,
+.body ol > li:first-child::before,
+.body ul > li:first-child::before {
   margin-top: 0;
 }
 
-.li2 > li:before,
-.body ul > li:before {
-  background: #333333;
-  width: .75rem;
-  height: .75rem;
-  margin: 0.71428571428571rem auto 0.35714285714286rem;
-  display: block;
-  content: "";
-  border-radius: 50%;
-}
-.li2 > li:before:first-child:before,
-.body ul > li:before:first-child:before {
-  margin-top: 0;
+.li2 > li::before,
+.body ul > li::before {
+  content: counter(li,square);
 }
 
 dt {
