@@ -688,6 +688,12 @@ textarea {
   visibility: hidden;
 }
 
+.nix {
+  color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  border: 0;
+}
+
 .force {
   margin-top: -1px;
   margin-bottom: -1px;
@@ -1987,8 +1993,13 @@ figcaption a:visited:hover, figcaption a:focus, figcaption a:focus:hover, figcap
 }
 
 img {
+  border: 0;
   max-width: 100%;
   height: auto;
+}
+a img {
+  border: 0;
+  outline: 0;
 }
 
 iframe[id^='twitter-widget-'],

@@ -30,6 +30,12 @@
 
 .ghost { visibility: hidden; }
 
+.nix {
+	color: rgba($raven, 0);
+	text-decoration: none;
+	border: 0;
+}
+
 .force {
 	margin: {
 		top: -1px;
