@@ -337,7 +337,7 @@ span {
 
 .label {
 	
-	@include baseline($base_font-size - 2, .75);
+	@include baseline($base_font-size - 1, .75);
 	text-transform: uppercase;
 	letter-spacing: .1em;
 	font-weight: normal;
@@ -419,7 +419,7 @@ span {
 		@include baseline($base_font-size - 3, .875);
 		letter-spacing: .15em;
 		text-transform: uppercase;
-		padding: #{baseline($base_font-size - 3, .875) / 6}em 1em;
+		padding: #{baseline($base_font-size - 3, .875) / 8}em 1em;
 		background: $graye;
 		display: inline-block;
 	}
@@ -445,46 +445,50 @@ span {
 	
 }
 
-%more {
-	font-family: FontAwesome;
-	font-style: normal;
-	font-weight: normal;
-	text-decoration: inherit;
-	color: $gray9;
-	display: inline-block;
-}
+// %more {
+// 	font-family: FontAwesome;
+// 	font-style: normal;
+// 	font-weight: normal;
+// 	text-decoration: inherit;
+// 	color: $gray9;
+// 	display: inline-block;
+// }
 
-.more {
+// .more {
 	
-	//font-size: smaller;
-	text-transform: lowercase;
-	letter-spacing: .05em;
+// 	font-size: smaller;
+// 	line-height: normal;
 	
-	&:before {
-		@extend %more;
-		content: "\f141\00a0";
-	}
-	&:after {
-		@extend %more;
-		content: "\00a0\f141";
-	}
+// 	&:before {
+// 		@extend %more;
+// 		content: "\f141\00a0";
+// 	}
+// 	&:after {
+// 		@extend %more;
+// 		content: "\00a0\f141";
+// 	}
 	
-	a {
+// 	a {
 		
-		&,
-		&:visited { color: $lobster; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
-			color: $juice;
-			text-decoration: none;
-		}
+// 		text-transform: lowercase;
+// 		letter-spacing: .08em;
+// 		text-transform: uppercase;
+// 		font-weight: bold;
 		
-	}
+// 		&,
+// 		&:visited { color: $lobster; }
+// 		&:visited:hover,
+// 		&:focus,
+// 		&:focus:hover,
+// 		&:hover,
+// 		&:active {
+// 			color: $juice;
+// 			text-decoration: none;
+// 		}
+		
+// 	}
 	
-}
+// }
 
 .external {
 	
@@ -548,6 +552,22 @@ span {
 		font-size: smaller;
 		letter-spacing: .125em;
 		margin-top: .3em;
+	}
+	
+}
+
+.more {
+	
+	a.social {
+		
+		&,
+		&:visited { color: $juice; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active { color: $lobster; }
+		
 	}
 	
 }

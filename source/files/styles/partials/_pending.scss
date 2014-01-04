@@ -11,6 +11,7 @@
 	text-align: center;
 	color: $milk;
 	position: absolute;
+	z-index: 100;
 	width: 100%;
 	top: #{relative(10)}rem;
 	left: 0;
