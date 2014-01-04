@@ -1344,6 +1344,61 @@ span.amp {
   text-decoration: none;
 }
 
+.external {
+  font-size: 1rem;
+  line-height: normal;
+  text-transform: none;
+  letter-spacing: .1em;
+}
+.external a {
+  font-size: 1.57142857142857rem;
+  line-height: 1;
+  padding: 1.07142857142857rem 2.85714285714286rem;
+  background: #cc3300;
+  display: inline-block;
+  position: relative;
+  border-radius: 0.21428571428571rem;
+  text-shadow: 0 0.07142857142857rem rgba(102, 26, 0, 0.75);
+  box-shadow: 0 0.21428571428571rem rgba(153, 38, 0, 0.2);
+}
+.external a, .external a:visited {
+  color: white;
+}
+.external a:visited:hover, .external a:focus, .external a:focus:hover, .external a:hover, .external a:active {
+  color: white;
+  text-decoration: none;
+  background: #ff6600;
+}
+.external a::before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: smaller;
+  text-decoration: none;
+  content: "\f08e";
+  color: white;
+  position: absolute;
+  top: .5em;
+  right: .5em;
+}
+.external time,
+.external span {
+  font-weight: normal;
+  line-height: 1.2;
+  display: block;
+}
+.external time {
+  font-size: 60%;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  margin-bottom: .4em;
+}
+.external span {
+  font-size: smaller;
+  letter-spacing: .125em;
+  margin-top: .3em;
+}
+
 pre {
   font-size: 1rem;
   line-height: 1.375;
