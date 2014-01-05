@@ -1,54 +1,72 @@
 /* jshint -W062, expr:true */
 
 // Load Disqus comments on click.
+//
+// Markup nesting:
+// <#comments><#disqus><#disqus_thread>
 WWPD.register(function() {
 	
 	'use strict';
 	
-	var $disqus = $('#disqus'),
+	var $comments = $('#comments'),
+	    $disqus,
 	    $disqus_thread;
 	
-	if ($disqus.length) {
+	if ($comments.length) {
 		
-		$disqus.hide();
+		$disqus = $comments.find('#disqus');
 		
-		$disqus_thread = $disqus.find('#disqus_thread');
-		
-		if ($disqus_thread.length) {
+		if ($disqus.length) {
 			
-			$('.disqus').one('click.disqus', function(e) {
+			$disqus.hide();
+			
+			$disqus_thread = $disqus.find('#disqus_thread');
+			
+			if ($disqus_thread.length) {
 				
-				var data = $disqus_thread.data('disqus'),
-				    i;
-				
-				e.preventDefault();
-				
-				for (i in data) {
+				$('.disqus').one('click.disqus', function(e) {
 					
-					if (data.hasOwnProperty(i)) {
+					var data = $disqus_thread.data('disqus'),
+					    i;
+					
+					e.preventDefault();
+					
+					history.replaceState(null, '', '#comments');
+					
+					for (i in data) {
 						
-						window['disqus_' + i.toLowerCase()] = data[i];
+						if (data.hasOwnProperty(i)) {
+							
+							window['disqus_' + i.toLowerCase()] = data[i];
+							
+						}
 						
 					}
 					
-				}
-				
-				//$this.fadeOut(500, function() {
-				
-				$disqus.fadeIn(1000, function() {
+					//$this.fadeOut(500, function() {
 					
-					$.ajax({
-						type: 'GET',
-						url: 'http://' + window.disqus_shortname + '.disqus.com/embed.js',
-						dataType: 'script',
-						cache: true
+					$disqus.fadeIn(1000, function() {
+						
+						$.ajax({
+							type: 'GET',
+							url: 'http://' + window.disqus_shortname + '.disqus.com/embed.js',
+							dataType: 'script',
+							cache: true
+						});
+						
 					});
+					
+					//});
 					
 				});
 				
-				//});
+				if (location.hash.indexOf('#comments') === 0) {
+					
+					$('.disqus').trigger('click.disqus');
+					
+				}
 				
-			});
+			}
 			
 		}
 		

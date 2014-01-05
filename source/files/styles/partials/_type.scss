@@ -341,7 +341,6 @@ span {
 	text-transform: uppercase;
 	letter-spacing: .1em;
 	font-weight: normal;
-	color: $gray8;
 	margin: {
 		top: #{relative($base_margin)}rem;
 		bottom: #{relative($base_margin)}rem;
@@ -349,17 +348,19 @@ span {
 	
 	a,
 	span {
-		border-bottom: #{relative(2)}rem solid $grayd;
-		padding: #{relative(1)}rem #{relative(5)}rem;
+		border-bottom: #{relative(5)}rem solid $graye;
+		padding: #{relative(1)}rem #{relative(10)}rem;
 		display: inline-block;
 	}
+	
+	span { color: $gray9; }
 	
 	a {
 		
 		&,
 		&:visited {
 			color: $gray3;
-			border-bottom-color: $gray1;
+			border-bottom-color: $grayd;
 		}
 		&:visited:hover,
 		&:focus,
@@ -501,12 +502,28 @@ span {
 		
 		@include baseline($base_font-size + 8);
 		padding: #{relative($base_padding * 1.5)}rem #{relative($base_padding * 4)}rem;
-		background: $lobster;
 		display: inline-block;
 		position: relative;
 		border-radius: #{relative($base_radii)}rem;
-		text-shadow: 0 #{relative(1)}rem rgba(darken($lobster, 20%), .75);
-		box-shadow: 0 #{relative(3)}rem rgba(darken($lobster, 10%), .2);
+		text-shadow: 0 #{relative(1)}rem rgba(darken($hulk, 10%), .75);
+		box-shadow: 0 #{relative(3)}rem rgba(darken($goblin, 10%), .2);
+		
+		// http://lea.verou.me/2010/12/checkered-stripes-other-background-patterns-with-css3-gradients/
+		background-color: $hulk;
+		background-image:
+			linear-gradient(
+				45deg, rgba($milk, .075) 25%,
+				transparent 25%,
+				transparent 50%,
+				rgba($milk, .075) 50%,
+				rgba($milk, .075) 75%,
+				transparent 75%,
+				transparent
+			);
+		// Controls the size of the stripes:
+		-webkit-background-size: 50px 50px;
+		   -moz-background-size: 50px 50px;
+		        background-size: 50px 50px;
 		
 		&,
 		&:visited { color: $milk; }
@@ -517,7 +534,7 @@ span {
 		&:active {
 			color: $milk;
 			text-decoration: none;
-			background: $juice;
+			background-color: $goblin;
 		}
 		
 		&::before {
@@ -529,8 +546,8 @@ span {
 			content: "\f08e";
 			color: $milk;
 			position: absolute;
-			top: .5em;
-			right: .5em;
+			top: #{relative($base_padding * 1.5)}rem;
+			right: #{relative($base_padding * 1.5)}rem;
 		}
 		
 	}
@@ -558,6 +575,16 @@ span {
 
 .more {
 	
+	font-size: 1rem;
+	line-height: 1;
+	margin: {
+		top: 0;
+		bottom: 0;
+	}
+	padding: 0;
+	
+	.fa-plus { text-shadow: 0 #{relative(4)}rem rgba(darken($lobster, 20%), .5); }
+	
 	a.social {
 		
 		&,
@@ -570,4 +597,11 @@ span {
 		
 	}
 	
+}
+
+.excerpt {
+	margin: {
+		top: .5rem;
+		bottom: .25rem;
+	}
 }

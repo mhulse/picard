@@ -781,7 +781,7 @@ a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
 hr,
 .hr {
   border: 0;
-  border-top: 0.35714285714286rem solid #eeeeee;
+  border-top: 0.28571428571429rem solid #eeeeee;
   height: 0;
   margin-top: 2.85714285714286rem;
   margin-bottom: 2.85714285714286rem;
@@ -795,10 +795,10 @@ article hr, aside hr, section hr, article
 .hr, aside
 .hr, section
 .hr {
-  border-top-width: 0.07142857142857rem;
+  border-top-width: 0.14285714285714rem;
   border-color: #cccccc;
-  margin-top: 1.42857142857143rem;
-  margin-bottom: 1.42857142857143rem;
+  margin-top: 2.14285714285714rem;
+  margin-bottom: 2.14285714285714rem;
 }
 
 section > :first-child,
@@ -1246,19 +1246,21 @@ span.amp {
   text-transform: uppercase;
   letter-spacing: .1em;
   font-weight: normal;
-  color: #888888;
   margin-top: 0.71428571428571rem;
   margin-bottom: 0.71428571428571rem;
 }
 .label a,
 .label span {
-  border-bottom: 0.14285714285714rem solid #dddddd;
-  padding: 0.07142857142857rem 0.35714285714286rem;
+  border-bottom: 0.35714285714286rem solid #eeeeee;
+  padding: 0.07142857142857rem 0.71428571428571rem;
   display: inline-block;
+}
+.label span {
+  color: #999999;
 }
 .label a, .label a:visited {
   color: #333333;
-  border-bottom-color: #111111;
+  border-bottom-color: #dddddd;
 }
 .label a:visited:hover, .label a:focus, .label a:focus:hover, .label a:hover, .label a:active {
   color: #ff6600;
@@ -1327,12 +1329,16 @@ span.amp {
   font-size: 1.57142857142857rem;
   line-height: 1;
   padding: 1.07142857142857rem 2.85714285714286rem;
-  background: #cc3300;
   display: inline-block;
   position: relative;
   border-radius: 0.21428571428571rem;
-  text-shadow: 0 0.07142857142857rem rgba(102, 26, 0, 0.75);
-  box-shadow: 0 0.21428571428571rem rgba(153, 38, 0, 0.2);
+  text-shadow: 0 0.07142857142857rem rgba(53, 86, 19, 0.75);
+  box-shadow: 0 0.21428571428571rem rgba(109, 112, 1, 0.2);
+  background-color: #4e801c;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.075) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.075) 50%, rgba(255, 255, 255, 0.075) 75%, transparent 75%, transparent);
+  -webkit-background-size: 50px 50px;
+  -moz-background-size: 50px 50px;
+  background-size: 50px 50px;
 }
 .external a, .external a:visited {
   color: white;
@@ -1340,7 +1346,7 @@ span.amp {
 .external a:visited:hover, .external a:focus, .external a:focus:hover, .external a:hover, .external a:active {
   color: white;
   text-decoration: none;
-  background: #ff6600;
+  background-color: #9ea301;
 }
 .external a::before {
   font-family: FontAwesome;
@@ -1351,8 +1357,8 @@ span.amp {
   content: "\f08e";
   color: white;
   position: absolute;
-  top: .5em;
-  right: .5em;
+  top: 1.07142857142857rem;
+  right: 1.07142857142857rem;
 }
 .external time,
 .external span {
@@ -1372,11 +1378,26 @@ span.amp {
   margin-top: .3em;
 }
 
+.more {
+  font-size: 1rem;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+.more .fa-plus {
+  text-shadow: 0 0.28571428571429rem rgba(102, 26, 0, 0.5);
+}
 .more a.social, .more a.social:visited {
   color: #ff6600;
 }
 .more a.social:visited:hover, .more a.social:focus, .more a.social:focus:hover, .more a.social:hover, .more a.social:active {
   color: #cc3300;
+}
+
+.excerpt {
+  margin-top: .5rem;
+  margin-bottom: .25rem;
 }
 
 pre {
@@ -2163,7 +2184,7 @@ p.meta:hover {
   color: #870000;
 }
 
-.pager > li:first-child > a:before, .pager > li:last-child > a:after {
+.pager > li:first-child a::before, .pager > li:last-child a::after {
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
@@ -2173,13 +2194,11 @@ p.meta:hover {
 
 .pager {
   color: #999999;
-  background: #dddddd;
   margin-top: 0.71428571428571rem;
   margin-bottom: 0;
-  padding: 0.35714285714286rem;
+  padding: 0;
   display: inline-block;
   width: auto;
-  border-radius: 0.21428571428571rem;
 }
 .pager > li {
   margin: 0;
@@ -2192,20 +2211,25 @@ p.meta:hover {
   line-height: 1.83333333333333;
   text-transform: uppercase;
   letter-spacing: .05em;
-  margin: 0 .25em;
-  padding: .1em .75em;
+  padding: .5em 1em;
   display: inline-block;
-  border-radius: 0.21428571428571rem;
+  background: #dddddd;
 }
 .pager > li .pager-current {
   color: white;
   font-weight: bold;
   background: #333333;
 }
-.pager > li:first-child > a:before {
+.pager > li:first-child a {
+  border-radius: 0.21428571428571rem 0 0 0.21428571428571rem;
+}
+.pager > li:first-child a::before {
   content: "\f177\00a0";
 }
-.pager > li:last-child > a:after {
+.pager > li:last-child a {
+  border-radius: 0 0.21428571428571rem 0.21428571428571rem;
+}
+.pager > li:last-child a::after {
   content: "\00a0\f178";
 }
 @media (max-width: 53.5rem) {
@@ -2216,10 +2240,15 @@ p.meta:hover {
 .pager a, .pager a:visited {
   color: #333333;
 }
-.pager a:visited:hover, .pager a:focus, .pager a:focus:hover, .pager a:hover, .pager a:active {
+.pager a:visited:hover, .pager a:focus, .pager a:focus:hover, .pager a:hover {
   color: #333333;
   text-decoration: none;
   background: #eeeeee;
+}
+.pager a:active, .pager a:active:visited, .pager a:active:visited:hover, .pager a:active:focus, .pager a:active:focus:hover, .pager a:active:hover {
+  color: white;
+  text-decoration: none;
+  background: #cc3300;
 }
 
 a.social, a.social:visited {

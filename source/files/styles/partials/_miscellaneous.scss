@@ -212,15 +212,14 @@ p.meta {
 	//border-width: #{relative(5)}rem 0 0;
 	//border-style: solid;
 	//border-color: $grayd;
-	background: $grayd;
+	//background: $grayd;
 	margin: {
 		top: #{relative($base_margin)}rem;
 		bottom: 0;
 	}
-	padding: #{relative($base_padding) / 2}rem;
+	padding: 0;
 	display: inline-block;
 	width: auto;
-	border-radius: #{relative($base_radii)}rem;
 	
 	> {
 		
@@ -235,10 +234,11 @@ p.meta {
 				@include baseline($base_font-size - 2);
 				text-transform: uppercase;
 				letter-spacing: .05em;
-				margin: 0 .25em;
-				padding: .1em .75em;
+				//margin: 0 .25em;
+				padding: .5em 1em;
 				display: inline-block;
-				border-radius: #{relative($base_radii)}rem;
+				//border-radius: #{relative($base_radii)}rem;
+				background: $grayd;
 			}
 			
 			.pager-current {
@@ -247,13 +247,34 @@ p.meta {
 				background: $gray3;
 			}
 			
-			&:first-child > a:before {
-				@extend %chevron;
-				content: "\f177\00a0";
+			&:first-child {
+				
+				a {
+					
+					border-radius: #{relative($base_radii)}rem 0 0 #{relative($base_radii)}rem;
+					
+					&::before {
+						@extend %chevron;
+						content: "\f177\00a0";
+					}
+					
+				}
+				
 			}
-			&:last-child > a:after {
-				@extend %chevron;
-				content: "\00a0\f178";
+			
+			&:last-child {
+				
+				a {
+					
+					border-radius: 0 #{relative($base_radii)}rem #{relative($base_radii)}rem;
+					
+					&::after {
+						@extend %chevron;
+						content: "\00a0\f178";
+					}
+					
+				}
+				
 			}
 			
 			&:not(:first-child):not(:last-child) {
@@ -277,11 +298,20 @@ p.meta {
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
-		&:hover,
-		&:active {
+		&:hover {
 			color: $gray3;
 			text-decoration: none;
 			background: $graye;
+		}
+		&:active,
+		&:active:visited,
+		&:active:visited:hover,
+		&:active:focus,
+		&:active:focus:hover,
+		&:active:hover {
+			color: $milk;
+			text-decoration: none;
+			background: $lobster;
 		}
 		
 	}
