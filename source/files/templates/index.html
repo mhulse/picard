@@ -1,56 +1,36 @@
 <!doctype html>
-<html dir="ltr" lang="en" class="no-js">
+<html class="no-js">
 
 <!--@echo banner-->
 
 <head>
 	
-	<meta http-equiv="X-UA-Compatible" content="chrome=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http-equiv="date" content="">
-	
 	<meta charset="utf-8">
 	
-	<title><!--@echo title--> | v<!--@echo version--> | <!--@echo NODE_ENV--></title>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 	
 	<meta name="viewport" content="width=device-width">
+	
+	<title><!--@echo title--> | v<!--@echo version--> | <!--@echo NODE_ENV--></title>
+	<meta name="description" content="<!--@echo description-->">
+	<meta name="keywords" content="">
+	
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="HandheldFriendly" content="true">
 	<meta name="apple-mobile-web-app-title" content="MKY.io">
-	<meta name="description" content="<!--@echo description-->">
-	<meta name="keywords" content="">
-	
-	<meta property="og:title" content="<!--@echo title-->">
-	<meta property="og:type" content="website">
-	<!--
-	<meta property="og:type" content="article">
-	<meta property="article:published_time" content="">
-	<meta property="article:section" content="">
-	<meta property="article:tag" content="">
-	-->
-	<meta property="og:image" content="">
-	<meta property="og:image:type" content="image/png">
-	<meta property="og:image:width" content="400">
-	<meta property="og:image:height" content="300">
-	<meta property="og:url" content="">
-	<meta property="og:description" content="<!--@echo description-->">
-	<meta property="og:site_name" content="MKY.io">
-	
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="//mky.io/apple-touch-icon-144x144-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="//mky.io/apple-touch-icon-114x114-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="//mky.io/apple-touch-icon-72x72-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" href="//mky.io/apple-touch-icon-57x57-precomposed.png">
-	<link rel="shortcut icon" href="//mky.io/favicon.ico">
-	<!--<link rel="icon" type="image/png" href="">-->
-	<link rel="alternate" type="application/rss+xml" href="" title="RSS Feed">
-	<link rel="sitemap" type="application/xml" href="" title="Sitemap">
-	<link rel="source" href="https://github.com/mhulse" title="Source Code">
-	<!-- Use photo if one exists, otherwise use this as a default: -->
-	<link rel="image_src" href="//mky.io/apple-touch-icon-144x144-precomposed.png">
 	
 	<!-- Use when not on mky.io: -->
-	<meta name="msapplication-TileImage" content="//mky.io/apple-touch-icon-144x144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://mky.io/apple-touch-icon-144x144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://mky.io/apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://mky.io/apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="http://mky.io/apple-touch-icon-57x57-precomposed.png">
+	<link rel="shortcut icon" href="http://mky.io/favicon.ico">
+	
+	<!-- Use photo if one exists, otherwise use this as a default: -->
+	<link rel="image_src" href="http://mky.io/apple-touch-icon-144x144-precomposed.png">
+	
+	<meta name="msapplication-TileImage" content="http://mky.io/apple-touch-icon-144x144-precomposed.png">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	
 	<!-- Webmaster tools: -->
@@ -68,12 +48,12 @@
 	
 	<!-- @if NODE_ENV == 'PRODUCTION' -->
 	
-	<link rel="stylesheet" href="//picard.mky.io/<!-- @echo name -->/prod/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/css/<!-- @echo name -->.min.css">
+	<link rel="stylesheet" href="http://picard.mky.io/<!-- @echo name -->/prod/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/css/<!-- @echo name -->.min.css">
 	
 	<!-- @endif -->
 	
-	<link rel="stylesheet" href="//fonts.mky.io/hulse/hulse.css">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="http://fonts.mky.io/hulse/hulse.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 	
 	<!--<![endif]-->
 	
@@ -463,7 +443,7 @@
 			
 			<h1 id="h1-h6-sh1-sh6-p" class="marker"><a href="#h1-h6-sh1-sh6-p"><code>h1</code> - <code>h6</code> + <code>.sh1</code> - <code>.sh6</code> + <code>p</code></a></h1>
 			
-			<article>
+			<article itemscope itemtype="http://schema.org/Article">
 				
 				<header>
 					
@@ -489,7 +469,7 @@
 			
 			<hr>
 			
-			<article>
+			<article itemscope itemtype="http://schema.org/Article">
 				
 				<header>
 					
@@ -515,7 +495,7 @@
 			
 			<hr>
 			
-			<article>
+			<article itemscope itemtype="http://schema.org/Article">
 				
 				<header>
 					
@@ -541,7 +521,7 @@
 			
 			<hr>
 			
-			<article>
+			<article itemscope itemtype="http://schema.org/Article">
 				
 				<header>
 					
@@ -567,7 +547,7 @@
 			
 			<hr>
 			
-			<article>
+			<article itemscope itemtype="http://schema.org/Article">
 				
 				<header>
 					
@@ -593,7 +573,7 @@
 			
 			<hr>
 			
-			<article>
+			<article itemscope itemtype="http://schema.org/Article">
 				
 				<header>
 					
@@ -785,7 +765,7 @@
 			
 			<h1 id="p" class="marker"><a href="#p"><code>p</code></a></h1>
 			
-			<article>
+			<article itemscope itemtype="http://schema.org/Article">
 				
 				<p>Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues.</p>
 				
@@ -807,7 +787,7 @@
 			
 			<h2 class="subtle"><code>.body</code></h2>
 			
-			<article>
+			<article itemscope itemtype="http://schema.org/Article">
 				
 				<div class="body" itemprop="articleBody">
 					
@@ -1695,10 +1675,10 @@ p q r s t u v w x y z { | } ~
 	
 	<!-- @if NODE_ENV == 'PRODUCTION' -->
 	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script>if(!window.jQuery){document.write('<script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.3.min.js"><\/script>');}</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script>if(!window.jQuery){document.write('<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.3.min.js"><\/script>');}</script>
 	
-	<script src="//picard.mky.io/<!-- @echo name -->/prod/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/scripts/<!-- @echo name -->.min.js"></script>
+	<script src="http://picard.mky.io/<!-- @echo name -->/prod/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/scripts/<!-- @echo name -->.min.js"></script>
 	
 	<!-- @endif -->
 	
