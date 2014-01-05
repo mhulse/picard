@@ -2227,7 +2227,7 @@ p.meta:hover {
   content: "\f177\00a0";
 }
 .pager > li:last-child a {
-  border-radius: 0 0.21428571428571rem 0.21428571428571rem;
+  border-radius: 0 0.21428571428571rem 0.21428571428571rem 0;
 }
 .pager > li:last-child a::after {
   content: "\00a0\f178";

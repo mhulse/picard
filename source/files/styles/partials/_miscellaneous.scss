@@ -266,7 +266,7 @@ p.meta {
 				
 				a {
 					
-					border-radius: 0 #{relative($base_radii)}rem #{relative($base_radii)}rem;
+					border-radius: 0 #{relative($base_radii)}rem #{relative($base_radii)}rem 0;
 					
 					&::after {
 						@extend %chevron;
