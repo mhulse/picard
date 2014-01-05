@@ -18,7 +18,7 @@
 
 DEVELOPMENT | PRODUCTION
 :-: | :-:
-[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://mhulse.github.io/picard/dev/&chs=240x240)](http://mhulse.github.io/picard/dev/) | [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://mhulse.github.io/picard/prod/&chs=240x240)](http://mhulse.github.io/picard/prod/)
+[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://picard.mky.io/dev/&chs=240x240)](http://picard.mky.io/dev/) | [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://picard.mky.io/prod/&chs=240x240)](http://picard.mky.io/prod/)
 `$ grunt` | `$ grunt prod`
 
 ## Q: Um, what were you thinking?

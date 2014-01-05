@@ -583,17 +583,17 @@ span {
 	}
 	padding: 0;
 	
-	.fa-plus { text-shadow: 0 #{relative(2)}rem rgba(darken($lobster, 20%), .5); }
+	.fa-plus { text-shadow: 0 #{relative(3)}rem rgba(darken($lobster, 10%), .5); }
 	
 	a.social {
 		
 		&,
-		&:visited { color: $juice; }
+		&:visited { color: $lobster; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
-		&:active { color: $lobster; }
+		&:active { color: $juice; }
 		
 	}
 	

@@ -1386,13 +1386,13 @@ span.amp {
   padding: 0;
 }
 .more .fa-plus {
-  text-shadow: 0 0.14285714285714rem rgba(102, 26, 0, 0.5);
+  text-shadow: 0 0.21428571428571rem rgba(153, 38, 0, 0.5);
 }
 .more a.social, .more a.social:visited {
-  color: #ff6600;
+  color: #cc3300;
 }
 .more a.social:visited:hover, .more a.social:focus, .more a.social:focus:hover, .more a.social:hover, .more a.social:active {
-  color: #cc3300;
+  color: #ff6600;
 }
 
 .excerpt {
