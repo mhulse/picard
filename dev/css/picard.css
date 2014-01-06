@@ -2186,47 +2186,53 @@ p.meta:hover {
 
 .pager > li:first-child a::before, .pager > li:last-child a::after {
   font-family: FontAwesome;
+  line-height: 0;
+  position: relative;
   font-style: normal;
   font-weight: normal;
   text-decoration: inherit;
-  display: inline-block;
 }
 
 .pager {
-  color: #999999;
+  color: #4a85a5;
+  width: auto;
   margin-top: 0.71428571428571rem;
-  margin-bottom: 0;
+  margin-bottom: 0.71428571428571rem;
   padding: 0;
   display: inline-block;
-  width: auto;
 }
 .pager > li {
+  font-size: 0.85714285714286rem;
+  line-height: 1;
   margin: 0;
   padding: 0;
   display: inline-block;
 }
 .pager > li a,
 .pager > li span {
-  font-size: 0.85714285714286rem;
-  line-height: 1.83333333333333;
   text-transform: uppercase;
   letter-spacing: .05em;
+  white-space: nowrap;
+  background: #c9d1d5;
+  width: 100%;
+  height: 100%;
   padding: .5em 1em;
-  display: inline-block;
-  background: #dddddd;
+  display: block;
 }
 .pager > li .pager-current {
   color: white;
   font-weight: bold;
-  background: #333333;
+  background: #1a5c80;
 }
-.pager > li:first-child a {
+.pager > li:first-child a,
+.pager > li:first-child span {
   border-radius: 0.21428571428571rem 0 0 0.21428571428571rem;
 }
 .pager > li:first-child a::before {
   content: "\f177\00a0";
 }
-.pager > li:last-child a {
+.pager > li:last-child a,
+.pager > li:last-child span {
   border-radius: 0 0.21428571428571rem 0.21428571428571rem 0;
 }
 .pager > li:last-child a::after {
@@ -2238,17 +2244,16 @@ p.meta:hover {
   }
 }
 .pager a, .pager a:visited {
-  color: #333333;
+  color: #1a5c80;
 }
 .pager a:visited:hover, .pager a:focus, .pager a:focus:hover, .pager a:hover {
-  color: #333333;
+  color: #19587a;
   text-decoration: none;
-  background: #eeeeee;
+  background: #e8eff3;
 }
-.pager a:active, .pager a:active:visited, .pager a:active:visited:hover, .pager a:active:focus, .pager a:active:focus:hover, .pager a:active:hover {
-  color: white;
-  text-decoration: none;
-  background: #cc3300;
+.pager .fa {
+  line-height: 0;
+  position: relative;
 }
 
 a.social, a.social:visited {

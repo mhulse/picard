@@ -198,81 +198,75 @@ p.meta {
 	
 }
 
-%chevron {
+%arrow {
 	font-family: FontAwesome;
+	line-height: 0;
+	position: relative;
 	font-style: normal;
 	font-weight: normal;
 	text-decoration: inherit;
-	display: inline-block;
+	//display: inline-block;
 }
 
 .pager {
 	
-	color: $gray9;
-	//border-width: #{relative(5)}rem 0 0;
-	//border-style: solid;
-	//border-color: $grayd;
-	//background: $grayd;
+	color: mix($milk, $dusk, 20%);
+	width: auto;
 	margin: {
 		top: #{relative($base_margin)}rem;
-		bottom: 0;
+		bottom: #{relative($base_margin)}rem;
 	}
 	padding: 0;
 	display: inline-block;
-	width: auto;
 	
 	> {
 		
 		li {
 			
+			font-size: #{relative($base_font-size - 2)}rem;
+			line-height: 1;
 			margin: 0;
 			padding: 0;
 			display: inline-block;
 			
 			a,
 			span {
-				@include baseline($base_font-size - 2);
 				text-transform: uppercase;
 				letter-spacing: .05em;
-				//margin: 0 .25em;
+				white-space: nowrap;
+				background: mix($grayd, $dusk, 90%);
+				width: 100%;
+				height: 100%;
 				padding: .5em 1em;
-				display: inline-block;
-				//border-radius: #{relative($base_radii)}rem;
-				background: $grayd;
+				display: block;
 			}
 			
 			.pager-current {
 				color: $milk;
 				font-weight: bold;
-				background: $gray3;
+				background: mix($raven, $dusk, 10%);
 			}
 			
 			&:first-child {
 				
-				a {
-					
-					border-radius: #{relative($base_radii)}rem 0 0 #{relative($base_radii)}rem;
-					
-					&::before {
-						@extend %chevron;
-						content: "\f177\00a0";
-					}
-					
+				a,
+				span { border-radius: #{relative($base_radii)}rem 0 0 #{relative($base_radii)}rem; }
+				
+				a::before {
+					@extend %arrow;
+					content: "\f177\00a0";
 				}
 				
 			}
 			
 			&:last-child {
 				
-				a {
-					
-					border-radius: 0 #{relative($base_radii)}rem #{relative($base_radii)}rem 0;
-					
-					&::after {
-						@extend %chevron;
-						content: "\00a0\f178";
-					}
-					
+				a,
+				span { border-radius: 0 #{relative($base_radii)}rem #{relative($base_radii)}rem 0; }
+				
+				a::after {
+					@extend %arrow;
+					content: "\00a0\f178";
 				}
 				
 			}
@@ -294,26 +288,22 @@ p.meta {
 	a {
 		
 		&,
-		&:visited { color: $gray3; }
+		&:visited { color: mix($raven, $dusk, 10%); }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover {
-			color: $gray3;
+			color: darken($dusk, 5%);
 			text-decoration: none;
-			background: $graye;
-		}
-		&:active,
-		&:active:visited,
-		&:active:visited:hover,
-		&:active:focus,
-		&:active:focus:hover,
-		&:active:hover {
-			color: $milk;
-			text-decoration: none;
-			background: $lobster;
+			background: mix($milk, $dusk, 90%);
 		}
 		
+	}
+	
+	// https://github.com/mhulse/picard/issues/133#issuecomment-31626386
+	.fa {
+		line-height: 0;
+		position: relative;
 	}
 	
 }
