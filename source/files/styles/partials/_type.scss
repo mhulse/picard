@@ -335,12 +335,11 @@ span {
 	
 }
 
-.label {
+.label,
+%label {
 	
-	@include baseline($base_font-size - 1, .75);
 	text-transform: uppercase;
-	letter-spacing: .1em;
-	font-weight: normal;
+	letter-spacing: .15em;
 	margin: {
 		top: #{relative($base_margin)}rem;
 		bottom: #{relative($base_margin)}rem;
@@ -348,34 +347,73 @@ span {
 	
 	a,
 	span {
-		border-bottom: #{relative(5)}rem solid $graye;
-		padding: #{relative(1)}rem #{relative(10)}rem;
+		padding: {
+			left: #{relative($base_padding * 2)}em;
+			right: #{relative($base_padding * 2)}em;
+		}
 		display: inline-block;
 	}
 	
-	span { color: $gray9; }
+	span { color: $grayc; }
 	
 	a {
 		
 		&,
-		&:visited {
-			color: $gray3;
-			border-bottom-color: $grayd;
-		}
+		&:visited { color: $gray8; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $juice;
+			color: $lobster;
 			text-decoration: none;
-			border-bottom-color: $lobster;
 		}
 		
 		&:focus,
 		&:active { outline: none; }
 		
 	}
+	
+}
+
+.label {
+	
+	@include baseline($base_font-size - 1, .75);
+	font-weight: bold;
+	
+	a,
+	span {
+		border-bottom: #{relative(5)}rem solid $graye;
+		padding: {
+			top: #{baseline($base_font-size - 1, .25) / 2}em;
+			bottom: #{baseline($base_font-size - 1, .25) / 2}em;
+		}
+	}
+	
+}
+
+.pub {
+	
+	@extend %label;
+	@include baseline($base_font-size - 2, .75);
+	font-weight: normal;
+	
+	a,
+	span {
+		padding: {
+			top: #{baseline($base_font-size - 2, .25) / 2}em;
+			bottom: #{baseline($base_font-size - 2, .25) / 2}em;
+		}
+	}
+	
+}
+
+.label + .pub {
+	
+	margin-top: -#{relative($base_margin + 5)}rem;
+	
+	a,
+	span { border-top: #{relative(5)}rem solid $graye; }
 	
 }
 
@@ -398,48 +436,6 @@ span {
 		&:active {
 			color: $smurf;
 			text-decoration: none;
-		}
-		
-	}
-	
-}
-
-.pub {
-	
-	font-size: 1rem;
-	font-weight: normal;
-	text-transform: none;
-	margin: {
-		top: 0;
-		bottom: #{relative($base_margin)}rem;
-	}
-	padding: 0;
-	
-	a,
-	span {
-		@include baseline($base_font-size - 3, .875);
-		letter-spacing: .15em;
-		text-transform: uppercase;
-		padding: #{baseline($base_font-size - 3, .875) / 8}em 1em;
-		background: $graye;
-		display: inline-block;
-	}
-	
-	span { color: $gray9; }
-	
-	a {
-		
-		background: $grayd;
-		
-		&,
-		&:visited { color: $gray3; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
-			color: $graye;
-			background: $gray3;
 		}
 		
 	}

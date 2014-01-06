@@ -210,7 +210,7 @@ p.meta {
 
 .pager {
 	
-	color: mix($milk, $dusk, 20%);
+	color: $gray8;
 	width: auto;
 	margin: {
 		top: #{relative($base_margin)}rem;
@@ -234,7 +234,7 @@ p.meta {
 				text-transform: uppercase;
 				letter-spacing: .05em;
 				white-space: nowrap;
-				background: mix($grayd, $dusk, 90%);
+				background: $grayd;
 				width: 100%;
 				height: 100%;
 				padding: .5em 1em;
@@ -244,7 +244,7 @@ p.meta {
 			.pager-current {
 				color: $milk;
 				font-weight: bold;
-				background: mix($raven, $dusk, 10%);
+				background: $gray3;
 			}
 			
 			&:first-child {
@@ -288,14 +288,14 @@ p.meta {
 	a {
 		
 		&,
-		&:visited { color: mix($raven, $dusk, 10%); }
+		&:visited { color: $gray6; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover {
-			color: darken($dusk, 5%);
+			color: $gray3;
 			text-decoration: none;
-			background: mix($milk, $dusk, 90%);
+			background: $graye;
 		}
 		
 	}

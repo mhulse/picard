@@ -31,7 +31,7 @@ WWPD.register(function() {
 					
 					e.preventDefault();
 					
-					history.replaceState(null, '', '#comments');
+					//history.replaceState(null, '', '#comments'); // https://github.com/mhulse/picard/issues/132
 					
 					for (i in data) {
 						

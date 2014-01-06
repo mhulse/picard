@@ -1240,35 +1240,74 @@ span.amp {
   margin-bottom: 0 !important;
 }
 
-.label {
-  font-size: 0.92857142857143rem;
-  line-height: 1.26923076923077;
+.label,
+.pub {
   text-transform: uppercase;
-  letter-spacing: .1em;
-  font-weight: normal;
+  letter-spacing: .15em;
   margin-top: 0.71428571428571rem;
   margin-bottom: 0.71428571428571rem;
 }
 .label a,
-.label span {
-  border-bottom: 0.35714285714286rem solid #eeeeee;
-  padding: 0.07142857142857rem 0.71428571428571rem;
+.label span,
+.pub a,
+.pub span {
+  padding-left: 1.42857142857143em;
+  padding-right: 1.42857142857143em;
   display: inline-block;
 }
-.label span {
-  color: #999999;
+.label span,
+.pub span {
+  color: #cccccc;
 }
-.label a, .label a:visited {
-  color: #333333;
-  border-bottom-color: #dddddd;
+.label a, .label a:visited,
+.pub a,
+.pub a:visited {
+  color: #888888;
 }
-.label a:visited:hover, .label a:focus, .label a:focus:hover, .label a:hover, .label a:active {
-  color: #ff6600;
+.label a:visited:hover, .label a:focus, .label a:focus:hover, .label a:hover, .label a:active,
+.pub a:visited:hover,
+.pub a:focus,
+.pub a:focus:hover,
+.pub a:hover,
+.pub a:active {
+  color: #cc3300;
   text-decoration: none;
-  border-bottom-color: #cc3300;
 }
-.label a:focus, .label a:active {
+.label a:focus, .label a:active,
+.pub a:focus,
+.pub a:active {
   outline: none;
+}
+
+.label {
+  font-size: 0.92857142857143rem;
+  line-height: 1.26923076923077;
+  font-weight: bold;
+}
+.label a,
+.label span {
+  border-bottom: 0.35714285714286rem solid #eeeeee;
+  padding-top: 0.21153846153846em;
+  padding-bottom: 0.21153846153846em;
+}
+
+.pub {
+  font-size: 0.85714285714286rem;
+  line-height: 1.375;
+  font-weight: normal;
+}
+.pub a,
+.pub span {
+  padding-top: 0.22916666666667em;
+  padding-bottom: 0.22916666666667em;
+}
+
+.label + .pub {
+  margin-top: -1.07142857142857rem;
+}
+.label + .pub a,
+.label + .pub span {
+  border-top: 0.35714285714286rem solid #eeeeee;
 }
 
 .head {
@@ -1285,38 +1324,6 @@ span.amp {
 .head a:visited:hover, .head a:focus, .head a:focus:hover, .head a:hover, .head a:active {
   color: #13aac9;
   text-decoration: none;
-}
-
-.pub {
-  font-size: 1rem;
-  font-weight: normal;
-  text-transform: none;
-  margin-top: 0;
-  margin-bottom: 0.71428571428571rem;
-  padding: 0;
-}
-.pub a,
-.pub span {
-  font-size: 0.78571428571429rem;
-  line-height: 1.75;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  padding: 0.21875em 1em;
-  background: #eeeeee;
-  display: inline-block;
-}
-.pub span {
-  color: #999999;
-}
-.pub a {
-  background: #dddddd;
-}
-.pub a, .pub a:visited {
-  color: #333333;
-}
-.pub a:visited:hover, .pub a:focus, .pub a:focus:hover, .pub a:hover, .pub a:active {
-  color: #eeeeee;
-  background: #333333;
 }
 
 .external {
@@ -2194,7 +2201,7 @@ p.meta:hover {
 }
 
 .pager {
-  color: #4a85a5;
+  color: #888888;
   width: auto;
   margin-top: 0.71428571428571rem;
   margin-bottom: 0.71428571428571rem;
@@ -2213,7 +2220,7 @@ p.meta:hover {
   text-transform: uppercase;
   letter-spacing: .05em;
   white-space: nowrap;
-  background: #c9d1d5;
+  background: #dddddd;
   width: 100%;
   height: 100%;
   padding: .5em 1em;
@@ -2222,7 +2229,7 @@ p.meta:hover {
 .pager > li .pager-current {
   color: white;
   font-weight: bold;
-  background: #1a5c80;
+  background: #333333;
 }
 .pager > li:first-child a,
 .pager > li:first-child span {
@@ -2244,12 +2251,12 @@ p.meta:hover {
   }
 }
 .pager a, .pager a:visited {
-  color: #1a5c80;
+  color: #666666;
 }
 .pager a:visited:hover, .pager a:focus, .pager a:focus:hover, .pager a:hover {
-  color: #19587a;
+  color: #333333;
   text-decoration: none;
-  background: #e8eff3;
+  background: #eeeeee;
 }
 .pager .fa {
   line-height: 0;
