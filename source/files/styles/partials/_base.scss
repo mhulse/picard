@@ -77,6 +77,11 @@ hr,
 		}
 	}
 	
+	.body & {
+		border-top-width: #{relative(1)}rem !important;
+		border-top-style: dashed;
+	}
+	
 }
 
 section,

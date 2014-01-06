@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 0.1.0
- * @date 2014/01/05
+ * @date 2014/01/06
  */
 
 
@@ -800,6 +800,11 @@ article hr, aside hr, section hr, article
   margin-top: 2.14285714285714rem;
   margin-bottom: 2.14285714285714rem;
 }
+.body hr, .body
+.hr {
+  border-top-width: 0.07142857142857rem !important;
+  border-top-style: dashed;
+}
 
 section > :first-child,
 article > :first-child,
@@ -881,8 +886,11 @@ h5,
 h6,
 p,
 pre, .x7, article hr,
+article .hr,
 aside hr,
-section hr {
+aside .hr,
+section hr,
+section .hr {
   margin-right: auto;
   margin-left: auto;
   display: block;
@@ -930,8 +938,11 @@ pre {
 }
 
 .x7, article hr,
+article .hr,
 aside hr,
-section hr {
+aside .hr,
+section hr,
+section .hr {
   max-width: 53.57142857142857rem;
 }
 
