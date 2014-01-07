@@ -1312,6 +1312,9 @@ span.amp {
   padding-top: 0.21153846153846em;
   padding-bottom: 0.21153846153846em;
 }
+.label a {
+  border-color: #cccccc;
+}
 
 .pub {
   font-size: 0.85714285714286rem;
@@ -1330,6 +1333,9 @@ span.amp {
 .label + .pub a,
 .label + .pub span {
   border-top: 0.35714285714286rem solid #eeeeee;
+}
+.label + .pub a {
+  border-color: #cccccc;
 }
 
 .head {

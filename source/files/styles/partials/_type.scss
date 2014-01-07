@@ -412,6 +412,8 @@ span {
 		}
 	}
 	
+	a { border-color: $grayc; }
+	
 }
 
 .pub {
@@ -436,6 +438,8 @@ span {
 	
 	a,
 	span { border-top: #{relative(5)}rem solid $graye; }
+	
+	a { border-color: $grayc; }
 	
 }
 
