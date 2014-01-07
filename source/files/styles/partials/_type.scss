@@ -333,6 +333,28 @@ span {
 		
 	}
 	
+	h1, h2, h3, h4, h5, h6 {
+		
+		color: $gray3;
+		text-transform: none;
+		
+		a {
+			
+			&,
+			&:visited { color: $bruise; }
+			&:visited:hover,
+			&:focus,
+			&:focus:hover,
+			&:hover,
+			&:active {
+				color: lighten($bruise, 20%);
+				text-decoration: underline;
+			}
+			
+		}
+		
+	}
+	
 }
 
 .label,

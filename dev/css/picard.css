@@ -1250,6 +1250,17 @@ span.amp {
 .body > :last-child {
   margin-bottom: 0 !important;
 }
+.body h1, .body h2, .body h3, .body h4, .body h5, .body h6 {
+  color: #333333;
+  text-transform: none;
+}
+.body h1 a, .body h1 a:visited, .body h2 a, .body h2 a:visited, .body h3 a, .body h3 a:visited, .body h4 a, .body h4 a:visited, .body h5 a, .body h5 a:visited, .body h6 a, .body h6 a:visited {
+  color: #504375;
+}
+.body h1 a:visited:hover, .body h1 a:focus, .body h1 a:focus:hover, .body h1 a:hover, .body h1 a:active, .body h2 a:visited:hover, .body h2 a:focus, .body h2 a:focus:hover, .body h2 a:hover, .body h2 a:active, .body h3 a:visited:hover, .body h3 a:focus, .body h3 a:focus:hover, .body h3 a:hover, .body h3 a:active, .body h4 a:visited:hover, .body h4 a:focus, .body h4 a:focus:hover, .body h4 a:hover, .body h4 a:active, .body h5 a:visited:hover, .body h5 a:focus, .body h5 a:focus:hover, .body h5 a:hover, .body h5 a:active, .body h6 a:visited:hover, .body h6 a:focus, .body h6 a:focus:hover, .body h6 a:hover, .body h6 a:active {
+  color: #8071ad;
+  text-decoration: underline;
+}
 
 .label,
 .pub {
