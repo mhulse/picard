@@ -41,7 +41,12 @@ WWPD.register(function() {
 		
 	});
 	
-	$scroll.trigger('foo');
+	// https://github.com/mhulse/picard/issues/137
+	$(window).load(function() {
+		
+		$scroll.trigger('foo');
+		
+	});
 	
 	$(window).resize(function() {
 		
