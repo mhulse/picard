@@ -234,17 +234,17 @@ p.meta {
 				text-transform: uppercase;
 				letter-spacing: .05em;
 				white-space: nowrap;
-				background: $grayd;
+				background: $graye;
 				width: 100%;
 				height: 100%;
-				padding: .5em 1em;
+				padding: 1em 1.5em;
 				display: block;
 			}
 			
 			.pager-current {
-				color: $milk;
+				color: $raven;
 				font-weight: bold;
-				background: $gray3;
+				background: $grayc;
 			}
 			
 			&:first-child {
@@ -271,15 +271,15 @@ p.meta {
 				
 			}
 			
-			&:not(:first-child):not(:last-child) {
+			// &:not(:first-child):not(:last-child) {
 				
-				@media (max-width: #{relative($base_breakpoint-max)}rem) {
+			// 	@media (max-width: #{relative($base_breakpoint-max)}rem) {
 					
-					& { display: none; }
+			// 		& { display: none; }
 					
-				}
+			// 	}
 				
-			}
+			// }
 			
 		}
 		
@@ -288,15 +288,18 @@ p.meta {
 	a {
 		
 		&,
-		&:visited { color: $gray6; }
+		&:visited { color: $gray3; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover {
-			color: $gray3;
+			color: $graye;
 			text-decoration: none;
-			background: $graye;
+			background: $gray3;
 		}
+		
+		-webkit-transition: background 250ms linear, color 500ms linear;
+		        transition: background 250ms linear, color 500ms linear;
 		
 	}
 	
