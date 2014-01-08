@@ -97,3 +97,30 @@ img {
 	}
 	
 }
+
+.mm {
+	
+	height: 0;
+	padding-bottom: 56.25%; /* 16:9 = (9 / 16 = .5625) x 100 */
+	position: relative;
+	overflow: hidden;
+	margin: {
+		top: #{relative($base_margin)}rem;
+		bottom: #{relative($base_margin)}rem;
+	}
+	
+	iframe,
+	object,
+	embed {
+		width: 100% !important;
+		height: 100% !important;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+	&.tv { padding-bottom: 75%; } /* 4:3 = (3 / 4 = .75) x 100 */
+	
+	&.slide { padding-bottom: 66.666%; } /* 3:2 = (2 / 3 = .66666666666667) x 100 */
+	
+}

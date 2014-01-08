@@ -574,7 +574,7 @@ span {
 			color: $milk;
 			position: absolute;
 			top: #{relative($base_padding * 1.5)}rem;
-			right: #{relative(($base_padding - 2) * 1.5)}rem;
+			right: #{relative(($base_padding - 2) * 1.5)}rem; // https://github.com/mhulse/picard/issues/141
 		}
 		
 	}

@@ -2099,6 +2099,33 @@ a img {
   outline: 0;
 }
 
+.mm {
+  height: 0;
+  padding-bottom: 56.25%;
+  /* 16:9 = (9 / 16 = .5625) x 100 */
+  position: relative;
+  overflow: hidden;
+  margin-top: 0.71428571428571rem;
+  margin-bottom: 0.71428571428571rem;
+  /* 4:3 = (3 / 4 = .75) x 100 */
+  /* 3:2 = (2 / 3 = .66666666666667) x 100 */
+}
+.mm iframe,
+.mm object,
+.mm embed {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mm.tv {
+  padding-bottom: 75%;
+}
+.mm.slide {
+  padding-bottom: 66.666%;
+}
+
 iframe[id^='twitter-widget-'],
 .twitter-timeline {
   width: 100%;
