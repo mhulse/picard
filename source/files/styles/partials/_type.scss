@@ -254,17 +254,22 @@ span {
 	}
 	padding: 0;
 	
+	div {
+		display: inline-block;
+		overflow: hidden;
+	}
+	
 	a,
 	span {
 		@include baseline($base_font-size + 4, .875);
 		letter-spacing: .03em;
 		padding: #{baseline($base_font-size + 4, .875) / 2}em;
-		display: inline-block;
+		float: left;
 	}
 	
 	span {
-		color: $gray6;
-		background: $graye;
+		color: darken($bling, 25%);
+		background: darken($bling, 5%);
 	}
 	
 	a {
@@ -605,7 +610,7 @@ span {
 	}
 	padding: 0;
 	
-	.fa-plus { text-shadow: 0 #{relative(3)}rem rgba(darken($lobster, 10%), .5); }
+	.fa-plus { text-shadow: 0 #{relative(4)}rem rgba(darken($lobster, 20%), .5); }
 	
 	a.social {
 		

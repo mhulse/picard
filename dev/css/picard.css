@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 0.1.0
- * @date 2014/01/06
+ * @date 2014/01/07
  */
 
 
@@ -1190,17 +1190,21 @@ span.amp {
   margin-bottom: 1.42857142857143rem;
   padding: 0;
 }
+.marker div {
+  display: inline-block;
+  overflow: hidden;
+}
 .marker a,
 .marker span {
   font-size: 1.28571428571429rem;
   line-height: 1.06944444444444;
   letter-spacing: .03em;
   padding: 0.53472222222222em;
-  display: inline-block;
+  float: left;
 }
 .marker span {
-  color: #666666;
-  background: #eeeeee;
+  color: #806900;
+  background: #e6bc00;
 }
 .marker a {
   background: #ffd100;
@@ -1421,7 +1425,7 @@ span.amp {
   padding: 0;
 }
 .more .fa-plus {
-  text-shadow: 0 0.21428571428571rem rgba(153, 38, 0, 0.5);
+  text-shadow: 0 0.28571428571429rem rgba(102, 26, 0, 0.5);
 }
 .more a.social, .more a.social:visited {
   color: #cc3300;
