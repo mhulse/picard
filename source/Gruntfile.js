@@ -112,8 +112,9 @@ module.exports = function(grunt) {
 			files : [
 				
 				'<%= jshint.init %>',
-				'./files/styles/**/*',
+				'./files/feeds/**/*',
 				'./files/scripts/**/*',
+				'./files/styles/**/*',
 				'./files/templates/**/*',
 				
 			],
@@ -384,6 +385,7 @@ module.exports = function(grunt) {
 				expand : true,
 				cwd : './files/',
 				src : [
+					'feeds/**/*',
 					'images/**/*',
 					'scripts/**/*',
 				],
@@ -396,6 +398,7 @@ module.exports = function(grunt) {
 				expand : true,
 				cwd : './files/',
 				src : [
+					'feeds/**/*',
 					'images/**/*',
 				],
 				dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/'

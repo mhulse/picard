@@ -101,10 +101,12 @@
 				
 				<label class="x4">
 					<span class="off">Search:</span>
-					<input type="search" name="s" placeholder="&hellip; search &hellip;">
+					<input class="search" type="search" name="s" placeholder="&hellip; search &hellip;" autocomplete="off">
 				</label>
 				
 			</form>
+			
+			<div id="results"></div>
 			
 		</section>
 		
@@ -1004,8 +1006,8 @@ p q r s t u v w x y z { | } ~
  8
  9
 10</pre></div></td><td><div class="foo"><pre><span class="nc">.off</span> <span class="p">{</span>
-    <span class="k">border</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="k">clip</span><span class="o">:</span> <span class="n">rect</span><span class="p">(</span><span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span><span class="p">);</span>
+		<span class="k">border</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+		<span class="k">clip</span><span class="o">:</span> <span class="n">rect</span><span class="p">(</span><span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span><span class="p">);</span>
 <span class="hll">    <span class="k">height</span><span class="o">:</span> <span class="m">1px</span><span class="p">;</span>
 </span><span class="hll">    <span class="k">margin</span><span class="o">:</span> <span class="m">-1px</span><span class="p">;</span>
 </span><span class="hll">    <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
@@ -1731,11 +1733,145 @@ p q r s t u v w x y z { | } ~
 	<script src="./scripts/wwpd.mod.pinterest.js"></script>
 	<script src="./scripts/wwpd.mod.disqus.js"></script>
 	<script src="./scripts/wwpd.mod.twitter.js"></script>
+	<script src="./scripts/wwpd.mod.search.js"></script>
 	<script src="./scripts/wwpd.init.js"></script>
 	
 	<script>
 		
-		$(document).ready(function() {});
+		$(document).ready(function() {
+			
+			var matches = [],
+				searchResults = $('#results'),
+				$search_data;
+			
+			function registerEvent() {
+				
+				$(this).on('keyup', function(e) {
+					
+					var $this = $(this);
+					
+					if (e.which === 13) {
+						
+						if (matches) {
+							window.location = matches[0].url; // On ENTER, goes to first result's "url".
+						}
+						
+					}
+					if ($this.val().length) {
+						
+						writeMatches(performSearch($this.val()));
+						
+					} else {
+						
+						clearSearchResults();
+						
+					}
+					
+				});
+			}
+			
+			function performSearch(str) {
+				
+				matches = [];
+				
+				for (var i = 0; i < $search_data.length; i++) {
+					
+					var obj = $search_data[i];
+					
+					for (key in obj) {
+						
+						if (obj.hasOwnProperty(key)) {
+							
+							if ((typeof obj[key] === 'string') && (obj[key].toLowerCase().indexOf(str.toLowerCase()) >= 0)) {
+								
+								matches.push(obj);
+								
+							} else if (typeof obj[key] === 'object') {
+								
+								console.log(obj[key]);
+								
+							}
+							
+							break;
+							
+						}
+						
+					}
+					
+				}
+				return matches;
+			}
+			
+			function clearSearchResults() {
+				//console.log(searchResults);
+				searchResults.children().remove();
+				
+			}
+			
+			function writeMatches(m) {
+				
+				clearSearchResults();
+				
+				if (m && m.length) {
+					
+					for (var i = 0; i < m.length && i < 10; i++) { // 10 = limit.
+						
+						var obj = m[i];
+						output = '<p><a href="{url}" title="{desc}">{title}</a></p>';
+						output = output.replace(/\{(.*?)\}/g, function(match, property) {
+							return obj[property];
+						});
+						searchResults.append($(output));
+						
+					}
+					
+				} else {
+					
+					searchResults.append('<p>Oh shucks<br/><small>Nothing found :(</small></p>');
+					
+				}
+				
+			}
+			
+			$('.search').one('keyup', function(e) {
+				
+				var $this = $(this),
+					$def = $.Deferred();
+				
+				$search_data = window.localStorage.getItem('search_data'); // localStorage.clear();
+				
+				if ( ! $search_data) {
+					
+					$def = $.getJSON('feeds/search.json', function($data) {
+						
+						$search_data = $data;
+						
+						window.localStorage.setItem(
+							'search_data',
+							JSON.stringify($search_data)
+						);
+						
+					});
+					
+				} else {
+					
+					//console.log($search_data);
+					
+					$search_data = JSON.parse($search_data);
+					
+					$def.resolve();
+					
+				}
+				
+				$def.done(function() {
+					
+					registerEvent.call($this);
+					
+				});
+			
+			});
+			
+		});
 		
 		$(window).load(function() {});
 		
