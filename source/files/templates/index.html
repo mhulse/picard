@@ -1743,136 +1743,207 @@ p q r s t u v w x y z { | } ~
 		
 		$(document).ready(function() {
 			
-			var matches = [],
-				searchResults = $('#results'),
-				$search_data;
-			
-			function registerEvent() {
+			(function($, window) {
+					
+				var matches = [],
+					searchResults = $('#results'),
+					$search_data;
 				
-				$(this).on('keyup', function(e) {
+				function registerEvent() {
 					
-					var $this = $(this);
+					var timer;
 					
-					if (e.which === 13) {
+					$(this).on('keyup', function(e) {
 						
-						if (matches) {
-							window.location = matches[0].url; // On ENTER, goes to first result's "url".
-						}
+						var val = $.trim($(this).val());
 						
-					}
-					if ($this.val().length) {
-						
-						writeMatches(performSearch($this.val()));
-						
-					} else {
-						
-						clearSearchResults();
-						
-					}
-					
-				});
-			}
-			
-			function performSearch(str) {
-				
-				matches = [];
-				
-				for (var i = 0; i < $search_data.length; i++) {
-					
-					var obj = $search_data[i];
-					
-					for (key in obj) {
-						
-						if (obj.hasOwnProperty(key)) {
+						clearInterval(timer);
+						timer = setTimeout(function() {
 							
-							if ((typeof obj[key] === 'string') && (obj[key].toLowerCase().indexOf(str.toLowerCase()) >= 0)) {
+							if (e.which === 13) {
 								
-								matches.push(obj);
-								
-							} else if (typeof obj[key] === 'object') {
-								
-								console.log(obj[key]);
+								if (matches) {
+									
+									window.location = matches[0].href; // On ENTER, goes to first result's "url".
+									
+								}
 								
 							}
 							
-							break;
+							if (val.length) {
+								
+								writeMatches(performSearch(val));
+								
+							} else {
+								
+								clearSearchResults();
+								
+							}
+							
+						}, 300); // Buffer time.
+						
+					});
+					
+				}
+				
+				// http://stackoverflow.com/a/722732/922323
+				// http://stackoverflow.com/a/14889628/922323
+				function traverse(obj, str) {
+					
+					//console.log('new traverse');
+					
+					var flag = false;
+					
+					for (var key in obj) {
+						
+						if (obj.hasOwnProperty(key)) {
+							
+							if ((typeof obj[key] === 'string') && (obj[key].toLowerCase().indexOf(str.toLowerCase()) != -1)) {
+								
+								//console.log('TRUE');
+								
+								flag = true;
+								
+								break;
+								
+							} else if ((obj[key] !== null) && (typeof obj[key] === 'object')) {
+								
+								flag = traverse(obj[key], str);
+								
+								if (flag) {
+									
+									break;
+									
+								}
+								
+							}
 							
 						}
 						
 					}
 					
-				}
-				return matches;
-			}
-			
-			function clearSearchResults() {
-				//console.log(searchResults);
-				searchResults.children().remove();
-				
-			}
-			
-			function writeMatches(m) {
-				
-				clearSearchResults();
-				
-				if (m && m.length) {
+					return flag;
 					
-					for (var i = 0; i < m.length && i < 10; i++) { // 10 = limit.
+				}
+				
+				function performSearch(str) {
+					
+					var i,
+					    l,
+					    key,
+					    obj,
+					    k,
+					    o;
+					
+					matches = [];
+					
+					for (i = 0, l = $search_data.length; i < l; i++) {
 						
-						var obj = m[i];
-						output = '<p><a href="{url}" title="{desc}">{title}</a></p>';
-						output = output.replace(/\{(.*?)\}/g, function(match, property) {
-							return obj[property];
-						});
-						searchResults.append($(output));
+						obj = $search_data[i];
+						
+						//console.log('traverse', obj, traverse(obj, str));
+						
+						if (traverse(obj, str)) {
+							
+							//console.log('yup', obj);
+							
+							matches.push(obj);
+							
+						}
+						
+						/*
+						for (key in obj) {
+							
+							if (obj.hasOwnProperty(key)) {
+								
+								if ((typeof obj[key] === 'string') && (obj[key].toLowerCase().indexOf(str.toLowerCase()) >= 0)) {
+									
+									matches.push(obj);
+									
+									break;
+									
+								} else if (obj[key] !== null && typeof obj[key] === 'object') { // http://stackoverflow.com/a/722732/922323
+									
+									o = obj[key];
+									
+									for (k in o) {
+										
+										if (o.hasOwnProperty(k)) {
+											
+											if ((typeof o[k] === 'string') && (o[k].toLowerCase().indexOf(str.toLowerCase()) >= 0)) {
+												
+												matches.push(obj);
+												
+												break;
+												
+											}
+											
+										}
+										
+									}
+									
+								}
+								
+							}
+							
+						}
+						*/
 						
 					}
 					
-				} else {
-					
-					searchResults.append('<p>Oh shucks<br/><small>Nothing found :(</small></p>');
+					return matches;
 					
 				}
 				
-			}
-			
-			$('.search').one('keyup', function(e) {
-				
-				var $this = $(this),
-					$def = $.Deferred();
-				
-				$search_data = window.localStorage.getItem('search_data'); // localStorage.clear();
-				
-				if ( ! $search_data) {
+				function clearSearchResults() {
 					
-					$def = $.getJSON('feeds/search.json', function($data) {
+					//console.log(searchResults);
+					searchResults.children().remove();
+					
+				}
+				
+				function writeMatches(m) {
+					
+					clearSearchResults();
+					
+					if (m && m.length) {
 						
-						$search_data = $data;
+						for (var i = 0; i < m.length && i < 10; i++) { // 10 = limit.
+							
+							var obj = m[i];
+							
+							var output = '<a href="{href}">{title}</a>';
+							output = output.replace(/\{(.*?)\}/g, function(match, property) {
+								return obj[property];
+							});
+							
+							searchResults.append($(output));
+							
+						}
 						
-						window.localStorage.setItem(
-							'search_data',
-							JSON.stringify($search_data)
-						);
+					} else {
+						
+						searchResults.append('<p>Oh shucks<br/><small>Nothing found :(</small></p>');
+						
+					}
+					
+				}
+				
+				$('.search').one('focus', function() {
+					
+					$this = $(this);
+					
+					$.getJSON('feeds/search.json', function(data) {
+						
+						$search_data = data;
+						
+						registerEvent.call($this);
 						
 					});
-					
-				} else {
-					
-					//console.log($search_data);
-					
-					$search_data = JSON.parse($search_data);
-					
-					$def.resolve();
-					
-				}
 				
-				$def.done(function() {
-					
-					registerEvent.call($this);
-					
 				});
-			
-			});
+				
+			}(jQuery, window));
 			
 		});
 		
