@@ -96,8 +96,6 @@
 		
 		if (data.results.length) {
 			
-			console.log(data.target.closest('form'));
-			
 			data.target
 				.one('focus', function() {
 					
@@ -314,6 +312,7 @@
 // @todo Need area to spit out "not found" message (vs. use same area as results).
 // @todo Hide the not found and results areas when empty.
 // @todo Show animated ... when typing/waiting for things.
+// @todo Results animation fade-in/out?
 var $ul = $('<ul>', { id : 'results', 'class' : 'x6' }),
     $search = $('#query');
 
@@ -322,7 +321,6 @@ $search
 	.after($ul);
 
 $search.jse({
-	feed : 'feeds/search.json',
 	template : '<li><a href="{ href }">{ title }</a></li>',
 	zilch : '<li><i aria-hidden="true" class="fa fa-times-circle"></i> Nothing found.</li>'
 });
