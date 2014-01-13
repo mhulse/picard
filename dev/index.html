@@ -97,16 +97,16 @@
 			
 			<h1></h1>
 			
-			<form class="form" method="get" action="" role="search">
+			<form id="search" class="form" method="get" action="http://www.google.com/search" role="search">
+				
+				<input type="hidden" name="sitesearch" value="mky.io">
 				
 				<label class="x4">
 					<span class="off">Search:</span>
-					<input class="search" type="search" name="s" placeholder="&hellip; search &hellip;" autocomplete="off">
+					<input id="query" type="search" name="q" placeholder="&hellip; search &hellip;" autocomplete="off">
 				</label>
 				
 			</form>
-			
-			<div id="results"></div>
 			
 		</section>
 		
@@ -996,7 +996,7 @@ p q r s t u v w x y z { | } ~
 
 			<h2 class="subtle">Pygments</h2>
 
-<div class="pygments x6"><table class="footable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<div class="pygments x6"><table class="pygtable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
  4
@@ -1005,9 +1005,9 @@ p q r s t u v w x y z { | } ~
  7
  8
  9
-10</pre></div></td><td><div class="foo"><pre><span class="nc">.off</span> <span class="p">{</span>
-		<span class="k">border</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-		<span class="k">clip</span><span class="o">:</span> <span class="n">rect</span><span class="p">(</span><span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span><span class="p">);</span>
+10</pre></div></td><td><div class="pyg"><pre><span class="nc">.off</span> <span class="p">{</span>
+<span class="k">    border</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="k">    clip</span><span class="o">:</span> <span class="n">rect</span><span class="p">(</span><span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0</span><span class="p">);</span>
 <span class="hll">    <span class="k">height</span><span class="o">:</span> <span class="m">1px</span><span class="p">;</span>
 </span><span class="hll">    <span class="k">margin</span><span class="o">:</span> <span class="m">-1px</span><span class="p">;</span>
 </span><span class="hll">    <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
@@ -1740,6 +1740,9 @@ p q r s t u v w x y z { | } ~
 		
 		$(document).ready(function() {
 			
+			// https://github.com/christian-fei/Simple-Jekyll-Search/blob/master/simpleJekyllSearch.js
+			// https://github.com/alexpearce/alexpearce.github.com/blob/master/assets/js/alexpearce.js
+			/*
 			(function($, window) {
 					
 				var matches = [],
@@ -1787,8 +1790,6 @@ p q r s t u v w x y z { | } ~
 				// http://stackoverflow.com/a/14889628/922323
 				function traverse(obj, str) {
 					
-					//console.log('new traverse');
-					
 					var flag = false;
 					
 					for (var key in obj) {
@@ -1796,8 +1797,6 @@ p q r s t u v w x y z { | } ~
 						if (obj.hasOwnProperty(key)) {
 							
 							if ((typeof obj[key] === 'string') && (obj[key].toLowerCase().indexOf(str.toLowerCase()) != -1)) {
-								
-								//console.log('TRUE');
 								
 								flag = true;
 								
@@ -1825,66 +1824,19 @@ p q r s t u v w x y z { | } ~
 				
 				function performSearch(str) {
 					
-					var i,
-					    l,
-					    key,
-					    obj,
-					    k,
-					    o;
+					var obj;
 					
 					matches = [];
 					
-					for (i = 0, l = $search_data.length; i < l; i++) {
+					for (var i = 0, l = $search_data.length; i < l; i++) {
 						
 						obj = $search_data[i];
 						
-						//console.log('traverse', obj, traverse(obj, str));
-						
 						if (traverse(obj, str)) {
-							
-							//console.log('yup', obj);
 							
 							matches.push(obj);
 							
 						}
-						
-						/*
-						for (key in obj) {
-							
-							if (obj.hasOwnProperty(key)) {
-								
-								if ((typeof obj[key] === 'string') && (obj[key].toLowerCase().indexOf(str.toLowerCase()) >= 0)) {
-									
-									matches.push(obj);
-									
-									break;
-									
-								} else if (obj[key] !== null && typeof obj[key] === 'object') { // http://stackoverflow.com/a/722732/922323
-									
-									o = obj[key];
-									
-									for (k in o) {
-										
-										if (o.hasOwnProperty(k)) {
-											
-											if ((typeof o[k] === 'string') && (o[k].toLowerCase().indexOf(str.toLowerCase()) >= 0)) {
-												
-												matches.push(obj);
-												
-												break;
-												
-											}
-											
-										}
-										
-									}
-									
-								}
-								
-							}
-							
-						}
-						*/
 						
 					}
 					
@@ -1894,24 +1846,28 @@ p q r s t u v w x y z { | } ~
 				
 				function clearSearchResults() {
 					
-					//console.log(searchResults);
 					searchResults.children().remove();
 					
 				}
 				
 				function writeMatches(m) {
 					
+					var obj,
+					    output;
+					
 					clearSearchResults();
 					
 					if (m && m.length) {
 						
-						for (var i = 0; i < m.length && i < 10; i++) { // 10 = limit.
+						for (var i = 0, l = m.length; (i < l) && (i < 10); i++) { // 10 = limit.
 							
-							var obj = m[i];
+							obj = m[i];
 							
-							var output = '<a href="{href}">{title}</a>';
+							output = '<p><a href="{href}">{title}</a></p>';
 							output = output.replace(/\{(.*?)\}/g, function(match, property) {
+								
 								return obj[property];
+								
 							});
 							
 							searchResults.append($(output));
@@ -1941,6 +1897,7 @@ p q r s t u v w x y z { | } ~
 				});
 				
 			}(jQuery, window));
+			*/
 			
 		});
 		

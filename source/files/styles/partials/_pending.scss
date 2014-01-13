@@ -25,3 +25,36 @@
 }
 .scroll-overlay::before { content: "\f0a5\00a0"; }
 .scroll-overlay::after { content: "\00a0\f0a4"; }
+
+form#search {
+	
+	label {
+		margin-bottom: #{relative($base_margin)}rem;
+	}
+	
+	ul#results {
+		
+		margin: {
+			top: 0;
+			bottom: 0;
+		}
+		
+		li {
+			
+			@include baseline($base_font-size + 2, .75);
+			font-weight: bold;
+			//margin: 0;
+			padding: 0;
+			
+			a {
+				padding: #{relative($base_padding)}rem;
+				display: inline-block;
+				background: $graye;
+				border-radius: #{$base_radii}rem;
+			}
+			
+		}
+		
+	}
+	
+}

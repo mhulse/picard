@@ -69,6 +69,25 @@ pre {
 		padding: 0;
 		line-height: normal;
 		
+		// http://stackoverflow.com/a/7570613/922323
+		// https://github.com/mhulse/picard/issues/145
+		.pyg {
+			
+			position: relative;
+			
+			pre {
+				width: 100%;
+				padding: {
+					right: 0;
+					left: #{relative(5)}rem;
+				}
+				//overflow: hidden;
+				//white-space: nowrap;
+				position: absolute;
+			}
+			
+		}
+		
 		.linenos {
 			
 			vertical-align: top;
@@ -78,7 +97,10 @@ pre {
 			color: $gray8;
 			text-align: right;
 			
-			+ td { width: 100%; }
+			+ td {
+				width: 100%;
+				vertical-align: top;
+			}
 			
 		}
 		

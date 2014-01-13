@@ -1499,6 +1499,15 @@ pre.terminal .prompt {
   padding: 0;
   line-height: normal;
 }
+.pygments table .pyg {
+  position: relative;
+}
+.pygments table .pyg pre {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0.35714285714286rem;
+  position: absolute;
+}
 .pygments table .linenos {
   vertical-align: top;
   background: #333333;
@@ -1509,6 +1518,7 @@ pre.terminal .prompt {
 }
 .pygments table .linenos + td {
   width: 100%;
+  vertical-align: top;
 }
 .pygments table th,
 .pygments table td {
@@ -2305,8 +2315,8 @@ p.meta:hover {
   content: "\00a0\f178";
 }
 .pager a {
-  -webkit-transition: background 250ms linear, color 500ms linear;
-  transition: background 250ms linear, color 500ms linear;
+  -webkit-transition: background 200ms linear, color 750ms linear;
+  transition: background 200ms linear, color 750ms linear;
 }
 .pager a, .pager a:visited {
   color: #333333;
@@ -2437,4 +2447,24 @@ a.social-tumblr, a.social-tumblr:visited, a.social-tumblr:visited:hover, a.socia
 
 .scroll-overlay::after {
   content: "\00a0\f0a4";
+}
+
+form#search label {
+  margin-bottom: 0.71428571428571rem;
+}
+form#search ul#results {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+form#search ul#results li {
+  font-size: 1.14285714285714rem;
+  line-height: 1.03125;
+  font-weight: bold;
+  padding: 0;
+}
+form#search ul#results li a {
+  padding: 0.71428571428571rem;
+  display: inline-block;
+  background: #eeeeee;
+  border-radius: 3pxrem;
 }
