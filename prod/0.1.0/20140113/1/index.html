@@ -18,7 +18,7 @@
 	
 	<meta name="viewport" content="width=device-width">
 	
-	<title>Picard | v0.1.0 | DEVELOPMENT</title>
+	<title>Picard | v0.1.0 | PRODUCTION</title>
 	<meta name="description" content="Make it so.">
 	<meta name="keywords" content="">
 	
@@ -44,9 +44,8 @@
 	<!--[if !IE]><!-->
 	
 	
-	<link rel="stylesheet" href="./css/picard.css">
-	<link rel="stylesheet" href="./css/development.css">
 	
+	<link rel="stylesheet" href="http://picard.mky.io/picard/prod/0.1.0/20140113/1/css/picard.min.css">
 	
 	
 	<link rel="stylesheet" href="http://fonts.mky.io/hulse/hulse.css">
@@ -112,30 +111,6 @@
 	<hr>
 	
 	<main role="main">
-		
-		
-		<section>
-			
-			<h1 id="colors" class="marker"><div><span>The</span> <a href="#colors">Colors</a><span>!</span></div></h1>
-			
-			<div class="swatches">
-				
-				<div class="swatches-swatch milk"><code>$milk</code> &rsaquo; <code>#fff</code></div>
-				<div class="swatches-swatch lobster"><code>$lobster</code> &rsaquo; <code>#c30</code></div>
-				<div class="swatches-swatch juice"><code>$juice</code> &rsaquo; <code>#f60</code></div>
-				<div class="swatches-swatch bling"><code>$bling</code> &rsaquo; <code>#ffd100</code></div>
-				<div class="swatches-swatch goblin"><code>$goblin</code> &rsaquo; <code>#9ea301</code></div>
-				<div class="swatches-swatch hulk"><code>$hulk</code> &rsaquo; <code>#4e801c</code></div>
-				<div class="swatches-swatch smurf"><code>$smurf</code> &rsaquo; <code>#13aac9</code></div>
-				<div class="swatches-swatch dusk"><code>$dusk</code> &rsaquo; <code>#1d678f</code></div>
-				<div class="swatches-swatch bruise"><code>$bruise</code> &rsaquo; <code>#504375</code></div>
-				<div class="swatches-swatch raven"><code>$raven</code> &rsaquo; <code>#000</code></div>
-				
-			</div>
-			
-		</section>
-		
-		<hr>
 		
 		
 		<section>
@@ -1721,189 +1696,11 @@ p q r s t u v w x y z { | } ~
 	<!--[if !IE]><!-->
 	
 	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
 	
-	<script src="./scripts/fastclick.js"></script>
-	<script src="./scripts/wwpd.js"></script>
-	<script src="./scripts/wwpd.mod.fastclick.js"></script>
-	<script src="./scripts/wwpd.mod.scroll.js"></script>
-	<script src="./scripts/wwpd.mod.pinterest.js"></script>
-	<script src="./scripts/wwpd.mod.disqus.js"></script>
-	<script src="./scripts/wwpd.mod.twitter.js"></script>
-	<script src="./scripts/wwpd.mod.search.js"></script>
-	<script src="./scripts/wwpd.init.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script>if(!window.jQuery){document.write('<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.3.min.js"><\/script>');}</script>
 	
-	<script>
-		
-		$(document).ready(function() {
-			
-			// https://github.com/christian-fei/Simple-Jekyll-Search/blob/master/simpleJekyllSearch.js
-			// https://github.com/alexpearce/alexpearce.github.com/blob/master/assets/js/alexpearce.js
-			/*
-			(function($, window) {
-					
-				var matches = [],
-					searchResults = $('#results'),
-					$search_data;
-				
-				function registerEvent() {
-					
-					var timer;
-					
-					$(this).on('keyup', function(e) {
-						
-						var val = $.trim($(this).val());
-						
-						clearInterval(timer);
-						timer = setTimeout(function() {
-							
-							if (e.which === 13) {
-								
-								if (matches) {
-									
-									window.location = matches[0].href; // On ENTER, goes to first result's "url".
-									
-								}
-								
-							}
-							
-							if (val.length) {
-								
-								writeMatches(performSearch(val));
-								
-							} else {
-								
-								clearSearchResults();
-								
-							}
-							
-						}, 300); // Buffer time.
-						
-					});
-					
-				}
-				
-				// http://stackoverflow.com/a/722732/922323
-				// http://stackoverflow.com/a/14889628/922323
-				function traverse(obj, str) {
-					
-					var flag = false;
-					
-					for (var key in obj) {
-						
-						if (obj.hasOwnProperty(key)) {
-							
-							if ((typeof obj[key] === 'string') && (obj[key].toLowerCase().indexOf(str.toLowerCase()) != -1)) {
-								
-								flag = true;
-								
-								break;
-								
-							} else if ((obj[key] !== null) && (typeof obj[key] === 'object')) {
-								
-								flag = traverse(obj[key], str);
-								
-								if (flag) {
-									
-									break;
-									
-								}
-								
-							}
-							
-						}
-						
-					}
-					
-					return flag;
-					
-				}
-				
-				function performSearch(str) {
-					
-					var obj;
-					
-					matches = [];
-					
-					for (var i = 0, l = $search_data.length; i < l; i++) {
-						
-						obj = $search_data[i];
-						
-						if (traverse(obj, str)) {
-							
-							matches.push(obj);
-							
-						}
-						
-					}
-					
-					return matches;
-					
-				}
-				
-				function clearSearchResults() {
-					
-					searchResults.children().remove();
-					
-				}
-				
-				function writeMatches(m) {
-					
-					var obj,
-					    output;
-					
-					clearSearchResults();
-					
-					if (m && m.length) {
-						
-						for (var i = 0, l = m.length; (i < l) && (i < 10); i++) { // 10 = limit.
-							
-							obj = m[i];
-							
-							output = '<p><a href="{href}">{title}</a></p>';
-							output = output.replace(/\{(.*?)\}/g, function(match, property) {
-								
-								return obj[property];
-								
-							});
-							
-							searchResults.append($(output));
-							
-						}
-						
-					} else {
-						
-						searchResults.append('<p>Oh shucks<br/><small>Nothing found :(</small></p>');
-						
-					}
-					
-				}
-				
-				$('.search').one('focus', function() {
-					
-					$this = $(this);
-					
-					$.getJSON('feeds/search.json', function(data) {
-						
-						$search_data = data;
-						
-						registerEvent.call($this);
-						
-					});
-				
-				});
-				
-			}(jQuery, window));
-			*/
-			
-		});
-		
-		$(window).load(function() {});
-		
-		$(window).resize(function() {});
-		
-	</script>
-	
+	<script src="http://picard.mky.io/picard/prod/0.1.0/20140113/1/scripts/picard.min.js"></script>
 	
 	
 	<!--<![endif]-->
