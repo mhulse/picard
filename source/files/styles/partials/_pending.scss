@@ -37,29 +37,71 @@ form#search {
 		
 		// http://stackoverflow.com/a/18486387/922323
 		width: 100%;
-		margin: 0 auto;
+		margin: -#{relative($base_margin)}rem auto 0;
 		padding: 0;
+		box-shadow: 0 #{relative(5)}rem #{relative(5)}rem rgba($raven, .2);
 		position: absolute;
 		top: auto;
 		left: 0;
 		right: 0;
 		z-index: 100;
 		
-		li,
-		p {
-			border: 1px solid #ddd;
-			background: rgba(255, 255, 255, .9);
-			margin: 0;
-			padding: 10px;
-		}
-		
-		p { max-width: none; }
+		&:empty { display: none; }
 		
 	}
 	
-	#bigglesworth_results li {
-		margin: 0 0 -1px;
-		list-style: none;
+	#bigglesworth_results {
+		
+		li {
+			border: #{relative(1)}rem solid $grayd;
+			margin: 0 0 -#{relative(1)}rem;
+			list-style: none;
+		}
+		
+		time {
+			@include baseline($base_font-size - 2, .75);
+			text-transform: uppercase;
+			letter-spacing: .1em;
+			display: block;
+		}
+		
+		div {
+			@include baseline($base_font-size + 2, .75);
+			font-weight: bold;
+		}
+		
+		a {
+			
+			background: rgba($milk, .9);
+			padding: #{relative($base_padding)}rem 0;
+			display: block;
+			
+			&,
+			&:visited,
+			&:visited:hover,
+			&:focus,
+			&:focus:hover,
+			&:hover,
+			&:active { text-decoration: none; }
+			
+			&:focus,
+			&:active { outline: none; }
+			
+		}
+		
+	}
+	
+	#bigglesworth_results-no {
+		
+		p {
+			@include baseline($base_font-size - 1, .875);
+			border: #{relative(1)}rem solid $grayd;
+			background: rgba($milk, .9);
+			margin: 0;
+			padding: #{relative($base_padding)}rem 0;
+			max-width: none;
+		}
+		
 	}
 	
 	label { padding: 0; }

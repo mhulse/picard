@@ -2464,30 +2464,55 @@ form#search {
 form#search #bigglesworth_results,
 form#search #bigglesworth_results-no {
   width: 100%;
-  margin: 0 auto;
+  margin: -0.71428571428571rem auto 0;
   padding: 0;
+  box-shadow: 0 0.35714285714286rem 0.35714285714286rem rgba(0, 0, 0, 0.2);
   position: absolute;
   top: auto;
   left: 0;
   right: 0;
   z-index: 100;
 }
-form#search #bigglesworth_results li,
-form#search #bigglesworth_results p,
-form#search #bigglesworth_results-no li,
-form#search #bigglesworth_results-no p {
-  border: 1px solid #ddd;
-  background: rgba(255, 255, 255, 0.9);
-  margin: 0;
-  padding: 10px;
-}
-form#search #bigglesworth_results p,
-form#search #bigglesworth_results-no p {
-  max-width: none;
+form#search #bigglesworth_results:empty,
+form#search #bigglesworth_results-no:empty {
+  display: none;
 }
 form#search #bigglesworth_results li {
-  margin: 0 0 -1px;
+  border: 0.07142857142857rem solid #dddddd;
+  margin: 0 0 -0.07142857142857rem;
   list-style: none;
+}
+form#search #bigglesworth_results time {
+  font-size: 0.85714285714286rem;
+  line-height: 1.375;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  display: block;
+}
+form#search #bigglesworth_results div {
+  font-size: 1.14285714285714rem;
+  line-height: 1.03125;
+  font-weight: bold;
+}
+form#search #bigglesworth_results a {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.71428571428571rem 0;
+  display: block;
+}
+form#search #bigglesworth_results a, form#search #bigglesworth_results a:visited, form#search #bigglesworth_results a:visited:hover, form#search #bigglesworth_results a:focus, form#search #bigglesworth_results a:focus:hover, form#search #bigglesworth_results a:hover, form#search #bigglesworth_results a:active {
+  text-decoration: none;
+}
+form#search #bigglesworth_results a:focus, form#search #bigglesworth_results a:active {
+  outline: none;
+}
+form#search #bigglesworth_results-no p {
+  font-size: 0.92857142857143rem;
+  line-height: 1.48076923076923;
+  border: 0.07142857142857rem solid #dddddd;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  padding: 0.71428571428571rem 0;
+  max-width: none;
 }
 form#search label {
   padding: 0;

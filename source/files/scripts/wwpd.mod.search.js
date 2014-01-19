@@ -6,9 +6,13 @@ WWPD.register(function() {
 		
 		data.results.append(
 			'<li>' +
-				obj.date.month + ' ' + obj.date.day + ', ' + obj.date.year + ' | ' +
 				'<a href="' + obj.uri + '">' +
-					obj.title +
+					'<time>' +
+						obj.date.month + ' ' + obj.date.day + ', ' + obj.date.year +
+					'</time>' +
+					'<div>' +
+						obj.title +
+					'</div>' +
 				'</a>' +
 			'</li>'
 		);
@@ -43,8 +47,8 @@ WWPD.register(function() {
 		
 	};
 	
-	var $ul = $('<ul>', { id : 'bigglesworth_results', 'class' : 'x5' }),
-	    $div = $('<div>', { id : 'bigglesworth_results-no', 'class' : 'x3' }),
+	var $ul = $('<ul>', { id : 'bigglesworth_results', 'class' : 'x3' }),
+	    $div = $('<div>', { id : 'bigglesworth_results-no', 'class' : 'x2' }),
 	    $search = $('#bigglesworth');
 	
 	$search
