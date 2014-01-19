@@ -1296,7 +1296,7 @@ span.amp {
 .pub a:focus:hover,
 .pub a:hover,
 .pub a:active {
-  color: #cc3300;
+  color: #333333;
   text-decoration: none;
 }
 .label a:focus, .label a:active,
@@ -1431,10 +1431,10 @@ span.amp {
   color: #dddddd;
 }
 .more a.social:visited:hover, .more a.social:focus, .more a.social:focus:hover, .more a.social:hover, .more a.social:active {
-  color: #cc3300;
+  color: #333333;
 }
 .more a.social:visited:hover .fa-plus, .more a.social:focus .fa-plus, .more a.social:focus:hover .fa-plus, .more a.social:hover .fa-plus, .more a.social:active .fa-plus {
-  color: white;
+  color: #eeeeee;
 }
 
 .excerpt {

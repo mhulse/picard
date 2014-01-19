@@ -392,7 +392,7 @@ span {
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $lobster;
+			color: $gray3;
 			text-decoration: none;
 		}
 		
@@ -625,9 +625,9 @@ span {
 		&:hover,
 		&:active {
 			
-			color: $lobster;
+			color: $gray3;
 			
-			.fa-plus { color: $milk; }
+			.fa-plus { color: $graye; }
 			
 		}
 		
