@@ -2495,4 +2495,44 @@ form#search label {
     background: white;
     color: black;
   }
+
+  nav {
+    display: none;
+  }
+
+  @page {
+    margin: 1cm;
+}
+
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+  }
+
+  article {
+    page-break-before: always;
+  }
+
+  img {
+    page-break-inside: avoid;
+  }
+
+  a[href^=http]:after {
+    font-style: italic;
+    content: " < " attr(href) " > ";
+  }
+
+  a[href^="#"]:after {
+    content: "";
+  }
 }
