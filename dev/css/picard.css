@@ -1426,6 +1426,8 @@ span.amp {
 }
 .more a.social .fa-plus {
   color: #999999;
+  position: relative;
+  bottom: -0.01em;
 }
 .more a.social, .more a.social:visited {
   color: #dddddd;

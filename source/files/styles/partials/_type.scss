@@ -615,6 +615,8 @@ span {
 		.fa-plus {
 			color: $gray9;
 			//text-shadow: 0 #{relative(2)}rem $milk;
+			position: relative;
+			bottom: -.01em
 		}
 		
 		&,
