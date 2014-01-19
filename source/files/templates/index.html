@@ -100,7 +100,7 @@
 				
 				<label class="x4">
 					<span class="off">Search:</span>
-					<input id="query" type="search" name="q" placeholder="&hellip; search &hellip;" autocomplete="off" data-jse-options='{ "feed" : "feeds/search.json" }'>
+					<input id="bigglesworth" type="search" name="q" placeholder="&hellip; search &hellip;" autocomplete="off" data-jse-options='{ "feed" : "feeds/search.json" }'>
 				</label>
 				
 			</form>
@@ -1727,6 +1727,7 @@ p q r s t u v w x y z { | } ~
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
 	
 	<script src="./scripts/fastclick.js"></script>
+	<script src="./scripts/jquery.bigglesworth.js"></script>
 	<script src="./scripts/wwpd.js"></script>
 	<script src="./scripts/wwpd.mod.fastclick.js"></script>
 	<script src="./scripts/wwpd.mod.scroll.js"></script>
@@ -1738,168 +1739,7 @@ p q r s t u v w x y z { | } ~
 	
 	<script>
 		
-		$(document).ready(function() {
-			
-			// https://github.com/christian-fei/Simple-Jekyll-Search/blob/master/simpleJekyllSearch.js
-			// https://github.com/alexpearce/alexpearce.github.com/blob/master/assets/js/alexpearce.js
-			/*
-			(function($, window) {
-					
-				var matches = [],
-					searchResults = $('#results'),
-					$search_data;
-				
-				function registerEvent() {
-					
-					var timer;
-					
-					$(this).on('keyup', function(e) {
-						
-						var val = $.trim($(this).val());
-						
-						clearInterval(timer);
-						timer = setTimeout(function() {
-							
-							if (e.which === 13) {
-								
-								if (matches) {
-									
-									window.location = matches[0].href; // On ENTER, goes to first result's "url".
-									
-								}
-								
-							}
-							
-							if (val.length) {
-								
-								writeMatches(performSearch(val));
-								
-							} else {
-								
-								clearSearchResults();
-								
-							}
-							
-						}, 300); // Buffer time.
-						
-					});
-					
-				}
-				
-				// http://stackoverflow.com/a/722732/922323
-				// http://stackoverflow.com/a/14889628/922323
-				function traverse(obj, str) {
-					
-					var flag = false;
-					
-					for (var key in obj) {
-						
-						if (obj.hasOwnProperty(key)) {
-							
-							if ((typeof obj[key] === 'string') && (obj[key].toLowerCase().indexOf(str.toLowerCase()) != -1)) {
-								
-								flag = true;
-								
-								break;
-								
-							} else if ((obj[key] !== null) && (typeof obj[key] === 'object')) {
-								
-								flag = traverse(obj[key], str);
-								
-								if (flag) {
-									
-									break;
-									
-								}
-								
-							}
-							
-						}
-						
-					}
-					
-					return flag;
-					
-				}
-				
-				function performSearch(str) {
-					
-					var obj;
-					
-					matches = [];
-					
-					for (var i = 0, l = $search_data.length; i < l; i++) {
-						
-						obj = $search_data[i];
-						
-						if (traverse(obj, str)) {
-							
-							matches.push(obj);
-							
-						}
-						
-					}
-					
-					return matches;
-					
-				}
-				
-				function clearSearchResults() {
-					
-					searchResults.children().remove();
-					
-				}
-				
-				function writeMatches(m) {
-					
-					var obj,
-					    output;
-					
-					clearSearchResults();
-					
-					if (m && m.length) {
-						
-						for (var i = 0, l = m.length; (i < l) && (i < 10); i++) { // 10 = limit.
-							
-							obj = m[i];
-							
-							output = '<p><a href="{href}">{title}</a></p>';
-							output = output.replace(/\{(.*?)\}/g, function(match, property) {
-								
-								return obj[property];
-								
-							});
-							
-							searchResults.append($(output));
-							
-						}
-						
-					} else {
-						
-						searchResults.append('<p>Oh shucks<br/><small>Nothing found :(</small></p>');
-						
-					}
-					
-				}
-				
-				$('.search').one('focus', function() {
-					
-					$this = $(this);
-					
-					$.getJSON('feeds/search.json', function(data) {
-						
-						$search_data = data;
-						
-						registerEvent.call($this);
-						
-					});
-				
-				});
-				
-			}(jQuery, window));
-			*/
-			
-		});
+		$(document).ready(function() {});
 		
 		$(window).load(function() {});
 		

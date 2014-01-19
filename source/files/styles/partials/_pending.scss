@@ -28,33 +28,61 @@
 
 form#search {
 	
-	label {
-		margin-bottom: #{relative($base_margin)}rem;
+	position: relative;
+	
+	//label { margin-bottom: #{relative($base_margin)}rem; }
+	
+	#bigglesworth_results,
+	#bigglesworth_results-no {
+		
+		// http://stackoverflow.com/a/18486387/922323
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+		position: absolute;
+		top: auto;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		
+		li,
+		p {
+			border: 1px solid #ddd;
+			background: rgba(255, 255, 255, .9);
+			margin: 0;
+			padding: 10px;
+		}
+		
 	}
 	
-	ul#results {
-		
-		margin: {
-			top: 0;
-			bottom: 0;
-		}
-		
-		li {
-			
-			@include baseline($base_font-size + 2, .75);
-			font-weight: bold;
-			//margin: 0;
-			padding: 0;
-			
-			a {
-				padding: #{relative($base_padding)}rem;
-				display: inline-block;
-				background: $graye;
-				border-radius: #{$base_radii}rem;
-			}
-			
-		}
-		
+	#bigglesworth_results li {
+		margin: 0 0 -1px;
+		list-style: none;
 	}
+	
+	// ul#bigglesworth_results {
+		
+	// 	margin: {
+	// 		top: 0;
+	// 		bottom: 0;
+	// 	}
+		
+	// 	li {
+			
+	// 		@include baseline($base_font-size + 2, .75);
+	// 		font-weight: bold;
+	// 		//margin: 0;
+	// 		padding: 0;
+			
+	// 		a {
+	// 			padding: #{relative($base_padding)}rem;
+	// 			display: inline-block;
+	// 			background: $graye;
+	// 			border-radius: #{$base_radii}rem;
+	// 		}
+			
+	// 	}
+		
+	// }
 	
 }

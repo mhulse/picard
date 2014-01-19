@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 0.1.0
- * @date 2014/01/13
+ * @date 2014/01/19
  */
 
 
@@ -2449,22 +2449,30 @@ a.social-tumblr, a.social-tumblr:visited, a.social-tumblr:visited:hover, a.socia
   content: "\00a0\f0a4";
 }
 
-form#search label {
-  margin-bottom: 0.71428571428571rem;
+form#search {
+  position: relative;
 }
-form#search ul#results {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-form#search ul#results li {
-  font-size: 1.14285714285714rem;
-  line-height: 1.03125;
-  font-weight: bold;
+form#search #bigglesworth_results,
+form#search #bigglesworth_results-no {
+  width: 100%;
+  margin: 0 auto;
   padding: 0;
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
-form#search ul#results li a {
-  padding: 0.71428571428571rem;
-  display: inline-block;
-  background: #eeeeee;
-  border-radius: 3pxrem;
+form#search #bigglesworth_results li,
+form#search #bigglesworth_results p,
+form#search #bigglesworth_results-no li,
+form#search #bigglesworth_results-no p {
+  border: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  padding: 10px;
+}
+form#search #bigglesworth_results li {
+  margin: 0 0 -1px;
+  list-style: none;
 }
