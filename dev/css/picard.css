@@ -2491,12 +2491,12 @@ form#search #bigglesworth_results time {
 }
 form#search #bigglesworth_results div {
   font-size: 1.14285714285714rem;
-  line-height: 1.03125;
+  line-height: 1.203125;
   font-weight: bold;
 }
 form#search #bigglesworth_results a {
   background: rgba(255, 255, 255, 0.9);
-  padding: 0.71428571428571rem 0;
+  padding: 0.71428571428571rem;
   display: block;
 }
 form#search #bigglesworth_results a, form#search #bigglesworth_results a:visited, form#search #bigglesworth_results a:visited:hover, form#search #bigglesworth_results a:focus, form#search #bigglesworth_results a:focus:hover, form#search #bigglesworth_results a:hover, form#search #bigglesworth_results a:active {
@@ -2511,7 +2511,7 @@ form#search #bigglesworth_results-no p {
   border: 0.07142857142857rem solid #dddddd;
   background: rgba(255, 255, 255, 0.9);
   margin: 0;
-  padding: 0.71428571428571rem 0;
+  padding: 0.71428571428571rem;
   max-width: none;
 }
 form#search label {

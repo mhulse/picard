@@ -66,14 +66,14 @@ form#search {
 		}
 		
 		div {
-			@include baseline($base_font-size + 2, .75);
+			@include baseline($base_font-size + 2, .875);
 			font-weight: bold;
 		}
 		
 		a {
 			
 			background: rgba($milk, .9);
-			padding: #{relative($base_padding)}rem 0;
+			padding: #{relative($base_padding)}rem;
 			display: block;
 			
 			&,
@@ -98,7 +98,7 @@ form#search {
 			border: #{relative(1)}rem solid $grayd;
 			background: rgba($milk, .9);
 			margin: 0;
-			padding: #{relative($base_padding)}rem 0;
+			padding: #{relative($base_padding)}rem;
 			max-width: none;
 		}
 		
