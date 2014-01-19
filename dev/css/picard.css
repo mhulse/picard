@@ -1424,14 +1424,17 @@ span.amp {
   margin-bottom: 0;
   padding: 0;
 }
-.more .fa-plus {
-  text-shadow: 0 0.28571428571429rem rgba(102, 26, 0, 0.5);
+.more a.social .fa-plus {
+  color: #999999;
 }
 .more a.social, .more a.social:visited {
-  color: #cc3300;
+  color: #dddddd;
 }
 .more a.social:visited:hover, .more a.social:focus, .more a.social:focus:hover, .more a.social:hover, .more a.social:active {
-  color: #ff6600;
+  color: #cc3300;
+}
+.more a.social:visited:hover .fa-plus, .more a.social:focus .fa-plus, .more a.social:focus:hover .fa-plus, .more a.social:hover .fa-plus, .more a.social:active .fa-plus {
+  color: white;
 }
 
 .excerpt {
