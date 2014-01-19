@@ -25,10 +25,10 @@ WWPD.register(function() {
 					'Nothing recent found.' +
 				'</span>' +
 				'<br>' +
-				'<span class="callout callout-success">' +
+				'<span class="callout callout-info">' +
 					'<i class="fa fa-search" aria-hidden="true"></i>' +
 					' ' +
-					'<a id="submit" href="#">Search google instead?</a>' +
+					'<a id="submit" href="#">Search via Google instead?</a>' +
 				'</span>' +
 			'</p>'
 		);

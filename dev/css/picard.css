@@ -2489,3 +2489,10 @@ form#search #bigglesworth_results li {
 form#search label {
   padding: 0;
 }
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+}
