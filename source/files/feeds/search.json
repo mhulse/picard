@@ -2,7 +2,7 @@
   "title"    : "WHO test for testing's sake",
   "category" : ["test", "goomby", "boy"],
   "tags"     : ["blog"],
-  "href"     : "/lorem-ipsum-dolor-sit-5/",
+  "uri"      : "/lorem-ipsum-dolor-sit-5/",
   "date"     : {
     "day"    : "05",
     "month"  : "January",
@@ -12,7 +12,7 @@
   "title"    : "BAZ test for testing's sake",
   "category" : ["test"],
   "tags"     : ["blog"],
-  "href"     : "/lorem-ipsum-dolor-sit-4/",
+  "uri"      : "/lorem-ipsum-dolor-sit-4/",
   "date"     : {
     "day"    : "05",
     "month"  : "January",
@@ -22,7 +22,7 @@
   "title"    : "FOO test for testing's sake",
   "category" : ["test"],
   "tags"     : ["blog"],
-  "href"     : "/lorem-ipsum-dolor-sit-3/",
+  "uri"      : "/lorem-ipsum-dolor-sit-3/",
   "date"     : {
     "day"    : "05",
     "month"  : "January",
@@ -32,7 +32,7 @@
   "title"    : "Another test for testing's sake",
   "category" : ["test"],
   "tags"     : ["blog"],
-  "href"     : "/lorem-ipsum-dolor-sit-2/",
+  "uri"      : "/lorem-ipsum-dolor-sit-2/",
   "date"     : {
     "day"    : "05",
     "month"  : "January",
@@ -42,7 +42,7 @@
   "title"    : "One more test for testing's sake",
   "category" : ["test"],
   "tags"     : ["blog"],
-  "href"     : "/lorem-ipsum-dolor-sit/",
+  "uri"      : "/lorem-ipsum-dolor-sit/",
   "date"     : {
     "day"    : "05",
     "month"  : "January",
@@ -52,7 +52,7 @@
   "title"    : "Installing Jekyll",
   "category" : ["test", "code"],
   "tags"     : ["blog", "jekyll", "github"],
-  "href"     : "/installing-jekyl/",
+  "uri"      : "/installing-jekyl/",
   "date"     : {
     "day"    : "22",
     "month"  : "December",
@@ -62,7 +62,7 @@
   "title"    : "This is a test",
   "category" : ["test", "design"],
   "tags"     : ["blog", "blogging", "fun", "code"],
-  "href"     : "/this-is-a-test/",
+  "uri"      : "/this-is-a-test/",
   "date"     : {
     "day"    : "21",
     "month"  : "December",
@@ -72,7 +72,7 @@
   "title"    : "Rainy Day",
   "category" : ["test", "art", "wacom"],
   "tags"     : ["blog", "blogging", "awesomeness"],
-  "href"     : "/rainy-day/",
+  "uri"      : "/rainy-day/",
   "date"     : {
     "day"    : "11",
     "month"  : "November",

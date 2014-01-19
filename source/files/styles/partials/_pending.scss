@@ -53,6 +53,8 @@ form#search {
 			padding: 10px;
 		}
 		
+		p { max-width: none; }
+		
 	}
 	
 	#bigglesworth_results li {
@@ -60,29 +62,6 @@ form#search {
 		list-style: none;
 	}
 	
-	// ul#bigglesworth_results {
-		
-	// 	margin: {
-	// 		top: 0;
-	// 		bottom: 0;
-	// 	}
-		
-	// 	li {
-			
-	// 		@include baseline($base_font-size + 2, .75);
-	// 		font-weight: bold;
-	// 		//margin: 0;
-	// 		padding: 0;
-			
-	// 		a {
-	// 			padding: #{relative($base_padding)}rem;
-	// 			display: inline-block;
-	// 			background: $graye;
-	// 			border-radius: #{$base_radii}rem;
-	// 		}
-			
-	// 	}
-		
-	// }
+	label { padding: 0; }
 	
 }

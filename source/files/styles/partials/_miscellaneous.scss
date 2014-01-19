@@ -93,12 +93,8 @@ p.meta {
 
 .callout {
 	
-	@include baseline($base_font-size - 2, .75);
 	color: $gray3;
-	background-color: $grayd;
 	letter-spacing: .03em;
-	padding: #{relative($base_padding * 2)}rem;
-	border-radius: #{relative($base_radii) * 2}rem;
 	
 	a {
 		
@@ -120,79 +116,89 @@ p.meta {
 		
 	}
 	
-}
-
-.callout-info {
-	
-	color: darken($ice, 60%);
-	background-color: $ice;
-	
-	a {
+	&.callout-box {
 		
-		&,
-		&:visited,
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active { color: darken($ice, 60%); }
+		@include baseline($base_font-size - 2, .75);
+		background-color: $grayd;
+		padding: #{relative($base_padding * 2)}rem;
+		border-radius: #{relative($base_radii) * 2}rem;
+		
+		&.callout-info { background-color: $ice; }
+		&.callout-success { background-color: $frog; }
+		&.callout-warning { background-color: $duck; }
+		&.callout-error { background-color: $chili; }
 		
 	}
 	
-}
-
-.callout-success {
-	
-	color: darken($frog, 60%);
-	background-color: $frog;
-	
-	a {
+	&.callout-info {
 		
-		&,
-		&:visited,
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active { color: darken($frog, 60%); }
+		color: darken($ice, 60%);
 		
-	}
-	
-}
-
-.callout-warning {
-	
-	color: darken($duck, 60%);
-	background-color: $duck;
-	
-	a {
-		
-		&,
-		&:visited,
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active { color: darken($duck, 60%); }
+		a {
+			
+			&,
+			&:visited,
+			&:visited:hover,
+			&:focus,
+			&:focus:hover,
+			&:hover,
+			&:active { color: darken($ice, 60%); }
+			
+		}
 		
 	}
 	
-}
-
-.callout-error {
-	
-	color: darken($chili, 60%);
-	background-color: $chili;
-	
-	a {
+	&.callout-success {
 		
-		&,
-		&:visited,
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active { color: darken($chili, 60%); }
+		color: darken($frog, 60%);
+		
+		a {
+			
+			&,
+			&:visited,
+			&:visited:hover,
+			&:focus,
+			&:focus:hover,
+			&:hover,
+			&:active { color: darken($frog, 60%); }
+			
+		}
+		
+	}
+	
+	&.callout-warning {
+		
+		color: darken($duck, 60%);
+		
+		a {
+			
+			&,
+			&:visited,
+			&:visited:hover,
+			&:focus,
+			&:focus:hover,
+			&:hover,
+			&:active { color: darken($duck, 60%); }
+			
+		}
+		
+	}
+	
+	&.callout-error {
+		
+		color: darken($chili, 60%);
+		
+		a {
+			
+			&,
+			&:visited,
+			&:visited:hover,
+			&:focus,
+			&:focus:hover,
+			&:hover,
+			&:active { color: darken($chili, 60%); }
+			
+		}
 		
 	}
 	

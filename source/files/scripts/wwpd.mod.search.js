@@ -19,9 +19,17 @@ WWPD.register(function() {
 		
 		data.resultsNo.append(
 			'<p>' +
-				'Nothing recent found.' +
+				'<span class="callout callout-error">' +
+					'<i class="fa fa-times-circle" aria-hidden="true"></i>' +
+					' ' +
+					'Nothing recent found.' +
+				'</span>' +
 				'<br>' +
-				'<a id="submit" href="#">Search google instead?</a>' +
+				'<span class="callout callout-success">' +
+					'<i class="fa fa-search" aria-hidden="true"></i>' +
+					' ' +
+					'<a id="submit" href="#">Search google instead?</a>' +
+				'</span>' +
 			'</p>'
 		);
 		
@@ -36,7 +44,7 @@ WWPD.register(function() {
 	};
 	
 	var $ul = $('<ul>', { id : 'bigglesworth_results', 'class' : 'x5' }),
-	    $div = $('<div>', { id : 'bigglesworth_results-no', 'class' : 'x5' }),
+	    $div = $('<div>', { id : 'bigglesworth_results-no', 'class' : 'x3' }),
 	    $search = $('#bigglesworth');
 	
 	$search

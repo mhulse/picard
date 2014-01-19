@@ -2208,13 +2208,8 @@ p.meta:hover {
 }
 
 .callout {
-  font-size: 0.85714285714286rem;
-  line-height: 1.375;
   color: #333333;
-  background-color: #dddddd;
   letter-spacing: .03em;
-  padding: 1.42857142857143rem;
-  border-radius: 0.42857142857143rem;
 }
 .callout a {
   font-weight: bold;
@@ -2227,36 +2222,47 @@ p.meta:hover {
   color: #333333;
   text-decoration: underline;
 }
-
-.callout-info {
-  color: #0d5476;
+.callout.callout-box {
+  font-size: 0.85714285714286rem;
+  line-height: 1.375;
+  background-color: #dddddd;
+  padding: 1.42857142857143rem;
+  border-radius: 0.42857142857143rem;
+}
+.callout.callout-box.callout-info {
   background-color: #bde5f8;
 }
-.callout-info a, .callout-info a:visited, .callout-info a:visited:hover, .callout-info a:focus, .callout-info a:focus:hover, .callout-info a:hover, .callout-info a:active {
-  color: #0d5476;
-}
-
-.callout-success {
-  color: #4a6a15;
+.callout.callout-box.callout-success {
   background-color: #dff2bf;
 }
-.callout-success a, .callout-success a:visited, .callout-success a:visited:hover, .callout-success a:focus, .callout-success a:focus:hover, .callout-success a:hover, .callout-success a:active {
-  color: #4a6a15;
-}
-
-.callout-warning {
-  color: #7d6502;
+.callout.callout-box.callout-warning {
   background-color: #feefb3;
 }
-.callout-warning a, .callout-warning a:visited, .callout-warning a:visited:hover, .callout-warning a:focus, .callout-warning a:focus:hover, .callout-warning a:hover, .callout-warning a:active {
-  color: #7d6502;
-}
-
-.callout-error {
-  color: #870000;
+.callout.callout-box.callout-error {
   background-color: #ffbaba;
 }
-.callout-error a, .callout-error a:visited, .callout-error a:visited:hover, .callout-error a:focus, .callout-error a:focus:hover, .callout-error a:hover, .callout-error a:active {
+.callout.callout-info {
+  color: #0d5476;
+}
+.callout.callout-info a, .callout.callout-info a:visited, .callout.callout-info a:visited:hover, .callout.callout-info a:focus, .callout.callout-info a:focus:hover, .callout.callout-info a:hover, .callout.callout-info a:active {
+  color: #0d5476;
+}
+.callout.callout-success {
+  color: #4a6a15;
+}
+.callout.callout-success a, .callout.callout-success a:visited, .callout.callout-success a:visited:hover, .callout.callout-success a:focus, .callout.callout-success a:focus:hover, .callout.callout-success a:hover, .callout.callout-success a:active {
+  color: #4a6a15;
+}
+.callout.callout-warning {
+  color: #7d6502;
+}
+.callout.callout-warning a, .callout.callout-warning a:visited, .callout.callout-warning a:visited:hover, .callout.callout-warning a:focus, .callout.callout-warning a:focus:hover, .callout.callout-warning a:hover, .callout.callout-warning a:active {
+  color: #7d6502;
+}
+.callout.callout-error {
+  color: #870000;
+}
+.callout.callout-error a, .callout.callout-error a:visited, .callout.callout-error a:visited:hover, .callout.callout-error a:focus, .callout.callout-error a:focus:hover, .callout.callout-error a:hover, .callout.callout-error a:active {
   color: #870000;
 }
 
@@ -2472,7 +2478,14 @@ form#search #bigglesworth_results-no p {
   margin: 0;
   padding: 10px;
 }
+form#search #bigglesworth_results p,
+form#search #bigglesworth_results-no p {
+  max-width: none;
+}
 form#search #bigglesworth_results li {
   margin: 0 0 -1px;
   list-style: none;
+}
+form#search label {
+  padding: 0;
 }
