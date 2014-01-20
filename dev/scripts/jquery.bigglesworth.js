@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/jquery-bigglesworth
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @license Released under the Apache License, Version 2.0.
- * @version 1.0.0
+ * @version 1.1.0
  * @date 2014/01/19
  */
 
@@ -18,6 +18,10 @@
 // http://stackoverflow.com/a/11335081/922323
 // http://stackoverflow.com/a/722732/922323
 // http://stackoverflow.com/a/14889628/922323
+
+//----------------------------------
+
+// @todo Is there a better way to handle on/off classes?
 
 //----------------------------------
 
@@ -70,18 +74,20 @@
 	
 	defaults = {
 		
-		results           : '#' + NS + '_results',                     // Target results element.
-		resultsTemplate   : '<p><a href="{ uri }">{ title }</a></p>', // Results HTML "template".
-		resultsNo         : '#' + NS + '_results-no',                  // Target "no" results element.
-		resultsNoTemplate : '<p>Nothing recent found.</p>',            // No results HTML template.
-		feed              : 'search.json',                             // The search data file.
-		limit             : 5,                                         // Result limit.
-		buffer            : 300,                                       // Search buffer.
-		onInit            : $.noop,                                    // Callback on plugin initialization.
-		onAfterInit       : $.noop,                                    // Callback after plugin initialization.
-		onResult          : $.noop,                                    // Callback when result added.
-		onRemove          : $.noop,                                    // Callback when result removed.
-		onZilch           : $.noop                                     // Callback for no results.
+		result           : '#' + NS + '_result',                     // Target "result" element.
+		resultTemplate   : '<p><a href="{ uri }">{ title }</a></p>', // HTML "template" for "result" element.
+		resultNo         : '#' + NS + '_result-no',                  // Target "no result" element.
+		resultNoTemplate : '<p>Nothing recent found.</p>',           // HTML template for "no result".
+		classOn          : NS + '_on',                               // Class applied to parent element when "result" exists.
+		classOff         : NS + '_off',                              // Class applied to parent element when "result" does not exist.
+		feed             : 'search.json',                            // The "search" data file.
+		limit            : 5,                                        // Limit of "result" output.
+		buffer           : 300,                                      // Buffer "search" output.
+		onInit           : $.noop,                                   // Callback on plugin initialization.
+		onAfterInit      : $.noop,                                   // Callback after plugin initialization.
+		onResult         : $.noop,                                   // Callback when a "result" has been added.
+		onRemove         : $.noop,                                   // Callback when a "result" has been removed.
+		onZilch          : $.noop                                    // Callback when search query returns no "result".
 		
 	}, // defaults
 	
@@ -136,15 +142,15 @@
 					
 					$this.data(NS, {
 						
-						init      : false,                 // Plugin initialization flag.
-						settings  : settings,              // Merged plugin settings.
-						target    : $this,                 // Target element plugin has been initialized on (assumed to be a form `input` element).
-						form      : $this.closest('form'), // The `input`'s parent `form`.
-						results   : $(settings.results),   // Results target element.
-						resultsNo : $(settings.resultsNo), // No results target element.
-						matches   : [],                    // Container for matched results for `query`.
-						query     : '',                    // Search terms.
-						json      : null                   // The parsed data returned from JSON feed.
+						init     : false,                 // Plugin initialization flag.
+						settings : settings,              // Merged plugin settings.
+						target   : $this,                 // Target element plugin has been initialized on (assumed to be a form `input` element).
+						form     : $this.closest('form'), // The `input`'s parent `form`.
+						result   : $(settings.result),    // Target element "result".
+						resultNo : $(settings.resultNo),  // Target element "no result".
+						matches  : [],                    // Container for `query`'s matched "result".
+						query    : '',                    // Search terms.
+						json     : null                   // The parsed data returned from JSON feed.
 						
 					});
 					
@@ -202,8 +208,7 @@
 				// Declare, hoist and initialize:
 				//----------------------------------
 				
-				var $this = $(this),
-				    data  = $this.data(NS);
+				var data = $(this).data(NS);
 				
 				//----------------------------------
 				// Data?
@@ -211,13 +216,21 @@
 				
 				if (data) {
 					
-					$this // ... hot chaining action -->
+					data.target // ... hot chaining action -->
 					
 					//----------------------------------
 					// Namespaced instance data:
 					//----------------------------------
 					
 					.removeData(NS) // -->
+					
+					//----------------------------------
+					// Remove classes:
+					//----------------------------------
+					
+					.removeClass(data.settings.classOff) // -->
+					
+					.removeClass(data.settings.classOn) // -->
 					
 					//----------------------------------
 					// Namespaced events:
@@ -237,7 +250,16 @@
 					// Namespaced events:
 					//----------------------------------
 					
-					.off('submit.' + NS); // Done!
+					.off('submit.' + NS); // Done with target.
+					
+					//----------------------------------
+					// Remove classes:
+					//----------------------------------
+					
+					data.result // Take "result" jQuery object ...
+						.add(data.resultNo) // ... add the "no result" jQuery object ...
+						.removeClass(data.settings.classOn) // ... and remove ...
+						.removeClass(data.settings.classOff); // ... classes. :)
 					
 				}
 				
@@ -279,7 +301,15 @@
 		// Check for "result" elements:
 		//----------------------------------
 		
-		if (data.results.length && data.resultsNo.length) {
+		if (data.result.length && data.resultNo.length) {
+			
+			//----------------------------------
+			// Add class:
+			//----------------------------------
+			
+			data.result
+				.add(data.resultNo)
+				.addClass(data.settings.classOff);
 			
 			//----------------------------------
 			// Wait for first "focus" event:
@@ -337,7 +367,7 @@
 			// Ouch!
 			//----------------------------------
 			
-			console.warn('jQuery.%s can\'t find either a "results" (%o) or "resultsNo" (%o) elements for %o.', NS, data.results, data.resultsNo, data.target);
+			console.warn('jQuery.%s can\'t find either a "result" (%o) or "resultNo" (%o) elements for %o.', NS, data.result, data.resultNo, data.target);
 			
 		}
 		
@@ -391,16 +421,16 @@
 				if ($e.which === 13) {
 					
 					//----------------------------------
-					// Do we have results?
+					// Do we have a "result"?
 					//----------------------------------
 					
 					if (data.matches.length) {
 						
 						//----------------------------------
-						// Yes, so navigate to first result:
+						// Yes. Navigate to first "result":
 						//----------------------------------
 						
-						window.location = data.matches[0].uri; // On ENTER, goes to first result's "url".
+						window.location = data.matches[0].uri; // On ENTER, goes to first "result"'s "uri".
 						
 					} else {
 						
@@ -409,7 +439,7 @@
 						//----------------------------------
 						
 						data.form[0]
-							.submit();
+							.submit(); // Go!
 						
 					}
 					
@@ -422,18 +452,27 @@
 				if (data.query.length) {
 					
 					//----------------------------------
-					// Yup, so spit out the results:
+					// Yup, so spit out the "result":
 					//----------------------------------
 					
 					_write(
 						data,
-						_search(data) // Return results of `_search()` back to `_write()`.
+						_search(data) // Return "result" of `_search()` back to `_write()`.
 					);
 					
 				} else {
 					
 					//----------------------------------
-					// No, so clear the matched results:
+					// Juggle classes ...
+					//----------------------------------
+					
+					data.result // Take "result" jQuery object ...
+						.add(data.resultNo) // ... add the "no result" jQuery object ...
+						.removeClass(data.settings.classOn) // ... add one class ...
+						.addClass(data.settings.classOff); // ... and remove the other class.
+					
+					//----------------------------------
+					// No. Clear the matched "result":
 					//----------------------------------
 					
 					data.matches = [];
@@ -458,7 +497,7 @@
 	 * @private
 	 * @type { function }
 	 * @param { object } data Parent data object literal.
-	 * @return { object } Matched results.
+	 * @return { object } Matched "result".
 	 */
 	
 	_search = function(data) {
@@ -520,6 +559,7 @@
 	 * @type { function }
 	 * @param { object } data Parent data object literal.
 	 * @param { object } matches Matched data.
+	 * @param { function } callback Optional callback method.
 	 */
 	
 	_write = function(data, matches) {
@@ -538,32 +578,56 @@
 		$.fn[NS].nuke(data);
 		
 		//----------------------------------
-		// Results?
+		// Do we have a "result"?
 		//----------------------------------
 		
 		if (matches && matches.length) {
 			
 			//----------------------------------
-			// Yup, loop over each result:
+			// Yup, loop over each "result":
 			//----------------------------------
 			
 			for (i = 0, l = matches.length; (i < l) && (i < data.settings.limit); i++) {
 				
 				//----------------------------------
-				// Format result:
+				// Format "result":
 				//----------------------------------
 				
 				$.fn[NS].format(data, matches[i]);
 				
 			}
 			
+			//----------------------------------
+			// Juggle classes:
+			//----------------------------------
+			
+			data.result
+				.removeClass(data.settings.classOff)
+				.addClass(data.settings.classOn);
+			
+			data.resultNo
+				.removeClass(data.settings.classOn)
+				.addClass(data.settings.classOff);
+			
 		} else {
 			
 			//----------------------------------
-			// Display "no results" message:
+			// Display "no result" message:
 			//----------------------------------
 			
 			$.fn[NS].zilch(data);
+			
+			//----------------------------------
+			// Juggle classes:
+			//----------------------------------
+			
+			data.result
+				.removeClass(data.settings.classOn)
+				.addClass(data.settings.classOff);
+			
+			data.resultNo
+				.removeClass(data.settings.classOff)
+				.addClass(data.settings.classOn);
 			
 		}
 		
@@ -687,7 +751,7 @@
 	//--------------------------------------------------------------------
 	
 	/**
-	 * Formats the output of a result.
+	 * Format the output of a "result".
 	 *
 	 * @type { function }
 	 */
@@ -695,16 +759,16 @@
 	$.fn[NS].format = function(data, obj) {
 		
 		//----------------------------------
-		// Combine result and template:
+		// Combine "result" and template:
 		//----------------------------------
 		
-		var item = data.settings.resultsTemplate.replace(/\{(.*?)\}/g, function(match, property) {
+		var item = data.settings.resultTemplate.replace(/\{(.*?)\}/g, function(match, property) {
 			
 			//----------------------------------
 			// Return property if it exists:
 			//----------------------------------
 			
-			return obj[$.trim(property)];
+			return obj[$.trim(property)]; // @todo Allow for nesting?
 			
 		});
 		
@@ -715,17 +779,17 @@
 		data.settings.onResult.call(data.target, obj, item, data);
 		
 		//----------------------------------
-		// Add formatted result to DOM:
+		// Add formatted "result" to DOM:
 		//----------------------------------
 		
-		data.results.append(item);
+		data.result.append(item);
 		
 	}; // $.fn[NS].format
 	
 	//--------------------------------------------------------------------
 	
 	/**
-	 * Displays no result message.
+	 * Displays "no result" message.
 	 *
 	 * @type { function }
 	 */
@@ -739,17 +803,17 @@
 		data.settings.onZilch.call(data.target, data);
 		
 		//----------------------------------
-		// Add "no results" template to DOM:
+		// Add template to DOM:
 		//----------------------------------
 		
-		data.resultsNo.append(data.settings.resultsNoTemplate);
+		data.resultNo.append(data.settings.resultNoTemplate);
 		
 	}; // $.fn[NS].zilch
 	
 	//--------------------------------------------------------------------
 	
 	/**
-	 * Removes result from output.
+	 * Removes "result" from output.
 	 *
 	 * @type { function }
 	 */
@@ -757,10 +821,10 @@
 	$.fn[NS].nuke = function(data) {
 		
 		//----------------------------------
-		// Loop over "result" objects:
+		// Loop over objects:
 		//----------------------------------
 		
-		$.each([data.results, data.resultsNo], function() {
+		$.each([data.result, data.resultNo], function() {
 			
 			//----------------------------------
 			// Declare, hoist and initialize:
@@ -785,7 +849,7 @@
 				// ... and remove HTML from DOM:
 				//----------------------------------
 				
-				$children.remove();
+				$children.remove(); // https://github.com/mhulse/jquery-bigglesworth/issues/12
 				
 			}
 			

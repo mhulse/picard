@@ -2114,6 +2114,20 @@ a img {
   outline: 0;
 }
 
+audio,
+video {
+  vertical-align: middle;
+}
+audio:focus, audio:active,
+video:focus,
+video:active {
+  outline: none;
+}
+
+audio {
+  width: 100%;
+}
+
 .mm {
   height: 0;
   padding-bottom: 56.25%;
@@ -2127,7 +2141,8 @@ a img {
 }
 .mm iframe,
 .mm object,
-.mm embed {
+.mm embed,
+.mm video {
   width: 100% !important;
   height: 100% !important;
   position: absolute;
@@ -2462,9 +2477,10 @@ a.social-tumblr, a.social-tumblr:visited, a.social-tumblr:visited:hover, a.socia
 
 form#search {
   position: relative;
+  /* https://github.com/mhulse/jquery-bigglesworth/issues/13 */
 }
-form#search #bigglesworth_results,
-form#search #bigglesworth_results-no {
+form#search #bigglesworth_result,
+form#search #bigglesworth_result-no {
   width: 100%;
   margin: -0.71428571428571rem auto 0;
   padding: 0;
@@ -2475,39 +2491,35 @@ form#search #bigglesworth_results-no {
   right: 0;
   z-index: 100;
 }
-form#search #bigglesworth_results:empty,
-form#search #bigglesworth_results-no:empty {
-  display: none;
-}
-form#search #bigglesworth_results li {
+form#search #bigglesworth_result li {
   border: 0.07142857142857rem solid #dddddd;
   margin: 0 0 -0.07142857142857rem;
   list-style: none;
 }
-form#search #bigglesworth_results time {
+form#search #bigglesworth_result time {
   font-size: 0.85714285714286rem;
   line-height: 1.375;
   text-transform: uppercase;
   letter-spacing: .1em;
   display: block;
 }
-form#search #bigglesworth_results div {
+form#search #bigglesworth_result div {
   font-size: 1.14285714285714rem;
   line-height: 1.203125;
   font-weight: bold;
 }
-form#search #bigglesworth_results a {
+form#search #bigglesworth_result a {
   background: rgba(255, 255, 255, 0.9);
   padding: 0.71428571428571rem;
   display: block;
 }
-form#search #bigglesworth_results a, form#search #bigglesworth_results a:visited, form#search #bigglesworth_results a:visited:hover, form#search #bigglesworth_results a:focus, form#search #bigglesworth_results a:focus:hover, form#search #bigglesworth_results a:hover, form#search #bigglesworth_results a:active {
+form#search #bigglesworth_result a, form#search #bigglesworth_result a:visited, form#search #bigglesworth_result a:visited:hover, form#search #bigglesworth_result a:focus, form#search #bigglesworth_result a:focus:hover, form#search #bigglesworth_result a:hover, form#search #bigglesworth_result a:active {
   text-decoration: none;
 }
-form#search #bigglesworth_results a:focus, form#search #bigglesworth_results a:active {
+form#search #bigglesworth_result a:focus, form#search #bigglesworth_result a:active {
   outline: none;
 }
-form#search #bigglesworth_results-no p {
+form#search #bigglesworth_result-no p {
   font-size: 0.92857142857143rem;
   line-height: 1.48076923076923;
   border: 0.07142857142857rem solid #dddddd;
@@ -2515,6 +2527,12 @@ form#search #bigglesworth_results-no p {
   margin: 0;
   padding: 0.71428571428571rem;
   max-width: none;
+}
+form#search .bigglesworth_on {
+  display: block;
+}
+form#search .bigglesworth_off {
+  display: none;
 }
 form#search label {
   padding: 0;

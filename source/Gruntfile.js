@@ -387,6 +387,7 @@ module.exports = function(grunt) {
 				src : [
 					'feeds/**/*',
 					'images/**/*',
+					'media/**/*',
 					'scripts/**/*',
 				],
 				dest : '../dev/',
@@ -398,8 +399,8 @@ module.exports = function(grunt) {
 				expand : true,
 				cwd : './files/',
 				src : [
-					'feeds/**/*',
 					'images/**/*',
+					'!images/junk/**'
 				],
 				dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/'
 				

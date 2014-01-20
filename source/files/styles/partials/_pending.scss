@@ -32,8 +32,8 @@ form#search {
 	
 	//label { margin-bottom: #{relative($base_margin)}rem; }
 	
-	#bigglesworth_results,
-	#bigglesworth_results-no {
+	#bigglesworth_result,
+	#bigglesworth_result-no {
 		
 		// http://stackoverflow.com/a/18486387/922323
 		width: 100%;
@@ -46,11 +46,12 @@ form#search {
 		right: 0;
 		z-index: 100;
 		
-		&:empty { display: none; }
+		// &:empty { display: none; }
+		// &:not(:empty) { display: block; }
 		
 	}
 	
-	#bigglesworth_results {
+	#bigglesworth_result {
 		
 		li {
 			border: #{relative(1)}rem solid $grayd;
@@ -91,7 +92,7 @@ form#search {
 		
 	}
 	
-	#bigglesworth_results-no {
+	#bigglesworth_result-no {
 		
 		p {
 			@include baseline($base_font-size - 1, .875);
@@ -103,6 +104,10 @@ form#search {
 		}
 		
 	}
+	
+	/* https://github.com/mhulse/jquery-bigglesworth/issues/13 */
+	.bigglesworth_on { display: block; }
+	.bigglesworth_off { display: none; }
 	
 	label { padding: 0; }
 	

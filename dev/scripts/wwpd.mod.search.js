@@ -4,7 +4,7 @@ WWPD.register(function() {
 	
 	$.fn.bigglesworth.format = function(data, obj) {
 		
-		data.results.append(
+		data.result.append(
 			'<li>' +
 				'<a href="' + obj.uri + '">' +
 					'<time>' +
@@ -21,7 +21,7 @@ WWPD.register(function() {
 	
 	$.fn.bigglesworth.zilch = function(data) {
 		
-		data.resultsNo.append(
+		data.resultNo.append(
 			'<p>' +
 				'<span class="callout callout-error">' +
 					'<i class="fa fa-times-circle" aria-hidden="true"></i>' +
@@ -47,8 +47,8 @@ WWPD.register(function() {
 		
 	};
 	
-	var $ul = $('<ul>', { id : 'bigglesworth_results', 'class' : 'x3' }),
-	    $div = $('<div>', { id : 'bigglesworth_results-no', 'class' : 'x2' }),
+	var $ul = $('<ul>', { id : 'bigglesworth_result', 'class' : 'x3 bigglesworth_off' }),
+	    $div = $('<div>', { id : 'bigglesworth_result-no', 'class' : 'x2 bigglesworth_off' }),
 	    $search = $('#bigglesworth');
 	
 	$search
