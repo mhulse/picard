@@ -21,9 +21,11 @@ DEVELOPMENT | PRODUCTION
 [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://picard.mky.io/dev/&chs=240x240)](http://picard.mky.io/dev/) | [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://picard.mky.io/prod/&chs=240x240)](http://picard.mky.io/prod/)
 `$ grunt` | `$ grunt prod`
 
+While you're at it: [Tea. Earl Grey. Hot.](http://youtu.be/R2IJdfxWtPM) <img width="20" height="20" align="absmiddle" src="https://github.global.ssl.fastly.net/images/icons/emoji/coffee.png" alt=":coffee:" title=":coffee:" class="emoji">
+
 ## Q: Um, what were you thinking?
 
-**A:** [Tea. Earl Grey. Hot.](http://youtu.be/R2IJdfxWtPM) <img width="20" height="20" align="absmiddle" src="https://github.global.ssl.fastly.net/images/icons/emoji/coffee.png" alt=":coffee:" title=":coffee:" class="emoji">
+**A:** [SHUT UP WESLEY!](http://youtu.be/d3Y6SUh8saQ) <img width="20" height="20" align="absmiddle" src="https://github.global.ssl.fastly.net/images/icons/emoji/older_man.png" alt=":older_man:" title=":older_man:" class="emoji">
 
 ---
 
