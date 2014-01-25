@@ -58,8 +58,8 @@
 	
 	width: 100%;
 	margin: {
-		top: #{relative($base_margin)}rem;
-		bottom: #{relative($base_margin)}rem;
+		top: #{rex_relative($base_margin)}rem;
+		bottom: #{rex_relative($base_margin)}rem;
 	}
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;

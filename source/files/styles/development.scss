@@ -13,21 +13,21 @@
 
 .swatches {
 	
-	max-width: #{relative(650)}rem;
-	margin: #{relative($base_margin)}rem auto;
+	max-width: #{rex_relative(650)}rem;
+	margin: #{rex_relative($base_margin)}rem auto;
 	
 	.swatches-swatch {
-		@include baseline(14, .75);
-		border: #{relative(1)}rem solid rgba($raven, .1);
-		margin: #{relative(5)}rem 0;
-		padding: #{baseline(14, .75) / 2}em;
+		@include rex_baseline(14, .75);
+		border: #{rex_relative(1)}rem solid rgba($raven, .1);
+		margin: #{rex_relative(5)}rem 0;
+		padding: #{rex_baseline(14, .75) / 2}em;
 	}
 	
 	code {
-		text-shadow: 0 #{relative(1)}rem 0 rgba($raven, .8);
+		text-shadow: 0 #{rex_relative(1)}rem 0 rgba($raven, .8);
 		color: $milk;
 		background: rgba($raven, .5);
-		padding: #{relative(3)}rem #{relative(5)}rem;
+		padding: #{rex_relative(3)}rem #{rex_relative(5)}rem;
 		border: 0;
 	}
 	

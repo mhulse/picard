@@ -14,9 +14,9 @@ body {
 	min-height: 100%;
 	text-rendering: optimizeLegibility;
 	
-	@media (max-width: #{relative($base_breakpoint-max)}rem) {
+	@media (max-width: #{rex_relative($base_breakpoint-max)}rem) {
 		
-		& { padding: #{relative($base_padding * 2)}rem; }
+		& { padding: #{rex_relative($base_padding * 2)}rem; }
 		
 	}
 	
@@ -54,11 +54,11 @@ hr,
 .hr {
 	
 	border: 0;
-	border-top: #{relative(4)}rem solid $graye;
+	border-top: #{rex_relative(4)}rem solid $graye;
 	height: 0;
 	margin: {
-		top: #{relative($base_margin) * 4}rem;
-		bottom: #{relative($base_margin) * 4}rem;
+		top: #{rex_relative($base_margin) * 4}rem;
+		bottom: #{rex_relative($base_margin) * 4}rem;
 	}
 	padding: 0;
 	-webkit-box-sizing: content-box;
@@ -69,16 +69,16 @@ hr,
 	article &,
 	aside &,
 	section & {
-		border-top-width: #{relative(2)}rem;
+		border-top-width: #{rex_relative(2)}rem;
 		border-color: $grayc;
 		margin: {
-			top: #{relative($base_margin) * 3}rem;
-			bottom: #{relative($base_margin) * 3}rem;
+			top: #{rex_relative($base_margin) * 3}rem;
+			bottom: #{rex_relative($base_margin) * 3}rem;
 		}
 	}
 	
 	.body & {
-		border-top-width: #{relative(1)}rem !important;
+		border-top-width: #{rex_relative(1)}rem !important;
 		border-top-style: dashed;
 	}
 	

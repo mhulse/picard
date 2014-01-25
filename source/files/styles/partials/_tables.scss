@@ -3,8 +3,8 @@
 	empty-cells: hide;
 	
 	margin: {
-		top: #{relative($base_margin)}rem;
-		right: #{relative($base_margin)}rem;
+		top: #{rex_relative($base_margin)}rem;
+		right: #{rex_relative($base_margin)}rem;
 	}
 	
 	width: 100%;
@@ -27,8 +27,8 @@
 		
 		text-align: left;
 		padding: {
-			right: #{relative(10)}rem;
-			left: #{relative(10)}rem;
+			right: #{rex_relative(10)}rem;
+			left: #{rex_relative(10)}rem;
 		}
 		
 		&:first-child { padding-left: 0; }
@@ -44,7 +44,7 @@
 		
 		thead th,
 		tbody th,
-		tbody td { border-bottom: #{relative(1)}rem solid $gray9; }
+		tbody td { border-bottom: #{rex_relative(1)}rem solid $gray9; }
 		
 		/*
 		& th:empty,
@@ -52,7 +52,7 @@
 		*/
 		
 		tfoot th,
-		tfoot td { border-top: #{relative(1)}rem solid $gray9; }
+		tfoot td { border-top: #{rex_relative(1)}rem solid $gray9; }
 		
 		tbody tr:last-child th,
 		tbody tr:last-child td { border-bottom: 0; }
@@ -65,8 +65,8 @@
 		td {
 			
 			border: {
-				right: #{relative(1)}rem solid $gray9;
-				left: #{relative(1)}rem solid $gray9;
+				right: #{rex_relative(1)}rem solid $gray9;
+				left: #{rex_relative(1)}rem solid $gray9;
 			}
 			
 		}

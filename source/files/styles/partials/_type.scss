@@ -1,12 +1,12 @@
 h1#flag {
 	
 	font-family: "Hulse", Arial, sans-serif;
-	font-size: #{relative(115)}rem;
+	font-size: #{rex_relative(115)}rem;
 	font-weight: normal;
 	font-style: normal;
-	line-height: #{relative(115)}rem;
+	line-height: #{rex_relative(115)}rem;
 	text-transform: none;
-	margin-bottom: #{relative($base_margin * 5)}rem;
+	margin-bottom: #{rex_relative($base_margin * 5)}rem;
 	-webkit-touch-callout: none;
 	-webkit-tap-highlight-color: rgba($raven, 0);
 	-webkit-tap-highlight-color: transparent;
@@ -53,7 +53,7 @@ h1#flag {
 		font-weight: normal;
 		color: $bling;
 		line-height: 1;
-		margin-left: #{relative(50)}rem;
+		margin-left: #{rex_relative(50)}rem;
 		position: absolute;
 		top: 0;
 		left: 50%;
@@ -96,19 +96,19 @@ h1:empty { display: none; }
 
 blockquote {
 	
-	@include baseline(20);
+	@include rex_baseline(20);
 	font-family: serif;
 	font-style: italic;
 	letter-spacing: .03em;
 	color: $gray6;
-	border-width: #{relative(2)}rem 0;
+	border-width: #{rex_relative(2)}rem 0;
 	border-style: dashed;
 	border-color: $grayd;
 	margin: {
-		top: #{relative($base_margin) * 2}rem;
-		bottom: #{relative($base_margin) * 2}rem;
+		top: #{rex_relative($base_margin) * 2}rem;
+		bottom: #{rex_relative($base_margin) * 2}rem;
 	}
-	padding: #{baseline(20)}em #{baseline(20) * 2}em;
+	padding: #{rex_baseline(20)}em #{rex_baseline(20) * 2}em;
 	position: relative;
 	
 	p {
@@ -129,7 +129,7 @@ blockquote {
 	
 	* { max-width: none; }
 	
-	blockquote { border-width: #{relative(1)}rem 0; }
+	blockquote { border-width: #{rex_relative(1)}rem 0; }
 	
 	a {
 		
@@ -146,9 +146,9 @@ blockquote {
 		
 	}
 	
-	@media (max-width: #{relative($base_breakpoint-max)}rem) {
+	@media (max-width: #{rex_relative($base_breakpoint-max)}rem) {
 		
-		& { padding: #{baseline(20)}em; }
+		& { padding: #{rex_baseline(20)}em; }
 		
 	}
 	
@@ -156,17 +156,17 @@ blockquote {
 
 mark {
 	background: rgba($duck, .9);
-	padding: #{relative(1)}rem #{relative(3)}rem;
-	border-radius: #{relative($base_radii)}rem;
+	padding: #{rex_relative(1)}rem #{rex_relative(3)}rem;
+	border-radius: #{rex_relative($base_radii)}rem;
 }
 
 del,
 ins {
 	line-height: 0;
 	letter-spacing: .05em;
-	padding: #{relative(1)}rem #{relative(3)}rem;
+	padding: #{rex_relative(1)}rem #{rex_relative(3)}rem;
 	position: relative;
-	border-radius: #{relative($base_radii) - 1}rem;
+	border-radius: #{rex_relative($base_radii) - 1}rem;
 }
 del {
 	color: darken($chili, 50%);
@@ -194,7 +194,7 @@ abbr {
 	font-style: italic;
 	cursor: help;
 	
-	&[title] { border-bottom: #{relative(1)}rem dotted; }
+	&[title] { border-bottom: #{rex_relative(1)}rem dotted; }
 	
 	&[title="et cetera"] { font-family: $etc; }
 	
@@ -208,7 +208,7 @@ dfn {
 	font-style: italic;
 	
 	&[title] {
-		border-bottom: #{relative(1)}rem dotted;
+		border-bottom: #{rex_relative(1)}rem dotted;
 		cursor: help;
 	}
 	
@@ -249,8 +249,8 @@ span {
 	font-weight: normal;
 	text-transform: none;
 	margin: {
-		top: #{relative($base_margin * 2)}rem;
-		bottom: #{relative($base_margin * 2)}rem;
+		top: #{rex_relative($base_margin * 2)}rem;
+		bottom: #{rex_relative($base_margin * 2)}rem;
 	}
 	padding: 0;
 	
@@ -261,9 +261,9 @@ span {
 	
 	a,
 	span {
-		@include baseline($base_font-size + 4, .875);
+		@include rex_baseline($rex_base-font-size + 4, .875);
 		letter-spacing: .03em;
-		padding: #{baseline($base_font-size + 4, .875) * .75}em #{relative($base_padding)}em;
+		padding: #{rex_baseline($rex_base-font-size + 4, .875) * .75}em #{rex_relative($base_padding)}em;
 		float: left;
 	}
 	
@@ -292,13 +292,13 @@ span {
 }
 
 .subtle {
-	@include baseline($base_font-size + 4, .75);
+	@include rex_baseline($rex_base-font-size + 4, .75);
 	font-weight: normal;
 	font-family: $mono;
 	color: darken($bling, 10%);
 	letter-spacing: .1em;
-	margin-top: #{relative($base_margin)}rem;
-	margin-bottom: #{relative($base_margin)}rem;
+	margin-top: #{rex_relative($base_margin)}rem;
+	margin-bottom: #{rex_relative($base_margin)}rem;
 }
 
 .marker,
@@ -324,11 +324,11 @@ span {
 	> {
 		
 		p {
-			@include baseline($base_font-size + 3);
+			@include rex_baseline($rex_base-font-size + 3);
 			// Using `em` keeps it on the baseline:
 			margin: {
-				top: #{baseline($base_font-size + 3)}em;
-				bottom: #{baseline($base_font-size + 3)}em;
+				top: #{rex_baseline($rex_base-font-size + 3)}em;
+				bottom: #{rex_baseline($rex_base-font-size + 3)}em;
 			}
 		}
 		
@@ -368,15 +368,15 @@ span {
 	text-transform: uppercase;
 	letter-spacing: .15em;
 	margin: {
-		top: #{relative($base_margin)}rem;
-		bottom: #{relative($base_margin)}rem;
+		top: #{rex_relative($base_margin)}rem;
+		bottom: #{rex_relative($base_margin)}rem;
 	}
 	
 	a,
 	span {
 		padding: {
-			left: #{relative($base_padding * 2)}em;
-			right: #{relative($base_padding * 2)}em;
+			left: #{rex_relative($base_padding * 2)}em;
+			right: #{rex_relative($base_padding * 2)}em;
 		}
 		display: inline-block;
 	}
@@ -405,15 +405,15 @@ span {
 
 .label {
 	
-	@include baseline($base_font-size - 1, .75);
+	@include rex_baseline($rex_base-font-size - 1, .75);
 	font-weight: bold;
 	
 	a,
 	span {
-		border-bottom: #{relative(5)}rem solid $graye;
+		border-bottom: #{rex_relative(5)}rem solid $graye;
 		padding: {
-			top: #{baseline($base_font-size - 1, .25) / 2}em;
-			bottom: #{baseline($base_font-size - 1, .25) / 2}em;
+			top: #{rex_baseline($rex_base-font-size - 1, .25) / 2}em;
+			bottom: #{rex_baseline($rex_base-font-size - 1, .25) / 2}em;
 		}
 	}
 	
@@ -424,14 +424,14 @@ span {
 .pub {
 	
 	@extend %label;
-	@include baseline($base_font-size - 2, .75);
+	@include rex_baseline($rex_base-font-size - 2, .75);
 	font-weight: normal;
 	
 	a,
 	span {
 		padding: {
-			top: #{baseline($base_font-size - 2, .25) / 2}em;
-			bottom: #{baseline($base_font-size - 2, .25) / 2}em;
+			top: #{rex_baseline($rex_base-font-size - 2, .25) / 2}em;
+			bottom: #{rex_baseline($rex_base-font-size - 2, .25) / 2}em;
 		}
 	}
 	
@@ -439,10 +439,10 @@ span {
 
 .label + .pub {
 	
-	margin-top: -#{relative($base_margin + 5)}rem;
+	margin-top: -#{rex_relative($base_margin + 5)}rem;
 	
 	a,
-	span { border-top: #{relative(5)}rem solid $graye; }
+	span { border-top: #{rex_relative(5)}rem solid $graye; }
 	
 	a { border-color: $grayc; }
 	
@@ -450,11 +450,11 @@ span {
 
 .head {
 	
-	@include baseline($base_font-size + 2, .675);
+	@include rex_baseline($rex_base-font-size + 2, .675);
 	font-weight: bold;
 	text-transform: none;
 	color: mix($dusk, $milk, 65%);
-	margin-bottom: #{relative($base_margin)}rem;
+	margin-bottom: #{rex_relative($base_margin)}rem;
 	
 	a {
 		
@@ -527,13 +527,13 @@ span {
 	
 	a {
 		
-		@include baseline($base_font-size + 8);
-		padding: #{relative($base_padding * 1.5)}rem #{relative($base_padding * 4)}rem;
+		@include rex_baseline($rex_base-font-size + 8);
+		padding: #{rex_relative($base_padding * 1.5)}rem #{rex_relative($base_padding * 4)}rem;
 		display: inline-block;
 		position: relative;
-		border-radius: #{relative($base_radii)}rem;
-		text-shadow: 0 #{relative(1)}rem rgba(darken($hulk, 10%), .75);
-		box-shadow: 0 #{relative(3)}rem rgba(darken($goblin, 10%), .2);
+		border-radius: #{rex_relative($base_radii)}rem;
+		text-shadow: 0 #{rex_relative(1)}rem rgba(darken($hulk, 10%), .75);
+		box-shadow: 0 #{rex_relative(3)}rem rgba(darken($goblin, 10%), .2);
 		
 		// http://lea.verou.me/2010/12/checkered-stripes-other-background-patterns-with-css3-gradients/
 		background-color: $hulk;
@@ -573,8 +573,8 @@ span {
 			content: "\f08e";
 			color: $milk;
 			position: absolute;
-			top: #{relative($base_padding * 1.5)}rem;
-			right: #{relative(($base_padding - 2) * 1.5)}rem; // https://github.com/mhulse/picard/issues/141
+			top: #{rex_relative($base_padding * 1.5)}rem;
+			right: #{rex_relative(($base_padding - 2) * 1.5)}rem; // https://github.com/mhulse/picard/issues/141
 		}
 		
 	}
@@ -614,7 +614,7 @@ span {
 		
 		.fa-plus {
 			color: $gray9;
-			//text-shadow: 0 #{relative(2)}rem $milk;
+			//text-shadow: 0 #{rex_relative(2)}rem $milk;
 			position: relative;
 			bottom: -.01em
 		}

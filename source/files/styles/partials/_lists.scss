@@ -18,8 +18,8 @@ ul, ol { list-style: none; }
 			font-weight: bold;
 			color: darken($bling, 10%);
 			margin: {
-				top: #{relative($base_margin)}rem;
-				bottom: #{relative($base_margin / 4)}rem;
+				top: #{rex_relative($base_margin)}rem;
+				bottom: #{rex_relative($base_margin / 4)}rem;
 			}
 			display: block;
 			content: counter(li, lower-roman);
@@ -39,7 +39,7 @@ ul, ol { list-style: none; }
 		
 		&::before {
 			content: counter(li, square);
-			margin-bottom: #{relative($base_margin / 6)}rem;
+			margin-bottom: #{rex_relative($base_margin / 6)}rem;
 		}
 		
 	}
@@ -47,10 +47,10 @@ ul, ol { list-style: none; }
 }
 
 dt {
-	@include baseline($base_font-size + 2, .75);
+	@include rex_baseline($rex_base-font-size + 2, .75);
 	font-weight: bold;
 	margin: 0;
-	padding: #{baseline($base_font-size + 2, .25) / 2}em 0;
+	padding: #{rex_baseline($rex_base-font-size + 2, .25) / 2}em 0;
 }
 
 dd { margin-left: 0; }

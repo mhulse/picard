@@ -4,16 +4,16 @@
 	line-height: 1;
 	letter-spacing: .1em;
 	text-transform: lowercase;
-	text-shadow: 0 #{relative(1)}rem #{relative(3)}rem $raven,
-	             0 #{relative(1)}rem #{relative(3)}rem $raven,
-	             0 #{relative(1)}rem #{relative(3)}rem $raven,
-	             0 #{relative(1)}rem #{relative(3)}rem $raven;
+	text-shadow: 0 #{rex_relative(1)}rem #{rex_relative(3)}rem $raven,
+	             0 #{rex_relative(1)}rem #{rex_relative(3)}rem $raven,
+	             0 #{rex_relative(1)}rem #{rex_relative(3)}rem $raven,
+	             0 #{rex_relative(1)}rem #{rex_relative(3)}rem $raven;
 	text-align: center;
 	color: $milk;
 	position: absolute;
 	z-index: 100;
 	width: 100%;
-	top: #{relative(10)}rem;
+	top: #{rex_relative(10)}rem;
 	left: 0;
 	opacity: .5;
 }
@@ -30,16 +30,16 @@ form#search {
 	
 	position: relative;
 	
-	//label { margin-bottom: #{relative($base_margin)}rem; }
+	//label { margin-bottom: #{rex_relative($base_margin)}rem; }
 	
 	#bigglesworth_result,
 	#bigglesworth_result-no {
 		
 		// http://stackoverflow.com/a/18486387/922323
 		width: 100%;
-		margin: -#{relative($base_margin)}rem auto 0;
+		margin: -#{rex_relative($base_margin)}rem auto 0;
 		padding: 0;
-		box-shadow: 0 #{relative(5)}rem #{relative(5)}rem rgba($raven, .2);
+		box-shadow: 0 #{rex_relative(5)}rem #{rex_relative(5)}rem rgba($raven, .2);
 		position: absolute;
 		top: auto;
 		left: 0;
@@ -54,27 +54,27 @@ form#search {
 	#bigglesworth_result {
 		
 		li {
-			border: #{relative(1)}rem solid $grayd;
-			margin: 0 0 -#{relative(1)}rem;
+			border: #{rex_relative(1)}rem solid $grayd;
+			margin: 0 0 -#{rex_relative(1)}rem;
 			list-style: none;
 		}
 		
 		time {
-			@include baseline($base_font-size - 2, .75);
+			@include rex_baseline($rex_base-font-size - 2, .75);
 			text-transform: uppercase;
 			letter-spacing: .1em;
 			display: block;
 		}
 		
 		div {
-			@include baseline($base_font-size + 2, .875);
+			@include rex_baseline($rex_base-font-size + 2, .875);
 			font-weight: bold;
 		}
 		
 		a {
 			
 			background: rgba($milk, .9);
-			padding: #{relative($base_padding)}rem;
+			padding: #{rex_relative($base_padding)}rem;
 			display: block;
 			
 			&,
@@ -95,11 +95,11 @@ form#search {
 	#bigglesworth_result-no {
 		
 		p {
-			@include baseline($base_font-size - 1, .875);
-			border: #{relative(1)}rem solid $grayd;
+			@include rex_baseline($rex_base-font-size - 1, .875);
+			border: #{rex_relative(1)}rem solid $grayd;
 			background: rgba($milk, .9);
 			margin: 0;
-			padding: #{relative($base_padding)}rem;
+			padding: #{rex_relative($base_padding)}rem;
 			max-width: none;
 		}
 		

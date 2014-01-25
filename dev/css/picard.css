@@ -6,8 +6,8 @@
  * @link http://mky.io
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
- * @version 0.1.0
- * @date 2014/01/24
+ * @version 1.0.0
+ * @date 2014/01/25
  */
 
 
@@ -413,7 +413,7 @@ table {
 }
 .baseline::before {
   background-image: -webkit-linear-gradient(rgba(255, 0, 0, 0.75) 1px, transparent 1px), -webkit-linear-gradient(rgba(0, 255, 255, 0.75) 1px, transparent 1px), -webkit-linear-gradient(rgba(0, 255, 255, 0.25) 1px, transparent 1px);
-  background-image: -moz-linear-gradient(rgba(255, 0, 0, 0.75) 1px, transparent 1px), -moz-linear-gradient(rgba(0, 255, 255, 0.75) 1px, transparent 1px), -moz-linear-gradient(rgba(0, 255, 255, 0.25) 1px, transparent 1px);
+  background-image: -moz-linear-gradient(rgba(255, 0, 0, 0.25) 1px, transparent 1px), -moz-linear-gradient(rgba(0, 255, 255, 0.75) 1px, transparent 1px), -moz-linear-gradient(rgba(0, 255, 255, 0.25) 1px, transparent 1px);
   background-image: linear-gradient(rgba(255, 0, 0, 0.75) 1px, transparent 1px), linear-gradient(rgba(0, 255, 255, 0.75) 1px, transparent 1px), linear-gradient(rgba(0, 255, 255, 0.25) 1px, transparent 1px);
   background-size: 100% 1.57142857142857rem, 100% 0.78571428571429rem, 100% 0.39285714285714rem;
   background-position: 0 0;
@@ -609,7 +609,6 @@ input[type="text"],
 input[type="password"] {
   font-size: 1em;
   line-height: 1.57142857142857;
-  height: 1.57142857142857rem;
   margin: 0;
   padding-right: 0.26190476190476em;
   padding-left: 0.26190476190476em;
@@ -1878,13 +1877,13 @@ kbd kbd {
   width: 100%;
   background: #ffd100;
   border: 0;
-  margin-top: 0.71428571428571rem;
-  margin-bottom: 0.71428571428571rem;
+  margin-top: relative(10px)rem;
+  margin-bottom: relative(10px)rem;
   padding-top: 0.22916666666667em;
   padding-bottom: 0.22916666666667em;
   cursor: pointer;
   zoom: 1;
-  border-radius: 0.21428571428571rem;
+  border-radius: relative(3px)rem;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -moz-user-select: none;

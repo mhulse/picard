@@ -34,10 +34,10 @@ section {
 	width: 100%;
 }
 
-.x1 { max-width: #{relative(150)}rem; }
-.x2 { max-width: #{relative(250)}rem; }
-.x3 { max-width: #{relative(350)}rem; }
-.x4 { max-width: #{relative(450)}rem; }
-.x5 { max-width: #{relative(550)}rem; }
-.x6 { max-width: #{relative(650)}rem; }
-.x7 { max-width: #{relative(750)}rem; }
+.x1 { max-width: #{rex_relative(150)}rem; }
+.x2 { max-width: #{rex_relative(250)}rem; }
+.x3 { max-width: #{rex_relative(350)}rem; }
+.x4 { max-width: #{rex_relative(450)}rem; }
+.x5 { max-width: #{rex_relative(550)}rem; }
+.x6 { max-width: #{rex_relative(650)}rem; }
+.x7 { max-width: #{rex_relative(750)}rem; }
