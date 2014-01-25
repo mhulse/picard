@@ -1803,10 +1803,6 @@ p q r s t u v w x y z { | } ~
 	
 	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 	
-	<!--
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
-	-->
-	
 	<script src="./scripts/jquery.js"></script>
 	<script src="./scripts/fastclick.js"></script>
 	<script src="./scripts/jquery.bigglesworth.js"></script>
@@ -1832,11 +1828,6 @@ p q r s t u v w x y z { | } ~
 	<!-- @endif -->
 	
 	<!-- @if NODE_ENV == 'PRODUCTION' -->
-	
-	<!--
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script>if(!window.jQuery){document.write('<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.3.min.js"><\/script>');}</script>
-	-->
 	
 	<script src="http://picard.mky.io/prod/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/scripts/<!-- @echo name -->.min.js"></script>
 	
