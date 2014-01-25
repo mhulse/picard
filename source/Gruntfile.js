@@ -226,6 +226,7 @@ module.exports = function(grunt) {
 					
 					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/scripts/<%= pkg.name %>.min.js' : [
 						'./files/scripts/fastclick.js',
+						'./files/scripts/jquery.js',
 						'./files/scripts/jquery.*.js',
 						'./files/scripts/wwpd.js',
 						'./files/scripts/wwpd.mod.*.js',

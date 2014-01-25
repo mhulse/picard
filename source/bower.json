@@ -2,10 +2,11 @@
   "name": "simple-bower",
   "version": "0.0.0",
   "dependencies": {
-    "normalize-css": "2.1.3",
+    "bigglesworth": "https://github.com/mhulse/jquery-bigglesworth.git",
     "fastclick": "0.6.11",
-    "rex": "https://github.com/mhulse/rex.git",
-    "bigglesworth": "https://github.com/mhulse/jquery-bigglesworth.git"
+    "jquery": "2.1.0",
+    "normalize-css": "2.1.3",
+    "rex": "https://github.com/mhulse/rex.git"
   },
   "exportsOverride": {
     "rex": {
