@@ -263,6 +263,7 @@ span {
 	span {
 		@include rex_baseline($rex_base-font-size + 4, .875);
 		letter-spacing: .03em;
+		border-left: #{rex_relative(1)}rem solid darken($bling, 8%);
 		padding: #{rex_baseline($rex_base-font-size + 4, .875) * .75}em #{rex_relative($base_padding)}em;
 		float: left;
 	}
@@ -288,6 +289,8 @@ span {
 		}
 		
 	}
+	
+	:first-child { border: 0; }
 	
 }
 
