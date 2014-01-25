@@ -46,7 +46,7 @@ h1#flag {
 	}
 	
 	position: relative;
-	&:before {
+	&::before {
 		font-family: FontAwesome;
 		font-size: 1rem;
 		font-style: normal;
@@ -178,8 +178,8 @@ ins {
 	text-decoration: none;
 	background: rgba($frog, .5);
 	
-	&:before { content: "["; }
-	&:after { content: "]"; }
+	&::before { content: "["; }
+	&::after { content: "]"; }
 	
 }
 
@@ -216,7 +216,7 @@ dfn {
 
 wbr {
 	
-	&:after { content: "\00200B"; }
+	&::after { content: "\00200B"; }
 	
 }
 
@@ -263,7 +263,7 @@ span {
 	span {
 		@include baseline($base_font-size + 4, .875);
 		letter-spacing: .03em;
-		padding: #{baseline($base_font-size + 4, .875) / 2}em;
+		padding: #{baseline($base_font-size + 4, .875) * .75}em #{relative($base_padding)}em;
 		float: left;
 	}
 	
@@ -487,11 +487,11 @@ span {
 // 	font-size: smaller;
 // 	line-height: normal;
 	
-// 	&:before {
+// 	&::before {
 // 		@extend %more;
 // 		content: "\f141\00a0";
 // 	}
-// 	&:after {
+// 	&::after {
 // 		@extend %more;
 // 		content: "\00a0\f141";
 // 	}

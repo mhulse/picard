@@ -1021,7 +1021,7 @@ h1#flag a:visited:hover, h1#flag a:focus, h1#flag a:focus:hover, h1#flag a:hover
 h1#flag a:active, h1#flag a:focus {
   outline: none;
 }
-h1#flag:before {
+h1#flag::before {
   font-family: FontAwesome;
   font-size: 1rem;
   font-style: normal;
@@ -1126,10 +1126,10 @@ ins {
   text-decoration: none;
   background: rgba(223, 242, 191, 0.5);
 }
-ins:before {
+ins::before {
   content: "[";
 }
-ins:after {
+ins::after {
   content: "]";
 }
 
@@ -1163,7 +1163,7 @@ dfn[title] {
   cursor: help;
 }
 
-wbr:after {
+wbr::after {
   content: "\00200B";
 }
 
@@ -1199,7 +1199,7 @@ span.amp {
   font-size: 1.28571428571429rem;
   line-height: 1.06944444444444;
   letter-spacing: .03em;
-  padding: 0.53472222222222em;
+  padding: 0.80208333333333em 0.71428571428571em;
   float: left;
 }
 .marker span {

@@ -132,7 +132,7 @@
 		
 		<section>
 			
-			<h1 id="colors" class="marker"><div><span>The</span> <a href="#colors">Colors</a><span>!</span></div></h1>
+			<h1 id="colors" class="marker"><div><span class="marker-r">The</span> <a href="#colors">Colors</a><span>!</span></div></h1>
 			
 			<div class="swatches">
 				
@@ -1600,9 +1600,11 @@ p q r s t u v w x y z { | } ~
 					
 					<legend></legend>
 					
+					<!--
 					<label>Password: <input type="password" name="fm_password" placeholder="&hellip; enter password &hellip;"></label>
 					
 					<hr>
+					-->
 					
 					<!--
 					<label>File: <input type="file" name="fm_file" placeholder="&hellip; choose file &hellip;"></label>
@@ -1722,10 +1724,10 @@ p q r s t u v w x y z { | } ~
 			<figure class="x6">
 				
 				<div class="mm tv">
-					<video poster="media/shut-up-wesley.jpg" width="480" height="360" controls preload>
-						<source src="./media/shut-up-wesley.mp4" type="video/mp4"></source>
+					<video poster="media/shut-up-wesley.jpg" width="480" height="360" preload="none" controls>
 						<source src="./media/shut-up-wesley.webm" type="video/webm"></source>
 						<source src="./media/shut-up-wesley.ogv" type="video/ogg"></source>
+						<source src="./media/shut-up-wesley.mp4" type="video/mp4"></source>
 					</video>
 				</div>
 				
@@ -1735,9 +1737,9 @@ p q r s t u v w x y z { | } ~
 			
 			<figure class="x6">
 				
-				<audio controls preload>
-					<source src="./media/shut-up-wesley.mp3" type="audio/mpeg"></source>
+				<audio preload="none" controls>
 					<source src="./media/shut-up-wesley.ogg" type="audio/ogg"></source>
+					<source src="./media/shut-up-wesley.mp3" type="audio/mpeg"></source>
 				</audio>
 				
 			</figure>
