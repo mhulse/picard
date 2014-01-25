@@ -319,6 +319,8 @@ p.meta {
 
 a.social {
 	
+	&.fa-lg { font-size: 1.3875em; } // Fixes rounding oddness in Firefox.
+	
 	&,
 	&:visited { color: $gray9; }
 	&:visited:hover,

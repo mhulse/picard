@@ -602,8 +602,8 @@ span {
 
 .more {
 	
-	font-size: 1rem;
-	line-height: 1;
+	//font-size: 1rem;
+	//line-height: 1;
 	margin: {
 		top: 0;
 		bottom: 0;
@@ -614,9 +614,8 @@ span {
 		
 		.fa-plus {
 			color: $gray9;
-			//text-shadow: 0 #{rex_relative(2)}rem $milk;
-			position: relative;
-			bottom: -.01em
+			text-shadow: 0 #{rex_relative(2)}rem rgba($milk, .25);
+			line-height: inherit;
 		}
 		
 		&,

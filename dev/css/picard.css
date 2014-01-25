@@ -1417,16 +1417,14 @@ span.amp {
 }
 
 .more {
-  font-size: 1rem;
-  line-height: 1;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
 }
 .more a.social .fa-plus {
   color: #999999;
-  position: relative;
-  bottom: -0.01em;
+  text-shadow: 0 0.14285714285714rem rgba(255, 255, 255, 0.25);
+  line-height: inherit;
 }
 .more a.social, .more a.social:visited {
   color: #dddddd;
@@ -2356,6 +2354,9 @@ p.meta:hover {
   position: relative;
 }
 
+a.social.fa-lg {
+  font-size: 1.3875em;
+}
 a.social, a.social:visited {
   color: #999999;
 }
