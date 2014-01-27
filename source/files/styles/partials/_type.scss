@@ -263,7 +263,7 @@ span {
 	span {
 		@include rex_baseline($rex_base-font-size + 4, .875);
 		letter-spacing: .03em;
-		border-left: #{rex_relative(1)}rem solid darken($bling, 8%);
+		margin-left: #{rex_relative(1)}rem;
 		padding: #{rex_baseline($rex_base-font-size + 4, .875) * .75}em #{rex_relative($base_padding)}em;
 		float: left;
 	}
@@ -290,7 +290,7 @@ span {
 		
 	}
 	
-	:first-child { border: 0; }
+	:first-child { margin-left: 0; }
 	
 }
 
@@ -343,6 +343,8 @@ span {
 	
 	h1, h2, h3, h4, h5, h6 {
 		
+		font-family: $serif;
+		font-weight: normal;
 		color: $gray3;
 		text-transform: none;
 		
@@ -365,89 +367,45 @@ span {
 	
 }
 
-.label,
-%label {
+.label {
 	
+	@include rex_baseline($rex_base-font-size - 2, .75);
+	font-weight: normal;
 	text-transform: uppercase;
 	letter-spacing: .15em;
 	margin: {
 		top: #{rex_relative($base_margin)}rem;
 		bottom: #{rex_relative($base_margin)}rem;
 	}
+	padding: 0;
 	
 	a,
 	span {
-		padding: {
-			left: #{rex_relative($base_padding * 2)}em;
-			right: #{rex_relative($base_padding * 2)}em;
-		}
+		background: $graye;
+		padding: #{rex_relative($base_padding)}em;
 		display: inline-block;
 	}
 	
-	span { color: $grayc; }
+	span { color: $gray9; }
 	
 	a {
 		
 		&,
-		&:visited { color: $gray8; }
+		&:visited { color: $gray6; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $gray3;
+			color: $graye;
 			text-decoration: none;
+			background: $gray3;
 		}
 		
 		&:focus,
 		&:active { outline: none; }
 		
 	}
-	
-}
-
-.label {
-	
-	@include rex_baseline($rex_base-font-size - 1, .75);
-	font-weight: bold;
-	
-	a,
-	span {
-		border-bottom: #{rex_relative(5)}rem solid $graye;
-		padding: {
-			top: #{rex_baseline($rex_base-font-size - 1, .25) / 2}em;
-			bottom: #{rex_baseline($rex_base-font-size - 1, .25) / 2}em;
-		}
-	}
-	
-	a { border-color: $grayc; }
-	
-}
-
-.pub {
-	
-	@extend %label;
-	@include rex_baseline($rex_base-font-size - 2, .75);
-	font-weight: normal;
-	
-	a,
-	span {
-		padding: {
-			top: #{rex_baseline($rex_base-font-size - 2, .25) / 2}em;
-			bottom: #{rex_baseline($rex_base-font-size - 2, .25) / 2}em;
-		}
-	}
-	
-}
-
-.label + .pub {
-	
-	margin-top: -#{rex_relative($base_margin + 5)}rem;
-	
-	a,
-	span { border-top: #{rex_relative(5)}rem solid $graye; }
-	
-	a { border-color: $grayc; }
 	
 }
 
@@ -531,7 +489,7 @@ span {
 	a {
 		
 		@include rex_baseline($rex_base-font-size + 8);
-		padding: #{rex_relative($base_padding * 1.5)}rem #{rex_relative($base_padding * 4)}rem;
+		padding: #{rex_relative($base_padding * 1.5)}rem #{rex_relative($base_padding * 6)}rem;
 		display: inline-block;
 		position: relative;
 		border-radius: #{rex_relative($base_radii)}rem;
@@ -599,42 +557,6 @@ span {
 		font-size: smaller;
 		letter-spacing: .125em;
 		margin-top: .3em;
-	}
-	
-}
-
-.more {
-	
-	//font-size: 1rem;
-	//line-height: 1;
-	margin: {
-		top: 0;
-		bottom: 0;
-	}
-	padding: 0;
-	
-	a.social {
-		
-		.fa-plus {
-			color: $gray9;
-			text-shadow: 0 #{rex_relative(2)}rem rgba($milk, .25);
-			line-height: inherit;
-		}
-		
-		&,
-		&:visited { color: $grayd; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
-			
-			color: $gray3;
-			
-			.fa-plus { color: $graye; }
-			
-		}
-		
 	}
 	
 }

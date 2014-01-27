@@ -2,6 +2,15 @@ ul, ol, dl { padding: 0; }
 
 ul, ol { list-style: none; }
 
+dt {
+	@include rex_baseline($rex_base-font-size + 2, .75);
+	font-weight: bold;
+	margin: 0;
+	padding: #{rex_baseline($rex_base-font-size + 2, .25) / 2}em 0;
+}
+
+dd { margin-left: 0; }
+
 // http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/
 // http://css-tricks.com/numbering-in-style/
 .li1,
@@ -46,11 +55,152 @@ ul, ol { list-style: none; }
 	
 }
 
-dt {
-	@include rex_baseline($rex_base-font-size + 2, .75);
-	font-weight: bold;
-	margin: 0;
-	padding: #{rex_baseline($rex_base-font-size + 2, .25) / 2}em 0;
+.pager {
+	
+	color: $gray8;
+	width: auto;
+	margin: {
+		top: #{rex_relative($base_margin)}rem;
+		bottom: #{rex_relative($base_margin)}rem;
+	}
+	padding: 0;
+	display: inline-block;
+	
+	> {
+		
+		li {
+			
+			font-size: #{rex_relative($rex_base-font-size - 2)}rem;
+			line-height: 1;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			
+			a,
+			span {
+				text-transform: uppercase;
+				letter-spacing: .05em;
+				white-space: nowrap;
+				background: $graye;
+				width: 100%;
+				height: 100%;
+				padding: 1em 1.5em;
+				display: block;
+			}
+			
+			.pager-current {
+				color: $raven;
+				font-weight: bold;
+				background: $grayc;
+			}
+			
+			&:first-child {
+				
+				a,
+				span { border-radius: #{rex_relative($base_radii)}rem 0 0 #{rex_relative($base_radii)}rem; }
+				
+				a::before {
+					@extend %arrow;
+					content: "\f177\00a0";
+				}
+				
+			}
+			
+			&:last-child {
+				
+				a,
+				span { border-radius: 0 #{rex_relative($base_radii)}rem #{rex_relative($base_radii)}rem 0; }
+				
+				a::after {
+					@extend %arrow;
+					content: "\00a0\f178";
+				}
+				
+			}
+			
+			// &:not(:first-child):not(:last-child) {
+				
+			// 	@media (max-width: #{rex_relative($base_breakpoint-max)}rem) {
+					
+			// 		& { display: none; }
+					
+			// 	}
+				
+			// }
+			
+		}
+		
+	}
+	
+	a {
+		
+		&,
+		&:visited { color: $gray3; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover {
+			color: $graye;
+			text-decoration: none;
+			background: $gray3;
+		}
+		
+		// -webkit-transition: background 200ms linear, color 750ms linear;
+		//         transition: background 200ms linear, color 750ms linear;
+		
+	}
+	
+	// https://github.com/mhulse/picard/issues/133#issuecomment-31626386
+	.fa {
+		line-height: 0;
+		position: relative;
+	}
+	
 }
 
-dd { margin-left: 0; }
+ul.meta {
+	
+	// h-offset, v-offset, blur, spread, color
+	box-shadow: 0 #{rex_relative(3)}rem rgba($raven, .1);
+	
+	> li {
+		
+		border-bottom: #{rex_relative(1)}rem solid $grayb;
+		margin: 0;
+		padding: #{rex_baseline($rex_base-font-size, .875) / 2}em;
+		background: lighten($graye, 5%);
+		box-shadow: inset 0 0 #{rex_relative(10)}rem 0 rgba($raven, .2);
+		
+		&:last-child { border-bottom: 0; }
+		
+	}
+	
+}
+
+.cloud {
+	
+	> li {
+		display: inline-block;
+		text-transform: lowercase;
+		margin: .1rem .25rem;
+	}
+	
+	a {
+		
+		line-height: 1;
+		display: block;
+		
+		&,
+		&:visited { color: $dusk; }
+		&:visited:hover,
+		&:focus,
+		&:focus:hover,
+		&:hover,
+		&:active {
+			color: $smurf;
+			text-decoration: none;
+		}
+		
+	}
+	
+}
