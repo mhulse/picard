@@ -112,3 +112,30 @@ form#search {
 	label { padding: 0; }
 	
 }
+
+.archive {
+	
+	.archive-year,
+	.archive-month,
+	.archive-day {
+		border: #{rex_relative(1)}rem solid $grayc;
+		background: $milk;
+		margin: #{rex_relative($base_margin + 1)}rem #{rex_relative(1)}rem #{rex_relative($base_margin)}rem;
+		padding: #{rex_relative($base_padding)}rem;
+		display: inline-block;
+		white-space: nowrap;
+	}
+	
+	> :nth-of-type(-n+3) { margin-top: 0; } // Remove top margin from first three elements (dt).
+	
+	.archive-item {
+		border: {
+			width: #{rex_relative(1)}rem 0;
+			style: solid;
+			color: $grayd;
+		}
+		margin: 0 0 -#{rex_relative(1)}rem;
+		padding: #{rex_relative($base_padding * 2)}rem;
+	}
+	
+}

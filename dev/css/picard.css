@@ -2476,6 +2476,27 @@ form#search label {
   padding: 0;
 }
 
+.archive .archive-year,
+.archive .archive-month,
+.archive .archive-day {
+  border: 0.07142857142857rem solid #cccccc;
+  background: white;
+  margin: 0.78571428571429rem 0.07142857142857rem 0.71428571428571rem;
+  padding: 0.71428571428571rem;
+  display: inline-block;
+  white-space: nowrap;
+}
+.archive > :nth-of-type(-n+3) {
+  margin-top: 0;
+}
+.archive .archive-item {
+  border-width: 0.07142857142857rem 0;
+  border-style: solid;
+  border-color: #dddddd;
+  margin: 0 0 -0.07142857142857rem;
+  padding: 1.42857142857143rem;
+}
+
 @media print {
   body {
     background: white;
