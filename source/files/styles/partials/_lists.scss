@@ -145,6 +145,9 @@ dd { margin-left: 0; }
 			background: $gray3;
 		}
 		
+		&:focus,
+		&:active { outline: none; }
+		
 		// -webkit-transition: background 200ms linear, color 750ms linear;
 		//         transition: background 200ms linear, color 750ms linear;
 		

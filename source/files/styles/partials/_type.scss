@@ -369,7 +369,8 @@ span {
 
 .label {
 	
-	@include rex_baseline($rex_base-font-size - 2, .75);
+	font-size: #{rex_relative($rex_base-font-size - 2)}rem;
+	line-height: 1;
 	font-weight: normal;
 	text-transform: uppercase;
 	letter-spacing: .15em;
@@ -382,16 +383,17 @@ span {
 	a,
 	span {
 		background: $graye;
-		padding: #{rex_relative($base_padding)}em;
+		padding: .75em 1.25em;
 		display: inline-block;
+		//border-radius: #{rex_relative($base_radii)}rem;
 	}
 	
-	span { color: $gray9; }
+	span { color: $gray8; }
 	
 	a {
 		
 		&,
-		&:visited { color: $gray6; }
+		&:visited { color: $gray3; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
@@ -553,6 +555,7 @@ span {
 		text-transform: uppercase;
 		margin-bottom: .4em;
 	}
+	
 	span {
 		font-size: smaller;
 		letter-spacing: .125em;

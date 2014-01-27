@@ -920,6 +920,9 @@ dd {
   text-decoration: none;
   background: #333333;
 }
+.pager a:focus, .pager a:active {
+  outline: none;
+}
 .pager .fa {
   line-height: 0;
   position: relative;
@@ -1361,7 +1364,7 @@ span.amp {
 
 .label {
   font-size: 0.85714285714286rem;
-  line-height: 1.375;
+  line-height: 1;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: .15em;
@@ -1372,14 +1375,14 @@ span.amp {
 .label a,
 .label span {
   background: #eeeeee;
-  padding: 0.71428571428571em;
+  padding: .75em 1.25em;
   display: inline-block;
 }
 .label span {
-  color: #999999;
+  color: #888888;
 }
 .label a, .label a:visited {
-  color: #666666;
+  color: #333333;
 }
 .label a:visited:hover, .label a:focus, .label a:focus:hover, .label a:hover, .label a:active {
   color: #eeeeee;
