@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 1.0.0
- * @date 2014/01/26
+ * @date 2014/01/27
  */
 
 
@@ -1901,19 +1901,22 @@ kbd kbd {
   font-weight: normal;
   text-align: center;
   text-decoration: none;
+  text-shadow: 0 0.07142857142857rem #993d00;
   letter-spacing: .1em;
-  color: #997d00;
+  color: #993d00;
   vertical-align: baseline;
   width: 100%;
-  background: #ffd100;
-  border: 0;
-  margin-top: relative(10px)rem;
-  margin-bottom: relative(10px)rem;
+  background: #ff6600;
+  border: 0.14285714285714rem solid #e65c00;
+  margin-top: 0.71428571428571rem;
+  margin-bottom: 0.71428571428571rem;
+  padding: 0;
   padding-top: 0.22916666666667em;
   padding-bottom: 0.22916666666667em;
+  box-shadow: 0 0.14285714285714rem 0.07142857142857rem rgba(153, 61, 0, 0.2);
   cursor: pointer;
   zoom: 1;
-  border-radius: relative(3px)rem;
+  border-radius: 0.21428571428571rem;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1934,7 +1937,8 @@ kbd kbd {
 .form input[type="button"]:visited,
 .form input[type="reset"]:visited,
 .form input[type="submit"]:visited {
-  color: #997d00;
+  color: white;
+  background: linear-gradient(to bottom, #ff8533, #ff6600);
 }
 .button:visited:hover, .form button:visited:hover,
 .form input[type="button"]:visited:hover,
@@ -1952,9 +1956,18 @@ kbd kbd {
 .form input[type="button"]:active,
 .form input[type="reset"]:active,
 .form input[type="submit"]:active {
-  color: #997d00;
+  color: white;
   text-decoration: none;
-  background: #ffe880;
+  background: linear-gradient(to top, #ff8533, #ff6600);
+}
+.button:active, .form button:active,
+.form input[type="button"]:active,
+.form input[type="reset"]:active,
+.form input[type="submit"]:active, .button:focus, .form button:focus,
+.form input[type="button"]:focus,
+.form input[type="reset"]:focus,
+.form input[type="submit"]:focus {
+  background: #ff6600;
 }
 .button:active, .form button:active,
 .form input[type="button"]:active,
@@ -2479,12 +2492,16 @@ form#search label {
 .archive .archive-year,
 .archive .archive-month,
 .archive .archive-day {
+  color: #555555;
   border: 0.07142857142857rem solid #cccccc;
+  border-top-width: 0.35714285714286rem;
   background: white;
-  margin: 0.78571428571429rem 0.07142857142857rem 0.71428571428571rem;
+  margin: 0.78571428571429rem 0.14285714285714rem 0.71428571428571rem;
   padding: 0.71428571428571rem;
   display: inline-block;
   white-space: nowrap;
+  border-radius: 0 0 0.14285714285714rem 0.21428571428571rem;
+  box-shadow: 0 0.21428571428571rem 0.07142857142857rem rgba(0, 0, 0, 0.05);
 }
 .archive > :nth-of-type(-n+3) {
   margin-top: 0;
