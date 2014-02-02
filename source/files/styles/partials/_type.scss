@@ -341,12 +341,15 @@ span {
 		
 	}
 	
-	h1, h2, h3, h4, h5, h6 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		
 		font-family: $serif;
-		font-weight: normal;
 		color: $gray3;
-		text-transform: none;
 		
 		a {
 			
@@ -364,6 +367,26 @@ span {
 		}
 		
 	}
+	
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-weight: normal;
+		text-transform: none;
+	}
+	
+	h1 { @include rex_baseline($rex_base-font-size + 24); }
+	
+	h2 { @include rex_baseline($rex_base-font-size + 18, .875); }
+	
+	h3 { @include rex_baseline($rex_base-font-size + 12, .75); }
+	
+	h4 { @include rex_baseline($rex_base-font-size + 6, 1.125); }
+	
+	h5 { @include rex_baseline($rex_base-font-size + 2); }
+	
+	h6 { @include rex_baseline($rex_base-font-size, .875); }
 	
 }
 
