@@ -1127,6 +1127,7 @@ h1#flag::before {
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
+  word-wrap: break-word;
 }
 h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
   color: #4e801c;
@@ -1483,6 +1484,7 @@ span.amp {
   line-height: normal;
   text-transform: none;
   letter-spacing: .1em;
+  white-space: normal;
 }
 .external a {
   font-size: 1.57142857142857rem;

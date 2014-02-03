@@ -65,6 +65,7 @@ h1#flag {
 h1, h2, h3, h4, h5, h6 {
 	
 	text-transform: uppercase;
+	word-wrap: break-word;
 	
 	a {
 		
@@ -510,6 +511,7 @@ span {
 	line-height: normal;
 	text-transform: none;
 	letter-spacing: .1em;
+	white-space: normal;
 	
 	a {
 		
