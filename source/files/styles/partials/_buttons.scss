@@ -9,31 +9,14 @@
 
 .button {
 	
-	@include rex_baseline($rex_base-font-size + 2);
-	font-family: $sans;
 	font-weight: normal;
 	text-align: center;
-	text-decoration: none;
-	text-shadow: 0 #{rex_relative(1)}rem darken($juice, 20%);
-	letter-spacing: .1em;
-	color: darken($juice, 20%);
-	//white-space: nowrap;
+	line-height: normal;
 	vertical-align: baseline;
-	width: 100%;
-	background: $juice;
-	border: #{rex_relative(2)}rem solid darken($juice, 5%);
-	margin: {
-		top: #{rex_relative($base_margin)}rem;
-		bottom: #{rex_relative($base_margin)}rem;
-	}
-	padding: 0 {
-		top: #{rex_baseline($rex_base-font-size + 2) / 6}em;
-		bottom: #{rex_baseline($rex_base-font-size + 2) / 6}em;
-	}
-	box-shadow: 0 #{rex_relative(2)}rem #{rex_relative(1)}rem rgba(darken($juice, 20%), .2);
-	cursor: pointer;
+	//white-space: nowrap;
+	display: block;
 	zoom: 1;
-	border-radius: #{rex_relative($base_radii)}rem;
+	cursor: pointer;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
@@ -45,24 +28,87 @@
 		border: 0;
 	}
 	
-	&,
-	&:visited {
-		color: $milk;
-		background: linear-gradient(to bottom, lighten($juice, 10%), $juice);
+	@include rex_baseline($rex_base-font-size + 2);
+	font-family: $sans;
+	text-shadow: 0 #{rex_relative(1)}rem darken($juice, 20%);
+	letter-spacing: .1em;
+	color: darken($juice, 20%);
+	width: 100%;
+	background-color: $juice;
+	border: none rgba($raven, 0);
+	border-radius: #{rex_relative($base_radii)}rem;
+	margin: {
+		top: #{rex_relative($base_margin)}rem;
+		bottom: #{rex_relative($base_margin)}rem;
 	}
+	padding: 0 {
+		top: #{rex_baseline($rex_base-font-size + 2) / 4}em;
+		bottom: #{rex_baseline($rex_base-font-size + 2) / 4}em;
+	}
+	-webkit-tap-highlight-color: rgba($raven, 0);
+	
+	&,
+	&:visited,
 	&:visited:hover,
 	&:focus,
 	&:focus:hover,
 	&:hover,
 	&:active {
-		color: $milk;
 		text-decoration: none;
-		background: linear-gradient(to top, lighten($juice, 10%), $juice);
+		color: $milk;
 	}
-	&:active,
-	&:focus { background: $juice; }
 	
-	&:active,
+	&.button-hover,
+	&:hover,
+	&:focus { background-image: linear-gradient(transparent, rgba($raven, .05) 40%, rgba($raven, .10)); }
+	
 	&:focus { outline: 0; }
+	
+	&:active {
+		box-shadow: 0 0 0 #{rex_relative(2)}rem rgba($raven, .15) inset,
+		            0 0 #{rex_relative(10)}rem rgba($raven, .25) inset;
+	}
+	
+	&[disabled],
+	&.button-disabled,
+	&.button-disabled:visited,
+	&.button-disabled:visited:hover,
+	&.button-disabled:focus,
+	&.button-disabled:focus:hover,
+	&.button-disabled:hover,
+	&.button-disabled:active {
+		border: none;
+		background-image: none;
+		filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+		filter: alpha(opacity=40);
+		-khtml-opacity: .40;
+		  -moz-opacity: .40;
+		       opacity: .40;
+		cursor: not-allowed;
+		box-shadow: none;
+	}
+	
+	&.button-hidden { display: none; }
+	
+	&.button-info,
+	&.button-success,
+	&.button-warning,
+	&.button-error { text-shadow: none; }
+	&.button-info {
+		color: darken($ice, 55%);
+		background-color: $ice;
+	}
+	&.button-success {
+		color: darken($frog, 55%);
+		background-color: $frog;
+	}
+	&.button-warning {
+		color: darken($duck, 55%);
+		background-color: $duck;
+	}
+	&.button-error {
+		color: darken($chili, 55%);
+		background-color: $chili;
+	}
 	
 }

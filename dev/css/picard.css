@@ -1964,33 +1964,34 @@ kbd kbd {
 .form input[type="button"],
 .form input[type="reset"],
 .form input[type="submit"] {
-  font-size: 1.14285714285714rem;
-  line-height: 1.375;
-  font-family: Arial, sans-serif;
   font-weight: normal;
   text-align: center;
-  text-decoration: none;
-  text-shadow: 0 0.07142857142857rem #993d00;
-  letter-spacing: .1em;
-  color: #993d00;
+  line-height: normal;
   vertical-align: baseline;
-  width: 100%;
-  background: #ff6600;
-  border: 0.14285714285714rem solid #e65c00;
-  margin-top: 0.71428571428571rem;
-  margin-bottom: 0.71428571428571rem;
-  padding: 0;
-  padding-top: 0.22916666666667em;
-  padding-bottom: 0.22916666666667em;
-  box-shadow: 0 0.14285714285714rem 0.07142857142857rem rgba(153, 61, 0, 0.2);
-  cursor: pointer;
+  display: block;
   zoom: 1;
-  border-radius: 0.21428571428571rem;
+  cursor: pointer;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  font-size: 1.14285714285714rem;
+  line-height: 1.375;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0.07142857142857rem #993d00;
+  letter-spacing: .1em;
+  color: #993d00;
+  width: 100%;
+  background-color: #ff6600;
+  border: none rgba(0, 0, 0, 0);
+  border-radius: 0.21428571428571rem;
+  margin-top: 0.71428571428571rem;
+  margin-bottom: 0.71428571428571rem;
+  padding: 0;
+  padding-top: 0.34375em;
+  padding-bottom: 0.34375em;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .button::-moz-focus-inner, .form button::-moz-focus-inner,
 .form input[type="button"]::-moz-focus-inner,
@@ -2005,11 +2006,7 @@ kbd kbd {
 .form input[type="submit"], .button:visited, .form button:visited,
 .form input[type="button"]:visited,
 .form input[type="reset"]:visited,
-.form input[type="submit"]:visited {
-  color: white;
-  background: linear-gradient(to bottom, #ff8533, #ff6600);
-}
-.button:visited:hover, .form button:visited:hover,
+.form input[type="submit"]:visited, .button:visited:hover, .form button:visited:hover,
 .form input[type="button"]:visited:hover,
 .form input[type="reset"]:visited:hover,
 .form input[type="submit"]:visited:hover, .button:focus, .form button:focus,
@@ -2025,27 +2022,116 @@ kbd kbd {
 .form input[type="button"]:active,
 .form input[type="reset"]:active,
 .form input[type="submit"]:active {
-  color: white;
   text-decoration: none;
-  background: linear-gradient(to top, #ff8533, #ff6600);
+  color: white;
 }
-.button:active, .form button:active,
-.form input[type="button"]:active,
-.form input[type="reset"]:active,
-.form input[type="submit"]:active, .button:focus, .form button:focus,
+.button.button-hover, .form button.button-hover,
+.form input.button-hover[type="button"],
+.form input.button-hover[type="reset"],
+.form input.button-hover[type="submit"], .button:hover, .form button:hover,
+.form input[type="button"]:hover,
+.form input[type="reset"]:hover,
+.form input[type="submit"]:hover, .button:focus, .form button:focus,
 .form input[type="button"]:focus,
 .form input[type="reset"]:focus,
 .form input[type="submit"]:focus {
-  background: #ff6600;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
 }
-.button:active, .form button:active,
-.form input[type="button"]:active,
-.form input[type="reset"]:active,
-.form input[type="submit"]:active, .button:focus, .form button:focus,
+.button:focus, .form button:focus,
 .form input[type="button"]:focus,
 .form input[type="reset"]:focus,
 .form input[type="submit"]:focus {
   outline: 0;
+}
+.button:active, .form button:active,
+.form input[type="button"]:active,
+.form input[type="reset"]:active,
+.form input[type="submit"]:active {
+  box-shadow: 0 0 0 0.14285714285714rem rgba(0, 0, 0, 0.15) inset, 0 0 0.71428571428571rem rgba(0, 0, 0, 0.25) inset;
+}
+.button[disabled], .form button[disabled],
+.form input[disabled][type="button"],
+.form input[disabled][type="reset"],
+.form input[disabled][type="submit"], .button.button-disabled, .form button.button-disabled,
+.form input.button-disabled[type="button"],
+.form input.button-disabled[type="reset"],
+.form input.button-disabled[type="submit"], .button.button-disabled:visited, .form button.button-disabled:visited,
+.form input.button-disabled[type="button"]:visited,
+.form input.button-disabled[type="reset"]:visited,
+.form input.button-disabled[type="submit"]:visited, .button.button-disabled:visited:hover, .form button.button-disabled:visited:hover,
+.form input.button-disabled[type="button"]:visited:hover,
+.form input.button-disabled[type="reset"]:visited:hover,
+.form input.button-disabled[type="submit"]:visited:hover, .button.button-disabled:focus, .form button.button-disabled:focus,
+.form input.button-disabled[type="button"]:focus,
+.form input.button-disabled[type="reset"]:focus,
+.form input.button-disabled[type="submit"]:focus, .button.button-disabled:focus:hover, .form button.button-disabled:focus:hover,
+.form input.button-disabled[type="button"]:focus:hover,
+.form input.button-disabled[type="reset"]:focus:hover,
+.form input.button-disabled[type="submit"]:focus:hover, .button.button-disabled:hover, .form button.button-disabled:hover,
+.form input.button-disabled[type="button"]:hover,
+.form input.button-disabled[type="reset"]:hover,
+.form input.button-disabled[type="submit"]:hover, .button.button-disabled:active, .form button.button-disabled:active,
+.form input.button-disabled[type="button"]:active,
+.form input.button-disabled[type="reset"]:active,
+.form input.button-disabled[type="submit"]:active {
+  border: none;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  filter: alpha(opacity=40);
+  -khtml-opacity: .40;
+  -moz-opacity: .40;
+  opacity: .40;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.button.button-hidden, .form button.button-hidden,
+.form input.button-hidden[type="button"],
+.form input.button-hidden[type="reset"],
+.form input.button-hidden[type="submit"] {
+  display: none;
+}
+.button.button-info, .form button.button-info,
+.form input.button-info[type="button"],
+.form input.button-info[type="reset"],
+.form input.button-info[type="submit"], .button.button-success, .form button.button-success,
+.form input.button-success[type="button"],
+.form input.button-success[type="reset"],
+.form input.button-success[type="submit"], .button.button-warning, .form button.button-warning,
+.form input.button-warning[type="button"],
+.form input.button-warning[type="reset"],
+.form input.button-warning[type="submit"], .button.button-error, .form button.button-error,
+.form input.button-error[type="button"],
+.form input.button-error[type="reset"],
+.form input.button-error[type="submit"] {
+  text-shadow: none;
+}
+.button.button-info, .form button.button-info,
+.form input.button-info[type="button"],
+.form input.button-info[type="reset"],
+.form input.button-info[type="submit"] {
+  color: #0f658d;
+  background-color: #bde5f8;
+}
+.button.button-success, .form button.button-success,
+.form input.button-success[type="button"],
+.form input.button-success[type="reset"],
+.form input.button-success[type="submit"] {
+  color: #597f1a;
+  background-color: #dff2bf;
+}
+.button.button-warning, .form button.button-warning,
+.form input.button-warning[type="button"],
+.form input.button-warning[type="reset"],
+.form input.button-warning[type="submit"] {
+  color: #977902;
+  background-color: #feefb3;
+}
+.button.button-error, .form button.button-error,
+.form input.button-error[type="button"],
+.form input.button-error[type="reset"],
+.form input.button-error[type="submit"] {
+  color: #a10000;
+  background-color: #ffbaba;
 }
 
 .form fieldset {
