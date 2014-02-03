@@ -112,3 +112,116 @@
 	}
 	
 }
+
+a.social {
+	
+	&.fa-lg { font-size: 1.3875em; } // Fixes rounding oddness in Firefox.
+	
+	&,
+	&:visited { color: $gray9; }
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active {
+		color: darken($gray9, 20%);
+		text-decoration: none;
+	}
+	
+}
+
+a.social-twitter {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #41b7d8; }
+	
+}
+
+a.social-facebook {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #3b5997; }
+	
+}
+
+a.social-google-plus {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #d64937; }
+	
+}
+
+a.social-linkedin {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #0073b2; }
+	
+}
+
+a.social-pinterest {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #cb2027; }
+	
+}
+
+a.social-vk {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #54769b; }
+	
+}
+
+a.social-xing {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #006567; }
+	
+}
+
+a.social-tumblr {
+	
+	&,
+	&:visited,
+	&:visited:hover,
+	&:focus,
+	&:focus:hover,
+	&:hover,
+	&:active { color: #34465d; }
+	
+}

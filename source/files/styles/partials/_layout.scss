@@ -1,6 +1,9 @@
 button,
 .button { @extend .x1; }
 
+.body hr,
+.body .hr { @extend .x2; }
+
 label { @extend .x3; }
 
 blockquote,

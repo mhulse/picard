@@ -55,6 +55,16 @@ dd { margin-left: 0; }
 	
 }
 
+%arrow {
+	font-family: FontAwesome;
+	line-height: 0;
+	position: relative;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	//display: inline-block;
+}
+
 .pager {
 	
 	color: $gray8;

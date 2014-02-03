@@ -389,6 +389,10 @@ span {
 	
 	h6 { @include rex_baseline($rex_base-font-size, .875); }
 	
+	h4,
+	h5,
+	h6 { letter-spacing: .0375em; }
+	
 }
 
 .label {

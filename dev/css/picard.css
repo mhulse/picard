@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 1.0.0
- * @date 2014/02/02
+ * @date 2014/02/03
  */
 
 
@@ -800,8 +800,9 @@ article hr, aside hr, section hr, article
 }
 .body hr, .body
 .hr {
-  border-top-width: 0.07142857142857rem !important;
-  border-top-style: dashed;
+  border-top-width: 0.28571428571429rem !important;
+  border-top-style: dotted;
+  border-top-color: #999999;
 }
 
 section > :first-child,
@@ -865,6 +866,15 @@ dd {
 .body ul > li::before {
   content: counter(li,square);
   margin-bottom: 0.11904761904762rem;
+}
+
+.pager > li:first-child a::before, .pager > li:last-child a::after {
+  font-family: FontAwesome;
+  line-height: 0;
+  position: relative;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
 }
 
 .pager {
@@ -964,7 +974,8 @@ ul.meta > li:last-child {
 .form button,
 .form input[type="button"],
 .form input[type="reset"],
-.form input[type="submit"], .x2, .x3, label, .x4, blockquote,
+.form input[type="submit"], .x2, .body hr,
+.body .hr, .x3, label, .x4, blockquote,
 ol,
 ul, .x5, figcaption, .x6, address,
 dl,
@@ -996,7 +1007,8 @@ section .hr {
   max-width: 10.71428571428571rem;
 }
 
-.x2 {
+.x2, .body hr,
+.body .hr {
   max-width: 17.85714285714286rem;
 }
 
@@ -1430,6 +1442,11 @@ span.amp {
 .body h6 {
   font-size: 1rem;
   line-height: 1.375;
+}
+.body h4,
+.body h5,
+.body h6 {
+  letter-spacing: .0375em;
 }
 
 .label {
@@ -2136,6 +2153,49 @@ kbd kbd {
   background-color: #ffbaba;
 }
 
+a.social.fa-lg {
+  font-size: 1.3875em;
+}
+a.social, a.social:visited {
+  color: #999999;
+}
+a.social:visited:hover, a.social:focus, a.social:focus:hover, a.social:hover, a.social:active {
+  color: #666666;
+  text-decoration: none;
+}
+
+a.social-twitter, a.social-twitter:visited, a.social-twitter:visited:hover, a.social-twitter:focus, a.social-twitter:focus:hover, a.social-twitter:hover, a.social-twitter:active {
+  color: #41b7d8;
+}
+
+a.social-facebook, a.social-facebook:visited, a.social-facebook:visited:hover, a.social-facebook:focus, a.social-facebook:focus:hover, a.social-facebook:hover, a.social-facebook:active {
+  color: #3b5997;
+}
+
+a.social-google-plus, a.social-google-plus:visited, a.social-google-plus:visited:hover, a.social-google-plus:focus, a.social-google-plus:focus:hover, a.social-google-plus:hover, a.social-google-plus:active {
+  color: #d64937;
+}
+
+a.social-linkedin, a.social-linkedin:visited, a.social-linkedin:visited:hover, a.social-linkedin:focus, a.social-linkedin:focus:hover, a.social-linkedin:hover, a.social-linkedin:active {
+  color: #0073b2;
+}
+
+a.social-pinterest, a.social-pinterest:visited, a.social-pinterest:visited:hover, a.social-pinterest:focus, a.social-pinterest:focus:hover, a.social-pinterest:hover, a.social-pinterest:active {
+  color: #cb2027;
+}
+
+a.social-vk, a.social-vk:visited, a.social-vk:visited:hover, a.social-vk:focus, a.social-vk:focus:hover, a.social-vk:hover, a.social-vk:active {
+  color: #54769b;
+}
+
+a.social-xing, a.social-xing:visited, a.social-xing:visited:hover, a.social-xing:focus, a.social-xing:focus:hover, a.social-xing:hover, a.social-xing:active {
+  color: #006567;
+}
+
+a.social-tumblr, a.social-tumblr:visited, a.social-tumblr:visited:hover, a.social-tumblr:focus, a.social-tumblr:focus:hover, a.social-tumblr:hover, a.social-tumblr:active {
+  color: #34465d;
+}
+
 .form fieldset {
   border: 0;
   margin: 0;
@@ -2296,6 +2356,7 @@ figcaption a:visited:hover, figcaption a:focus, figcaption a:focus:hover, figcap
   text-decoration: none;
 }
 figcaption .social {
+  white-space: nowrap;
   margin-left: 0.35714285714286rem;
 }
 figcaption .social i {
@@ -2456,58 +2517,6 @@ p.meta:hover {
 }
 .callout.callout-error a, .callout.callout-error a:visited, .callout.callout-error a:visited:hover, .callout.callout-error a:focus, .callout.callout-error a:focus:hover, .callout.callout-error a:hover, .callout.callout-error a:active {
   color: #870000;
-}
-
-.pager > li:first-child a::before, .pager > li:last-child a::after {
-  font-family: FontAwesome;
-  line-height: 0;
-  position: relative;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
-}
-
-a.social.fa-lg {
-  font-size: 1.3875em;
-}
-a.social, a.social:visited {
-  color: #999999;
-}
-a.social:visited:hover, a.social:focus, a.social:focus:hover, a.social:hover, a.social:active {
-  color: #666666;
-  text-decoration: none;
-}
-
-a.social-twitter, a.social-twitter:visited, a.social-twitter:visited:hover, a.social-twitter:focus, a.social-twitter:focus:hover, a.social-twitter:hover, a.social-twitter:active {
-  color: #41b7d8;
-}
-
-a.social-facebook, a.social-facebook:visited, a.social-facebook:visited:hover, a.social-facebook:focus, a.social-facebook:focus:hover, a.social-facebook:hover, a.social-facebook:active {
-  color: #3b5997;
-}
-
-a.social-google-plus, a.social-google-plus:visited, a.social-google-plus:visited:hover, a.social-google-plus:focus, a.social-google-plus:focus:hover, a.social-google-plus:hover, a.social-google-plus:active {
-  color: #d64937;
-}
-
-a.social-linkedin, a.social-linkedin:visited, a.social-linkedin:visited:hover, a.social-linkedin:focus, a.social-linkedin:focus:hover, a.social-linkedin:hover, a.social-linkedin:active {
-  color: #0073b2;
-}
-
-a.social-pinterest, a.social-pinterest:visited, a.social-pinterest:visited:hover, a.social-pinterest:focus, a.social-pinterest:focus:hover, a.social-pinterest:hover, a.social-pinterest:active {
-  color: #cb2027;
-}
-
-a.social-vk, a.social-vk:visited, a.social-vk:visited:hover, a.social-vk:focus, a.social-vk:focus:hover, a.social-vk:hover, a.social-vk:active {
-  color: #54769b;
-}
-
-a.social-xing, a.social-xing:visited, a.social-xing:visited:hover, a.social-xing:focus, a.social-xing:focus:hover, a.social-xing:hover, a.social-xing:active {
-  color: #006567;
-}
-
-a.social-tumblr, a.social-tumblr:visited, a.social-tumblr:visited:hover, a.social-tumblr:focus, a.social-tumblr:focus:hover, a.social-tumblr:hover, a.social-tumblr:active {
-  color: #34465d;
 }
 
 .boring {

@@ -78,8 +78,9 @@ hr,
 	}
 	
 	.body & {
-		border-top-width: #{rex_relative(1)}rem !important;
-		border-top-style: dashed;
+		border-top-width: #{rex_relative(4)}rem !important;
+		border-top-style: dotted;
+		border-top-color: $gray9;
 	}
 	
 }
