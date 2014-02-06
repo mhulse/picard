@@ -108,13 +108,20 @@ audio,
 video {
 	
 	vertical-align: middle;
+	display: block;
 	
 	&:focus,
 	&:active { outline: none; }
 	
 }
 
-audio { width: 100%; }
+audio {
+	width: 100%;
+	margin: {
+		top: #{rex_relative($base_margin)}rem;
+		bottom: #{rex_relative($base_margin)}rem;
+	}
+}
 
 .mm {
 	

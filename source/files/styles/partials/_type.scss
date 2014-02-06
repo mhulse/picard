@@ -297,12 +297,16 @@ span {
 
 .subtle {
 	@include rex_baseline($rex_base-font-size + 4, .75);
-	font-weight: normal;
-	font-family: $mono;
+	font: {
+		family: $mono;
+		weight: normal;
+	}
 	color: darken($bling, 10%);
 	letter-spacing: .1em;
-	margin-top: #{rex_relative($base_margin)}rem;
-	margin-bottom: #{rex_relative($base_margin)}rem;
+	margin: {
+		top: #{rex_relative($base_margin)}rem;
+		bottom: #{rex_relative($base_margin)}rem;
+	}
 }
 
 .marker,

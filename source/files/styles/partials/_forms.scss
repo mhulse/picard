@@ -130,3 +130,91 @@
 	}
 	
 }
+
+// Live search Bigglesworth:
+form#search {
+	
+	position: relative;
+	
+	//label { margin-bottom: #{rex_relative($base_margin)}rem; }
+	
+	#bigglesworth_result,
+	#bigglesworth_result-no {
+		
+		// http://stackoverflow.com/a/18486387/922323
+		width: 100%;
+		margin: -#{rex_relative($base_margin)}rem auto 0;
+		padding: 0;
+		box-shadow: 0 #{rex_relative(5)}rem #{rex_relative(5)}rem rgba($raven, .2);
+		position: absolute;
+		top: auto;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		
+		// &:empty { display: none; }
+		// &:not(:empty) { display: block; }
+		
+	}
+	
+	#bigglesworth_result {
+		
+		li {
+			border: #{rex_relative(1)}rem solid $grayd;
+			margin: 0 0 -#{rex_relative(1)}rem;
+			list-style: none;
+		}
+		
+		time {
+			@include rex_baseline($rex_base-font-size - 2, .75);
+			text-transform: uppercase;
+			letter-spacing: .1em;
+			display: block;
+		}
+		
+		div {
+			@include rex_baseline($rex_base-font-size + 2, .875);
+			font-weight: bold;
+		}
+		
+		a {
+			
+			background: rgba($milk, .9);
+			padding: #{rex_relative($base_padding)}rem;
+			display: block;
+			
+			&,
+			&:visited,
+			&:visited:hover,
+			&:focus,
+			&:focus:hover,
+			&:hover,
+			&:active { text-decoration: none; }
+			
+			&:focus,
+			&:active { outline: none; }
+			
+		}
+		
+	}
+	
+	#bigglesworth_result-no {
+		
+		p {
+			@include rex_baseline($rex_base-font-size - 1, .875);
+			border: #{rex_relative(1)}rem solid $grayd;
+			background: rgba($milk, .9);
+			margin: 0;
+			padding: #{rex_relative($base_padding)}rem;
+			max-width: none;
+		}
+		
+	}
+	
+	/* https://github.com/mhulse/jquery-bigglesworth/issues/13 */
+	.bigglesworth_on { display: block; }
+	.bigglesworth_off { display: none; }
+	
+	label { padding: 0; }
+	
+}

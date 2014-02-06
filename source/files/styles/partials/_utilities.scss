@@ -80,6 +80,35 @@
 	
 }
 
+// For the scroll left/right icon added via JS:
+.scroll-wrap { position: relative; }
+.scroll-overlay {
+	font-size: 1em;
+	line-height: 1;
+	letter-spacing: .1em;
+	text-transform: lowercase;
+	text-shadow: 0 #{rex_relative(1)}rem #{rex_relative(3)}rem $raven,
+	             0 #{rex_relative(1)}rem #{rex_relative(3)}rem $raven,
+	             0 #{rex_relative(1)}rem #{rex_relative(3)}rem $raven,
+	             0 #{rex_relative(1)}rem #{rex_relative(3)}rem $raven;
+	text-align: center;
+	color: $milk;
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	top: #{rex_relative(10)}rem;
+	left: 0;
+	opacity: .5;
+}
+.scroll-overlay::before,
+.scroll-overlay::after {
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+}
+.scroll-overlay::before { content: "\f0a5\00a0"; }
+.scroll-overlay::after { content: "\00a0\f0a4"; }
+
 // http://css-tricks.com/examples/IconFont/
 [data-icon]:before {
 	font-family: FontAwesome;

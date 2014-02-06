@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 1.0.0
- * @date 2014/02/03
+ * @date 2014/02/05
  */
 
 
@@ -727,6 +727,41 @@ figure .scroll {
   margin: 0;
 }
 
+.scroll-wrap {
+  position: relative;
+}
+
+.scroll-overlay {
+  font-size: 1em;
+  line-height: 1;
+  letter-spacing: .1em;
+  text-transform: lowercase;
+  text-shadow: 0 0.07142857142857rem 0.21428571428571rem black, 0 0.07142857142857rem 0.21428571428571rem black, 0 0.07142857142857rem 0.21428571428571rem black, 0 0.07142857142857rem 0.21428571428571rem black;
+  text-align: center;
+  color: white;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  top: 0.71428571428571rem;
+  left: 0;
+  opacity: .5;
+}
+
+.scroll-overlay::before,
+.scroll-overlay::after {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.scroll-overlay::before {
+  content: "\f0a5\00a0";
+}
+
+.scroll-overlay::after {
+  content: "\00a0\f0a4";
+}
+
 [data-icon]:before {
   font-family: FontAwesome;
   font-size: inherit;
@@ -967,6 +1002,31 @@ ul.meta > li:last-child {
 .cloud a:visited:hover, .cloud a:focus, .cloud a:focus:hover, .cloud a:hover, .cloud a:active {
   color: #13aac9;
   text-decoration: none;
+}
+
+.archive .archive-year,
+.archive .archive-month,
+.archive .archive-day {
+  color: #555555;
+  border: 0.07142857142857rem solid #cccccc;
+  border-top-width: 0.35714285714286rem;
+  background: white;
+  margin: 0.78571428571429rem 0.14285714285714rem 0.71428571428571rem;
+  padding: 0.71428571428571rem;
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 0 0 0.14285714285714rem 0.21428571428571rem;
+  box-shadow: 0 0.21428571428571rem 0.07142857142857rem rgba(0, 0, 0, 0.05);
+}
+.archive > :nth-of-type(-n+3) {
+  margin-top: 0;
+}
+.archive .archive-item {
+  border-width: 0.07142857142857rem 0;
+  border-style: solid;
+  border-color: #dddddd;
+  margin: 0 0 -0.07142857142857rem;
+  padding: 1.42857142857143rem;
 }
 
 .x1, button,
@@ -1327,8 +1387,8 @@ span.amp {
 .subtle {
   font-size: 1.28571428571429rem;
   line-height: 0.91666666666667;
-  font-weight: normal;
   font-family: monospace, serif;
+  font-weight: normal;
   color: #cca700;
   letter-spacing: .1em;
   margin-top: 0.71428571428571rem;
@@ -2298,6 +2358,69 @@ a.social-tumblr, a.social-tumblr:visited, a.social-tumblr:visited:hover, a.socia
   width: 100%;
 }
 
+form#search {
+  position: relative;
+  /* https://github.com/mhulse/jquery-bigglesworth/issues/13 */
+}
+form#search #bigglesworth_result,
+form#search #bigglesworth_result-no {
+  width: 100%;
+  margin: -0.71428571428571rem auto 0;
+  padding: 0;
+  box-shadow: 0 0.35714285714286rem 0.35714285714286rem rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+form#search #bigglesworth_result li {
+  border: 0.07142857142857rem solid #dddddd;
+  margin: 0 0 -0.07142857142857rem;
+  list-style: none;
+}
+form#search #bigglesworth_result time {
+  font-size: 0.85714285714286rem;
+  line-height: 1.375;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  display: block;
+}
+form#search #bigglesworth_result div {
+  font-size: 1.14285714285714rem;
+  line-height: 1.203125;
+  font-weight: bold;
+}
+form#search #bigglesworth_result a {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.71428571428571rem;
+  display: block;
+}
+form#search #bigglesworth_result a, form#search #bigglesworth_result a:visited, form#search #bigglesworth_result a:visited:hover, form#search #bigglesworth_result a:focus, form#search #bigglesworth_result a:focus:hover, form#search #bigglesworth_result a:hover, form#search #bigglesworth_result a:active {
+  text-decoration: none;
+}
+form#search #bigglesworth_result a:focus, form#search #bigglesworth_result a:active {
+  outline: none;
+}
+form#search #bigglesworth_result-no p {
+  font-size: 0.92857142857143rem;
+  line-height: 1.48076923076923;
+  border: 0.07142857142857rem solid #dddddd;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  padding: 0.71428571428571rem;
+  max-width: none;
+}
+form#search .bigglesworth_on {
+  display: block;
+}
+form#search .bigglesworth_off {
+  display: none;
+}
+form#search label {
+  padding: 0;
+}
+
 figure {
   margin-top: 0.71428571428571rem;
   margin-bottom: 0.71428571428571rem;
@@ -2382,6 +2505,7 @@ embed {
 audio,
 video {
   vertical-align: middle;
+  display: block;
 }
 audio:focus, audio:active,
 video:focus,
@@ -2391,6 +2515,8 @@ video:active {
 
 audio {
   width: 100%;
+  margin-top: 0.71428571428571rem;
+  margin-bottom: 0.71428571428571rem;
 }
 
 .mm {
@@ -2560,129 +2686,6 @@ p.meta:hover {
   font-weight: normal;
   color: #ffd100;
   content: "\f069\00a0";
-}
-
-.scroll-wrap {
-  position: relative;
-}
-
-.scroll-overlay {
-  font-size: 1em;
-  line-height: 1;
-  letter-spacing: .1em;
-  text-transform: lowercase;
-  text-shadow: 0 0.07142857142857rem 0.21428571428571rem black, 0 0.07142857142857rem 0.21428571428571rem black, 0 0.07142857142857rem 0.21428571428571rem black, 0 0.07142857142857rem 0.21428571428571rem black;
-  text-align: center;
-  color: white;
-  position: absolute;
-  z-index: 100;
-  width: 100%;
-  top: 0.71428571428571rem;
-  left: 0;
-  opacity: .5;
-}
-
-.scroll-overlay::before,
-.scroll-overlay::after {
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-}
-
-.scroll-overlay::before {
-  content: "\f0a5\00a0";
-}
-
-.scroll-overlay::after {
-  content: "\00a0\f0a4";
-}
-
-form#search {
-  position: relative;
-  /* https://github.com/mhulse/jquery-bigglesworth/issues/13 */
-}
-form#search #bigglesworth_result,
-form#search #bigglesworth_result-no {
-  width: 100%;
-  margin: -0.71428571428571rem auto 0;
-  padding: 0;
-  box-shadow: 0 0.35714285714286rem 0.35714285714286rem rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: auto;
-  left: 0;
-  right: 0;
-  z-index: 100;
-}
-form#search #bigglesworth_result li {
-  border: 0.07142857142857rem solid #dddddd;
-  margin: 0 0 -0.07142857142857rem;
-  list-style: none;
-}
-form#search #bigglesworth_result time {
-  font-size: 0.85714285714286rem;
-  line-height: 1.375;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  display: block;
-}
-form#search #bigglesworth_result div {
-  font-size: 1.14285714285714rem;
-  line-height: 1.203125;
-  font-weight: bold;
-}
-form#search #bigglesworth_result a {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 0.71428571428571rem;
-  display: block;
-}
-form#search #bigglesworth_result a, form#search #bigglesworth_result a:visited, form#search #bigglesworth_result a:visited:hover, form#search #bigglesworth_result a:focus, form#search #bigglesworth_result a:focus:hover, form#search #bigglesworth_result a:hover, form#search #bigglesworth_result a:active {
-  text-decoration: none;
-}
-form#search #bigglesworth_result a:focus, form#search #bigglesworth_result a:active {
-  outline: none;
-}
-form#search #bigglesworth_result-no p {
-  font-size: 0.92857142857143rem;
-  line-height: 1.48076923076923;
-  border: 0.07142857142857rem solid #dddddd;
-  background: rgba(255, 255, 255, 0.9);
-  margin: 0;
-  padding: 0.71428571428571rem;
-  max-width: none;
-}
-form#search .bigglesworth_on {
-  display: block;
-}
-form#search .bigglesworth_off {
-  display: none;
-}
-form#search label {
-  padding: 0;
-}
-
-.archive .archive-year,
-.archive .archive-month,
-.archive .archive-day {
-  color: #555555;
-  border: 0.07142857142857rem solid #cccccc;
-  border-top-width: 0.35714285714286rem;
-  background: white;
-  margin: 0.78571428571429rem 0.14285714285714rem 0.71428571428571rem;
-  padding: 0.71428571428571rem;
-  display: inline-block;
-  white-space: nowrap;
-  border-radius: 0 0 0.14285714285714rem 0.21428571428571rem;
-  box-shadow: 0 0.21428571428571rem 0.07142857142857rem rgba(0, 0, 0, 0.05);
-}
-.archive > :nth-of-type(-n+3) {
-  margin-top: 0;
-}
-.archive .archive-item {
-  border-width: 0.07142857142857rem 0;
-  border-style: solid;
-  border-color: #dddddd;
-  margin: 0 0 -0.07142857142857rem;
-  padding: 1.42857142857143rem;
 }
 
 @media print {
