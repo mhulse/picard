@@ -30,6 +30,9 @@ nav[role="navigation"] {
 			white-space: nowrap;
 			border-radius: #{rex_relative($base_radii)}rem;
 			
+			-webkit-transition: background-color 100ms linear;
+			        transition: background-color 100ms linear;
+			
 			&,
 			&:visited { color: $milk; }
 			&.selected,

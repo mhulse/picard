@@ -41,7 +41,7 @@ h1#flag {
 		&:focus { outline: none; }
 		
 		-webkit-transition: color 250ms linear;
-		        transition: color 250ms linear;
+				transition: color 250ms linear;
 		
 	}
 	
@@ -277,6 +277,8 @@ span {
 	a {
 		
 		background: $bling;
+		-webkit-transition: background-color 100ms linear;
+				transition: background-color 100ms linear;
 		
 		&,
 		&:visited { color: darken($bling, 20%); }
@@ -424,6 +426,9 @@ span {
 	
 	a {
 		
+		-webkit-transition: background 200ms linear, color 750ms linear;
+		        transition: background 200ms linear, color 750ms linear;
+		
 		&,
 		&:visited { color: $gray3; }
 		&:visited:hover,
@@ -546,7 +551,9 @@ span {
 		// Controls the size of the stripes:
 		-webkit-background-size: 50px 50px;
 		   -moz-background-size: 50px 50px;
-		        background-size: 50px 50px;
+				background-size: 50px 50px;
+		-webkit-transition: background-color 100ms linear;
+				transition: background-color 100ms linear;
 		
 		&,
 		&:visited { color: $milk; }

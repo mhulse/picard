@@ -158,8 +158,8 @@ dd { margin-left: 0; }
 		&:focus,
 		&:active { outline: none; }
 		
-		// -webkit-transition: background 200ms linear, color 750ms linear;
-		//         transition: background 200ms linear, color 750ms linear;
+		-webkit-transition: background 200ms linear, color 750ms linear;
+		        transition: background 200ms linear, color 750ms linear;
 		
 	}
 	

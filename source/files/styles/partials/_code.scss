@@ -1,3 +1,6 @@
+@-webkit-keyframes cursor-blink { 80% { visibility: hidden; } }
+        @keyframes cursor-blink { 80% { visibility: hidden; } }
+
 pre {
 	
 	@include rex_baseline($rex_base-font-size, .875);

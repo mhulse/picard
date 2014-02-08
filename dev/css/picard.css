@@ -644,18 +644,6 @@ textarea {
   vertical-align: top;
 }
 
-@-webkit-keyframes cursor-blink {
-  80% {
-    visibility: hidden;
-  }
-}
-
-@keyframes cursor-blink {
-  80% {
-    visibility: hidden;
-  }
-}
-
 .fix {
   *zoom: 1;
 }
@@ -957,6 +945,10 @@ dd {
 .pager > li:last-child a::after {
   content: "\00a0\f178";
 }
+.pager a {
+  -webkit-transition: background 200ms linear, color 750ms linear;
+  transition: background 200ms linear, color 750ms linear;
+}
 .pager a, .pager a:visited {
   color: #333333;
 }
@@ -1131,6 +1123,8 @@ nav[role="navigation"] ul a {
   text-shadow: 0 0.07142857142857rem 0.07142857142857rem black;
   white-space: nowrap;
   border-radius: 0.21428571428571rem;
+  -webkit-transition: background-color 100ms linear;
+  transition: background-color 100ms linear;
 }
 nav[role="navigation"] ul a, nav[role="navigation"] ul a:visited {
   color: white;
@@ -1372,6 +1366,8 @@ span.amp {
 }
 .marker a {
   background: #ffd100;
+  -webkit-transition: background-color 100ms linear;
+  transition: background-color 100ms linear;
 }
 .marker a, .marker a:visited {
   color: #997d00;
@@ -1528,6 +1524,10 @@ span.amp {
 .label span {
   color: #888888;
 }
+.label a {
+  -webkit-transition: background 200ms linear, color 750ms linear;
+  transition: background 200ms linear, color 750ms linear;
+}
 .label a, .label a:visited {
   color: #333333;
 }
@@ -1577,6 +1577,8 @@ span.amp {
   -webkit-background-size: 50px 50px;
   -moz-background-size: 50px 50px;
   background-size: 50px 50px;
+  -webkit-transition: background-color 100ms linear;
+  transition: background-color 100ms linear;
 }
 .external a, .external a:visited {
   color: white;
@@ -1619,6 +1621,18 @@ span.amp {
 .excerpt {
   margin-top: .5rem;
   margin-bottom: .25rem;
+}
+
+@-webkit-keyframes cursor-blink {
+  80% {
+    visibility: hidden;
+  }
+}
+
+@keyframes cursor-blink {
+  80% {
+    visibility: hidden;
+  }
 }
 
 pre {
@@ -2606,7 +2620,8 @@ p.meta:hover {
   line-height: 1.375;
   background-color: #dddddd;
   padding: 1.42857142857143rem;
-  border-radius: 0.42857142857143rem;
+  border: 0.07142857142857rem solid rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 0.71428571428571rem rgba(0, 0, 0, 0.3);
 }
 .callout.callout-box.callout-info {
   background-color: #bde5f8;
