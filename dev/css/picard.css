@@ -2710,8 +2710,8 @@ footer[role="contentinfo"] {
 .v {
   border-radius: 100%;
   background: #dddddd;
-  width: 50px;
-  height: 50px;
+  width: 49px;
+  height: 49px;
   position: absolute;
   top: 0;
   overflow: hidden;
@@ -2728,7 +2728,7 @@ footer[role="contentinfo"] {
   right: 10px;
 }
 .v, .v:visited {
-  color: #999;
+  color: #666;
   text-decoration: none;
 }
 .v:visited:hover, .v:focus, .v:focus:hover, .v:hover, .v:active {
@@ -2752,8 +2752,10 @@ footer[role="contentinfo"] {
   display: block;
 }
 .v span:nth-child(2) {
+  line-height: 0;
   text-align: center;
-  height: auto;
+  height: 0;
+  margin-top: 1px;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);

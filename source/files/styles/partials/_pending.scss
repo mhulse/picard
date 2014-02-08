@@ -4,8 +4,8 @@ footer[role="contentinfo"] { position: relative; }
 	
 	border-radius: 100%;
 	background: $grayd;
-	width: 50px;
-	height: 50px;
+	width: 49px;
+	height: 49px;
 	position: absolute;
 	top: 0;
 	overflow: hidden;
@@ -19,7 +19,7 @@ footer[role="contentinfo"] { position: relative; }
 	
 	&,
 	&:visited {
-		color: #999;
+		color: #666;
 		text-decoration: none;
 	}
 	&:visited:hover,
@@ -48,8 +48,10 @@ footer[role="contentinfo"] { position: relative; }
 	
 	/* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */
 	span:nth-child(2) {
+		line-height: 0;
 		text-align: center;
-		height: auto;
+		height: 0;
+		margin-top: 1px; // Fudge factor; these damn icons don't center perfectly.
 		position: relative;
 		top: 50%;
 		-webkit-transform: translateY(-50%);
