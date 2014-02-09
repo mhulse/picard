@@ -988,6 +988,9 @@ ul.meta > li:last-child {
   display: inline-block;
   text-transform: lowercase;
   margin: .1rem .25rem;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
 }
 .cloud a {
   line-height: 1;
