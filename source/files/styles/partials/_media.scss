@@ -79,9 +79,9 @@ figcaption {
 	.social {
 		
 		white-space: nowrap; // https://github.com/mhulse/picard/issues/174
-		margin-left: #{rex_relative(5)}rem;
+		//margin-left: #{rex_relative(5)}rem;
 		
-		i { margin-right: #{rex_relative(2)}rem; }
+		i { margin-right: #{rex_relative(3)}rem; }
 		
 	}
 	

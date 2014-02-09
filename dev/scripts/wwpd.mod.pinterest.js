@@ -56,9 +56,10 @@ WWPD.register(function() {
 							'aria-hidden' : 'true'
 						});
 						
-						console.log($figcaption_last);
+						//console.log($figcaption_last);
 						
 						$a
+							.before(' ')
 							.prepend($i)
 							.appendTo($figcaption_last);
 						
