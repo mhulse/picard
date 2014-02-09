@@ -1,25 +1,23 @@
 footer[role="contentinfo"] { position: relative; }
 
-.v {
+.jump {
 	
 	border-radius: 100%;
 	background: $grayd;
-	width: 49px;
-	height: 49px;
+	// The odd number helps to center the icon better:
+	width: #{rex_relative(49)}rem;
+	height: #{rex_relative(49)}rem;
 	position: absolute;
 	top: 0;
 	overflow: hidden;
 	transition: color .5s linear;
 	-webkit-touch-callout: none;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: rgba($raven, 0);
 	-webkit-tap-highlight-color: transparent;
-	
-	&.v-prev { left: 10px; }
-	&.v-next { right: 10px; }
 	
 	&,
 	&:visited {
-		color: #666;
+		color: $gray6;
 		text-decoration: none;
 	}
 	&:visited:hover,
@@ -27,7 +25,7 @@ footer[role="contentinfo"] { position: relative; }
 	&:focus:hover,
 	&:hover,
 	&:active {
-		color: #fff;
+		color: $milk;
 		text-decoration: none;
 	}
 	&:active,
@@ -46,18 +44,33 @@ footer[role="contentinfo"] { position: relative; }
 	
 	span { display: block; }
 	
-	/* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */
+	// http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
 	span:nth-child(2) {
 		line-height: 0;
 		text-align: center;
 		height: 0;
-		margin-top: 1px; // Fudge factor; these damn icons don't center perfectly.
+		margin-top: #{rex_relative(1)}rem;; // Fudge factor; these damn icons don't center perfectly.
 		position: relative;
 		top: 50%;
 		-webkit-transform: translateY(-50%);
 			-ms-transform: translateY(-50%);
 				transform: translateY(-50%);
 		z-index: 100;
+	}
+	
+	&.jump-old {
+		
+		left: 0;
+		
+		span:nth-child(2) { left: -2px; } // Better visual horizontal alignment.
+		
+	}
+	&.jump-new {
+		
+		right: 0;
+		
+		span:nth-child(2) { right: -2px; } // IBID.
+		
 	}
 	
 	span:not(:nth-child(2)) {
@@ -102,8 +115,9 @@ footer[role="contentinfo"] { position: relative; }
 	@media (max-width: #{rex_relative($base_breakpoint-max / 2)}rem) {
 		
 		& {
-			width: 40px;
-			height: 40px;
+			width: #{rex_relative(39)}rem;
+			height: #{rex_relative(39)}rem;
+			top: #{rex_relative(25)}rem;
 		}
 		
 	}

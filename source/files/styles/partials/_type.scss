@@ -549,9 +549,10 @@ span {
 				transparent
 			);
 		// Controls the size of the stripes:
-		-webkit-background-size: 50px 50px;
-		   -moz-background-size: 50px 50px;
-				background-size: 50px 50px;
+		-webkit-background-size: #{rex_relative(50)}rem #{rex_relative(50)}rem;
+		   -moz-background-size: #{rex_relative(50)}rem #{rex_relative(50)}rem;
+				background-size: #{rex_relative(50)}rem #{rex_relative(50)}rem;
+		
 		-webkit-transition: background-color 100ms linear;
 				transition: background-color 100ms linear;
 		
