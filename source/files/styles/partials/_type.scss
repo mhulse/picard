@@ -1,6 +1,6 @@
 h1#flag {
 	
-	font-family: "Hulse", Arial, sans-serif;
+	font-family: "hulse", Arial, sans-serif;
 	font-size: #{rex_relative(115)}rem;
 	font-weight: normal;
 	font-style: normal;
@@ -11,16 +11,17 @@ h1#flag {
 	-webkit-tap-highlight-color: rgba($raven, 0);
 	-webkit-tap-highlight-color: transparent;
 	
-	span {
-		border: 0;
-		clip: rect(0 0 0 0);
-		height: 1px;
-		margin: -1px;
-		overflow: hidden;
-		padding: 0;
-		position: absolute;
-		width: 1px;
-	}
+	// Note: Font now includes non-marking/non-spacing glyphs.
+	// span {
+	// 	border: 0;
+	// 	clip: rect(0 0 0 0);
+	// 	height: 1px;
+	// 	margin: -1px;
+	// 	overflow: hidden;
+	// 	padding: 0;
+	// 	position: absolute;
+	// 	width: 1px;
+	// }
 	
 	a {
 		
