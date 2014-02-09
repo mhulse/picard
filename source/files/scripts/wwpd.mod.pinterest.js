@@ -42,6 +42,8 @@ WWPD.register(function() {
 					
 					if ($figcaption_last.length) {
 						
+						$figcaption_last.append(' ');
+						
 						description = $.trim($figcaption.text().replace(/(\r\n|\n|\r)/g,'').replace(/\t/g, ' ').replace(/\s{2,}/g, ' '));
 						
 						$a = $('<a>', {
@@ -59,7 +61,6 @@ WWPD.register(function() {
 						//console.log($figcaption_last);
 						
 						$a
-							.before(' ')
 							.prepend($i)
 							.appendTo($figcaption_last);
 						
