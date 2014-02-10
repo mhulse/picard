@@ -42,6 +42,7 @@ WWPD.register(function() {
 					
 					if ($figcaption_last.length) {
 						
+						// https://github.com/mhulse/picard/issues/187
 						$figcaption_last.append(' ');
 						
 						description = $.trim($figcaption.text().replace(/(\r\n|\n|\r)/g,'').replace(/\t/g, ' ').replace(/\s{2,}/g, ' '));

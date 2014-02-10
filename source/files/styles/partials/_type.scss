@@ -582,6 +582,14 @@ span {
 			right: #{rex_relative(($base_padding - 2) * 1.5)}rem; // https://github.com/mhulse/picard/issues/141
 		}
 		
+		@media (max-width: #{rex_relative($base_breakpoint-max)}rem) {
+			
+			& { padding: #{rex_relative($base_padding * 1.5)}rem; }
+			
+			&::before { content: ""; }
+			
+		}
+		
 	}
 	
 	time,

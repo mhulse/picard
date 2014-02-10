@@ -1598,6 +1598,14 @@ span.amp {
   top: 1.07142857142857rem;
   right: 0.85714285714286rem;
 }
+@media (max-width: 53.5rem) {
+  .external a {
+    padding: 1.07142857142857rem;
+  }
+  .external a::before {
+    content: "";
+  }
+}
 .external time,
 .external span {
   font-weight: normal;
