@@ -1048,6 +1048,9 @@ ul.meta > li:last-child {
   margin: 0 0 -0.07142857142857rem;
   padding: 1.42857142857143rem;
 }
+.archive .archive-item:last-child {
+  border-bottom: 0;
+}
 .archive .archive-item i {
   color: #ff6600;
 }

@@ -256,6 +256,8 @@ ul.meta {
 		margin: 0 0 -#{rex_relative(1)}rem;
 		padding: #{rex_relative($base_padding * 2)}rem;
 		
+		&:last-child { border-bottom: 0; }
+		
 		i { color: $juice; }
 		
 	}
