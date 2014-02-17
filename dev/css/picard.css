@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 1.0.0
- * @date 2014/02/09
+ * @date 2014/02/16
  */
 
 
@@ -1018,6 +1018,10 @@ ul.meta > li:last-child {
   border-radius: 0 0 0.14285714285714rem 0.21428571428571rem;
   box-shadow: 0 0.21428571428571rem 0.07142857142857rem rgba(0, 0, 0, 0.05);
 }
+.archive .archive-year {
+  color: #333333;
+  border-color: #666666;
+}
 .archive > :nth-of-type(-n+3) {
   margin-top: 0;
 }
@@ -1027,6 +1031,9 @@ ul.meta > li:last-child {
   border-color: #dddddd;
   margin: 0 0 -0.07142857142857rem;
   padding: 1.42857142857143rem;
+}
+.archive .archive-item i {
+  color: #ff6600;
 }
 
 .x1, button,
