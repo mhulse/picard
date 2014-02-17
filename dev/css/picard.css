@@ -2468,6 +2468,7 @@ form#search label {
 }
 
 figure {
+  margin: 0;
   margin-top: 0.71428571428571rem;
   margin-bottom: 0.71428571428571rem;
 }
