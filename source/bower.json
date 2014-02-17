@@ -5,13 +5,16 @@
     "bigglesworth": "https://github.com/mhulse/jquery-bigglesworth.git",
     "fastclick": "0.6.11",
     "jquery": "2.1.0",
-    "normalize-css": "2.1.3",
+    "normalize-css": "3.0.0",
     "rex": "https://github.com/mhulse/rex.git"
   },
   "exportsOverride": {
     "rex": {
       "scss": "rex/scss/",
       "css": "rex/*.css"
+    },
+    "jquery": {
+      "": "dist/jquery.js"
     }
   }
 }

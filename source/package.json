@@ -2,7 +2,7 @@
   "title": "Picard",
   "name": "picard",
   "description": "Make it so.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/mhulse/picard",
   "repository": {
     "type": "git",
