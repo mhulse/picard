@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 1.1.0
- * @date 2014/02/16
+ * @date 2014/02/17
  */
 
 
@@ -2585,8 +2585,11 @@ audio {
   top: 0;
   left: 0;
 }
+.mm.theatre {
+  padding-bottom: 59.171597633136%;
+}
 .mm.slide {
-  padding-bottom: 66.666%;
+  padding-bottom: 66.666666666667%;
 }
 .mm.tv {
   padding-bottom: 75%;
