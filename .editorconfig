@@ -11,15 +11,19 @@ trim_trailing_whitespace = false
 indent_size = 4
 indent_style = tab
 
-[*.{py,rst,ini}]
+[*.py]
+indent_style = space
+
+[*.{ini,json,rb,yml}]
+indent_size = 2
+indent_style = space
+
+[{Gemfile*,Rakefile}]
+indent_size = 2
 indent_style = space
 
 [*.bat]
 end_of_line = crlf
-
-[*.json]
-indent_size = 2
-indent_style = space
 
 [CNAME]
 insert_final_newline = false

@@ -12,6 +12,7 @@
     "name": "Micky Hulse",
     "url": "http://mky.io"
   },
+  "production": "http://picard.mky.io/prod",
   "dependencies": {
     "grunt": "0.4.2",
     "grunt-asciify": "0.2.2",
