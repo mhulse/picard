@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 1.1.0
- * @date 2014/03/04
+ * @date 2014/03/05
  */
 
 
@@ -786,13 +786,15 @@ body {
   text-align: center;
   color: black;
   background: white;
-  padding: 50px;
+  padding: 3.57142857142857rem;
+  padding-top: 5.92857142857143rem;
   min-height: 100%;
   text-rendering: optimizeLegibility;
 }
 @media (max-width: 53.5rem) {
   body {
     padding: 1.42857142857143rem;
+    padding-top: 3.78571428571429rem;
   }
 }
 
@@ -2808,6 +2810,31 @@ footer[role="contentinfo"] {
     height: 2.78571428571429rem;
     top: 1.07142857142857rem;
   }
+}
+
+.tip {
+  width: 100%;
+  background: #dddddd;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tip p {
+  color: #666666;
+  line-height: 2.35714285714286rem;
+  letter-spacing: .05em;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  white-space: nowrap;
+}
+.tip a, .tip a:visited {
+  color: black;
+  text-decoration: none;
+}
+.tip a:visited:hover, .tip a:focus, .tip a:focus:hover, .tip a:hover, .tip a:active {
+  color: black;
+  text-decoration: underline;
 }
 
 @media print {
