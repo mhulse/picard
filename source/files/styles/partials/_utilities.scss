@@ -44,7 +44,13 @@
 	padding: 1px 0;
 }
 
-.nono { word-wrap: break-word; }
+.nono {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	// -ms-word-break: break-all;
+	// 	word-break: break-all;
+	// 	word-break: break-word;
+}
 
 .none { max-width: none; }
 
@@ -88,9 +94,9 @@
 	letter-spacing: .1em;
 	text-transform: lowercase;
 	text-shadow: 0 #{rex_relative(1)}rem #{rex_relative(3)}rem $raven,
-	             0 #{rex_relative(1)}rem #{rex_relative(3)}rem $raven,
-	             0 #{rex_relative(1)}rem #{rex_relative(3)}rem $raven,
-	             0 #{rex_relative(1)}rem #{rex_relative(3)}rem $raven;
+				 0 #{rex_relative(1)}rem #{rex_relative(3)}rem $raven,
+				 0 #{rex_relative(1)}rem #{rex_relative(3)}rem $raven,
+				 0 #{rex_relative(1)}rem #{rex_relative(3)}rem $raven;
 	text-align: center;
 	color: $milk;
 	position: absolute;

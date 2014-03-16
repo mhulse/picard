@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 1.1.0
- * @date 2014/03/06
+ * @date 2014/03/16
  */
 
 
@@ -705,6 +705,7 @@ textarea {
 
 .nono {
   word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .none {
@@ -1012,8 +1013,9 @@ ul.meta > li:last-child {
   text-transform: lowercase;
   margin: .1rem .25rem;
   white-space: pre-wrap;
-  word-break: break-all;
   word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 .cloud a {
   line-height: 1;
@@ -1225,6 +1227,7 @@ h1#flag::before {
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
   color: #4e801c;
@@ -1592,7 +1595,6 @@ span.amp {
   line-height: normal;
   text-transform: none;
   letter-spacing: .1em;
-  white-space: normal;
 }
 .external a {
   font-size: 1.57142857142857rem;
@@ -1603,6 +1605,7 @@ span.amp {
   border-radius: 0.21428571428571rem;
   text-shadow: 0 0.07142857142857rem rgba(53, 86, 19, 0.75);
   box-shadow: 0 0.21428571428571rem rgba(109, 112, 1, 0.2);
+  width: auto;
   background-color: #4e801c;
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.075) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.075) 50%, rgba(255, 255, 255, 0.075) 75%, transparent 75%, transparent);
   -webkit-background-size: 3.57142857142857rem 3.57142857142857rem;
@@ -1634,6 +1637,9 @@ span.amp {
 @media (max-width: 53.5rem) {
   .external a {
     padding: 1.07142857142857rem;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   .external a::before {
     content: "";

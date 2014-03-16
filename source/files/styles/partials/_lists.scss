@@ -159,7 +159,7 @@ dd { margin-left: 0; }
 		&:active { outline: none; }
 		
 		-webkit-transition: background 200ms linear, color 750ms linear;
-		        transition: background 200ms linear, color 750ms linear;
+				transition: background 200ms linear, color 750ms linear;
 		
 	}
 	
@@ -198,8 +198,9 @@ ul.meta {
 		margin: .1rem .25rem;
 		// http://stackoverflow.com/a/16373316/922323
 		white-space: pre-wrap;
-		word-break: break-all;
 		word-wrap: break-word;
+		overflow-wrap: break-word;
+		word-break: break-all;
 	}
 	
 	a {

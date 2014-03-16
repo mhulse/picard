@@ -67,6 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 	
 	text-transform: uppercase;
 	word-wrap: break-word;
+	overflow-wrap: break-word;
 	
 	a {
 		
@@ -428,7 +429,7 @@ span {
 	a {
 		
 		-webkit-transition: background 200ms linear, color 750ms linear;
-		        transition: background 200ms linear, color 750ms linear;
+				transition: background 200ms linear, color 750ms linear;
 		
 		&,
 		&:visited { color: $gray3; }
@@ -525,7 +526,6 @@ span {
 	line-height: normal;
 	text-transform: none;
 	letter-spacing: .1em;
-	white-space: normal;
 	
 	a {
 		
@@ -536,6 +536,7 @@ span {
 		border-radius: #{rex_relative($base_radii)}rem;
 		text-shadow: 0 #{rex_relative(1)}rem rgba(darken($hulk, 10%), .75);
 		box-shadow: 0 #{rex_relative(3)}rem rgba(darken($goblin, 10%), .2);
+		width: auto;
 		
 		// http://lea.verou.me/2010/12/checkered-stripes-other-background-patterns-with-css3-gradients/
 		background-color: $hulk;
@@ -584,7 +585,15 @@ span {
 		
 		@media (max-width: #{rex_relative($base_breakpoint-max)}rem) {
 			
-			& { padding: #{rex_relative($base_padding * 1.5)}rem; }
+			& {
+				padding: #{rex_relative($base_padding * 1.5)}rem;
+				// Because `inline-block` is involved ...
+				width: 100%;
+				// ... a width is required for:
+				word-wrap: break-word;
+				overflow-wrap: break-word;
+				// In general, long words should be avoided.
+			}
 			
 			&::before { content: ""; }
 			
