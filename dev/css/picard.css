@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 1.1.0
- * @date 2014/03/16
+ * @date 2014/03/18
  */
 
 
@@ -416,7 +416,7 @@ th {
   cursor: pointer;
   cursor: hand;
   -webkit-highlight: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-drag: none;
   -webkit-user-modify: none;
@@ -692,7 +692,7 @@ textarea {
 }
 
 .nix {
-  color: rgba(0, 0, 0, 0);
+  color: transparent;
   text-decoration: none;
   border: 0;
 }
@@ -1191,7 +1191,7 @@ h1#flag {
   text-transform: none;
   margin-bottom: 3.57142857142857rem;
   -webkit-touch-callout: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: transparent;
   position: relative;
 }
@@ -1673,13 +1673,11 @@ span.amp {
     visibility: hidden;
   }
 }
-
 @keyframes cursor-blink {
   80% {
     visibility: hidden;
   }
 }
-
 pre {
   font-size: 1rem;
   line-height: 1.375;
@@ -2122,14 +2120,14 @@ kbd kbd {
   color: #993d00;
   width: 100%;
   background-color: #ff6600;
-  border: none rgba(0, 0, 0, 0);
+  border: none transparent;
   border-radius: 0.21428571428571rem;
   margin-top: 0.71428571428571rem;
   margin-bottom: 0.71428571428571rem;
   padding: 0;
   padding-top: 0.34375em;
   padding-bottom: 0.34375em;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 .button::-moz-focus-inner, .form button::-moz-focus-inner,
 .form input[type="button"]::-moz-focus-inner,
@@ -2765,7 +2763,7 @@ footer[role="contentinfo"] {
   -webkit-transition: background 200ms linear, color 750ms linear;
   transition: background 200ms linear, color 750ms linear;
   -webkit-touch-callout: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: transparent;
 }
 .jump, .jump:visited {
@@ -2860,8 +2858,7 @@ footer[role="contentinfo"] {
 
   @page {
     margin: 1cm;
-}
-
+  }
   body {
     width: 100%;
     margin: 0;
