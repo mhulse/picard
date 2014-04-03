@@ -529,7 +529,7 @@ span {
 	
 	a {
 		
-		@include rex_baseline($rex_base-font-size + 8);
+		@include rex_baseline($rex_base-font-size + 8, 1.25);
 		padding: #{rex_relative($base_padding * 1.5)}rem #{rex_relative($base_padding * 6)}rem;
 		display: inline-block;
 		position: relative;

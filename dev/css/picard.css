@@ -1598,7 +1598,7 @@ span.amp {
 }
 .external a {
   font-size: 1.57142857142857rem;
-  line-height: 1;
+  line-height: 1.25;
   padding: 1.07142857142857rem 4.28571428571429rem;
   display: inline-block;
   position: relative;
