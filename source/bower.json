@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "dependencies": {
     "bigglesworth": "https://github.com/mhulse/jquery-bigglesworth.git",
-    "fastclick": "0.6.11",
+    "fastclick": "1.0.1",
     "jquery": "2.1.0",
-    "normalize-css": "3.0.0",
+    "normalize-css": "3.0.1",
     "rex": "https://github.com/mhulse/rex.git"
   },
   "exportsOverride": {
