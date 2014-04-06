@@ -74,9 +74,9 @@ p.meta {
 		@include rex_baseline($rex_base-font-size - 2, .75);
 		background-color: $grayd;
 		padding: #{rex_relative($base_padding * 2)}rem;
-		//border-radius: #{rex_relative($base_radii)}rem;
-		border: #{rex_relative(1)}rem solid rgba($raven, .3);
-		box-shadow: inset 0 0 #{rex_relative(10)}rem rgba($raven, .3);
+		border-radius: #{rex_relative($base_radii * 2)}rem;
+		//border: #{rex_relative(1)}rem solid rgba($raven, .3);
+		//box-shadow: inset 0 0 #{rex_relative(10)}rem rgba($raven, .3);
 		
 		&.callout-info { background-color: $ice; }
 		&.callout-success { background-color: $frog; }
@@ -293,46 +293,6 @@ footer[role="contentinfo"] { position: relative; }
 			width: #{rex_relative(39)}rem;
 			height: #{rex_relative(39)}rem;
 			top: #{rex_relative(15)}rem;
-		}
-		
-	}
-	
-}
-
-.tip {
-	
-	width: 100%;
-	//background: linear-gradient(to bottom, $gray3 0, $gray2 100%);
-	background: $grayd;
-	position: absolute;
-	top: 0;
-	left: 0;
-	
-	p {
-		color: $gray6;
-		line-height: #{rex_relative($rex_base-line-height * 1.5)}rem;
-		letter-spacing: .05em;
-		//text-shadow: 0 #{rex_relative(1)}rem rgba($raven, .5);
-		margin: 0;
-		padding: 0;
-		max-width: none;
-		white-space: nowrap;
-	}
-	
-	a {
-		
-		&,
-		&:visited {
-			color: $raven;
-			text-decoration: none;
-		}
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
-			color: $raven;
-			text-decoration: underline;
 		}
 		
 	}

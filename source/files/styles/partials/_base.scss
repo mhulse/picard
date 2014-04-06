@@ -13,19 +13,13 @@ body {
 	text-align: center;
 	color: $raven;
 	background: $milk;
-	padding: #{rex_relative($base_padding * 5)}rem {
-		top: #{rex_relative(($base_padding * 5) + ($rex_base-line-height * 1.5))}rem; // Accounts for browser message.
-	}
+	padding: #{rex_relative($base_padding * 5)}rem;
 	min-height: 100%;
 	text-rendering: optimizeLegibility;
 	
 	@media (max-width: #{rex_relative($base_breakpoint-max)}rem) {
 		
-		& {
-			padding: #{rex_relative($base_padding * 2)}rem {
-				top: #{rex_relative(($base_padding * 2) + ($rex_base-line-height * 1.5))}rem; // Accounts for browser message.
-			}
-		}
+		& { padding: #{rex_relative($base_padding * 2)}rem; }
 		
 	}
 	

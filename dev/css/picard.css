@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 1.1.0
- * @date 2014/04/03
+ * @date 2014/04/06
  */
 
 
@@ -795,14 +795,12 @@ body {
   color: black;
   background: white;
   padding: 3.57142857142857rem;
-  padding-top: 5.92857142857143rem;
   min-height: 100%;
   text-rendering: optimizeLegibility;
 }
 @media (max-width: 53.5rem) {
   body {
     padding: 1.42857142857143rem;
-    padding-top: 3.78571428571429rem;
   }
 }
 
@@ -1459,7 +1457,6 @@ span.amp {
 .body h4,
 .body h5,
 .body h6 {
-  font-family: Cambria, Georgia, serif;
   color: #333333;
 }
 .body h1 a, .body h1 a:visited,
@@ -1473,7 +1470,7 @@ span.amp {
 .body h5 a:visited,
 .body h6 a,
 .body h6 a:visited {
-  color: #504375;
+  color: #ff527f;
 }
 .body h1 a:visited:hover, .body h1 a:focus, .body h1 a:focus:hover, .body h1 a:hover, .body h1 a:active,
 .body h2 a:visited:hover,
@@ -1501,13 +1498,14 @@ span.amp {
 .body h6 a:focus:hover,
 .body h6 a:hover,
 .body h6 a:active {
-  color: #8071ad;
+  color: #ff527f;
   text-decoration: underline;
 }
 .body h1,
 .body h2,
 .body h3,
 .body h4 {
+  font-family: Cambria, Georgia, serif;
   font-weight: normal;
   text-transform: none;
 }
@@ -1553,24 +1551,25 @@ span.amp {
 }
 .label a,
 .label span {
-  background: #eeeeee;
-  padding: .75em 1.25em;
+  padding: .75em 1em;
   display: inline-block;
 }
 .label span {
-  color: #888888;
+  color: #ff9fb8;
+  background: #feedf1;
 }
 .label a {
+  background: #feedf1;
   -webkit-transition: background 200ms linear, color 750ms linear;
   transition: background 200ms linear, color 750ms linear;
 }
 .label a, .label a:visited {
-  color: #333333;
+  color: #ff527f;
 }
 .label a:visited:hover, .label a:focus, .label a:focus:hover, .label a:hover, .label a:active {
-  color: #eeeeee;
+  color: white;
   text-decoration: none;
-  background: #333333;
+  background: #ff527f;
 }
 .label a:focus, .label a:active {
   outline: none;
@@ -1608,8 +1607,8 @@ span.amp {
   text-shadow: 0 0.07142857142857rem rgba(53, 86, 19, 0.75);
   box-shadow: 0 0.21428571428571rem rgba(109, 112, 1, 0.2);
   width: auto;
-  background-color: #4e801c;
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.075) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.075) 50%, rgba(255, 255, 255, 0.075) 75%, transparent 75%, transparent);
+  background-color: #333333;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.025) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.025) 50%, rgba(255, 255, 255, 0.025) 75%, transparent 75%, transparent);
   -webkit-background-size: 3.57142857142857rem 3.57142857142857rem;
   -moz-background-size: 3.57142857142857rem 3.57142857142857rem;
   background-size: 3.57142857142857rem 3.57142857142857rem;
@@ -1617,12 +1616,12 @@ span.amp {
   transition: background-color 100ms linear;
 }
 .external a, .external a:visited {
-  color: white;
+  color: #cccccc;
 }
 .external a:visited:hover, .external a:focus, .external a:focus:hover, .external a:hover, .external a:active {
   color: white;
   text-decoration: none;
-  background-color: #9ea301;
+  background-color: #222222;
 }
 .external a::before {
   font-family: FontAwesome;
@@ -1631,7 +1630,7 @@ span.amp {
   font-size: smaller;
   text-decoration: none;
   content: "\f08e";
-  color: white;
+  color: #cccccc;
   position: absolute;
   top: 1.07142857142857rem;
   right: 0.85714285714286rem;
@@ -2669,8 +2668,7 @@ p.meta:hover {
   line-height: 1.375;
   background-color: #dddddd;
   padding: 1.42857142857143rem;
-  border: 0.07142857142857rem solid rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 0.71428571428571rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.42857142857143rem;
 }
 .callout.callout-box.callout-info {
   background-color: #bde5f8;
@@ -2822,31 +2820,6 @@ footer[role="contentinfo"] {
     height: 2.78571428571429rem;
     top: 1.07142857142857rem;
   }
-}
-
-.tip {
-  width: 100%;
-  background: #dddddd;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.tip p {
-  color: #666666;
-  line-height: 2.35714285714286rem;
-  letter-spacing: .05em;
-  margin: 0;
-  padding: 0;
-  max-width: none;
-  white-space: nowrap;
-}
-.tip a, .tip a:visited {
-  color: black;
-  text-decoration: none;
-}
-.tip a:visited:hover, .tip a:focus, .tip a:focus:hover, .tip a:hover, .tip a:active {
-  color: black;
-  text-decoration: underline;
 }
 
 @media print {

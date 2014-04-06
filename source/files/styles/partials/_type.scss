@@ -357,19 +357,18 @@ span {
 	h5,
 	h6 {
 		
-		font-family: $serif;
 		color: $gray3;
 		
 		a {
 			
 			&,
-			&:visited { color: $bruise; }
+			&:visited { color: $tongue; }
 			&:visited:hover,
 			&:focus,
 			&:focus:hover,
 			&:hover,
 			&:active {
-				color: lighten($bruise, 20%);
+				color: $tongue;
 				text-decoration: underline;
 			}
 			
@@ -381,6 +380,7 @@ span {
 	h2,
 	h3,
 	h4 {
+		font-family: $serif;
 		font-weight: normal;
 		text-transform: none;
 	}
@@ -418,29 +418,32 @@ span {
 	
 	a,
 	span {
-		background: $graye;
-		padding: .75em 1.25em;
+		padding: .75em 1em;
 		display: inline-block;
 		//border-radius: #{rex_relative($base_radii)}rem;
 	}
 	
-	span { color: $gray8; }
+	span {
+		color: lighten($tongue, 15%);
+		background: lighten(desaturate($tongue, 15%), 30%);
+	}
 	
 	a {
 		
+		background: lighten(desaturate($tongue, 15%), 30%);
 		-webkit-transition: background 200ms linear, color 750ms linear;
 				transition: background 200ms linear, color 750ms linear;
 		
 		&,
-		&:visited { color: $gray3; }
+		&:visited { color: $tongue; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
 		&:hover,
 		&:active {
-			color: $graye;
+			color: $milk;
 			text-decoration: none;
-			background: $gray3;
+			background: $tongue;
 		}
 		
 		&:focus,
@@ -475,51 +478,6 @@ span {
 	
 }
 
-// %more {
-// 	font-family: FontAwesome;
-// 	font-style: normal;
-// 	font-weight: normal;
-// 	text-decoration: inherit;
-// 	color: $gray9;
-// 	display: inline-block;
-// }
-
-// .more {
-	
-// 	font-size: smaller;
-// 	line-height: normal;
-	
-// 	&::before {
-// 		@extend %more;
-// 		content: "\f141\00a0";
-// 	}
-// 	&::after {
-// 		@extend %more;
-// 		content: "\00a0\f141";
-// 	}
-	
-// 	a {
-		
-// 		text-transform: lowercase;
-// 		letter-spacing: .08em;
-// 		text-transform: uppercase;
-// 		font-weight: bold;
-		
-// 		&,
-// 		&:visited { color: $lobster; }
-// 		&:visited:hover,
-// 		&:focus,
-// 		&:focus:hover,
-// 		&:hover,
-// 		&:active {
-// 			color: $juice;
-// 			text-decoration: none;
-// 		}
-		
-// 	}
-	
-// }
-
 .external {
 	
 	font-size: 1rem;
@@ -539,14 +497,14 @@ span {
 		width: auto;
 		
 		// http://lea.verou.me/2010/12/checkered-stripes-other-background-patterns-with-css3-gradients/
-		background-color: $hulk;
+		background-color: $gray3;
 		background-image:
 			linear-gradient(
-				45deg, rgba($milk, .075) 25%,
+				45deg, rgba($milk, .025) 25%,
 				transparent 25%,
 				transparent 50%,
-				rgba($milk, .075) 50%,
-				rgba($milk, .075) 75%,
+				rgba($milk, .025) 50%,
+				rgba($milk, .025) 75%,
 				transparent 75%,
 				transparent
 			);
@@ -559,7 +517,7 @@ span {
 				transition: background-color 100ms linear;
 		
 		&,
-		&:visited { color: $milk; }
+		&:visited { color: $grayc; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
@@ -567,7 +525,7 @@ span {
 		&:active {
 			color: $milk;
 			text-decoration: none;
-			background-color: $goblin;
+			background-color: $gray2;
 		}
 		
 		&::before {
@@ -577,7 +535,7 @@ span {
 			font-size: smaller;
 			text-decoration: none;
 			content: "\f08e";
-			color: $milk;
+			color: $grayc;
 			position: absolute;
 			top: #{rex_relative($base_padding * 1.5)}rem;
 			right: #{rex_relative(($base_padding - 2) * 1.5)}rem; // https://github.com/mhulse/picard/issues/141
