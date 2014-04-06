@@ -63,3 +63,4 @@ npm-debug.log
 temp/
 bower_components/
 .sass-cache
+created.rid
