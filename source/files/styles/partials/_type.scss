@@ -368,7 +368,7 @@ span {
 			&:focus:hover,
 			&:hover,
 			&:active {
-				color: $bruise;
+				color: lighten($bruise, 20%);
 				text-decoration: underline;
 			}
 			
@@ -418,24 +418,21 @@ span {
 	
 	a,
 	span {
-		padding: .75em 1em;
+		background: $graye;
+		padding: .75em 1.25em;
 		display: inline-block;
 		//border-radius: #{rex_relative($base_radii)}rem;
 	}
 	
-	span {
-		color: $grayc;
-		background: $gray5;
-	}
+	span { color: $gray8; }
 	
 	a {
 		
-		background: $gray3;
 		-webkit-transition: background 200ms linear, color 750ms linear;
 				transition: background 200ms linear, color 750ms linear;
 		
 		&,
-		&:visited { color: $graye; }
+		&:visited { color: $gray3; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
@@ -443,7 +440,7 @@ span {
 		&:active {
 			color: $milk;
 			text-decoration: none;
-			background: $raven;
+			background: $gray3;
 		}
 		
 		&:focus,
@@ -497,14 +494,14 @@ span {
 		width: auto;
 		
 		// http://lea.verou.me/2010/12/checkered-stripes-other-background-patterns-with-css3-gradients/
-		background-color: $gray4;
+		background-color: $hulk;
 		background-image:
 			linear-gradient(
-				45deg, rgba($raven, .1) 25%,
+				45deg, rgba($milk, .075) 25%,
 				transparent 25%,
 				transparent 50%,
-				rgba($raven, .1) 50%,
-				rgba($raven, .1) 75%,
+				rgba($milk, .075) 50%,
+				rgba($milk, .075) 75%,
 				transparent 75%,
 				transparent
 			);
@@ -517,7 +514,7 @@ span {
 				transition: background-color 100ms linear;
 		
 		&,
-		&:visited { color: $grayc; }
+		&:visited { color: $milk; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
@@ -525,7 +522,7 @@ span {
 		&:active {
 			color: $milk;
 			text-decoration: none;
-			background-color: $gray3;
+			background-color: $goblin;
 		}
 		
 		&::before {
