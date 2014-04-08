@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 1.1.0
- * @date 2014/04/06
+ * @date 2014/04/08
  */
 
 
@@ -1470,7 +1470,7 @@ span.amp {
 .body h5 a:visited,
 .body h6 a,
 .body h6 a:visited {
-  color: #ff527f;
+  color: #504375;
 }
 .body h1 a:visited:hover, .body h1 a:focus, .body h1 a:focus:hover, .body h1 a:hover, .body h1 a:active,
 .body h2 a:visited:hover,
@@ -1498,7 +1498,7 @@ span.amp {
 .body h6 a:focus:hover,
 .body h6 a:hover,
 .body h6 a:active {
-  color: #ff527f;
+  color: #504375;
   text-decoration: underline;
 }
 .body h1,
@@ -1555,21 +1555,21 @@ span.amp {
   display: inline-block;
 }
 .label span {
-  color: #ff9fb8;
-  background: #feedf1;
+  color: #cccccc;
+  background: #555555;
 }
 .label a {
-  background: #feedf1;
+  background: #333333;
   -webkit-transition: background 200ms linear, color 750ms linear;
   transition: background 200ms linear, color 750ms linear;
 }
 .label a, .label a:visited {
-  color: #ff527f;
+  color: #eeeeee;
 }
 .label a:visited:hover, .label a:focus, .label a:focus:hover, .label a:hover, .label a:active {
   color: white;
   text-decoration: none;
-  background: #ff527f;
+  background: black;
 }
 .label a:focus, .label a:active {
   outline: none;
@@ -1604,11 +1604,11 @@ span.amp {
   display: inline-block;
   position: relative;
   border-radius: 0.21428571428571rem;
-  text-shadow: 0 0.07142857142857rem rgba(53, 86, 19, 0.75);
-  box-shadow: 0 0.21428571428571rem rgba(109, 112, 1, 0.2);
+  text-shadow: 0 0.07142857142857rem rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0.21428571428571rem rgba(0, 0, 0, 0.2);
   width: auto;
-  background-color: #333333;
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.025) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.025) 50%, rgba(255, 255, 255, 0.025) 75%, transparent 75%, transparent);
+  background-color: #444444;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 75%, transparent);
   -webkit-background-size: 3.57142857142857rem 3.57142857142857rem;
   -moz-background-size: 3.57142857142857rem 3.57142857142857rem;
   background-size: 3.57142857142857rem 3.57142857142857rem;
@@ -1621,7 +1621,7 @@ span.amp {
 .external a:visited:hover, .external a:focus, .external a:focus:hover, .external a:hover, .external a:active {
   color: white;
   text-decoration: none;
-  background-color: #222222;
+  background-color: #333333;
 }
 .external a::before {
   font-family: FontAwesome;

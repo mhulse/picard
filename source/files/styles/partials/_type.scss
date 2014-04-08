@@ -362,13 +362,13 @@ span {
 		a {
 			
 			&,
-			&:visited { color: $tongue; }
+			&:visited { color: $bruise; }
 			&:visited:hover,
 			&:focus,
 			&:focus:hover,
 			&:hover,
 			&:active {
-				color: $tongue;
+				color: $bruise;
 				text-decoration: underline;
 			}
 			
@@ -424,18 +424,18 @@ span {
 	}
 	
 	span {
-		color: lighten($tongue, 15%);
-		background: lighten(desaturate($tongue, 15%), 30%);
+		color: $grayc;
+		background: $gray5;
 	}
 	
 	a {
 		
-		background: lighten(desaturate($tongue, 15%), 30%);
+		background: $gray3;
 		-webkit-transition: background 200ms linear, color 750ms linear;
 				transition: background 200ms linear, color 750ms linear;
 		
 		&,
-		&:visited { color: $tongue; }
+		&:visited { color: $graye; }
 		&:visited:hover,
 		&:focus,
 		&:focus:hover,
@@ -443,7 +443,7 @@ span {
 		&:active {
 			color: $milk;
 			text-decoration: none;
-			background: $tongue;
+			background: $raven;
 		}
 		
 		&:focus,
@@ -492,19 +492,19 @@ span {
 		display: inline-block;
 		position: relative;
 		border-radius: #{rex_relative($base_radii)}rem;
-		text-shadow: 0 #{rex_relative(1)}rem rgba(darken($hulk, 10%), .75);
-		box-shadow: 0 #{rex_relative(3)}rem rgba(darken($goblin, 10%), .2);
+		text-shadow: 0 #{rex_relative(1)}rem rgba($raven, .75);
+		box-shadow: 0 #{rex_relative(3)}rem rgba($raven, .2);
 		width: auto;
 		
 		// http://lea.verou.me/2010/12/checkered-stripes-other-background-patterns-with-css3-gradients/
-		background-color: $gray3;
+		background-color: $gray4;
 		background-image:
 			linear-gradient(
-				45deg, rgba($milk, .025) 25%,
+				45deg, rgba($raven, .1) 25%,
 				transparent 25%,
 				transparent 50%,
-				rgba($milk, .025) 50%,
-				rgba($milk, .025) 75%,
+				rgba($raven, .1) 50%,
+				rgba($raven, .1) 75%,
 				transparent 75%,
 				transparent
 			);
@@ -525,7 +525,7 @@ span {
 		&:active {
 			color: $milk;
 			text-decoration: none;
-			background-color: $gray2;
+			background-color: $gray3;
 		}
 		
 		&::before {
