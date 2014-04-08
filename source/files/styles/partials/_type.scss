@@ -489,8 +489,8 @@ span {
 		display: inline-block;
 		position: relative;
 		border-radius: #{rex_relative($base_radii)}rem;
-		text-shadow: 0 #{rex_relative(1)}rem rgba($raven, .75);
-		box-shadow: 0 #{rex_relative(3)}rem rgba($raven, .2);
+		text-shadow: 0 #{rex_relative(1)}rem rgba(darken($hulk, 10%), .75);
+		box-shadow: 0 #{rex_relative(3)}rem rgba(darken($goblin, 10%), .2);
 		width: auto;
 		
 		// http://lea.verou.me/2010/12/checkered-stripes-other-background-patterns-with-css3-gradients/
@@ -532,7 +532,7 @@ span {
 			font-size: smaller;
 			text-decoration: none;
 			content: "\f08e";
-			color: $grayc;
+			color: $milk;
 			position: absolute;
 			top: #{rex_relative($base_padding * 1.5)}rem;
 			right: #{rex_relative(($base_padding - 2) * 1.5)}rem; // https://github.com/mhulse/picard/issues/141
