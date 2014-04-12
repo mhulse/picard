@@ -20,7 +20,7 @@ WWPD.register(function() {
 		var $this = $(this);
 		
 		$img = $this.find('img');
-		$figcaption = $this.find('figcaption');
+		$figcaption = $this.find('figcaption > div');
 		
 		if ($img.length && $figcaption.length) {
 			
