@@ -22,66 +22,71 @@ figure {
 
 figcaption {
 	
-	@include rex_baseline($rex_base-font-size - 2, .75);
-	text-transform: uppercase;
-	text-shadow: 0 #{rex_relative(1)}rem #{rex_relative(1)}rem $raven;
-	letter-spacing: .05em;
-	word-spacing: .25em;
-	color: $grayd;
-	background: $gray1;
-	background: linear-gradient(to bottom, $gray2 0, $gray1 100%);
-	margin-top: #{rex_relative(13)}rem;
-	padding: #{rex_baseline($rex_base-font-size, .75)}em;
-	border-radius: #{rex_relative($base_radii * 2)}rem;
-	box-shadow: 0 0 #{rex_relative(2)}rem rgba($raven, .9);
-	
-	// Caption triangle:
-	position: relative;
-	&::after {
-		content: "";
-		border-width: 0 #{rex_relative(10)}rem #{rex_relative(10)}rem;
-		border-style: solid;
-		border-color: $gray2 transparent;
-		// http://www.yuiblog.com/blog/2010/11/22/css-quick-tip-css-arrows-and-shapes-without-markup/
-		width: 0;
-		margin-left: -#{rex_relative(10)}rem;
-		position: absolute;
-		top: -#{rex_relative(9)}rem;
-		left: 50%;
-		-webkit-transform: rotate(360deg);
-	}
-	
-	p {
+	> div {
 		
-		font-size: inherit;
-		line-height: inherit;
+		@include rex_baseline($rex_base-font-size - 2, .875);
+		text-transform: uppercase;
+		text-shadow: 0 #{rex_relative(1)}rem #{rex_relative(1)}rem $raven;
+		letter-spacing: .05em;
+		word-spacing: .25em;
+		color: $grayd;
+		background: $gray1;
+		background: linear-gradient(to bottom, $gray2 0, $gray1 100%);
+		margin-top: #{rex_relative(13)}rem;
+		padding: #{rex_baseline($rex_base-font-size, .75)}em;
+		border-radius: #{rex_relative($base_radii * 2)}rem;
+		box-shadow: 0 0 #{rex_relative(2)}rem rgba($raven, .9);
+		display: inline-block;
 		
-		&:first-of-type { margin-top: 0 !important; }
-		&:last-of-type { margin-bottom: 0 !important; }
-		
-	}
-	
-	a {
-		
-		&,
-		&:visited { color: $juice; }
-		&:visited:hover,
-		&:focus,
-		&:focus:hover,
-		&:hover,
-		&:active {
-			color: $bling;
-			text-decoration: none;
+		// Caption triangle:
+		position: relative;
+		&::after {
+			content: "";
+			border-width: 0 #{rex_relative(10)}rem #{rex_relative(10)}rem;
+			border-style: solid;
+			border-color: $gray2 transparent;
+			// http://www.yuiblog.com/blog/2010/11/22/css-quick-tip-css-arrows-and-shapes-without-markup/
+			width: 0;
+			margin-left: -#{rex_relative(10)}rem;
+			position: absolute;
+			top: -#{rex_relative(9)}rem;
+			left: 50%;
+			-webkit-transform: rotate(360deg);
 		}
 		
-	}
-	
-	.social {
+		p {
+			
+			font-size: inherit;
+			line-height: inherit;
+			
+			&:first-of-type { margin-top: 0 !important; }
+			&:last-of-type { margin-bottom: 0 !important; }
+			
+		}
 		
-		white-space: nowrap; // https://github.com/mhulse/picard/issues/174
-		//margin-left: #{rex_relative(5)}rem;
+		a {
+			
+			&,
+			&:visited { color: $juice; }
+			&:visited:hover,
+			&:focus,
+			&:focus:hover,
+			&:hover,
+			&:active {
+				color: $bling;
+				text-decoration: none;
+			}
+			
+		}
 		
-		i { margin-right: #{rex_relative(3)}rem; }
+		.social {
+			
+			white-space: nowrap; // https://github.com/mhulse/picard/issues/174
+			//margin-left: #{rex_relative(5)}rem;
+			
+			i { margin-right: #{rex_relative(3)}rem; }
+			
+		}
 		
 	}
 	

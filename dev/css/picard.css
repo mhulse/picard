@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 1.1.0
- * @date 2014/04/08
+ * @date 2014/04/12
  */
 
 
@@ -2491,9 +2491,9 @@ figure img {
   margin-bottom: 1.42857142857143rem;
 }
 
-figcaption {
+figcaption > div {
   font-size: 0.85714285714286rem;
-  line-height: 1.375;
+  line-height: 1.60416666666667;
   text-transform: uppercase;
   text-shadow: 0 0.07142857142857rem 0.07142857142857rem black;
   letter-spacing: .05em;
@@ -2505,9 +2505,10 @@ figcaption {
   padding: 1.17857142857143em;
   border-radius: 0.42857142857143rem;
   box-shadow: 0 0 0.14285714285714rem rgba(0, 0, 0, 0.9);
+  display: inline-block;
   position: relative;
 }
-figcaption::after {
+figcaption > div::after {
   content: "";
   border-width: 0 0.71428571428571rem 0.71428571428571rem;
   border-style: solid;
@@ -2519,27 +2520,27 @@ figcaption::after {
   left: 50%;
   -webkit-transform: rotate(360deg);
 }
-figcaption p {
+figcaption > div p {
   font-size: inherit;
   line-height: inherit;
 }
-figcaption p:first-of-type {
+figcaption > div p:first-of-type {
   margin-top: 0 !important;
 }
-figcaption p:last-of-type {
+figcaption > div p:last-of-type {
   margin-bottom: 0 !important;
 }
-figcaption a, figcaption a:visited {
+figcaption > div a, figcaption > div a:visited {
   color: #ff6600;
 }
-figcaption a:visited:hover, figcaption a:focus, figcaption a:focus:hover, figcaption a:hover, figcaption a:active {
+figcaption > div a:visited:hover, figcaption > div a:focus, figcaption > div a:focus:hover, figcaption > div a:hover, figcaption > div a:active {
   color: #ffd100;
   text-decoration: none;
 }
-figcaption .social {
+figcaption > div .social {
   white-space: nowrap;
 }
-figcaption .social i {
+figcaption > div .social i {
   margin-right: 0.21428571428571rem;
 }
 
