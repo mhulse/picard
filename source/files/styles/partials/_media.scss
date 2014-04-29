@@ -54,6 +54,12 @@ figcaption {
 			-webkit-transform: rotate(360deg);
 		}
 		
+		b,
+		strong {
+			color: $milk;
+			letter-spacing: .08em;
+		}
+		
 		p {
 			
 			font-size: inherit;
