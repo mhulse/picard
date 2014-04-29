@@ -156,7 +156,7 @@ dd { margin-left: 0; }
 		}
 		
 		&:focus,
-		&:active { outline: none; }
+		&:active { outline: 0; }
 		
 		-webkit-transition: background 200ms linear, color 750ms linear;
 				transition: background 200ms linear, color 750ms linear;

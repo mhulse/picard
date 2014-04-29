@@ -244,7 +244,7 @@ footer[role="contentinfo"] { position: relative; }
 		background: $gray3;
 	}
 	&:active,
-	&:focus { outline: none; }
+	&:focus { outline: 0; }
 	
 	span {
 		border: 0;

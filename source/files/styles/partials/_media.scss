@@ -115,7 +115,7 @@ iframe,
 object,
 embed {
 	max-width: 100%;
-	outline: none;
+	outline: 0;
 }
 
 audio,
@@ -125,7 +125,7 @@ video {
 	display: block;
 	
 	&:focus,
-	&:active { outline: none; }
+	&:active { outline: 0; }
 	
 }
 

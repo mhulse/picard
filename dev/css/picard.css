@@ -693,9 +693,10 @@ textarea {
   visibility: hidden;
 }
 
-.nix {
+.nix, .nix:active, .nix:hover, .nix:focus {
   color: transparent;
   text-decoration: none;
+  outline: 0;
   border: 0;
 }
 
@@ -987,7 +988,7 @@ dd {
   background: #333333;
 }
 .pager a:focus, .pager a:active {
-  outline: none;
+  outline: 0;
 }
 .pager .fa {
   line-height: 0;
@@ -1179,7 +1180,7 @@ nav[role="navigation"] ul a.selected, nav[role="navigation"] ul a:visited:hover,
   box-shadow: inset 0 0 0.35714285714286rem 0 #661a00;
 }
 nav[role="navigation"] ul a:focus, nav[role="navigation"] ul a:active {
-  outline: none;
+  outline: 0;
 }
 
 h1#flag {
@@ -1208,7 +1209,7 @@ h1#flag a:visited:hover, h1#flag a:focus, h1#flag a:focus:hover, h1#flag a:hover
   text-decoration: none;
 }
 h1#flag a:active, h1#flag a:focus {
-  outline: none;
+  outline: 0;
 }
 h1#flag::before {
   font-family: FontAwesome;
@@ -1571,7 +1572,7 @@ span.amp {
   background: #333333;
 }
 .label a:focus, .label a:active {
-  outline: none;
+  outline: 0;
 }
 
 .head {
@@ -2368,7 +2369,7 @@ a.social-tumblr, a.social-tumblr:visited, a.social-tumblr:visited:hover, a.socia
   color: #999999;
 }
 .form input[type="text"]:focus, .form input[type="password"]:focus, .form input[type="search"]:focus, .form textarea:focus, .form input[type="text"]:active, .form input[type="password"]:active, .form input[type="search"]:active, .form textarea:active {
-  outline: none;
+  outline: 0;
 }
 .form input[type="text"]:focus, .form input[type="password"]:focus, .form input[type="search"]:focus, .form textarea:focus {
   border-color: #cc3300;
@@ -2457,7 +2458,7 @@ form#search #bigglesworth_result a, form#search #bigglesworth_result a:visited, 
   text-decoration: none;
 }
 form#search #bigglesworth_result a:focus, form#search #bigglesworth_result a:active {
-  outline: none;
+  outline: 0;
 }
 form#search #bigglesworth_result-no p {
   font-size: 0.92857142857143rem;
@@ -2563,7 +2564,7 @@ iframe,
 object,
 embed {
   max-width: 100%;
-  outline: none;
+  outline: 0;
 }
 
 audio,
@@ -2574,7 +2575,7 @@ video {
 audio:focus, audio:active,
 video:focus,
 video:active {
-  outline: none;
+  outline: 0;
 }
 
 audio {
@@ -2782,7 +2783,7 @@ footer[role="contentinfo"] {
   background: #333333;
 }
 .jump:active, .jump:focus {
-  outline: none;
+  outline: 0;
 }
 .jump span {
   border: 0;
