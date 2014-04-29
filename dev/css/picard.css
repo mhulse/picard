@@ -693,7 +693,7 @@ textarea {
   visibility: hidden;
 }
 
-.nix, .nix:active, .nix:hover, .nix:focus {
+.nix, .nix:focus, .nix:hover, .nix:active {
   color: transparent;
   text-decoration: none;
   outline: 0;

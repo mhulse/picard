@@ -30,10 +30,19 @@
 
 .ghost { visibility: hidden; }
 
+// https://github.com/mhulse/picard/issues/201
 .nix {
-	color: rgba($raven, 0);
-	text-decoration: none;
-	border: 0;
+	
+	&,
+	&:focus,
+	&:hover,
+	&:active {
+		color: rgba($raven, 0);
+		text-decoration: none;
+		outline: 0;
+		border: 0;
+	}
+	
 }
 
 .force {
