@@ -4,7 +4,7 @@
   "dependencies": {
     "bigglesworth": "https://github.com/mhulse/jquery-bigglesworth.git",
     "fastclick": "1.0.1",
-    "jquery": "2.1.0",
+    "jquery": "2.1.1",
     "normalize-css": "3.0.1",
     "rex": "https://github.com/mhulse/rex.git"
   },
