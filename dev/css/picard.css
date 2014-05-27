@@ -7,7 +7,7 @@
  * @docs https://github.com/mhulse/picard
  * @copyright Copyright (c) 2014 Micky Hulse.
  * @version 1.1.0
- * @date 2014/05/12
+ * @date 2014/05/26
  */
 
 
@@ -2825,6 +2825,49 @@ footer[role="contentinfo"] {
     width: 2.78571428571429rem;
     height: 2.78571428571429rem;
     top: 1.07142857142857rem;
+  }
+}
+
+@-webkit-keyframes skull {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 -24000px;
+  }
+}
+@keyframes skull {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 -24000px;
+  }
+}
+.js footer[role="contentinfo"]::after {
+  /* https://github.com/mhulse/picard/issues/194 */
+  background: url(http://uploads.mky.io/skull.jpg) 0 0 no-repeat;
+  background-origin: content-box;
+  background-attachment: local;
+  width: 350px;
+  height: 500px;
+  margin: 0 auto -3.57142857142857rem;
+  display: block;
+  content: "";
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-name: skull;
+  animation-name: skull;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps(48);
+  animation-timing-function: steps(48);
+}
+@media (max-width: 53.5rem) {
+  .js footer[role="contentinfo"]::after {
+    margin-bottom: -1.42857142857143rem;
   }
 }
 

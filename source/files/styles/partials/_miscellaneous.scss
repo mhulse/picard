@@ -298,3 +298,43 @@ footer[role="contentinfo"] { position: relative; }
 	}
 	
 }
+
+@-webkit-keyframes skull {
+	0% { background-position: 0 0; }
+	100% { background-position: 0 -24000px; }
+}
+@keyframes skull {
+	0% { background-position: 0 0; }
+	100% { background-position: 0 -24000px; }
+}
+footer[role="contentinfo"]::after {
+	
+	.js & {
+		
+		/* https://github.com/mhulse/picard/issues/194 */
+		background: url(http://uploads.mky.io/skull.jpg) 0 0 no-repeat; // Wish I could make this retina display quality. :(
+		background-origin: content-box;
+		background-attachment: local;
+		width: 350px;
+		height: 500px;
+		margin: 0 auto -#{rex_relative($base_padding * 5)}rem; // Account for bottom <body> padding.
+		display: block;
+		content: "";
+		-webkit-animation-duration: 2s;
+				animation-duration: 2s;
+		-webkit-animation-name: skull;
+				animation-name: skull;
+		-webkit-animation-iteration-count: infinite;
+				animation-iteration-count: infinite;
+		-webkit-animation-timing-function: steps(48);
+				animation-timing-function: steps(48);
+		
+		@media (max-width: #{rex_relative($base_breakpoint-max)}rem) {
+			
+			& { margin-bottom: -#{rex_relative($base_padding * 2)}rem; }
+			
+		}
+		
+	}
+	
+}
