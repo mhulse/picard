@@ -2830,28 +2830,30 @@ footer[role="contentinfo"] {
 
 @-webkit-keyframes skull {
   0% {
-    background-position: 0 0;
+    background-position: center 0;
   }
 
   100% {
-    background-position: 0 -24000px;
+    background-position: center -24000px;
   }
 }
 @keyframes skull {
   0% {
-    background-position: 0 0;
+    background-position: center 0;
   }
 
   100% {
-    background-position: 0 -24000px;
+    background-position: center -24000px;
   }
 }
 .js footer[role="contentinfo"]::after {
   /* https://github.com/mhulse/picard/issues/194 */
-  background: url(http://uploads.mky.io/skull.jpg) 0 0 no-repeat;
+  background-image: url(http://uploads.mky.io/skull.jpg);
+  background-repeat: no-repeat;
+  background-position: center 0;
   background-origin: content-box;
   background-attachment: local;
-  width: 350px;
+  background-size: 350px 24000px;
   height: 500px;
   margin: 0 auto -3.57142857142857rem;
   display: block;
