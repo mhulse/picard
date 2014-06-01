@@ -314,24 +314,27 @@ footer[role="contentinfo"] { position: relative; }
 
 @-webkit-keyframes skull {
 	0% { background-position: center 0; }
-	100% { background-position: center -24000px; }
+	100% { background-position: center -24480px; }
 }
 @keyframes skull {
 	0% { background-position: center 0; }
-	100% { background-position: center -24000px; }
+	100% { background-position: center -24480px; }
 }
 footer[role="contentinfo"]::after {
 	
 	.js & {
 		
-		/* https://github.com/mhulse/picard/issues/194 */
+		/* 
+		https://github.com/mhulse/picard/issues/194
+		https://github.com/mhulse/picard/issues/207
+		*/
 		background: {
 			image: url(http://uploads.mky.io/skull.jpg);
 			repeat: no-repeat;
 			position: center 0; // Wish I could make this retina display quality. :(
 			origin: content-box;
 			attachment: local;
-			size: 350px 24000px; // http://www.defusion.org.uk/archives/2010/02/19/shrinking-large-background-image-bug-in-iphone-safari/
+			size: 350px 24480px; // http://www.defusion.org.uk/archives/2010/02/19/shrinking-large-background-image-bug-in-iphone-safari/
 		}
 		//width: 350px;
 		height: 500px;
